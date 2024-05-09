@@ -91,9 +91,12 @@ pointer-events: none;
 
  .signs {
      width: 165px;
-     height: 22px;
+     height: 56px;
      opacity: 0.4;
      cursor: pointer;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 
  }
 

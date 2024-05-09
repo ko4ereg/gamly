@@ -33,7 +33,28 @@ const TypesSlider = () => {
             document.removeEventListener('mousemove', onMouseMove);
         });
     };
+ 
+  
 
+    const handleTouchStart = (e) => {
+        const touchStartX = e.touches[0].clientX;
+        const scrollLeft = sliderRef.current.scrollLeft;
+    
+        const onTouchMove = (e) => {
+            const touchMoveX = e.touches[0].clientX;
+            const touchDistance = touchStartX - touchMoveX;
+    
+            sliderRef.current.scrollLeft = scrollLeft + touchDistance;
+        };
+    
+        const onTouchEnd = () => {
+            document.removeEventListener('touchmove', onTouchMove);
+            document.removeEventListener('touchend', onTouchEnd);
+        };
+    
+        document.addEventListener('touchmove', onTouchMove);
+        document.addEventListener('touchend', onTouchEnd);
+    };
     
     useEffect(() =>  {
         if (sliderRef.current) {
@@ -42,24 +63,25 @@ const TypesSlider = () => {
                 const backgroundRight = backgroundRightRef.current;
                 const backgroundLeft = backgroundLeftRef.current;
                 
-                if (slider && slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                if ( window.innerWidth >= 1920 || slider.scrollLeft >= slider.scrollWidth - slider.clientWidth ) {
                     backgroundRight.style.display = 'none';
                 } else {
                     backgroundRight.style.display = 'block';
                 }
     
-                if ( slider && slider.scrollLeft === 0) {
+                if (window.innerWidth >= 1920   || slider.scrollLeft === 0 ) {
                     backgroundLeft.style.display = 'none';
                 } else {
                     backgroundLeft.style.display = 'block';
                 }
             };
-    
+            sliderRef.current.addEventListener('touchstart', handleTouchStart);
             sliderRef.current.addEventListener('scroll', checkScroll);
     
             return () => {
                 if (sliderRef.current) {
                     sliderRef.current.removeEventListener('scroll', checkScroll);
+                    sliderRef.current.removeEventListener('touchstart', handleTouchStart);
                 }
             };
         
@@ -71,7 +93,7 @@ const TypesSlider = () => {
      <div ref={backgroundRightRef} className={s.filters_types_background_right}></div>
      <div ref={backgroundLeftRef} className={s.filters_types_background_left}></div>
         <div ref={sliderRef}
-
+onTouchStart={handleTouchStart}
             onWheel={handleWheel}
             onMouseDown={handleMouseDown} className={s.filters_types}>
  
