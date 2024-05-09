@@ -1,0 +1,39 @@
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.button {
+    width: 90px;
+    height: 32px;
+    padding: 0px 24px 1px 24px;
+    gap: 4px;
+    border-radius: 40px;
+    background: var(--accent-color);
+    outline: none;
+    font-family: 'VelaSans-GX', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 2%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+ .adaptive {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+ }
+
+ .adaptive img{
+    width: 30px;
+ }

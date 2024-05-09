@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'VelaSans-GX';
+  src: url(./fonts/VELASANS-GX.TTF) format('truetype');
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url(./fonts/COOLVETICA\ RG.OTF) format('opentype');
+}
+
+:root {
+  --accent-color: #D4EE5D;
+  --gray-40: rgba(231, 229, 237, 0.40);
+  --gray-10: rgba(231, 229, 237, 0.1);
+  --white: #F9F8FC;
+ --light-gray: rgba(178, 172, 191, 1);
+ --background-far: #14111A;
+ --accent-purple: #5F42D9;
+ --dark-gray: #211F29;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "VelaSans-GX", sans-serif;
+background-color: transparent;
+  
+}
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Coolvetica', 'VelaSans-GX'
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-far);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New'
+    monospace;
+}
