@@ -1,9 +1,9 @@
 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_913_7471)">
-<path d="M5.99874 8.47237L5.99875 6.00098M5.99875 6.00098L5.99874 3.52958M5.99875 6.00098L3.52734 6.00098M5.99875 6.00098L8.47013 6.00098" stroke="#D4EE5D" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Frame" clip-path="url(#clip0_994_8688)">
+<path id="Vector" d="M5.99874 8.47237L5.99875 6.00098M5.99875 6.00098L5.99874 3.52958M5.99875 6.00098L3.52734 6.00098M5.99875 6.00098L8.47013 6.00098" stroke="#D4EE5D" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="clip0_913_7471">
+<clipPath id="clip0_994_8688">
 <rect width="8" height="8" fill="white" transform="translate(0.34375 6) rotate(-45)"/>
 </clipPath>
 </defs>

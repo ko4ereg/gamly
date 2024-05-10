@@ -16,11 +16,12 @@
   text-decoration: none;
   color: var(--white);
   opacity: 40%;
+  transition: 0.5s;
 }
 
 .link:hover .link_container{
   color: var(--accent-color);
- 
+  transition: 0.5s;
 }
 .link:hover  {
  opacity: 1;
@@ -32,10 +33,11 @@
   height: 100%;
   display: flex;
   align-items: center;
+  box-sizing: content-box;
 }
 
 .link_container:hover {
-  border-bottom: 0.5px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .link_container:hover .link {
