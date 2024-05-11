@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import s from './ShopPage.module.scss';
 import Carousel from './Carousel/Carousel';
+import plus from './../../assets/icons/plus.svg';
+import minus from './../../assets/icons/minus.svg';
 
 export const ProductCard = (props) => {
   const [inCart, setInCart] = useState(false);
@@ -33,7 +35,7 @@ console.log(currentWidth);
           ? (<div className={s.product_button_price} ref={handleRef}  > <span>В корзине</span> </div>)
           : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.newPrice ? <span>{props.product.newPrice}</span> : null} {props.product.newPrice ? (<span className={s.oldprice}>{props.product.price}</span>) : (<span>{props.product.price}</span>)} </div>)}
 
-        <div className={s.plus}>{inCart ? '-' : '+'}</div>
+        <div className={s.plus}>{inCart ? <img src={minus} alt="" /> : <img src={plus} alt="" />}</div>
 
       </div>
       {inCart ?

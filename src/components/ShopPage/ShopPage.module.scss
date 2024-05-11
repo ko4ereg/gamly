@@ -528,6 +528,10 @@ h1 {
         border-radius: 50%;
         transition: all 0.2s ease-out;
         text-align: center;
+        img {
+           
+            width: 8px;
+        }
     }
 
     img {
@@ -1409,7 +1413,11 @@ h1 {
                     width: 16px;
                     height: 16px;
                     font-size: 8px;
-
+                    
+                        img {
+                            width: 6.4px;
+                        }
+                
                 }
 
                 span {
