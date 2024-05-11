@@ -1,0 +1,65 @@
+.slick-slider {
+ 
+    position: relative;
+}
+
+.slick-dots {
+ 
+}
+
+.slick-dots li {
+    width: 4px;
+    height: 4px;
+    margin: 0;
+ 
+ /* display: none; */
+  
+}
+ 
+/* .slick-dots li.slick-active {
+display: block;
+
+   
+}
+.slick-dots li:nth-child(-n+1) {
+display: block;
+   
+}
+.slick-dots li.slick-active + li {
+display: block;
+   
+} */
+ 
+
+.slick-dots li button {
+    width: 4px;
+    height: 4px;
+    padding: 0;
+}
+
+.slick-dots li button::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    content: '';
+    background-color: white;
+    
+ 
+    transition: all 0.2s ease-out;
+}
+
+ 
+
+.slick-dots li.slick-active button::before {
+    color: white;
+    width: 6px;
+    height: 6px;
+    
+    transition: all 0.2s ease-out;
+}
+
+ 

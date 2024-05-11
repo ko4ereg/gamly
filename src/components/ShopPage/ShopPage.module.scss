@@ -374,6 +374,8 @@ h1 {
     white-space: nowrap;
     position: relative;
 
+
+
     .product_discont {
         position: absolute;
         top: 12px;
@@ -382,10 +384,11 @@ h1 {
         align-items: center;
         justify-content: center;
         border-radius: 4px;
-        background-color: var(--gray-10);
+        background-color: rgba(41, 38, 47, 1);
         color: var(--white);
         height: 21px;
         width: 46px;
+        z-index: 1;
 
         font-size: 14px;
         font-weight: 600;
@@ -403,46 +406,53 @@ h1 {
 
     .product_img {
         margin-bottom: 16px;
+        position: relative;
+        height: 342px;
     }
 
     .product_button_container {
         display: flex;
         gap: 12px;
         align-items: center;
+        height: 42px;
 
-     
 
         span {
             color: var(--accent-color);
         }
     }
-  
+
     .product_price {
+        display: flex;
+        align-items: center;
+
         animation: fadein 0.4s forwards, slidein 0.4s forwards;
         opacity: 0;
         transform: translateX(10px);
     }
-    
+
     @keyframes fadein {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
-    
+
     @keyframes slidein {
         from {
             transform: translateX(10px);
         }
+
         to {
             transform: translateX(0);
         }
     }
 
     .product_button {
-        height: 45px;
+        height: 42px;
         border: 1.5px solid rgba(52, 61, 51, 1);
         border-radius: 1000px;
         padding: 10px 10px 10px 16px;
@@ -456,8 +466,10 @@ h1 {
 
         .product_button_price {
             display: flex;
-            gap: 10px;
-            
+
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         &:hover {
@@ -629,6 +641,11 @@ h1 {
             letter-spacing: 0.03em;
         }
 
+
+        .product_img {
+            height: 262px;
+        }
+
         .filters_panel {
 
             .sliderContainer {
@@ -770,6 +787,7 @@ h1 {
         }
 
         .product_img {
+            height: 262px;
             margin-bottom: 16px;
         }
 
@@ -779,7 +797,11 @@ h1 {
             font-weight: 600;
             line-height: 19.6px;
             letter-spacing: 0.02em;
+            height: 40px;
 
+            .product_button {
+                height: 100%;
+            }
 
             span {
                 font-size: 14px;
@@ -894,7 +916,7 @@ h1 {
             gap: 8px;
             justify-content: flex-start;
 
-            
+
 
             .sortsBy {
                 position: absolute;
@@ -933,22 +955,26 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
         grid-column-gap: 24px;
-        grid-row-gap: 16px;
+        grid-row-gap: 24px;
         margin-bottom: 36px;
     }
 
 
     .product_card {
-       
+
         font-size: 14px;
         font-weight: 600;
         line-height: 16.8px;
         letter-spacing: 0.01em;
 
+        .product_img {
+
+            height: 276px;
+        }
 
         .product_button_container {
             gap: 10px;
-           
+            height: 40px;
         }
 
         .product_button {
@@ -1065,7 +1091,15 @@ h1 {
         font-size: 12px;
         line-height: 14.4px;
 
+        .product_img {
+            height: 180px;
+            margin-bottom: 8px;
 
+            img {
+                width: 100%;
+               
+            }
+        }
 
         .oldprice {
 
@@ -1192,6 +1226,10 @@ h1 {
             white-space: break-spaces;
         }
 
+        .product_img {
+
+            height: 151px;
+        }
         .product_button_container {
             gap: 3px;
 
@@ -1230,6 +1268,11 @@ h1 {
             line-height: 15.4px;
             letter-spacing: 0.02em;
 
+            .plus {
+                right: 6px;
+
+            }
+
             .oldprice {
 
                 font-size: 10px;
@@ -1255,7 +1298,7 @@ h1 {
 }
 
 
-@media (max-width: 374px) {
+@media (max-width: 375px) {
 
 
 
@@ -1352,7 +1395,10 @@ h1 {
                 line-height: 15.4px;
                 letter-spacing: 0.02em;
             }
+            .product_img {
 
+                height: 132px;
+            }
             .product_button {
                 gap: 3px;
                 height: 32px;
@@ -1362,7 +1408,7 @@ h1 {
                     width: 16px;
                     height: 16px;
                     font-size: 8px;
-                 
+
                 }
 
                 span {
@@ -1386,7 +1432,7 @@ h1 {
 
         }
 
-       
+
 
 
     }

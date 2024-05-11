@@ -4,7 +4,7 @@ import s from './ShopPage.module.scss';
  import pic2 from './../../assets/shop/mock/2.png';
  
  import pic3 from './../../assets/shop/mock/3.png';
- import pic4 from './../../assets/shop/mock/3.png';
+ import pic4 from './../../assets/shop/mock/4.png';
 import ProductCard from './ProductCard';
 import Pagination from './Pagination';
 
@@ -14,67 +14,67 @@ const Products = (props) => {
     const prods = [
         {
             title: 'Игровые наушники Logitech PRO X1',
-           img: pic1,
+           img: [pic1, pic2, pic3, pic4, pic2, pic3, pic4],
            price: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X2',
-           img: pic2,
+            img: [pic1, pic2, pic3, pic4],
            price: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X3',
-           img: pic3,
+            img: [pic1, pic2, pic3, pic4],
            price: '4 409 ₽',
            newPrice: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X4',
-           img: pic4,
+            img: [pic1, pic2, pic3, pic4],
            price: '3 809 ₽',
            inShip: true,
         },
         {
             title: 'Игровые наушники Logitech PRO X5',
-           img: pic1,
+           img: [pic1],
            price: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X6',
-           img: pic2,
+            img: [pic1, pic2, pic3, pic4],
            price: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X7',
-           img: pic3,
+           img: [pic3],
            price: '4 409 ₽',
            newPrice: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X8',
-           img: pic4,
+            img: [pic1, pic2, pic3, pic4],
            price: '3 809 ₽',
            inShip: true,
         },
         {
             title: 'Игровые наушники Logitech PRO X9',
-           img: pic1,
+           img: [pic1],
            price: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X10',
-           img: pic2,
+           img: [pic2],
            price: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X11',
-           img: pic3,
+            img: [pic1, pic2, pic3, pic4],
            price: '4 409 ₽',
            newPrice: '3 809 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X12',
-           img: pic4,
+           img: [pic4],
            price: '3 809 ₽',
            inShip: true,
         },
