@@ -41,7 +41,7 @@ const dotsRef = useRef();
     if (props.img.length === 1) {
         return (
 
-            <img src={props.img[0]} alt="carousel" />
+            <img className='sliderImage' src={props.img[0]} alt="carousel" />
 
         );
     } else {
@@ -100,7 +100,7 @@ const dotsRef = useRef();
            
                 <Slider ref={sliderRef} {...settings}>
                     {(props.img).map((item, index) => (
-                        <div key={index}><img src={item} alt="" /></div>
+                        <div key={index}><img className='sliderImage' src={item} alt="" /></div>
                     ))}
 
                 </Slider>
