@@ -31,7 +31,7 @@ const Pagination = ({ portionSize = 10, totalItems = 200, pageSize = 12, }) => {
 
 
     {pages.map((p) => {
-      if (p === 1 || p === pagesCount || (p >= currentPage - 2 && p <= currentPage + 2)) {
+      if (p === 1 || p === pagesCount || (p >= currentPage - 1 && p <= (window.innerWidth < 1024 ? currentPage + 1 : currentPage + 2))) {
         return (
           <div
             key={p}
@@ -40,7 +40,7 @@ const Pagination = ({ portionSize = 10, totalItems = 200, pageSize = 12, }) => {
               onPageChange(p)
             }}>{p} </div>
         );
-      } else if (p === currentPage - 3 || p === currentPage + 3) {
+      } else if (p === currentPage - 2 || (window.innerWidth < 1024 ? p===currentPage + 2 : p===currentPage +3)  ) {
         return <div className={s.pageEmpty} key={p}>... </div>;
       } else {
         return null;
