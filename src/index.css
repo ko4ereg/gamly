@@ -10,6 +10,7 @@
 
 :root {
   --accent-color: #D4EE5D;
+  --gray-15: rgba(65, 63, 75, 1);
   --gray-40: rgba(231, 229, 237, 0.40);
   --gray-10: rgba(231, 229, 237, 0.1);
   --white: #F9F8FC;
@@ -17,6 +18,7 @@
  --background-far: #14111A;
  --accent-purple: #5F42D9;
  --dark-gray: #211F29;
+ --gray-10-transparacy: rgba(231, 229, 237, 0.10);
 }
 
 

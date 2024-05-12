@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const Categories = (props) => {
 
-   const [selectedItem, setSelectedItem] = useState(null);
+   const [selectedItem, setSelectedItem] = useState(1);
 
    const handleItemClick = (index) => {
       setSelectedItem(index);
@@ -36,7 +36,7 @@ const Categories = (props) => {
             <div className={s.backhover} />
          </div>
          <div className={`${s.item} ${selectedItem === 4 ? s.selected : ''}`} onClick={() => handleItemClick(4)} >
-            <h2>Компьютерные комплектующие</h2>
+            <h2>Компьютеры и подобное</h2>
             <span>188 товаров</span>
             <img src={categoryPic4} alt="" />
             <div className={s.backhover} />

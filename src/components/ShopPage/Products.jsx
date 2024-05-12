@@ -15,12 +15,12 @@ const Products = (props) => {
         {
             title: 'Игровые наушники Logitech PRO X1',
            img: [pic1, pic2, pic3, pic4, pic2, pic3, pic4],
-           price: '3 809 ₽'
+           price: '12 987 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X2',
             img: [pic1, pic2, pic3, pic4],
-           price: '3 809 ₽'
+           price: '31 882 ₽'
         },
         {
             title: 'Игровые наушники Logitech PRO X3',

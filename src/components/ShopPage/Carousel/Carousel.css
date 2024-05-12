@@ -1,43 +1,91 @@
 .slick-slider {
- 
+    height: 100%;
     position: relative;
 }
 
-.slick-dots {
- 
+.slick-list {
+    height: 100%;
+    width: 100%;
 }
+
+.slick-active {
+    width: 100%;
+}
+
+.slick-active img {
+    width: 100%;
+    height: 90%;
+    user-select: none;
+}
+
+/* .slick-dots li {
+    width: 4px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
 
 .slick-dots li {
     width: 4px;
     height: 4px;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    content: '';
+    background-color: white;
+    opacity: 0.2;
  
- /* display: none; */
-  
 }
- 
-/* .slick-dots li.slick-active {
-display: block;
 
-   
-}
-.slick-dots li:nth-child(-n+1) {
-display: block;
-   
-}
-.slick-dots li.slick-active + li {
-display: block;
-   
-} */
+.slick-dots li.slick-active {
+    border-radius: 50%;
+  height: 6px;
+  width: 6px;
+    opacity: 1;
+    transition: all 0.2s ease-out;
  
 
-.slick-dots li button {
+}
+
+.slick-dots ul {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 4px;
+    height: 6px;
+}
+
+.slick-slide {
+    height: 100%;
+    user-select: none;
+}
+
+.slick-slide div {
+    height: 100%;
+}
+
+.slick-track {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* .slick-dots li button {
     width: 4px;
     height: 4px;
     padding: 0;
-}
+} */
 
-.slick-dots li button::before {
+/* .slick-dots li button::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -47,19 +95,20 @@ display: block;
     border-radius: 50%;
     content: '';
     background-color: white;
-    
- 
+    opacity: 0.2;
+
     transition: all 0.2s ease-out;
 }
 
- 
+
 
 .slick-dots li.slick-active button::before {
     color: white;
-    width: 6px;
+/* 
+    left: 50%; 
+    transform: translateY(-50%) translateX(-50%);  
     height: 6px;
-    
+    width: 6px;
+    opacity: 1;
     transition: all 0.2s ease-out;
-}
-
- 
+} */

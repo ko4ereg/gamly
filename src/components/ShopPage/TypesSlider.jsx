@@ -6,9 +6,17 @@ import s from './ShopPage.module.scss';
 
 const TypesSlider = () => {
 
-    const [selectedType, setSelectedType] = useState('');
+    const [selectedTypes, setSelectedTypes] = useState([]);
+   
+   
     const handleItemClick = (index) => {
-        setSelectedType(index);
+        if (selectedTypes.includes(index)) {
+            // Если категория уже выбрана, удаляем ее из списка выбранных
+            setSelectedTypes(selectedTypes.filter(item => item !== index));
+        } else {
+            // Если категория не выбрана, добавляем ее в список выбранных
+            setSelectedTypes([...selectedTypes, index]);
+        }
     }
 
 
@@ -65,14 +73,20 @@ const TypesSlider = () => {
                 const slider = sliderRef.current;
                 const backgroundRight = backgroundRightRef.current;
                 const backgroundLeft = backgroundLeftRef.current;
-
-                if (window.innerWidth >= 1920 || slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                
+                if (slider.scrollWidth <= slider.clientWidth) {
+                    backgroundRight.style.display = 'none';
+                } else {
+                    backgroundRight.style.display = 'block';
+                }
+    
+                if ( slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
                     backgroundRight.style.display = 'none';
                 } else {
                     backgroundRight.style.display = 'block';
                 }
 
-                if (window.innerWidth >= 1920 || slider.scrollLeft === 0) {
+                if (  slider.scrollLeft === 0) {
                     backgroundLeft.style.display = 'none';
                 } else {
                     backgroundLeft.style.display = 'block';
@@ -100,6 +114,13 @@ const TypesSlider = () => {
         'Столы',
         'Мониторы',
         'Прочее',
+        'Кресла',
+        'Столы',
+        'Мониторы',
+        'Прочее',
+      
+       
+        
     ]
 
     return (
@@ -113,7 +134,7 @@ const TypesSlider = () => {
                 
                 {
                     types.map((type, index) => (
-                        <div className={`${s.filters_types_item} ${selectedType === index ? s.selected : ''}`} onClick={() => handleItemClick(index)}>{type}</div>
+                        <div key={index} className={`${s.filters_types_item} ${selectedTypes.includes(index) ? s.selected : ''}`} onClick={() => handleItemClick(index)}>{type}</div>
                     ))
                 }
                 
