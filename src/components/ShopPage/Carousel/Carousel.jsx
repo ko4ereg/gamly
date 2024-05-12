@@ -87,7 +87,7 @@ const dotsRef = useRef();
             ),
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1023,
                     settings: {
                         speed: 500,
                         dots: false
