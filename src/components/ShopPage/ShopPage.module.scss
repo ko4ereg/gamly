@@ -310,11 +310,13 @@ h1 {
                 gap: 11px;
                 position: relative;
                 z-index: 1;
+                position: relative;
 
                 img {
                     position: absolute;
-                    top: -18px;
-                    left: 96px;
+                    top: -22px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
 
                 li {
@@ -442,7 +444,7 @@ h1 {
         position: relative;
         max-height: 342px;
         user-select: none;
-        
+
     }
 
     .product_button_container {
@@ -920,6 +922,9 @@ h1 {
                 padding: 12px;
 
                 ul {
+                    img {
+                        top: -18px;
+                    }
 
                     li {
 
@@ -1114,11 +1119,7 @@ h1 {
 
                 ul {
 
-                    img {
-                        position: absolute;
-                        top: -22px;
-                        left: 96px;
-                    }
+
 
                     li {
                         letter-spacing: 0.03em;
@@ -1285,17 +1286,6 @@ h1 {
             //     min-width: 229px;
             // }
 
-            .sortsBy {
-
-                ul {
-
-                    img {
-
-                        left: 86px;
-                    }
-
-                }
-            }
 
             .button {
                 height: 100%;
@@ -1346,20 +1336,33 @@ h1 {
 
         .product_button_container {
             .product_price {
-                font-size: 12px;
+                // font-size: 12px;
+                // font-weight: 600;
+                // line-height: 140%;
+                // /* 16.8px */
+                // letter-spacing: 0.24px;
+
+                font-size: 13px;
+                font-style: normal;
                 font-weight: 600;
                 line-height: 140%;
-                /* 16.8px */
-                letter-spacing: 0.24px;
+                /* 18.2px */
+                letter-spacing: 0.26px;
             }
 
             .product_button_price {
 
-                font-size: 12px;
+                // font-size: 12px;
+                // font-weight: 600;
+                // line-height: 140%;
+                // /* 16.8px */
+                // letter-spacing: 0.24px;
+                font-size: 13px;
+                font-style: normal;
                 font-weight: 600;
                 line-height: 140%;
-                /* 16.8px */
-                letter-spacing: 0.24px;
+                /* 18.2px */
+                letter-spacing: 0.26px;
             }
 
             .product_button {
@@ -1555,12 +1558,17 @@ h1 {
                 }
 
                 span {
-                    font-size: 12px;
+                    // font-size: 12px;
+                    // font-weight: 600;
+                    // line-height: 140%;
+                    // /* 16.8px */
+                    // letter-spacing: 0.24px;
+                    font-size: 13px;
+                    font-style: normal;
                     font-weight: 600;
                     line-height: 140%;
-                    /* 16.8px */
-                    letter-spacing: 0.24px;
-
+                    /* 18.2px */
+                    letter-spacing: 0.26px;
 
                 }
             }
@@ -1573,15 +1581,6 @@ h1 {
             display: none;
         }
 
-        .inCart {
-            background-color: var(--accent-color);
-
-            span {
-
-                color: rgba(4, 3, 7, 1);
-
-            }
-        }
     }
 
 
@@ -1600,7 +1599,7 @@ h1 {
 
 
 
-@media (max-width: 374px) {
+@media (min-width:320px) and (max-width: 374px) {
 
     h1 {
         margin-bottom: 12px;
@@ -1689,24 +1688,25 @@ h1 {
         .product_title {
 
             align-self: stretch;
-
+            white-space: wrap;
         }
 
         .product_button_container {
-
-
-
-
-
 
             .product_button {
                 gap: 4px;
 
                 span {
-                    font-size: 12px;
+                    // font-size: 12px;
+                    // line-height: 140%;
+                    // /* 16.8px */
+                    // letter-spacing: 0.24px;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 600;
                     line-height: 140%;
-                    /* 16.8px */
-                    letter-spacing: 0.24px;
+                    /* 18.2px */
+                    letter-spacing: 0.26px;
                 }
 
                 .plus {
