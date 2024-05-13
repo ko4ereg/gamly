@@ -824,7 +824,11 @@ h1 {
 
 
     .categories {
-
+        .item:nth-child(4) {
+            h2 {
+                max-width: none;
+            }
+    
         h2 {
 
 
@@ -834,7 +838,8 @@ h1 {
             letter-spacing: 0.16px;
         }
     }
-
+ 
+    }
     .item {
         // width: 199px;
         // height: 97px;
@@ -1029,7 +1034,11 @@ h1 {
         grid-column-gap: 12px;
         grid-row-gap: 12px;
 
-
+        .item:nth-child(4) {
+            h2 {
+                max-width: none;
+            }
+        }    
         h2 {
 
             font-size: 16px;
