@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import s from './ShopPage.module.scss';
 import Carousel from './Carousel/Carousel';
-
+ 
 import { formatValue } from '../../utils/formatValue';
 
 
@@ -22,15 +22,15 @@ export const ProductCard = (props) => {
 
   const handleRef = useRef();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const timer = setTimeout(() => {
       setCurrentWidth(handleRef.current.offsetWidth);
     }, 100);
 
-    // handleWindowResize();
-    // window.addEventListener('resize', handleWindowResize);
+    handleWindowResize();
+    window.addEventListener('resize', handleWindowResize);
     return () => {
-      // window.removeEventListener('resize', handleWindowResize);
+      window.removeEventListener('resize', handleWindowResize);
       clearTimeout(timer);
     }
 
@@ -41,7 +41,7 @@ export const ProductCard = (props) => {
     setCurrentWidth(handleRef.current.offsetWidth);
   }, [inCart, width, props.product]);
 
-
+ 
   const newPrice = props.product.discount ? props.product.price * (1 - props.product.discount / 100) : props.product.price;
   const actualPrice = formatValue(newPrice.toString()) + ' ₽';
 
