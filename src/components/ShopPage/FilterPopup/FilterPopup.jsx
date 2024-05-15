@@ -20,9 +20,11 @@ const FilterPopup = ({ filterActive, setFilterActive, prodsAmount }) => {
   useEffect(() => {
     if (filterActive) {
       document.body.style.overflow = "hidden";
+      document.body.style.marginRight = '17px';
     }
     return () => {
       document.body.style.overflow = "auto";
+      document.body.style.marginRight = 'auto';
     }
   }, [filterActive])
 

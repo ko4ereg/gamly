@@ -7,8 +7,7 @@ import { useMemo } from 'react';
 const Products = ({prods, prodsAmount}) => {
 
  
-console.log(prods);
-
+ 
   let itemElement = useMemo(() =>
     prods.map((product, index) => <ProductCard product={product}
   key={index} />), [prods]

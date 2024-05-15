@@ -17,9 +17,9 @@ const Selector = ({ isChecked, setIsChecked, setShowAll, showAll, filterValue, o
         option.label.toLowerCase().startsWith(filterValue.toLowerCase())
     );
 
-    const handleSelectAll = () => {
-        setIsChecked(options.map(option => option.value));
-    }
+    // const handleSelectAll = () => {
+    //     setIsChecked(options.map(option => option.value));
+    // }
 
     const handleCheckboxChange = (value) => {
 
@@ -85,9 +85,9 @@ const Selector = ({ isChecked, setIsChecked, setShowAll, showAll, filterValue, o
     return (
 
         <div className={`${s.selector} ${showAll ? s.shownSelector : ''}`}>
-            {showAll ?
+            {/* {showAll ?
                 <TextButtonC1 text={'Выбрать все'} onClick={handleSelectAll} />
-                : null}
+                : null} */}
             <ul onTouchStart={handleTouchStart} ref={listRef}>
                 {selectorElement}
             </ul>
