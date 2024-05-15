@@ -1,3 +1,40 @@
+.notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 434px;
+    flex-direction: column;
+    gap: 16px;
+
+    span {
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 28.8px */
+letter-spacing: 0.24px;
+    }
+
+    .notfound_button {
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 16.8px */
+letter-spacing: 0.42px;
+display: flex;
+padding: 12px 20px;
+align-items: center;
+gap: 4px;
+border-radius: 40px;
+background: var(--dark-gray);
+cursor: pointer;
+&:hover {
+   
+    background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+}
+    }
+}
+
 h1 {
     color: var(--white);
     font-size: 64px;
@@ -211,7 +248,7 @@ h1 {
                 top: 0;
                 right: 0; // ширина скрытого элемента
                 height: 100%;
-                width: 40px; // ширина скрытого элемента
+                width: 30px; // ширина скрытого элемента
                 background: linear-gradient(270deg, #14111A 0%, rgba(20, 17, 26, 0.00) 100%);
                 z-index: 1;
             }
@@ -222,7 +259,7 @@ h1 {
                 top: 0;
                 left: 0; // ширина скрытого элемента
                 height: 100%;
-                width: 40px; // ширина скрытого элемента
+                width: 30px; // ширина скрытого элемента
                 background: linear-gradient(90deg, #14111A 0%, rgba(20, 17, 26, 0.00) 100%);
                 z-index: 1;
             }

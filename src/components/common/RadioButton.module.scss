@@ -1,0 +1,61 @@
+.radiobutton {
+
+
+    input {
+        display: none;
+
+
+    }
+
+    label {
+        cursor: pointer;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        &:hover .check:not(.checked) {
+            border: 1px solid var(--gray-40);
+            transition: 0.2s ease-out;
+        }
+
+    }
+
+}
+
+.check {
+    width: 41px;
+    height: 24px;
+    border-radius: 40px;
+    border: 1px var(--dark-gray) solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 0 2px;
+    transition: 0.2s ease-out;
+
+    .inner {
+        width: 20px;
+        height: 20px;
+        background-color: var(--white);
+        border-radius: 50%;
+        transform: translateX(0%);
+        transition: 0.2s ease-out;
+    }
+
+}
+
+.checked {
+    background-color: var(--accent-purple);
+    border: 1px var(--accent-purple) solid;
+    transition: 0.2s ease-out;
+    .inner {
+        transform: translateX(17px);
+        transition: 0.2s ease-out;
+    }
+
+}
+
+// .check.checked:hover {
+ 
+// }

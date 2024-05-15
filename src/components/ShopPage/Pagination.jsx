@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import s from './ShopPage.module.scss';
 
-const Pagination = ({ portionSize = 10, totalItems = 200, pageSize = 12, }) => {
+const Pagination = ({ portionSize = 10, prodsAmount = 200, pageSize = 12, }) => {
 
-  let pagesCount = Math.ceil(totalItems / pageSize);
+  let pagesCount = Math.ceil(prodsAmount / pageSize);
 
   const [portionNumber, setPortionNumber] = useState(1);
 
@@ -40,7 +40,7 @@ const Pagination = ({ portionSize = 10, totalItems = 200, pageSize = 12, }) => {
               onPageChange(p)
             }}>{p} </div>
         );
-      } else if (p === currentPage - 2 || (window.innerWidth < 1024 ? p===currentPage + 2 : p===currentPage +3)  ) {
+      } else if (p === currentPage - 2 || (window.innerWidth < 1024 ? p === currentPage + 2 : p === currentPage + 3)) {
         return <div className={s.pageEmpty} key={p}>... </div>;
       } else {
         return null;

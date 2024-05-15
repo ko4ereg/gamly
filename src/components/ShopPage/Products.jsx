@@ -93,7 +93,7 @@ const Products = (props) => {
       <div className={s.products}>
         {itemElement}
       </div>
-      <Pagination />
+      <Pagination prodsAmount={props.prodsAmount} />
     </div>
 
 

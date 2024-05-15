@@ -1,4 +1,9 @@
 .app-wrapper {
   background: var(--Background-far, #14111A);
+display: flex;
+flex-direction: column;
+}
 
+.content-wrapper {
+  flex: 1 0 auto;
 }

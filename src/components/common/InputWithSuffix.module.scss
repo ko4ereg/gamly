@@ -1,0 +1,75 @@
+.inputWrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    /* 22.4px */
+    letter-spacing: inherit;
+
+}
+
+.input {
+    color: var(--white);
+    text-overflow: ellipsis;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    /* 22.4px */
+    letter-spacing: inherit;
+    border: none;
+    outline: none;
+    width: 100%;
+    outline: none;
+}
+
+.inputFakeValueWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    user-select: none;
+    pointer-events: none;
+
+
+    text-overflow: ellipsis;
+
+    border: none;
+    outline: none;
+
+    span {
+        color: var(--white);
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        /* 22.4px */
+        letter-spacing: inherit;
+    }
+
+}
+
+.inputFakeValue {
+    overflow: hidden;
+}
+
+.suffix {
+    visibility: visible;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+
+    text-overflow: ellipsis;
+
+    border: none;
+    outline: none;
+}

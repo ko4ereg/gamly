@@ -11,12 +11,15 @@ function App() {
     <BrowserRouter>
       <div className='app-wrapper'>
         <HeaderContainer />
+        <div className='content-wrapper'>
         <Routes>
           <Route path="" element={<MainPage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/subscribe" element={<SubscribePage />} />
         </Routes>
-      </div>
+        </div>
+        </div>
+      
       {/*         
         <div className='app-wrapper'>
         {pathName !== '/login' && pathName !== '/registrate' && pathName !== '/resetpassword'   ?  <HeaderContainer /> : null}

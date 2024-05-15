@@ -1,0 +1,45 @@
+.checkbox {
+
+
+    input {
+        display: none;
+
+
+    }
+
+    label {
+        cursor: pointer;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        &:hover .check:not(.checked) {
+            border: 1px solid var(--gray-40);
+            transition: 0.2s ease-out;
+        }
+
+    }
+
+}
+
+.check {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px var(--gray-10) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-out;
+
+}
+
+.checked {
+    background-color: var(--accent-purple);
+
+
+}
+
+.check.checked:hover {
+    border: none;
+}

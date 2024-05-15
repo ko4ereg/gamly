@@ -67,7 +67,18 @@ const TypesSlider = () => {
         document.addEventListener('touchend', onTouchEnd);
     };
 
+    const [width, setWidth] = useState(0)
+
+    const handleWindowResize = () => {
+      setWidth(window.innerWidth);
+   
+    }
+
     useEffect(() => {
+      
+        handleWindowResize();
+        window.addEventListener('resize', handleWindowResize);
+
         if (sliderRef.current) {
             const checkScroll = () => {
                 const slider = sliderRef.current;
@@ -100,11 +111,14 @@ const TypesSlider = () => {
                     sliderRef.current.removeEventListener('scroll', checkScroll);
                     sliderRef.current.removeEventListener('touchstart', handleTouchStart);
                 }
+                window.removeEventListener('resize', handleWindowResize);
+          
             };
 
         }
-    }, []);
+    }, [width]);
 
+   
 
     const types = [
         'Наушники',
@@ -114,10 +128,7 @@ const TypesSlider = () => {
         'Столы',
         'Мониторы',
         'Прочее',
-        'Кресла',
-        'Столы',
-        'Мониторы',
-        'Прочее',
+      
       
        
         
