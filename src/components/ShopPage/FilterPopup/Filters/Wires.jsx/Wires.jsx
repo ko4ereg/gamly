@@ -6,7 +6,7 @@ import TextButtonC2 from '../../../../common/TextButtonC2/TextButtonC2';
 
 
 const Wired = (props) => {
-
+console.log(props.isChecked.length);
     const handleCheckboxChange = (value) => {
 
         if (props.isChecked.includes(value)) {
@@ -20,12 +20,14 @@ const Wired = (props) => {
     }
 
     const handleFilterReset = () => {
-        props.setIsChecked('');
+        props.setIsChecked([]);
     }
 
     return (
         <div className={g.filter}>
-            <div className={g.filterHeading}><h4>Подключение</h4> <TextButtonC2 onClick={handleFilterReset} text={'Сбросить'} /></div>
+            <div className={g.filterHeading}>
+                <h4>Подключение</h4>
+                 <TextButtonC2 hidden={props.isChecked.length === 0} onClick={handleFilterReset} text={'Сбросить'} /></div>
 
             <div className={s.container}>
                 <Checkbox isChecked={props.isChecked.includes('wires')} setIsChecked={() => handleCheckboxChange('wires')} value={'wires'}>{'Проводные'}</Checkbox>

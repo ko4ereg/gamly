@@ -8,30 +8,33 @@
     gap: 16px;
 
     span {
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 120%; /* 28.8px */
-letter-spacing: 0.24px;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        /* 28.8px */
+        letter-spacing: 0.24px;
     }
 
     .notfound_button {
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 120%; /* 16.8px */
-letter-spacing: 0.42px;
-display: flex;
-padding: 12px 20px;
-align-items: center;
-gap: 4px;
-border-radius: 40px;
-background: var(--dark-gray);
-cursor: pointer;
-&:hover {
-   
-    background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
-}
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 0.42px;
+        display: flex;
+        padding: 12px 20px;
+        align-items: center;
+        gap: 4px;
+        border-radius: 40px;
+        background: var(--dark-gray);
+        cursor: pointer;
+
+        &:hover {
+
+            background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+        }
     }
 }
 
@@ -470,10 +473,14 @@ h1 {
 
     .product_title {
         margin-bottom: 12px;
+
+        display: flex;
+        height: auto;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         cursor: pointer;
+
     }
 
     .product_img {
@@ -865,18 +872,19 @@ h1 {
             h2 {
                 max-width: none;
             }
-    
-        h2 {
+
+            h2 {
 
 
-            font-size: 16px;
-            line-height: 120%;
-            /* 19.2px */
-            letter-spacing: 0.16px;
+                font-size: 16px;
+                line-height: 120%;
+                /* 19.2px */
+                letter-spacing: 0.16px;
+            }
         }
+
     }
- 
-    }
+
     .item {
         // width: 199px;
         // height: 97px;
@@ -1075,7 +1083,8 @@ h1 {
             h2 {
                 max-width: none;
             }
-        }    
+        }
+
         h2 {
 
             font-size: 16px;
@@ -1352,7 +1361,7 @@ h1 {
 
 
         .product_title {
-            height: 38px;
+            min-height: 38px;
             font-size: 16px;
             line-height: 110%;
             /* 17.6px */
@@ -1365,6 +1374,12 @@ h1 {
         .product_discont {
             width: 41px;
             height: 18px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 14.4px */
+            letter-spacing: 0.36px;
         }
 
         .product_img {
@@ -1573,8 +1588,8 @@ h1 {
             line-height: 120%;
             /* 16.8px */
             letter-spacing: 0.14px;
-            height: 38px;
-            overflow: visible;
+
+
         }
 
         .product_img {
@@ -1733,7 +1748,7 @@ h1 {
 
         .product_title {
 
-            align-self: stretch;
+
             white-space: wrap;
         }
 
