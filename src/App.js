@@ -7,13 +7,6 @@ import ShopPage from './pages/ShopPage';
 import SubscribePage from './pages/SubscribePage';
 
 function App() {
-
-  document.addEventListener('gesturestart', function(e){
-    e.preventDefault();
-    e.stopImmediatePropagation();
-  }, {passive:false});
-  
-
   return (
     <BrowserRouter>
       <div className='app-wrapper'>

@@ -357,7 +357,7 @@ h1 {
                     top: -22px;
                     left: 50%;
                     transform: translateX(-50%);
-                    
+                    transition: 0s;
                 }
 
                 li {
@@ -481,14 +481,14 @@ h1 {
 
     .product_title {
         margin-bottom: 12px;
-        flex: 1 1 100%;
-        // display: flex;
+
+        display: flex;
         height: auto;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         cursor: pointer;
-     
+
     }
 
     .product_img {
@@ -1375,7 +1375,7 @@ h1 {
 
 
         .product_title {
-     
+            min-height: 38px;
             font-size: 16px;
             line-height: 110%;
             /* 17.6px */
