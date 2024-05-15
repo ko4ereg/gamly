@@ -9,15 +9,10 @@ import NotFound from './NotFound';
 import FilterPopup from './FilterPopup/FilterPopup';
 
 
-import pic1 from './../../assets/shop/mock/1.png';
-
-import pic2 from './../../assets/shop/mock/2.png';
-
-import pic3 from './../../assets/shop/mock/3.png';
-import pic4 from './../../assets/shop/mock/4.png';
+import { prods } from '../mock/products';
 
 
-const Catalog = (props) => {
+const Catalog = ({setActualProducts, actualProducts, ...props}) => {
   const [filterActive, setFilterActive] = useState(false);
   const [sortsOpen, setSortsOpen] = useState(false);
   const sortsRef = useRef(null);
@@ -43,150 +38,18 @@ const Catalog = (props) => {
     };
   }, []);
 
+  // const [actualProducts, setActualProducts] = useState(prods);
 
-
-  const prods = [
-    {
-      title: 'Игровые наушники Logitech PRO X1',
-      img: [pic1, pic2, pic3, pic4, pic2, pic3, pic4],
-      price: '12 987 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X2',
-      img: [pic1, pic2, pic3, pic4],
-      price: '31 882 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X3',
-      img: [pic1, pic2, pic3, pic4],
-      price: '4 409 ₽',
-      newPrice: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X4',
-      img: [pic1, pic2, pic3, pic4],
-      price: '3 809 ₽',
-      inShip: true,
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X5',
-      img: [pic1],
-      price: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X6',
-      img: [pic1, pic2, pic3, pic4],
-      price: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X7',
-      img: [pic3],
-      price: '4 409 ₽',
-      newPrice: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X8',
-      img: [pic1, pic2, pic3, pic4],
-      price: '3 809 ₽',
-      inShip: true,
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X9',
-      img: [pic1],
-      price: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X10',
-      img: [pic2],
-      price: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X11',
-      img: [pic1, pic2, pic3, pic4],
-      price: '4 409 ₽',
-      newPrice: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X12',
-      img: [pic4],
-      price: '3 809 ₽',
-      inShip: true,
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X1',
-      img: [pic1, pic2, pic3, pic4, pic2, pic3, pic4],
-      price: '12 987 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X2',
-      img: [pic1, pic2, pic3, pic4],
-      price: '31 882 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X3',
-      img: [pic1, pic2, pic3, pic4],
-      price: '4 409 ₽',
-      newPrice: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X4',
-      img: [pic1, pic2, pic3, pic4],
-      price: '3 809 ₽',
-      inShip: true,
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X5',
-      img: [pic1],
-      price: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X6',
-      img: [pic1, pic2, pic3, pic4],
-      price: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X7',
-      img: [pic3],
-      price: '4 409 ₽',
-      newPrice: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X8',
-      img: [pic1, pic2, pic3, pic4],
-      price: '3 809 ₽',
-      inShip: true,
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X9',
-      img: [pic1],
-      price: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X10',
-      img: [pic2],
-      price: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X11',
-      img: [pic1, pic2, pic3, pic4],
-      price: '4 409 ₽',
-      newPrice: '3 809 ₽'
-    },
-    {
-      title: 'Игровые наушники Logitech PRO X12',
-      img: [pic4],
-      price: '3 809 ₽',
-      inShip: true,
-    },
-  ]
-
+   
+const [filtered, setFiltered] = useState([]);
+ 
 
   return (
     <div className={s.catalog}>
       <h1>Игровая периферия</h1>
 
       <div className={s.filters_panel}>
-        <TypesSlider />
+        <TypesSlider filtered={filtered} setFiltered={setFiltered} actualProducts={actualProducts} setActualProducts={setActualProducts}   />
 
         <div className={s.filters_sorts}>
           <div className={s.sorts} ref={sortsRef}>
@@ -198,9 +61,9 @@ const Catalog = (props) => {
           <div className={s.button} onClick={handleSetFilterActive}><img src={burger} alt="" />Фильтры</div>
         </div>
       </div>
-      {prods.length > 0 ? <Products prodsAmount={prods.length} /> : <NotFound />}
+      {actualProducts.length > 0 ? <Products prods={actualProducts} prodsAmount={actualProducts.length} /> : <NotFound setActualProducts={setActualProducts} />}
 
-      <FilterPopup prodsAmount={prods.length} filterActive={filterActive} setFilterActive={setFilterActive} />
+      <FilterPopup prodsAmount={actualProducts.length} filterActive={filterActive} setFilterActive={setFilterActive} />
     </div>
   )
 }

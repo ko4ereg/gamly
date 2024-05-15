@@ -1,6 +1,8 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import s from './ShopPage.module.scss';
 import Carousel from './Carousel/Carousel';
+ 
+import { formatValue } from '../../utils/formatValue';
 
 
 export const ProductCard = (props) => {
@@ -37,12 +39,14 @@ export const ProductCard = (props) => {
 
   useEffect(() => {
     setCurrentWidth(handleRef.current.offsetWidth);
-  }, [inCart, width]);
+  }, [inCart, width, props.product]);
 
-
+ 
+  const newPrice = props.product.discount ? props.product.price * (1 - props.product.discount / 100) : props.product.price;
+  const actualPrice = formatValue(newPrice.toString()) + ' ₽';
 
   return (<div className={s.product_card}>
-    {props.product.newPrice ? <div className={s.product_discont}>-30%</div> : null}
+    {props.product.discount ? <div className={s.product_discont}>-{(props.product.discount).toString()}%</div> : null}
     <div className={s.product_img} >
       <Carousel img={props.product.img} />
     </div>
@@ -50,10 +54,10 @@ export const ProductCard = (props) => {
 
     <div className={s.product_button_container} >
 
-      <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `}    style={{ width: currentWidth + ( window.innerWidth <= 480 ? 54 : 56) }} >
+      <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `} style={{ width: currentWidth + (window.innerWidth <= 480 ? 54 : 56) }} >
         {inCart
           ? (<div className={s.product_button_price} ref={handleRef}  > <span>В корзине</span> </div>)
-          : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.newPrice ? <span>{props.product.newPrice}</span> : null} {props.product.newPrice ? (<span className={s.oldprice}>{props.product.price}</span>) : (<span>{props.product.price}</span>)} </div>)}
+          : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.discount ? <span>{actualPrice}</span> : null} {props.product.discount ? (<span className={s.oldprice}>{formatValue(props.product.price.toString()) + ' ₽'}</span>) : (<span>{actualPrice}</span>)} </div>)}
 
         <div className={`${s.plus} ${inCart ? s.minus : ''} `}>
 
@@ -65,10 +69,10 @@ export const ProductCard = (props) => {
         </div>
 
       </div>
-{inCart ?  (props.product.newPrice ?
-          <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{props.product.newPrice}</div> :
-          <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{props.product.price}</div>) : null}
- 
+      {inCart ? (props.product.newPrice ?
+        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{props.product.newPrice}</div> :
+        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{props.product.price}</div>) : null}
+
 
     </div>
   </div>
