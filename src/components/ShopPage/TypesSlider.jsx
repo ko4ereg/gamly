@@ -1,37 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
 import s from './ShopPage.module.scss';
-import { prods } from '../mock/products';
 
 
 
 
-const TypesSlider = ({ actualProducts, setActualProducts, setFiltered, filtered }) => {
+const TypesSlider = () => {
 
     const [selectedTypes, setSelectedTypes] = useState([]);
-
-
+   
+   
     const handleItemClick = (index) => {
-        if (actualProducts.length == 0) return setActualProducts(prods);
         if (selectedTypes.includes(index)) {
             // Если категория уже выбрана, удаляем ее из списка выбранных
             setSelectedTypes(selectedTypes.filter(item => item !== index));
-            setActualProducts(actualProducts.filter(product => product.type !== index));
- 
         } else {
             // Если категория не выбрана, добавляем ее в список выбранных
             setSelectedTypes([...selectedTypes, index]);
-            const filteredProducts = prods.filter(product => product.type === index);
-            console.log(filteredProducts.length);
-            if (filteredProducts.length === 0) {
-                console.log('pusto');
-                return setActualProducts([]);
-            }
-            if (actualProducts.length === prods.length) {
-                return setActualProducts([...filteredProducts]);
-            } else {
-                setActualProducts([...actualProducts, ...filteredProducts]);
-            }
-
         }
     }
 
@@ -45,7 +29,6 @@ const TypesSlider = ({ actualProducts, setActualProducts, setFiltered, filtered 
 
     const handleMouseDown = (e) => {
         const startX = e.pageX - sliderRef.current.offsetLeft;
-
         const scrollLeft = sliderRef.current.scrollLeft;
 
         const onMouseMove = (e) => {
@@ -87,12 +70,12 @@ const TypesSlider = ({ actualProducts, setActualProducts, setFiltered, filtered 
     const [width, setWidth] = useState(0)
 
     const handleWindowResize = () => {
-        setWidth(window.innerWidth);
-
+      setWidth(window.innerWidth);
+   
     }
 
     useEffect(() => {
-
+      
         handleWindowResize();
         window.addEventListener('resize', handleWindowResize);
 
@@ -101,20 +84,20 @@ const TypesSlider = ({ actualProducts, setActualProducts, setFiltered, filtered 
                 const slider = sliderRef.current;
                 const backgroundRight = backgroundRightRef.current;
                 const backgroundLeft = backgroundLeftRef.current;
-
+                
                 if (slider.scrollWidth <= slider.clientWidth) {
                     backgroundRight.style.display = 'none';
                 } else {
                     backgroundRight.style.display = 'block';
                 }
-
-                if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+    
+                if ( slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
                     backgroundRight.style.display = 'none';
                 } else {
                     backgroundRight.style.display = 'block';
                 }
 
-                if (slider.scrollLeft === 0) {
+                if (  slider.scrollLeft === 0) {
                     backgroundLeft.style.display = 'none';
                 } else {
                     backgroundLeft.style.display = 'block';
@@ -129,22 +112,26 @@ const TypesSlider = ({ actualProducts, setActualProducts, setFiltered, filtered 
                     sliderRef.current.removeEventListener('touchstart', handleTouchStart);
                 }
                 window.removeEventListener('resize', handleWindowResize);
-
+          
             };
 
         }
     }, [width]);
 
-
+   
 
     const types = [
-        { value: 'headphones', label: 'Наушники' },
-        { value: 'keyboard', label: 'Клавиатуры' },
-        { value: 'mouse', label: 'Мыши' },
-        { value: 'chairs', label: 'Кресла' },
-        { value: 'table', label: 'Столы' },
-        { value: 'other', label: 'Прочее' },
-
+        'Наушники',
+        'Клавиатуры',
+        'Мыши',
+        'Кресла',
+        'Столы',
+        'Мониторы',
+        'Прочее',
+      
+      
+       
+        
     ]
 
     return (
@@ -155,13 +142,13 @@ const TypesSlider = ({ actualProducts, setActualProducts, setFiltered, filtered 
                 onTouchStart={handleTouchStart}
 
                 onMouseDown={handleMouseDown} className={s.filters_types}>
-
+                
                 {
                     types.map((type, index) => (
-                        <div key={index} className={`${s.filters_types_item} ${selectedTypes.includes(type.value) ? s.selected : ''}`} onClick={() => handleItemClick(type.value)}>{type.label}</div>
+                        <div key={index} className={`${s.filters_types_item} ${selectedTypes.includes(index) ? s.selected : ''}`} onClick={() => handleItemClick(index)}>{type}</div>
                     ))
                 }
-
+                
             </div>
         </div>
     );

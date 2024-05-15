@@ -6,7 +6,7 @@ import TextButtonC2 from '../../../../common/TextButtonC2/TextButtonC2';
 
 
 const Wired = (props) => {
- 
+console.log(props.isChecked.length);
     const handleCheckboxChange = (value) => {
 
         if (props.isChecked.includes(value)) {
