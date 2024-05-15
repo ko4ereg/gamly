@@ -27,10 +27,10 @@ export const ProductCard = (props) => {
       setCurrentWidth(handleRef.current.offsetWidth);
     }, 100);
 
-    handleWindowResize();
-    window.addEventListener('resize', handleWindowResize);
+    // handleWindowResize();
+    // window.addEventListener('resize', handleWindowResize);
     return () => {
-      window.removeEventListener('resize', handleWindowResize);
+      // window.removeEventListener('resize', handleWindowResize);
       clearTimeout(timer);
     }
 
@@ -69,9 +69,9 @@ export const ProductCard = (props) => {
         </div>
 
       </div>
-      {inCart ?
-        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{actualPrice}</div>
-        : null}
+      {inCart ? (props.product.newPrice ?
+        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{actualPrice}</div> :
+        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{formatValue(props.product.price.toString()) + ' ₽'}</div>) : null}
 
 
     </div>
