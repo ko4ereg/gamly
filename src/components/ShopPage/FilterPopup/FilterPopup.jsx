@@ -41,26 +41,27 @@ const FilterPopup = ({ filterActive, setFilterActive, prodsAmount }) => {
   const [toPrice, setToPrice] = useState(null);
 
 
+  console.log(fromPrice);
+
+
   const [isChecked, setIsChecked] = useState([]);
 
   const [connectToPhone, setConnectToPhone] = useState(false);
 
-  const [wires, setWires] = useState([]);
+  const [wires, setWires] = useState('');
 
   const handleReset = () => {
+    console.log(1);
     setIsChecked([]);
-    setWires([]);
+    setWires('');
     setConnectToPhone(false);
-    setFromPrice(null);
-    setToPrice(null);
+    setFromPrice('');
+    setToPrice('');
   }
 
 
   const noun = getNoun(prodsAmount, 'товар', 'товара', 'товаров');
-  const amount = prodsAmount + ' ' + noun;
-
-  const disabled = !fromPrice && !toPrice && !wires.length && !isChecked.length && !connectToPhone;
-
+const amount = prodsAmount + ' ' + noun;
   return (
     <div className={`${s.modal_container} ${filterActive ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
       <div className={s.filter_container} >
@@ -91,7 +92,7 @@ const FilterPopup = ({ filterActive, setFilterActive, prodsAmount }) => {
         <div className={s.buttons}>
 
           <ButtonPrimary text={'Применить'} />
-          <ButtonSecondary onClick={handleReset} disabled={disabled} text={'Сбросить'} />
+          <ButtonSecondary onClick={handleReset} text={'Сбросить'} />
 
         </div>
       </div>

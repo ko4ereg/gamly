@@ -10,8 +10,6 @@ const InputWithSuffix = ({ value, suffix, placeholder, ...props }) => {
     const suffixRef = useRef();
 
 
-
-
     useLayoutEffect(() => {
         const suffixWidth = suffixRef.current?.offsetWidth;
         setInputRightPadding(
@@ -25,8 +23,7 @@ const InputWithSuffix = ({ value, suffix, placeholder, ...props }) => {
         value = '';
     }
 
-   
-    
+    console.log(value);
     return (
         <div className={s.inputWrapper}>
             <input

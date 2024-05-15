@@ -50,7 +50,7 @@ export const ProductCard = (props) => {
     <div className={s.product_img} >
       <Carousel img={props.product.img} />
     </div>
-    <div className={s.product_title}> {props.product.title} </div>
+    <div className={s.product_title}><h3>{props.product.title}</h3></div>
 
     <div className={s.product_button_container} >
 
