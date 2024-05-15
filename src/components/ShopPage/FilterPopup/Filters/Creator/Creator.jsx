@@ -38,11 +38,11 @@ const Creator = (props) => {
 
 
     return (
-        <div className={s.filter} style={{gap: showAll ? '16px' : '2px' }}>
+        <div className={s.filter}>
             <div className={s.filterHeading}><h4>Производитель</h4> <TextButtonC2 hidden={props.isChecked.length === 0} onClick={handleFilterReset} text={'Сбросить'} /></div>
-            <div className={s.container} >
+            <div className={s.container}>
 
-                {options.length > 5 ? <div className={`${s.containerHidden} ${showAll ? s.containerNotHidden : ''}`}  > <SmallSearchbar handleSelectAll={handleSelectAll} placeholder={'Найти'} setFilterValue={setFilterValue} showAll={showAll} />
+                {options.length > 5 ?<div className={`${s.containerHidden} ${showAll ? s.containerNotHidden : ''}`}> <SmallSearchbar handleSelectAll={handleSelectAll} placeholder={'Найти'} setFilterValue={setFilterValue} showAll={showAll} />
                 {showAll ?
                 <TextButtonC1  text={'Выбрать все'} onClick={handleSelectAll} />
                 : null} </div>  : null}
