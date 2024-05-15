@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HeaderContainer from './components/Header/HeaderContainer';
 import MainPage from './pages/MainPage';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import ShopPage from './pages/ShopPage';
 import SubscribePage from './pages/SubscribePage';
 
@@ -13,6 +13,19 @@ function App() {
     e.stopImmediatePropagation();
   }, {passive:false});
   
+  const preventZoom = (e) => {
+    if (e.touches.length > 1) {
+      e.preventDefault();
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('touchstart', preventZoom, { passive: false });
+
+    return () => {
+      document.removeEventListener('touchstart', preventZoom);
+    };
+  }, []);
 
   return (
     <BrowserRouter>
