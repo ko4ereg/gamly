@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import s from './ShopPage.module.scss';
-
+import { prods } from '../mock/products';
 
 
 
