@@ -3,7 +3,7 @@ import s from './SmallSearchbar.module.scss';
 
 
 
-const SmallSearchbar = ({showAll, filterValue, setFilterValue, placeholder, handleSelectAll}) => {
+const SmallSearchbar = ({showAll, filterValue, setFilterValue, placeholder}) => {
 
   const [isActive, setIsActive] = useState(false);
 

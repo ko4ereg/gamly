@@ -12,7 +12,7 @@ import FilterPopup from './FilterPopup/FilterPopup';
 import { prods } from '../mock/products';
 
 
-const Catalog = ({ setActualProducts, actualProducts, ...props }) => {
+const Catalog = ({setActualProducts, actualProducts, ...props}) => {
   const [filterActive, setFilterActive] = useState(false);
   const [sortsOpen, setSortsOpen] = useState(false);
   const sortsRef = useRef(null);
@@ -40,21 +40,21 @@ const Catalog = ({ setActualProducts, actualProducts, ...props }) => {
 
   // const [actualProducts, setActualProducts] = useState(prods);
 
-
-  const [filtered, setFiltered] = useState([]);
-
+   
+const [filtered, setFiltered] = useState([]);
+ 
 
   return (
     <div className={s.catalog}>
       <h1>Игровая периферия</h1>
 
       <div className={s.filters_panel}>
-        <TypesSlider filtered={filtered} setFiltered={setFiltered} actualProducts={actualProducts} setActualProducts={setActualProducts} />
+        <TypesSlider filtered={filtered} setFiltered={setFiltered} actualProducts={actualProducts} setActualProducts={setActualProducts}   />
 
         <div className={s.filters_sorts}>
           <div className={s.sorts} ref={sortsRef}>
             <div className={s.sort}><span onClick={() => handleClick()}>Сортировка:</span></div>
-            <div className={s.sort} onClick={() => handleClick()}>{currentSort}  {sortsOpen ? <img onClick={() => handleClick()} style={{ transform: 'rotateX(180deg)  translateY(-3px)', height: '19px', transformOrigin: 'center ' }} src={chevrondown} alt="" /> : <img src={chevrondown} style={{ height: '19px', transformOrigin: 'center  ' }} alt="" />}</div>
+            <div className={s.sort} onClick={() => handleClick()}>{currentSort}  {sortsOpen ? <img onClick={() => handleClick()} style={{ transform: 'rotateX(180deg)  translateY(-3px)', transition: '0.3s ', height: '19px', transformOrigin: 'center ' }} src={chevrondown} alt="" /> : <img src={chevrondown} style={{ transition: '0.3s ', height: '19px', transformOrigin: 'center  ' }} alt="" />}</div>
 
             {sortsOpen && <SortsBy currentSort={currentSort} setSortsOpen={setSortsOpen} setSort={setSort} />}
           </div>

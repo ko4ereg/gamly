@@ -5,21 +5,32 @@ import { prods } from '../mock/products';
 
 
 
-const TypesSlider = ({ }) => {
+const TypesSlider = ({ actualProducts, setActualProducts, setFiltered, filtered }) => {
 
     const [selectedTypes, setSelectedTypes] = useState([]);
 
 
     const handleItemClick = (index) => {
-
+        if (actualProducts.length == 0) return setActualProducts(prods);
         if (selectedTypes.includes(index)) {
             // Если категория уже выбрана, удаляем ее из списка выбранных
             setSelectedTypes(selectedTypes.filter(item => item !== index));
-
-
+            setActualProducts(actualProducts.filter(product => product.type !== index));
+ 
         } else {
             // Если категория не выбрана, добавляем ее в список выбранных
             setSelectedTypes([...selectedTypes, index]);
+            const filteredProducts = prods.filter(product => product.type === index);
+            console.log(filteredProducts.length);
+            if (filteredProducts.length === 0) {
+                console.log('pusto');
+                return setActualProducts([]);
+            }
+            if (actualProducts.length === prods.length) {
+                return setActualProducts([...filteredProducts]);
+            } else {
+                setActualProducts([...actualProducts, ...filteredProducts]);
+            }
 
         }
     }

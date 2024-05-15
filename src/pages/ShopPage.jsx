@@ -8,11 +8,15 @@ import s from './ShopPage.module.css';
 const ShopPage = (props) => {
   
     const [actualProducts, setActualProducts] = useState(prods);
-    
+   
+    // if (actualProducts.length === 0) {
+    //     setActualProducts(prods);
+    // }
+
     return (
         <div className={g.container + ' ' + s.container}>
             <Search setActualProducts={setActualProducts} actualProducts={actualProducts} />
-            <Categories  />
+            <Categories setActualProducts={setActualProducts} actualProducts={actualProducts} />
             <Catalog setActualProducts={setActualProducts} actualProducts={actualProducts} />
         </div>)
 }

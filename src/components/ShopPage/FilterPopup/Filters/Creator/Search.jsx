@@ -25,7 +25,6 @@ const Search = ({showAll, filterValue, setFilterValue}) => {
       <input placeholder='Logitech' type="text" value={filterValue} onChange={(e) => handleChange(e)} />
 
     </div>
-    
   )
 }
 

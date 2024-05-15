@@ -70,8 +70,8 @@ export const ProductCard = (props) => {
 
       </div>
       {inCart ? (props.product.newPrice ?
-        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{actualPrice}</div> :
-        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{formatValue(props.product.price.toString()) + ' ₽'}</div>) : null}
+        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{props.product.newPrice}</div> :
+        <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{props.product.price}</div>) : null}
 
 
     </div>
