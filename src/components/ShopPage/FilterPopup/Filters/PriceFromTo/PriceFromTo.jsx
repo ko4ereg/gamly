@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import { formatValue } from '../../../../../utils/formatValue';
 import InputWithSuffix from '../../../../common/InputWithSuffix';
 import TextButtonC2 from '../../../../common/TextButtonC2/TextButtonC2';
@@ -22,14 +23,18 @@ const PriceFromTo = ({ fromPrice, toPrice, setToPrice, setFromPrice }) => {
     const handleChangeToInput = (e) => {
         let formattedValue = formatValue(e.target.value);
         setToPrice(formattedValue);
+      
     }
+ 
+    let hiddenFrom = (fromPrice === null || fromPrice === '') && (toPrice === null || toPrice === '');
+   
 
     return (
 
         <div className={g.filter}>
             <div className={g.filterHeading}>
                 <h4>Подключение</h4>
-                <TextButtonC2 hidden={fromPrice == null || toPrice == null} onClick={handleFilterReset} text={'Сбросить'} /></div>
+                <TextButtonC2 hidden={hiddenFrom}  onClick={handleFilterReset} text={'Сбросить'} /></div>
             <div className={s.pricing}>
                 <div className={s.fromTo}>от   <InputWithSuffix placeholder={'0'}
                     value={fromPrice}
