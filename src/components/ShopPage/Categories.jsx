@@ -24,19 +24,19 @@ const Categories = (props) => {
             <div className={s.backhover} />
          </div>
          <div className={`${s.item} ${selectedItem === 2 ? s.selected : ''}`} onClick={() => handleItemClick(2)} >
-            <h2>Скины</h2>
+            <h2>Дискорд и оформление</h2>
             <span>188 товаров</span>
             <img src={categoryPic2} alt="" />
             <div className={s.backhover} />
          </div>
          <div className={`${s.item} ${selectedItem === 3 ? s.selected : ''}`} onClick={() => handleItemClick(3)} >
-            <h2>Цифровые подарки</h2>
+            <h2>Цифровые подарки и игры</h2>
             <span>188 товаров</span>
             <img src={categoryPic3} alt="" />
             <div className={s.backhover} />
          </div>
          <div className={`${s.item} ${selectedItem === 4 ? s.selected : ''}`} onClick={() => handleItemClick(4)} >
-            <h2>Компьютеры и подобное</h2>
+            <h2>Компьютеры и комплектующие</h2>
             <span>188 товаров</span>
             <img src={categoryPic4} alt="" />
             <div className={s.backhover} />
