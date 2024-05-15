@@ -1089,6 +1089,11 @@ letter-spacing: 0.16px;
 }
 
 @media (max-width: 1023px) {
+    * {
+        &:focus {
+            outline: none;
+        }
+    }
     h1 {
         font-size: 32px;
         line-height: 140%;

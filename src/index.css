@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'VelaSans-GX';
   src: url(./fonts/VELASANS-GX.TTF) format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Coolvetica';
   src: url(./fonts/COOLVETICA\ RG.OTF) format('opentype');
+  font-display: swap;
 }
 
 :root {
