@@ -7,13 +7,13 @@ import g from './../Globalstyles.module.css';
 import s from './ShopPage.module.css';
 const ShopPage = (props) => {
   
-    const [actualProducts, setActualProducts] = useState(prods);
+  
     
     return (
         <div className={g.container + ' ' + s.container}>
-            <Search setActualProducts={setActualProducts} actualProducts={actualProducts} />
+            <Search   />
             <Categories  />
-            <Catalog setActualProducts={setActualProducts} actualProducts={actualProducts} />
+            <Catalog   />
         </div>)
 }
 

@@ -14,14 +14,6 @@ const Search = (props) => {
     }
     setText(e.target.value);
 
-    const filteredOptions = prods.filter(option =>
-      option.title.toLowerCase().includes(text.toLowerCase())
-    );
-    if (!e.target.value) {
-      props.setActualProducts(prods);
-    } else {
-      props.setActualProducts(filteredOptions);
-    }
   }
 
   return (
