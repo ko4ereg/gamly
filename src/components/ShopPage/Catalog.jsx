@@ -304,7 +304,7 @@ const prods = [
 
 ]
 
-const Catalog = ({ ...props }) => {
+const Catalog = (props) => {
   const [filterActive, setFilterActive] = useState(false);
   const [sortsOpen, setSortsOpen] = useState(false);
   const sortsRef = useRef(null);

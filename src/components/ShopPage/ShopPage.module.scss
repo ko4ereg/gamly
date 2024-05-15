@@ -116,6 +116,13 @@ h1 {
 
     }
 
+    .item:nth-child(3) {
+        h2 {
+            max-width: 60%;
+        }
+
+    }
+
     .selected {
         border: 1.5px var(--accent-color) solid;
         transition: 0.3s ease-out;
@@ -412,6 +419,12 @@ h1 {
             padding: 12px;
             border: 1.5px var(--gray-10) solid;
             border-radius: 8px;
+
+            &:hover {
+                border: 1.5px var(--gray-40) solid;
+                ;
+                transition: 0.2s ease-out;
+            }
         }
     }
 
@@ -465,6 +478,7 @@ h1 {
         z-index: 1;
 
         font-size: 14px;
+        padding: 2px 4px;
         font-weight: 600;
         line-height: 16.8px;
         letter-spacing: 0.01em;
@@ -473,7 +487,7 @@ h1 {
 
     .product_title {
         margin-bottom: 12px;
-
+        flex: 1 1 100%;
         display: flex;
         height: auto;
         overflow: hidden;
@@ -763,7 +777,18 @@ h1 {
 
     .categories {
 
-
+        .item:nth-child(4) {
+            h2 {
+                max-width: none;
+            }
+    
+        }
+        .item:nth-child(3) {
+            h2 {
+                max-width: 80%;
+            }
+    
+        }
         h2 {
             line-height: 21.6px;
             letter-spacing: 0.01em;
@@ -868,8 +893,14 @@ h1 {
 
 
     .categories {
+
+
         .item:nth-child(4) {
             h2 {
+                font-size: 16px;
+                line-height: 120%;
+                /* 19.2px */
+                letter-spacing: 0.16px;
                 max-width: none;
             }
 
@@ -881,6 +912,13 @@ h1 {
                 /* 19.2px */
                 letter-spacing: 0.16px;
             }
+            .item:nth-child(3) {
+                h2 {
+                    max-width: none;
+                }
+        
+            }
+    
         }
 
     }
@@ -1049,6 +1087,10 @@ h1 {
 }
 
 @media (max-width: 1023px) {
+
+    *:focus {
+        outline: none;
+    }
     h1 {
         font-size: 32px;
         line-height: 140%;
@@ -1343,6 +1385,12 @@ h1 {
 
 
             .button {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 120%;
+                /* 14.4px */
+                letter-spacing: 0.36px;
                 height: 100%;
             }
         }
@@ -1361,7 +1409,7 @@ h1 {
 
 
         .product_title {
-            min-height: 38px;
+      
             font-size: 16px;
             line-height: 110%;
             /* 17.6px */

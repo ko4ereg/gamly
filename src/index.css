@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'VelaSans-GX';
   src: url(./fonts/VELASANS-GX.TTF) format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Coolvetica';
   src: url(./fonts/COOLVETICA\ RG.OTF) format('opentype');
+  font-display: swap;
 }
 
 :root {
@@ -30,7 +32,7 @@
   box-sizing: border-box;
   font-family: "VelaSans-GX", sans-serif;
 background-color: transparent;
-  
+touch-action: manipulation;
 }
 
 

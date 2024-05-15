@@ -121,14 +121,12 @@ const TypesSlider = () => {
    
 
     const types = [
-        'Наушники',
-        'Клавиатуры',
-        'Мыши',
-        'Кресла',
-        'Столы',
-        'Мониторы',
-        'Прочее',
-      
+        { value: 'headphones', label: 'Наушники' },
+        { value: 'keyboard', label: 'Клавиатуры' },
+        { value: 'mouse', label: 'Мыши' },
+        { value: 'chairs', label: 'Кресла' },
+        { value: 'table', label: 'Столы' },
+        { value: 'other', label: 'Прочее' },
       
        
         
@@ -145,7 +143,7 @@ const TypesSlider = () => {
                 
                 {
                     types.map((type, index) => (
-                        <div key={index} className={`${s.filters_types_item} ${selectedTypes.includes(index) ? s.selected : ''}`} onClick={() => handleItemClick(index)}>{type}</div>
+                        <div key={index} className={`${s.filters_types_item} ${selectedTypes.includes(type.value) ? s.selected : ''}`} onClick={() => handleItemClick(type.value)}>{type.label}</div>
                     ))
                 }
                 
