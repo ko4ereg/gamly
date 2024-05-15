@@ -35,14 +35,14 @@ export const ProductCard = (props) => {
 
 
   }, []);
- 
+
   useEffect(() => {
     setCurrentWidth(handleRef.current.offsetWidth);
   }, [inCart, width]);
 
   const newPrice = props.product.discount ? props.product.price * (1 - props.product.discount / 100) : props.product.price;
   const actualPrice = formatValue(newPrice.toString()) + ' ₽';
-console.log(props.product.discount);
+  console.log(props.product.discount);
   return (<div className={s.product_card}>
     {props.product.newPrice ? <div className={s.product_discont}>-30%</div> : null}
     <div className={s.product_img} >
