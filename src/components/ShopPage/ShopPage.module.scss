@@ -81,6 +81,22 @@ h1 {
         line-height: 140%;
         letter-spacing: 0.32px;
 
+        &::-webkit-input-placeholder {
+            color: var(--light-gray);
+        }
+
+        &::-moz-placeholder {
+            color: var(--light-gray);
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--light-gray);
+        }
+
+        &::-ms-input-placeholder {
+            color: var(--light-gray);
+        }
+
         &::placeholder {
             color: var(--light-gray);
         }
@@ -144,7 +160,8 @@ h1 {
             background: #D4EE5D;
             box-shadow: 80px 80px 80px;
             border-radius: 9999;
-            filter: blur(80px);
+            -webkit-filter: blur(80px);
+                    filter: blur(80px);
             transition: 0.2s ease-out;
         }
 
@@ -278,7 +295,10 @@ h1 {
 
             .filters_types_item {
                 height: 100%;
-                user-select: none;
+                -webkit-user-select: none;
+                   -moz-user-select: none;
+                    -ms-user-select: none;
+                        user-select: none;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -286,6 +306,8 @@ h1 {
                 border-radius: 8px;
                 padding: 12px 20px;
                 cursor: pointer;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
                 width: fit-content;
                 transition: 0.2s ease-out;
                 font-size: 14px;
@@ -501,7 +523,10 @@ h1 {
         margin-bottom: 16px;
         position: relative;
         max-height: 342px;
-        user-select: none;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
 
     }
 
@@ -524,8 +549,23 @@ h1 {
         visibility: hidden;
         max-width: 0;
         color: var(--accent-color);
-        animation: fadein 0.5s ease-out forwards;
+        -webkit-animation: fadein 0.5s ease-out forwards;
+                animation: fadein 0.5s ease-out forwards;
 
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            opacity: 0;
+            max-width: 0;
+            visibility: hidden;
+        }
+
+        to {
+            opacity: 1;
+            max-width: none;
+            visibility: visible;
+        }
     }
 
     @keyframes fadeout {
@@ -539,6 +579,20 @@ h1 {
             opacity: 1;
             max-width: none;
             visibility: visible;
+        }
+    }
+
+    @-webkit-keyframes fadein {
+        from {
+            opacity: 1;
+            width: auto;
+            visibility: visible;
+        }
+
+        to {
+            opacity: 0;
+            width: 0;
+            visibility: hidden;
         }
     }
 
@@ -556,6 +610,16 @@ h1 {
         }
     }
 
+    @-webkit-keyframes slidein {
+        from {
+            transform: translateX(-20px);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
     @keyframes slidein {
         from {
             transform: translateX(-20px);
@@ -563,6 +627,16 @@ h1 {
 
         to {
             transform: translateX(0);
+        }
+    }
+
+    @-webkit-keyframes slideout {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-20px);
         }
     }
 
@@ -581,7 +655,9 @@ h1 {
         max-width: none;
         visibility: visible;
 
-        animation: fadeout 0.5s ease-out forwards;
+        -webkit-animation: fadeout 0.5s ease-out forwards;
+
+                animation: fadeout 0.5s ease-out forwards;
 
     }
 
@@ -595,8 +671,12 @@ h1 {
         align-items: center;
         gap: 10px;
         cursor: pointer;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         transition: all 0.2s ease-out;
+        -webkit-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
         position: relative;
 
         .product_button_price {
@@ -781,14 +861,16 @@ h1 {
             h2 {
                 max-width: none;
             }
-    
+
         }
+
         .item:nth-child(3) {
             h2 {
                 max-width: 80%;
             }
-    
+
         }
+
         h2 {
             line-height: 21.6px;
             letter-spacing: 0.01em;
@@ -912,13 +994,14 @@ h1 {
                 /* 19.2px */
                 letter-spacing: 0.16px;
             }
+
             .item:nth-child(3) {
                 h2 {
                     max-width: none;
                 }
-        
+
             }
-    
+
         }
 
     }
@@ -1091,6 +1174,7 @@ h1 {
     *:focus {
         outline: none;
     }
+
     h1 {
         font-size: 32px;
         line-height: 140%;
@@ -1409,7 +1493,7 @@ h1 {
 
 
         .product_title {
-      
+
             font-size: 16px;
             line-height: 110%;
             /* 17.6px */

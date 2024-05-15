@@ -18,11 +18,11 @@
   --gray-10-transparacy: rgba(231, 229, 237, 0.10);
   --gray-4: rgba(178, 172, 191, 0.04);
   --white: #F9F8FC;
- --light-gray: rgba(178, 172, 191, 1);
- --background-far: #14111A;
- --accent-purple: #5F42D9;
- --dark-gray: #211F29;
- 
+  --light-gray: rgba(178, 172, 191, 1);
+  --background-far: #14111A;
+  --accent-purple: #5F42D9;
+  --dark-gray: #211F29;
+
 }
 
 
@@ -31,19 +31,20 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "VelaSans-GX", sans-serif;
-background-color: transparent;
-touch-action: manipulation;
+  background-color: transparent;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
 
 body {
   margin: 0;
-  font-family:'Coolvetica', 'VelaSans-GX',
-  sans-serif,
-   /* -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Coolvetica', 'VelaSans-GX',
+    sans-serif,
+    /* -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',  */
-    ;
+  ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--background-far);

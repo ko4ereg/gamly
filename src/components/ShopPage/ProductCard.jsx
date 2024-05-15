@@ -21,7 +21,7 @@ export const ProductCard = (props) => {
 
   const handleRef = useRef();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentWidth(handleRef.current.offsetWidth);
     }, 100);
@@ -55,7 +55,7 @@ export const ProductCard = (props) => {
       <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `} style={{ width: currentWidth + (window.innerWidth <= 480 ? 54 : 56) }} >
         {inCart
           ? (<div className={s.product_button_price} ref={handleRef}  > <span>В корзине</span> </div>)
-          : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.discount ? <span>{actualPrice}</span> : null} {props.product.discount ? (<span className={s.oldprice}>{props.product.price}</span>) : (<span>{formatValue(props.product.price.toString()) + ' ₽'}</span>)} </div>)}
+          : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.discount ? <span>{actualPrice}</span> : null} {props.product.discount ? (<span className={s.oldprice}>{formatValue(props.product.price.toString()) + ' ₽'}</span>) : (<span>{formatValue(props.product.price.toString()) + ' ₽'}</span>)} </div>)}
 
         <div className={`${s.plus} ${inCart ? s.minus : ''} `}>
 
