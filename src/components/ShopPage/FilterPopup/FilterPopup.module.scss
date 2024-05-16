@@ -62,7 +62,7 @@
         .buttons {
             display: flex;
             justify-content: space-between;
-gap: 12px;
+            gap: 12px;
             width: 100%;
             padding-top: 16px;
             flex: 0 1 auto;
@@ -121,20 +121,26 @@ gap: 12px;
                     flex-direction: column;
                     gap: 10px;
                     max-height: 0;
-                
+
                     padding: 0;
                     border: none;
                     transition: 0.2s ease-out;
+
+                    button {
+                        max-height: 0px;
+                    }
                 }
 
                 .containerNotHidden {
                     max-height: 107px;
-               
+                    button {
+                        max-height: 100px;
+                    }
                     transition: 0.2s ease-out;
                 }
             }
 
-            
+
         }
     }
 

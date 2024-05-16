@@ -77,9 +77,7 @@ const TypesSlider = () => {
 
         if (window.innerWidth > 1023) {
             setIsMobile(false);
-            if (!isMobile && sliderRef.current) {
-                sliderRef.current.addEventListener('mousedown', handleMouseDown);
-            }
+       
         } else {
             setIsMobile(true);
         }
@@ -117,7 +115,7 @@ const TypesSlider = () => {
         }
 
         return (() => {
-            sliderRef.current.removeEventListener('mousedown', handleMouseDown);
+            // sliderRef.current.removeEventListener('mousedown', handleMouseDown);
             sliderRef.current.removeEventListener('scroll', checkScroll);
         })
     }, []);
