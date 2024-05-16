@@ -1286,6 +1286,12 @@ h1 {
             letter-spacing: 0.16px;
 
         }
+        .item:nth-child(3) {
+            h2 {
+                max-width: none;
+            }
+
+        }
     }
 
     .item {
