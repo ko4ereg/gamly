@@ -86,7 +86,7 @@
             -webkit-transition: all 0.2s ease-out;
             -o-transition: all 0.2s ease-out;
             position: relative;
-            will-change: width;
+            will-change: auto;
 
             & .inCart {
                 transition: 0.2s ease;
@@ -118,7 +118,7 @@
                 gap: 6px;
                 margin-right: 30px;
                 transition: all 1s ease-out;
-
+                will-change: auto;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
