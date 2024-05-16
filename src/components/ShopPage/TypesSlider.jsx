@@ -8,7 +8,7 @@ import { useDraggable } from 'react-use-draggable-scroll';
 const TypesSlider = () => {
 
     const [selectedTypes, setSelectedTypes] = useState([]);
-    
+
     const handleItemClick = (index) => {
         if (selectedTypes.includes(index)) {
             // Если категория уже выбрана, удаляем ее из списка выбранных
@@ -47,35 +47,64 @@ const TypesSlider = () => {
 
 
     const checkScroll = () => {
+        // const slider = sliderRef.current;
+        // const backgroundRight = backgroundRightRef.current;
+        // const backgroundLeft = backgroundLeftRef.current;
+
+        // if (slider.scrollWidth <= slider.clientWidth) {
+        //     backgroundRight.style.opacity = '0';
+        // } else if (slider.scrollWidth > slider.clientWidth) {
+        //     backgroundRight.style.opacity = '1';
+        // }
+
+
+        // if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+        //     backgroundRight.style.opacity = '0';
+        // } else {
+        //     backgroundRight.style.opacity = '1';
+        // }
+
+        // if (slider.scrollLeft === 0) {
+        //     backgroundLeft.style.opacity = '0';
+        // } else {
+        //     backgroundLeft.style.opacity = '1';
+        // }
+        const slider = sliderRef.current;
+        const backgroundRight = backgroundRightRef.current;
+        const backgroundLeft = backgroundLeftRef.current;
+    
+        if (slider) {
+            if (slider.scrollWidth <= slider.clientWidth) {
+                backgroundRight.style.opacity = '0';
+            } else if (slider.scrollWidth > slider.clientWidth) {
+                backgroundRight.style.opacity = '1';
+            }
+    
+            if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                backgroundRight.style.opacity = '0';
+            } else {
+                backgroundRight.style.opacity = '1';
+            }
+    
+            if (slider.scrollLeft === 0) {
+                backgroundLeft.style.opacity = '0';
+            } else {
+                backgroundLeft.style.opacity = '1';
+            }
+        }
+    };
+
+
+    useEffect(() => {
+
         const slider = sliderRef.current;
         const backgroundRight = backgroundRightRef.current;
         const backgroundLeft = backgroundLeftRef.current;
 
-        if (slider.scrollWidth <= slider.clientWidth) {
-            backgroundRight.style.opacity = '0';
-        } else if (slider.scrollWidth > slider.clientWidth) {
-            backgroundRight.style.opacity = '1';
+        if (slider && backgroundRight && backgroundLeft) {
+            checkScroll();
         }
 
-
-        if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-            backgroundRight.style.opacity = '0';
-        } else {
-            backgroundRight.style.opacity = '1';
-        }
-
-        if (slider.scrollLeft === 0) {
-            backgroundLeft.style.opacity = '0';
-        } else {
-            backgroundLeft.style.opacity = '1';
-        }
-    };
-
- 
-    useEffect(() => {
-
-        checkScroll();
-      
     }, []);
 
 
@@ -86,17 +115,17 @@ const TypesSlider = () => {
         { value: 'chairs', label: 'Кресла' },
         { value: 'table', label: 'Столы' },
         { value: 'other', label: 'Прочее' },
-       
+
 
 
 
     ]
 
-const ref2 = useRef();
+    const ref2 = useRef();
 
     const { events: events2 } = useDraggable(sliderRef, {
         applyRubberBandEffect: true, decayRate: 0.5, safeDisplacement: 21
-      });
+    });
 
     return (
         <div className={s.sliderContainer}>
@@ -106,7 +135,7 @@ const ref2 = useRef();
                 // onTouchStart={handleTouchStart}
                 {...events2}
                 // onMouseDown={handleMouseDown}
-                 className={s.filters_types}>
+                className={s.filters_types}>
 
                 {
                     types.map((type, index) => (

@@ -728,6 +728,16 @@ h1 {
             transition: all 1s ease-out;
             // animation: expand 2s ease-out;
 
+            @-webkit-keyframes expand {
+                from {
+                    width: 0px;
+                }
+
+                to {
+                    width: 100px;
+                }
+            }
+
             @keyframes expand {
                 from {
                     width: 0px;
@@ -1720,12 +1730,7 @@ h1 {
                 .filters_types_item {
                     padding: 12px 16px;
                     height: 36px;
-                    font-size: 10px;
-
-                    font-weight: 500;
-                    line-height: 120%;
-                    /* 12px */
-                    letter-spacing: 0.3px;
+                  
                 }
             }
         }
