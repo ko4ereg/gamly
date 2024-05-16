@@ -267,8 +267,15 @@ h1 {
             gap: 12px;
             height: 100%;
             align-items: center;
-            // overflow-x: scroll;
-
+             overflow-x: scroll;
+             -ms-overflow-style: none;
+             scrollbar-width: none;
+             scroll-behavior: smooth;
+      
+     
+         &::-webkit-scrollbar {
+             display: none;
+         }
 
             &_background_right {
 
@@ -279,10 +286,11 @@ h1 {
                 width: 30px; // ширина скрытого элемента
                 background: linear-gradient(270deg, #14111A 0%, rgba(20, 17, 26, 0.00) 100%);
                 z-index: 1;
+                transition: 0.2s ease-out;
             }
 
             &_background_left {
-                display: none;
+              
                 position: absolute;
                 top: 0;
                 left: 0; // ширина скрытого элемента
@@ -290,6 +298,7 @@ h1 {
                 width: 30px; // ширина скрытого элемента
                 background: linear-gradient(90deg, #14111A 0%, rgba(20, 17, 26, 0.00) 100%);
                 z-index: 1;
+                transition: 0.2s ease-out;
             }
 
 
@@ -873,12 +882,12 @@ h1 {
     .filters_types {
 
         &_background_right {
-            display: none;
+            // display: none;
 
         }
 
         &_background_left {
-            display: none;
+            // display: none;
 
         }
 
@@ -990,7 +999,7 @@ h1 {
             }
 
             .filters_types {
-                overflow: hidden;
+                // overflow: hidden;
                 gap: 7px;
 
             }
@@ -1109,7 +1118,7 @@ h1 {
 
             .filters_types {
 
-                overflow: hidden;
+                // overflow: hidden;
                 display: flex;
                 gap: 7px;
 
@@ -1313,7 +1322,7 @@ h1 {
             .filters_types {
                 gap: 7px;
 
-                overflow: hidden;
+                // overflow: hidden;
 
 
 

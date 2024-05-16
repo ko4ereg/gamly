@@ -7,8 +7,8 @@ import s from './ShopPage.module.scss';
 const TypesSlider = () => {
 
     const [selectedTypes, setSelectedTypes] = useState([]);
-   
-   
+
+
     const handleItemClick = (index) => {
         if (selectedTypes.includes(index)) {
             // Если категория уже выбрана, удаляем ее из списка выбранных
@@ -47,78 +47,42 @@ const TypesSlider = () => {
 
 
 
-    const handleTouchStart = (e) => {
-        const touchStartX = e.touches[0].clientX;
-        const scrollLeft = sliderRef.current.scrollLeft;
-
-        const onTouchMove = (e) => {
-            const touchMoveX = e.touches[0].clientX;
-            const touchDistance = touchStartX - touchMoveX;
-
-            sliderRef.current.scrollLeft = scrollLeft + touchDistance;
-        };
-
-        const onTouchEnd = () => {
-            document.removeEventListener('touchmove', onTouchMove);
-            document.removeEventListener('touchend', onTouchEnd);
-        };
-
-        document.addEventListener('touchmove', onTouchMove);
-        document.addEventListener('touchend', onTouchEnd);
-    };
-
-    const [width, setWidth] = useState(0)
-
-    const handleWindowResize = () => {
-      setWidth(window.innerWidth);
-   
-    }
 
     useEffect(() => {
-      
-        handleWindowResize();
-        window.addEventListener('resize', handleWindowResize);
+
 
         if (sliderRef.current) {
             const checkScroll = () => {
                 const slider = sliderRef.current;
                 const backgroundRight = backgroundRightRef.current;
                 const backgroundLeft = backgroundLeftRef.current;
-                
+
                 if (slider.scrollWidth <= slider.clientWidth) {
-                    backgroundRight.style.display = 'none';
+                    backgroundRight.style.opacity = '0';
                 } else {
-                    backgroundRight.style.display = 'block';
-                }
-    
-                if ( slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-                    backgroundRight.style.display = 'none';
-                } else {
-                    backgroundRight.style.display = 'block';
+                    backgroundRight.style.opacity = '1';
                 }
 
-                if (  slider.scrollLeft === 0) {
-                    backgroundLeft.style.display = 'none';
+                if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                    backgroundRight.style.opacity = '0';
                 } else {
-                    backgroundLeft.style.display = 'block';
+                    backgroundRight.style.opacity = '1';
+                }
+
+                if (slider.scrollLeft === 0) {
+                    backgroundLeft.style.opacity = '0';
+                } else {
+                    backgroundLeft.style.opacity = '1';
                 }
             };
-            sliderRef.current.addEventListener('touchstart', handleTouchStart);
+
             sliderRef.current.addEventListener('scroll', checkScroll);
 
-            return () => {
-                if (sliderRef.current) {
-                    sliderRef.current.removeEventListener('scroll', checkScroll);
-                    sliderRef.current.removeEventListener('touchstart', handleTouchStart);
-                }
-                window.removeEventListener('resize', handleWindowResize);
-          
-            };
+
 
         }
-    }, [width]);
+    }, []);
 
-   
 
     const types = [
         { value: 'headphones', label: 'Наушники' },
@@ -127,9 +91,9 @@ const TypesSlider = () => {
         { value: 'chairs', label: 'Кресла' },
         { value: 'table', label: 'Столы' },
         { value: 'other', label: 'Прочее' },
-      
-       
-        
+
+
+
     ]
 
     return (
@@ -137,16 +101,16 @@ const TypesSlider = () => {
             <div ref={backgroundRightRef} className={s.filters_types_background_right}></div>
             <div ref={backgroundLeftRef} className={s.filters_types_background_left}></div>
             <div ref={sliderRef}
-                onTouchStart={handleTouchStart}
+                // onTouchStart={handleTouchStart}
 
                 onMouseDown={handleMouseDown} className={s.filters_types}>
-                
+
                 {
                     types.map((type, index) => (
                         <div key={index} className={`${s.filters_types_item} ${selectedTypes.includes(type.value) ? s.selected : ''}`} onClick={() => handleItemClick(type.value)}>{type.label}</div>
                     ))
                 }
-                
+
             </div>
         </div>
     );
