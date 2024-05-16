@@ -83,7 +83,7 @@
             width: fit-content;
             max-width: 100%;
             transition: all 0.2s ease-out;
-            -webkit-transition: none;
+            -webkit-transition: all 0.2s ease-out;
             -o-transition: all 0.2s ease-out;
             position: relative;
             will-change: auto;
@@ -117,8 +117,8 @@
                 width: fit-content;
                 gap: 6px;
                 margin-right: 30px;
-                transition: all 1s ease-out;
-                -webkit-transition: none; 
+                transition: all 0.2s ease-out;
+                -webkit-transition: all 0.2s ease-out; 
                 will-change: auto;
                 font-size: 16px;
                 font-style: normal;
@@ -313,7 +313,7 @@
                 width: fit-content;
                 gap: 6px;
                 margin-right: 30px;
-                transition: all 1s ease-out;
+                transition: all 0.2s ease-out;
                 font-size: 14px;
                 line-height: 140%;
                 /* 19.6px */
