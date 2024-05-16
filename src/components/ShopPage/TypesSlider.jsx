@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import s from './ShopPage.module.scss';
+import { useDraggable } from 'react-use-draggable-scroll';
 
 
 
@@ -7,8 +8,7 @@ import s from './ShopPage.module.scss';
 const TypesSlider = () => {
 
     const [selectedTypes, setSelectedTypes] = useState([]);
-    const [isMobile, setIsMobile] = useState(true);
-
+    
     const handleItemClick = (index) => {
         if (selectedTypes.includes(index)) {
             // Если категория уже выбрана, удаляем ее из списка выбранных
@@ -27,23 +27,23 @@ const TypesSlider = () => {
 
 
 
-    const handleMouseDown = (e) => {
-        const startX = e.pageX - sliderRef.current.offsetLeft;
-        const scrollLeft = sliderRef.current.scrollLeft;
+    // const handleMouseDown = (e) => {
+    //     const startX = e.pageX - sliderRef.current.offsetLeft;
+    //     const scrollLeft = sliderRef.current.scrollLeft;
 
-        const onMouseMove = (e) => {
-            const x = e.pageX - sliderRef.current.offsetLeft;
-            const walk = (x - startX) * 1; // чувствительность перетаскивания
+    //     const onMouseMove = (e) => {
+    //         const x = e.pageX - sliderRef.current.offsetLeft;
+    //         const walk = (x - startX) * 1; // чувствительность перетаскивания
 
-            sliderRef.current.scrollLeft = scrollLeft - walk;
-        };
+    //         sliderRef.current.scrollLeft = scrollLeft - walk;
+    //     };
 
-        document.addEventListener('mousemove', onMouseMove);
+    //     document.addEventListener('mousemove', onMouseMove);
 
-        document.addEventListener('mouseup', () => {
-            document.removeEventListener('mousemove', onMouseMove);
-        });
-    };
+    //     document.addEventListener('mouseup', () => {
+    //         document.removeEventListener('mousemove', onMouseMove);
+    //     });
+    // };
 
 
     const checkScroll = () => {
@@ -71,53 +71,11 @@ const TypesSlider = () => {
         }
     };
 
-
-    console.log(isMobile);
+ 
     useEffect(() => {
 
-        if (window.innerWidth > 1023) {
-            setIsMobile(false);
-       
-        } else {
-            setIsMobile(true);
-        }
-
-        if (sliderRef.current) {
-            // const checkScroll = () => {
-            //     const slider = sliderRef.current;
-            //     const backgroundRight = backgroundRightRef.current;
-            //     const backgroundLeft = backgroundLeftRef.current;
-
-            //     if (slider.scrollWidth <= slider.clientWidth) {
-            //         backgroundRight.style.opacity = '0';
-            //     } else if (slider.scrollWidth > slider.clientWidth) {
-            //         backgroundRight.style.opacity = '1';
-            //     }
-
-
-            //     if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-            //         backgroundRight.style.opacity = '0';
-            //     } else {
-            //         backgroundRight.style.opacity = '1';
-            //     }
-
-            //     if (slider.scrollLeft === 0) {
-            //         backgroundLeft.style.opacity = '0';
-            //     } else {
-            //         backgroundLeft.style.opacity = '1';
-            //     }
-            // };
-            checkScroll();
-            sliderRef.current.addEventListener('scroll', checkScroll);
-
-
-
-        }
-
-        return (() => {
-            // sliderRef.current.removeEventListener('mousedown', handleMouseDown);
-            sliderRef.current.removeEventListener('scroll', checkScroll);
-        })
+        checkScroll();
+      
     }, []);
 
 
@@ -128,19 +86,27 @@ const TypesSlider = () => {
         { value: 'chairs', label: 'Кресла' },
         { value: 'table', label: 'Столы' },
         { value: 'other', label: 'Прочее' },
+       
 
 
 
     ]
 
+const ref2 = useRef();
+
+    const { events: events2 } = useDraggable(sliderRef, {
+        applyRubberBandEffect: true, decayRate: 0.5, safeDisplacement: 21
+      });
+
     return (
         <div className={s.sliderContainer}>
             <div ref={backgroundRightRef} className={s.filters_types_background_right}></div>
             <div ref={backgroundLeftRef} className={s.filters_types_background_left}></div>
-            <div ref={sliderRef}
+            <div ref={sliderRef} onScroll={checkScroll}
                 // onTouchStart={handleTouchStart}
-
-                onMouseDown={handleMouseDown} className={s.filters_types}>
+                {...events2}
+                // onMouseDown={handleMouseDown}
+                 className={s.filters_types}>
 
                 {
                     types.map((type, index) => (
