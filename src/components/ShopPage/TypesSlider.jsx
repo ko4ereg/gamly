@@ -7,7 +7,7 @@ import s from './ShopPage.module.scss';
 const TypesSlider = () => {
 
     const [selectedTypes, setSelectedTypes] = useState([]);
-
+    const [isMobile, setIsMobile] = useState(true);
 
     const handleItemClick = (index) => {
         if (selectedTypes.includes(index)) {
@@ -46,43 +46,80 @@ const TypesSlider = () => {
     };
 
 
+    const checkScroll = () => {
+        const slider = sliderRef.current;
+        const backgroundRight = backgroundRightRef.current;
+        const backgroundLeft = backgroundLeftRef.current;
+
+        if (slider.scrollWidth <= slider.clientWidth) {
+            backgroundRight.style.opacity = '0';
+        } else if (slider.scrollWidth > slider.clientWidth) {
+            backgroundRight.style.opacity = '1';
+        }
 
 
+        if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+            backgroundRight.style.opacity = '0';
+        } else {
+            backgroundRight.style.opacity = '1';
+        }
+
+        if (slider.scrollLeft === 0) {
+            backgroundLeft.style.opacity = '0';
+        } else {
+            backgroundLeft.style.opacity = '1';
+        }
+    };
+
+
+    console.log(isMobile);
     useEffect(() => {
 
+        if (window.innerWidth > 1023) {
+            setIsMobile(false);
+            if (!isMobile && sliderRef.current) {
+                sliderRef.current.addEventListener('mousedown', handleMouseDown);
+            }
+        } else {
+            setIsMobile(true);
+        }
 
         if (sliderRef.current) {
-            const checkScroll = () => {
-                const slider = sliderRef.current;
-                const backgroundRight = backgroundRightRef.current;
-                const backgroundLeft = backgroundLeftRef.current;
-            console.log(slider.scrollWidth);
-            console.log(slider.clientWidth);
-                if (slider.scrollWidth <= slider.clientWidth) {
-                    backgroundRight.style.opacity = '0';
-                } else if (slider.scrollWidth > slider.clientWidth) {
-                    backgroundRight.style.opacity = '1';
-                }
-                
+            // const checkScroll = () => {
+            //     const slider = sliderRef.current;
+            //     const backgroundRight = backgroundRightRef.current;
+            //     const backgroundLeft = backgroundLeftRef.current;
 
-                if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-                    backgroundRight.style.opacity = '0';
-                } else {
-                    backgroundRight.style.opacity = '1';
-                }
+            //     if (slider.scrollWidth <= slider.clientWidth) {
+            //         backgroundRight.style.opacity = '0';
+            //     } else if (slider.scrollWidth > slider.clientWidth) {
+            //         backgroundRight.style.opacity = '1';
+            //     }
 
-                if (slider.scrollLeft === 0) {
-                    backgroundLeft.style.opacity = '0';
-                } else {
-                    backgroundLeft.style.opacity = '1';
-                }
-            };
 
+            //     if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+            //         backgroundRight.style.opacity = '0';
+            //     } else {
+            //         backgroundRight.style.opacity = '1';
+            //     }
+
+            //     if (slider.scrollLeft === 0) {
+            //         backgroundLeft.style.opacity = '0';
+            //     } else {
+            //         backgroundLeft.style.opacity = '1';
+            //     }
+            // };
+            checkScroll();
             sliderRef.current.addEventListener('scroll', checkScroll);
 
 
 
         }
+
+        return (() => {
+            sliderRef.current.removeEventListener('mousedown', handleMouseDown);
+            sliderRef.current.removeEventListener('scroll', checkScroll);
+        })
     }, []);
 
 
