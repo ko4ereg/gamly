@@ -22,12 +22,10 @@ export const ProductCard = (props) => {
 
   const handleRef = useRef();
 
-
-  console.log(currentWidth);
-
+ 
   useLayoutEffect(() => {
     // const timer = setTimeout(() => {
-      setCurrentWidth(handleRef.current.offsetWidth + 4);
+    setCurrentWidth(handleRef.current.offsetWidth + 4);
     // }, 100);
 
     // handleWindowResize();
@@ -35,11 +33,11 @@ export const ProductCard = (props) => {
     // return () => {
     //   window.removeEventListener('resize', handleWindowResize);
     //   clearTimeout(timer);
-    }
+  }
 
 
-  // }
-  , []);
+    // }
+    , []);
 
   useEffect(() => {
     setCurrentWidth(handleRef.current.offsetWidth);
@@ -62,7 +60,7 @@ export const ProductCard = (props) => {
     <div className={s.product_button_container} >
 
       <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `}
-        style={{ width: currentWidth + ( window.innerWidth < 375 ? 54 : window.innerWidth <= 480 ? 54 : 56) }}
+        style={{ width: currentWidth + (window.innerWidth < 375 ? 54 : window.innerWidth <= 480 ? 54 : 56) }}
       >
         {inCart
           ? (<div className={s.product_button_price} ref={handleRef}><span>В корзине</span></div>)

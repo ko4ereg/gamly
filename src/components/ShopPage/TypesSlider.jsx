@@ -56,12 +56,14 @@ const TypesSlider = () => {
                 const slider = sliderRef.current;
                 const backgroundRight = backgroundRightRef.current;
                 const backgroundLeft = backgroundLeftRef.current;
-          
+            console.log(slider.scrollWidth);
+            console.log(slider.clientWidth);
                 if (slider.scrollWidth <= slider.clientWidth) {
                     backgroundRight.style.opacity = '0';
-                } else {
+                } else if (slider.scrollWidth > slider.clientWidth) {
                     backgroundRight.style.opacity = '1';
                 }
+                
 
                 if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
                     backgroundRight.style.opacity = '0';
