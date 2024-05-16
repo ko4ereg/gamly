@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect,  useRef, useState } from 'react';
 import s from './ProductCard.module.scss';
 import Carousel from '../Carousel/Carousel';
 import { formatValue } from '../../../utils/formatValue';
