@@ -52,7 +52,9 @@ export const ProductCard = (props) => {
 
     <div className={s.product_button_container} >
 
-      <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `} style={{ width: currentWidth + (window.innerWidth <= 480 ? 54 : 56) }} >
+      <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `} 
+      style={{ width: currentWidth + (window.innerWidth <= 480 ? 54 : 56) }} 
+      >
         {inCart
           ? (<div className={s.product_button_price} ref={handleRef}  > <span>В корзине</span> </div>)
           : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.discount ? <span>{actualPrice}</span> : null} {props.product.discount ? (<span className={s.oldprice}>{formatValue(props.product.price.toString()) + ' ₽'}</span>) : (<span>{formatValue(props.product.price.toString()) + ' ₽'}</span>)} </div>)}

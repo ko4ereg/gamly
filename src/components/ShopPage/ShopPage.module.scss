@@ -267,7 +267,16 @@ h1 {
             gap: 12px;
             height: 100%;
             align-items: center;
-            overflow: hidden;
+            overflow-x: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    
+     
 
             &_background_right {
 
@@ -450,7 +459,7 @@ h1 {
         }
     }
 
-}
+ 
 
 .products_container {
     display: flex;
@@ -681,7 +690,7 @@ h1 {
 
         .product_button_price {
             display: flex;
-
+            flex-grow: 1;
             align-items: center;
             gap: 6px;
 
