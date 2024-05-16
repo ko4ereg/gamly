@@ -5,7 +5,7 @@ import pic2 from './../../assets/shop/mock/2.png';
 
 import pic3 from './../../assets/shop/mock/3.png';
 import pic4 from './../../assets/shop/mock/4.png';
-import ProductCard from './ProductCard';
+import ProductCard from './ProductCard/ProductCard';
 import Pagination from './Pagination';
 import { useMemo } from 'react';
 

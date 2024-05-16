@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'VelaSans-GX';
-  src: url(./fonts/VELASANS-GX.TTF) format('truetype');
+  src: url(./fonts/VELASANS-GX.TTF) format('truetype'),
+    url(./fonts/VELASANS-GX.woff2) format('woff2'),
+    url(./fonts/VELASANS-GX.woff) format('woff');
   font-display: swap;
 }
 
