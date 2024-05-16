@@ -7,7 +7,7 @@ import { formatValue } from '../../../utils/formatValue';
 
 export const ProductCard = (props) => {
   const [inCart, setInCart] = useState(false);
-
+  const [firstRender, setFirstRender] = useState(true);
   const [currentWidth, setCurrentWidth] = useState(0);
   const [width, setWidth] = useState(0)
 
@@ -23,25 +23,25 @@ export const ProductCard = (props) => {
   const handleRef = useRef();
 
  
-  useLayoutEffect(() => {
-    // const timer = setTimeout(() => {
-    setCurrentWidth(handleRef.current.offsetWidth + 4);
-    // }, 100);
-
-    // handleWindowResize();
-    // window.addEventListener('resize', handleWindowResize);
-    // return () => {
-    //   window.removeEventListener('resize', handleWindowResize);
-    //   clearTimeout(timer);
+  useEffect(() => {
+    if (firstRender) {
+      setCurrentWidth(handleRef.current.offsetWidth + 4);
+      setFirstRender(false);
+  
+    } else {
+      setCurrentWidth(handleRef.current.offsetWidth);
+  
+    }
   }
 
 
     // }
-    , []);
+    , [inCart])
 
-  useEffect(() => {
-    setCurrentWidth(handleRef.current.offsetWidth);
-  }, [inCart]);
+  // useEffect(() => {
+  //   setCurrentWidth(handleRef.current.offsetWidth);
+  //   console.log('refresh');
+  // }, [inCart]);
 
   const newPrice = useMemo(() => {
     return props.product.discount ? props.product.price * (1 - props.product.discount / 100) : props.product.price;
