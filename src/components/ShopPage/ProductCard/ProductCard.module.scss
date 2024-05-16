@@ -373,15 +373,18 @@
                     background-color: var(--accent-color);
 
                     .product_button_price span {
-                        color: rgba(4, 3, 7, 1)
+                        color: rgba(4, 3, 7, 1);
+                        -webkit-tap-highlight-color: transparent;
                     }
 
                     .product_button_price .oldprice {
-                        color: rgba(4, 3, 7, 0.4)
+                        color: rgba(4, 3, 7, 0.4);
+                        -webkit-tap-highlight-color: transparent;
                     }
 
                     .plus {
                         background-color: rgba(4, 3, 7, 1);
+                        -webkit-tap-highlight-color: transparent;
                     }
                 }
 
@@ -389,15 +392,18 @@
                     background-color: var(--accent-color);
 
                     .product_button_price span {
-                        color: rgba(4, 3, 7, 1)
+                        color: rgba(4, 3, 7, 1);
+                        -webkit-tap-highlight-color: transparent;
                     }
 
                     .product_button_price .oldprice {
-                        color: rgba(4, 3, 7, 0.4)
+                        color: rgba(4, 3, 7, 0.4);
+                        -webkit-tap-highlight-color: transparent;
                     }
 
                     .plus {
                         background-color: rgba(4, 3, 7, 1);
+                        -webkit-tap-highlight-color: transparent;
                     }
                 }
             }
