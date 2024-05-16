@@ -364,11 +364,16 @@
 
         .product_button_container {
 
-.product_button {
-    &:hover {
-        -webkit-tap-highlight-color: var(--accent-color);
-    }
-}
+            .product_button{
+                :active {
+                    background-color: var(--accent-color);
+                }
+
+                :focus {
+                    background-color: var(--accent-color);
+                }
+            }
+ 
             .product_button_price {
 
                 font-size: 14px;
