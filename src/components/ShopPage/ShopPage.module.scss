@@ -268,15 +268,7 @@ h1 {
             height: 100%;
             align-items: center;
             overflow-x: scroll;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-            scroll-behavior: smooth;
-            &::-webkit-scrollbar {
-                display: none;
-            }
-        }
-    
-     
+            
 
             &_background_right {
 
@@ -459,7 +451,7 @@ h1 {
         }
     }
 
- 
+}
 
 .products_container {
     display: flex;
