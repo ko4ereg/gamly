@@ -27,64 +27,47 @@ const TypesSlider = () => {
 
 
 
-    // const handleMouseDown = (e) => {
-    //     const startX = e.pageX - sliderRef.current.offsetLeft;
-    //     const scrollLeft = sliderRef.current.scrollLeft;
-
-    //     const onMouseMove = (e) => {
-    //         const x = e.pageX - sliderRef.current.offsetLeft;
-    //         const walk = (x - startX) * 1; // чувствительность перетаскивания
-
-    //         sliderRef.current.scrollLeft = scrollLeft - walk;
-    //     };
-
-    //     document.addEventListener('mousemove', onMouseMove);
-
-    //     document.addEventListener('mouseup', () => {
-    //         document.removeEventListener('mousemove', onMouseMove);
-    //     });
-    // };
 
 
-    // const checkScroll = () => {
-      
-    //     const slider = sliderRef.current;
-    //     const backgroundRight = backgroundRightRef.current;
-    //     const backgroundLeft = backgroundLeftRef.current;
-    
-    //     if (slider) {
-    //         if (slider.scrollWidth <= slider.clientWidth) {
-    //             backgroundRight.style.opacity = '0';
-    //         } else if (slider.scrollWidth > slider.clientWidth) {
-    //             backgroundRight.style.opacity = '1';
-    //         }
-    
-    //         if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-    //             backgroundRight.style.opacity = '0';
-    //         } else {
-    //             backgroundRight.style.opacity = '1';
-    //         }
-    
-    //         if (slider.scrollLeft === 0) {
-    //             backgroundLeft.style.opacity = '0';
-    //         } else {
-    //             backgroundLeft.style.opacity = '1';
-    //         }
-    //     }
-    // };
+    const checkScroll = () => {
+
+        const slider = sliderRef.current;
+        const backgroundRight = backgroundRightRef.current;
+        const backgroundLeft = backgroundLeftRef.current;
+
+        if (slider) {
+            if (slider.scrollWidth <= slider.clientWidth) {
+                backgroundRight.style.opacity = '0';
+            } else if (slider.scrollWidth > slider.clientWidth) {
+                backgroundRight.style.opacity = '1';
+            }
+
+            if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                backgroundRight.style.opacity = '0';
+            } else {
+                backgroundRight.style.opacity = '1';
+            }
+
+            if (slider.scrollLeft === 0) {
+                backgroundLeft.style.opacity = '0';
+            } else {
+                backgroundLeft.style.opacity = '1';
+            }
+        }
+    };
 
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     const slider = sliderRef.current;
-    //     const backgroundRight = backgroundRightRef.current;
-    //     const backgroundLeft = backgroundLeftRef.current;
+        const slider = sliderRef.current;
+        const backgroundRight = backgroundRightRef.current;
+        const backgroundLeft = backgroundLeftRef.current;
 
-    //     if (slider && backgroundRight && backgroundLeft) {
-    //         checkScroll();
-    //     }
+        if (slider && backgroundRight && backgroundLeft) {
+            checkScroll();
+        }
 
-    // }, []);
+    }, []);
 
 
     const types = [
@@ -100,7 +83,7 @@ const TypesSlider = () => {
 
     ]
 
-    const ref2 = useRef();
+
 
     const { events: events2 } = useDraggable(sliderRef, {
         applyRubberBandEffect: true, decayRate: 0.5, safeDisplacement: 21
@@ -110,10 +93,11 @@ const TypesSlider = () => {
         <div className={s.sliderContainer}>
             <div ref={backgroundRightRef} className={s.filters_types_background_right}></div>
             <div ref={backgroundLeftRef} className={s.filters_types_background_left}></div>
-            <div ref={sliderRef}  
-                // onTouchStart={handleTouchStart}
+            <div ref={sliderRef}
+                onScroll={checkScroll}
+
                 {...events2}
-                // onMouseDown={handleMouseDown}
+
                 className={s.filters_types}>
 
                 {

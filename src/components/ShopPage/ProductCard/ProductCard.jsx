@@ -9,11 +9,8 @@ export const ProductCard = (props) => {
   const [inCart, setInCart] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
   const [currentWidth, setCurrentWidth] = useState(0);
-  const [width, setWidth] = useState(0)
 
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-  }
+
 
   const handleAddToCart = () => {
     setInCart(!inCart);
@@ -22,30 +19,22 @@ export const ProductCard = (props) => {
 
   const handleRef = useRef();
 
- 
+
   useEffect(() => {
     if (firstRender) {
       setCurrentWidth(handleRef.current.offsetWidth + 4);
       setFirstRender(false);
-  
+
     } else {
       setCurrentWidth(handleRef.current.offsetWidth);
-  
+    
     }
-  }
+  }, [inCart])
 
 
-    // }
-    , [inCart])
 
-  // useEffect(() => {
-  //   setCurrentWidth(handleRef.current.offsetWidth);
-  //   console.log('refresh');
-  // }, [inCart]);
+  const newPrice = props.product.discount ? props.product.price * (1 - props.product.discount / 100) : props.product.price;
 
-  const newPrice = useMemo(() => {
-    return props.product.discount ? props.product.price * (1 - props.product.discount / 100) : props.product.price;
-  }, [props.product.discount, props.product.price]);
   const actualPrice = formatValue(newPrice.toString()) + ' ₽';
 
 

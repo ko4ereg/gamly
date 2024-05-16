@@ -71,6 +71,10 @@
     height: 100%;
 }
 
+.slick-slide img {
+    height: 100%;
+}
+
 .slick-track {
     height: 100%;
     width: 100%;
@@ -79,5 +83,6 @@
  .sliderImage {
     object-fit: contain;
     width: 100%;
+    height: 100%;
     cursor: pointer;
  }

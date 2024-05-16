@@ -41,7 +41,7 @@ const dotsRef = useRef();
     if (props.img.length === 1) {
         return (
 
-            <img className='sliderImage' src={props.img[0]} alt="carousel" />
+            <img   className='sliderImage' src={props.img[0]} alt="carousel" />
 
         );
     } else {
