@@ -1,3 +1,66 @@
+@media (hover: hover) and (pointer: fine) {
+
+
+    .product_card {
+        .product_button_container {
+            .product_button {
+
+                &:hover {
+                    background-color: var(--accent-color);
+                    border: 1.5px solid var(--accent-color);
+
+                      .product_button_price {
+                        span {
+                            color: rgba(4, 3, 7, 1)
+                        }
+
+                        .oldprice {
+                            color: rgba(4, 3, 7, 0.4)
+                        }
+                    }
+
+                      .plus {
+                        background-color: rgba(4, 3, 7, 1);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .product_card {
+        .product_button_container {
+            .product_button {
+
+                &:active {
+                    background-color: var(--accent-color);
+                    border: 1.5px solid var(--accent-color);
+
+                      .product_button_price {
+                        span {
+                            color: rgba(4, 3, 7, 1)
+                        }
+
+                        .oldprice {
+                            color: rgba(4, 3, 7, 0.4)
+                        }
+                    }
+
+                      .plus {
+                        background-color: rgba(4, 3, 7, 1);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
+
 .product_card {
     display: flex;
     flex-direction: column;
@@ -91,24 +154,7 @@
             & .inCart {
                 transition: 0.2s ease;
             }
-
-            &:hover {
-
-                background-color: var(--accent-color);
-                border: 1.5px solid var(--accent-color);
-
-                .product_button_price span {
-                    color: rgba(4, 3, 7, 1)
-                }
-
-                .product_button_price .oldprice {
-                    color: rgba(4, 3, 7, 0.4)
-                }
-
-                .plus {
-                    background-color: rgba(4, 3, 7, 1);
-                }
-            }
+ 
 
             .product_button_price {
                 display: flex;
@@ -127,6 +173,7 @@
                 line-height: 140%;
                 /* 22.4px */
                 letter-spacing: 0.32px;
+                user-select: none;
 
                 span {
                     color: var(--accent-color);
@@ -364,49 +411,6 @@
 
         .product_button_container {
 
-            .product_button {
-                :hover {
-                    background-color: transparent;
-                }
-
-                :active {
-                    background-color: var(--accent-color);
-
-                    .product_button_price span {
-                        color: rgba(4, 3, 7, 1);
-                        -webkit-tap-highlight-color: transparent;
-                    }
-
-                    .product_button_price .oldprice {
-                        color: rgba(4, 3, 7, 0.4);
-                        -webkit-tap-highlight-color: transparent;
-                    }
-
-                    .plus {
-                        background-color: rgba(4, 3, 7, 1);
-                        -webkit-tap-highlight-color: transparent;
-                    }
-                }
-
-                :focus {
-                    background-color: var(--accent-color);
-
-                    .product_button_price span {
-                        color: rgba(4, 3, 7, 1);
-                        -webkit-tap-highlight-color: transparent;
-                    }
-
-                    .product_button_price .oldprice {
-                        color: rgba(4, 3, 7, 0.4);
-                        -webkit-tap-highlight-color: transparent;
-                    }
-
-                    .plus {
-                        background-color: rgba(4, 3, 7, 1);
-                        -webkit-tap-highlight-color: transparent;
-                    }
-                }
-            }
 
             .product_button_price {
 
@@ -533,12 +537,12 @@
 
         .product_button_container {
 
-            .product_button {
+            // .product_button {
 
-                width: 100%;
+            //     width: 100%;
 
 
-            }
+            // }
 
             .product_price {
                 display: none;

@@ -49,8 +49,8 @@ export const ProductCard = (props) => {
     <div className={s.product_button_container} >
 
       <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `}
-        // style={{ width: currentWidth + (window.innerWidth < 375 ? 54 : window.innerWidth <= 480 ? 54 : 56) }}
-        style={{  width: window.innerWidth >= 480 ? currentWidth + (window.innerWidth >= 768 ? 56 : 54) : '100%'  }}
+        style={{ width: currentWidth + (window.innerWidth < 375 ? 54 : window.innerWidth <= 480 ? 54 : 56) }}
+        // style={{  width: window.innerWidth >= 480 ? currentWidth + (window.innerWidth >= 768 ? 56 : 54) : '100%'  }}
       >
         {inCart
           ? (<div className={s.product_button_price} ref={handleRef}><span>В корзине</span></div>)

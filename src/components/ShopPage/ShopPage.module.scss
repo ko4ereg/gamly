@@ -1,3 +1,161 @@
+@media (hover: hover) and (pointer: fine) {
+
+    .notfound {
+        .notfound_button {
+
+
+            &:hover {
+
+                background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+            }
+        }
+    }
+
+
+    .categories {
+        .selected {
+            &:hover {
+                border: 1.5px var(--accent-color) solid;
+                transition: 0.2s ease-out;
+
+                h2 {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    .item {
+        &:hover {
+            border: 1.5px var(--gray-40) solid;
+            transition: 0.2s ease-out;
+        }
+    }
+
+    .catalog {
+        .filters_panel {
+            .filters_types {
+                .filters_types_item {
+                    &:hover {
+                        transition: 0.2s ease-out;
+                        border: 1.5px var(--gray-40) solid;
+                    }
+                }
+
+                .selected {
+                    background-color: var(--accent-purple);
+
+                    &:hover {
+                        border: 1.5px var(--gray-10) solid;
+                    }
+                }
+            }
+        }
+
+        .filters_sorts {
+            .button {
+                &:hover {
+                    border: 1.5px var(--gray-40) solid;
+                    transition: 0.2s ease-out;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        .page {  
+            &:hover {
+                transition: 0.2s ease-out;
+                border: 1.5px solid var(--gray-40);
+            }
+        }
+    
+        .activePage {
+            &:hover {
+                border: none;
+            }
+        }
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+    .notfound {
+        .notfound_button {
+            &:active {
+                background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+            }
+        }
+    }
+
+    .categories {
+        .selected {
+            &:active {
+                border: 1.5px var(--accent-color) solid;
+                transition: 0.2s ease-out;
+
+                h2 {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    .item {
+        &:active {
+            border: 1.5px var(--gray-40) solid;
+            transition: 0.2s ease-out;
+        }
+    }
+
+    .catalog {
+        .filters_panel {
+            .filters_types {
+                .filters_types_item {
+                    &:active {
+                        transition: 0.2s ease-out;
+                        border: 1.5px var(--gray-40) solid;
+                    }
+                }
+
+                .selected {
+                    background-color: var(--accent-purple);
+
+                    &:active {
+                        border: 1.5px var(--gray-10) solid;
+                    }
+                }
+            }
+        }
+        .filters_sorts {
+            .button {
+                &:active {
+                    border: 1.5px var(--gray-40) solid;
+                    transition: 0.2s ease-out;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        .page {  
+            &:active {
+                transition: 0.2s ease-out;
+                border: 1.5px solid var(--gray-40);
+            }
+        }
+    
+        .activePage {
+            &:active {
+                border: none;
+            }
+        }
+    }
+
+
+}
+
 .notfound {
     display: flex;
     justify-content: center;
@@ -31,10 +189,7 @@
         background: var(--dark-gray);
         cursor: pointer;
 
-        &:hover {
 
-            background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
-        }
     }
 }
 
@@ -165,16 +320,7 @@ h1 {
             transition: 0.2s ease-out;
         }
 
-        &:hover {
-            border: 1.5px var(--accent-color) solid;
-            transition: 0.2s ease-out;
 
-
-
-            h2 {
-                color: var(--white);
-            }
-        }
     }
 }
 
@@ -199,14 +345,7 @@ h1 {
 
 
 
-    &:hover {
-        border: 1.5px var(--gray-40) solid;
-        transition: 0.2s ease-out;
-
-
-
-
-    }
+    
 
 
 
@@ -270,8 +409,8 @@ h1 {
             overflow-x: scroll;
             -ms-overflow-style: none;
             scrollbar-width: none;
-     
- 
+
+
 
             &::-webkit-scrollbar {
                 display: none;
@@ -327,19 +466,12 @@ h1 {
                 /* 16.8px */
                 letter-spacing: 0.42px;
 
-                &:hover {
-                    transition: 0.2s ease-out;
-                    border: 1.5px var(--gray-40) solid;
-
-                }
+          
             }
 
             .selected {
                 background-color: var(--accent-purple);
-
-                &:hover {
-                    border: 1.5px var(--gray-10) solid;
-                }
+ 
             }
         }
 
@@ -452,11 +584,11 @@ h1 {
             border: 1.5px var(--gray-10) solid;
             border-radius: 8px;
 
-            &:hover {
-                border: 1.5px var(--gray-40) solid;
-                ;
-                transition: 0.2s ease-out;
-            }
+            // &:hover {
+            //     border: 1.5px var(--gray-40) solid;
+            //     ;
+            //     transition: 0.2s ease-out;
+            // }
         }
     }
 
@@ -856,11 +988,11 @@ h1 {
         cursor: pointer;
 
 
-        &:hover {
-            transition: 0.2s ease-out;
-            border: 1.5px solid var(--gray-40);
+        // &:hover {
+        //     transition: 0.2s ease-out;
+        //     border: 1.5px solid var(--gray-40);
 
-        }
+        // }
     }
 
     .activePage {
@@ -869,9 +1001,9 @@ h1 {
         border-radius: 8px;
         transition: 0.2s ease-out;
 
-        &:hover {
-            border: none;
-        }
+        // &:hover {
+        //     border: none;
+        // }
     }
 
     .pageEmpty {
@@ -1286,6 +1418,7 @@ h1 {
             letter-spacing: 0.16px;
 
         }
+
         .item:nth-child(3) {
             h2 {
                 max-width: none;
@@ -1736,7 +1869,7 @@ h1 {
                 .filters_types_item {
                     padding: 12px 16px;
                     height: 36px;
-                  
+
                 }
             }
         }
