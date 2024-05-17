@@ -13,10 +13,10 @@
         gap: 8px;
         align-items: center;
 
-        &:hover .check:not(.checked) {
-            border: 1px solid var(--gray-40);
-            transition: 0.2s ease-out;
-        }
+        // &:hover .check:not(.checked) {
+        //     border: 1px solid var(--gray-40);
+        //     transition: 0.2s ease-out;
+        // }
 
     }
 
@@ -40,6 +40,41 @@
 
 }
 
-.check.checked:hover {
-    border: none;
+// .check.checked:hover {
+//     border: none;
+// }
+
+@media (hover: hover) and (pointer: fine) {
+   
+
+    .check.checked:hover {
+        border: none;
+    }
+
+    .checkbox {
+        label {
+            &:hover .check:not(.checked) {
+                border: 1px solid var(--gray-40);
+                transition: 0.2s ease-out;
+            }
+        }
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+  
+    .check.checked:active {
+        border: none;
+    }
+
+    .checkbox {
+        label {
+            &:active .check:not(.checked) {
+                border: 1px solid var(--gray-40);
+                transition: 0.2s ease-out;
+            }
+        }
+    }
+
 }

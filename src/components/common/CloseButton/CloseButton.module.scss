@@ -89,3 +89,174 @@
 
 }
  
+
+@media (hover: hover) and (pointer: fine) {
+    .button {
+       
+        &:hover::before {
+            content: "";
+            left: 0;
+            top: 0;
+            width: 94%;
+            height: 94%;
+            position: absolute;
+            inset: calc(-1*1.5);
+            border: 1.5px solid var(--gray-15);
+            border-radius: 93px;
+            animation: polygon 0.2s linear forwards;
+        }
+    
+        &:not(:hover)::before {
+            content: "";
+            left: 0;
+            top: 0;
+            width: 94%;
+            height: 94%;
+            position: absolute;
+            inset: calc(-1*1.5);
+            border: 1.5px solid var(--gray-15);
+            border-radius: 93px;
+            animation: reverse-polygon 0.2s linear forwards;
+        }
+        
+        @keyframes reverse-polygon {
+            0% {
+                clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0%);
+            }
+            
+            17.1875% {
+                clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+            }
+        
+          
+            32.8125%  {
+                clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%);
+            }
+        
+            67.1875%  {
+                clip-path: polygon(50% 0%, 50% 0%, 50% 50%, 50% 50%, 100% 100%, 100% 0%);
+            }
+        
+            82.8125%  {
+                clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 100% 0%);
+            }
+        
+            100% {
+                clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+            }
+        }
+    
+    @keyframes polygon {
+        0% {
+            clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+        }
+    
+        17.1875% {
+            clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 100% 0%);
+        }
+    
+        32.8125% {
+            clip-path: polygon(50% 0%, 50% 0%, 50% 50%, 50% 50%, 100% 100%, 100% 0%);
+        }
+    
+        67.1875% {
+            clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%);
+        }
+    
+        82.8125% {
+            clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+        }
+    
+        100% {
+            clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0%);
+        }
+    }
+    
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .button {
+       
+        &:active::before {
+            content: "";
+            left: 0;
+            top: 0;
+            width: 94%;
+            height: 94%;
+            position: absolute;
+            inset: calc(-1*1.5);
+            border: 1.5px solid var(--gray-15);
+            border-radius: 93px;
+            animation: polygon 0.2s linear forwards;
+        }
+    
+        &:not(:active)::before {
+            content: "";
+            left: 0;
+            top: 0;
+            width: 94%;
+            height: 94%;
+            position: absolute;
+            inset: calc(-1*1.5);
+            border: 1.5px solid var(--gray-15);
+            border-radius: 93px;
+            animation: reverse-polygon 0.2s linear forwards;
+        }
+        
+        @keyframes reverse-polygon {
+            0% {
+                clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0%);
+            }
+            
+            17.1875% {
+                clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+            }
+        
+          
+            32.8125%  {
+                clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%);
+            }
+        
+            67.1875%  {
+                clip-path: polygon(50% 0%, 50% 0%, 50% 50%, 50% 50%, 100% 100%, 100% 0%);
+            }
+        
+            82.8125%  {
+                clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 100% 0%);
+            }
+        
+            100% {
+                clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+            }
+        }
+    
+    @keyframes polygon {
+        0% {
+            clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+        }
+    
+        17.1875% {
+            clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 100% 0%);
+        }
+    
+        32.8125% {
+            clip-path: polygon(50% 0%, 50% 0%, 50% 50%, 50% 50%, 100% 100%, 100% 0%);
+        }
+    
+        67.1875% {
+            clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%);
+        }
+    
+        82.8125% {
+            clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+        }
+    
+        100% {
+            clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 0%);
+        }
+    }
+    
+    }
+}

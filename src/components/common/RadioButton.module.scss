@@ -56,6 +56,34 @@
 
 }
 
-// .check.checked:hover {
+
+@media (hover: hover) and (pointer: fine) {
+   
  
-// }
+    .radiobutton {
+        label {
+            &:hover .check:not(.checked) {
+                border: 1px solid var(--gray-40);
+                transition: 0.2s ease-out;
+            }
+        }
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+  
+  
+
+    .radiobutton {
+        label {
+            &:active .check:not(.checked) {
+                border: 1px solid var(--gray-40);
+                transition: 0.2s ease-out;
+            }
+        }
+    }
+
+}
+
+ 

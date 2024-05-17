@@ -17,12 +17,7 @@
     border: none;
     color: var(--white);
     transition: 0.2s ease-out;
-
-
-    &:not(:disabled):hover {
-        background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
-        transition: 0.2s ease-out;
-    }
+ 
    
 
     &:disabled {
@@ -33,14 +28,26 @@
 
 
 }
+}
 
-
- 
-    
+@media (hover: hover) and (pointer: fine) {
+    .button {
+    &:not(:disabled):hover {
+        background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+        transition: 0.2s ease-out;
+    }
+}
 
 }
 
- 
+@media (hover: none) and (pointer: coarse) {
+    .button {
+        &:not(:disabled):active {
+            background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+            transition: 0.2s ease-out;
+        }
+    }
+}
 
 @media (max-width: 1439px) {
     .button {
