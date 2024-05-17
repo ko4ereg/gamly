@@ -31,7 +31,7 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    padding:  2px;
+    padding: 2px;
     transition: 0.2s ease-out;
 
     .inner {
@@ -49,6 +49,7 @@
     background-color: var(--accent-purple);
     border: 1px var(--accent-purple) solid;
     transition: 0.2s ease-out;
+
     .inner {
         transform: translateX(17px);
         transition: 0.2s ease-out;
@@ -58,8 +59,8 @@
 
 
 @media (hover: hover) and (pointer: fine) {
-   
- 
+
+
     .radiobutton {
         label {
             &:hover .check:not(.checked) {
@@ -72,8 +73,8 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
-  
-  
+
+
 
     .radiobutton {
         label {
@@ -85,5 +86,3 @@
     }
 
 }
-
- 

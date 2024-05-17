@@ -21,53 +21,53 @@ const TypesSlider = () => {
 
 
     const sliderRef = useRef(null);
-    // const backgroundRightRef = useRef(null);
-    // const backgroundLeftRef = useRef(null);
+    const backgroundRightRef = useRef(null);
+    const backgroundLeftRef = useRef(null);
 
 
 
 
 
 
-    // const checkScroll = () => {
+    const checkScroll = () => {
 
-    //     const slider = sliderRef.current;
-    //     const backgroundRight = backgroundRightRef.current;
-    //     const backgroundLeft = backgroundLeftRef.current;
+        const slider = sliderRef.current;
+        const backgroundRight = backgroundRightRef.current;
+        const backgroundLeft = backgroundLeftRef.current;
 
-    //     if (slider) {
-    //         if (slider.scrollWidth <= slider.clientWidth) {
-    //             backgroundRight.style.opacity = '0';
-    //         } else if (slider.scrollWidth > slider.clientWidth) {
-    //             backgroundRight.style.opacity = '1';
-    //         }
+        if (slider) {
+            if (slider.scrollWidth <= slider.clientWidth) {
+                backgroundRight.style.opacity = '0';
+            } else if (slider.scrollWidth > slider.clientWidth) {
+                backgroundRight.style.opacity = '1';
+            }
 
-    //         if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-    //             backgroundRight.style.opacity = '0';
-    //         } else {
-    //             backgroundRight.style.opacity = '1';
-    //         }
+            if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                backgroundRight.style.opacity = '0';
+            } else {
+                backgroundRight.style.opacity = '1';
+            }
 
-    //         if (slider.scrollLeft === 0) {
-    //             backgroundLeft.style.opacity = '0';
-    //         } else {
-    //             backgroundLeft.style.opacity = '1';
-    //         }
-    //     }
-    // };
+            if (slider.scrollLeft === 0) {
+                backgroundLeft.style.opacity = '0';
+            } else {
+                backgroundLeft.style.opacity = '1';
+            }
+        }
+    };
 
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     const slider = sliderRef.current;
-    //     const backgroundRight = backgroundRightRef.current;
-    //     const backgroundLeft = backgroundLeftRef.current;
+        const slider = sliderRef.current;
+        const backgroundRight = backgroundRightRef.current;
+        const backgroundLeft = backgroundLeftRef.current;
 
-    //     if (slider && backgroundRight && backgroundLeft) {
-    //         checkScroll();
-    //     }
+        if (slider && backgroundRight && backgroundLeft) {
+            checkScroll();
+        }
 
-    // }, []);
+    }, []);
 
 
     const types = [
@@ -92,13 +92,13 @@ const TypesSlider = () => {
     return (
         <div className={s.sliderContainer}>
             <div 
-            // ref={backgroundRightRef} 
+            ref={backgroundRightRef} 
             className={s.filters_types_background_right}></div>
             <div 
-            // ref={backgroundLeftRef} 
+            ref={backgroundLeftRef} 
             className={s.filters_types_background_left}></div>
             <div ref={sliderRef}
-                // onScroll={checkScroll}
+                onScroll={checkScroll}
 
                 {...events2}
 
