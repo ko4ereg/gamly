@@ -22,7 +22,7 @@ export const ProductCard = (props) => {
 
   useEffect(() => {
     if (firstRender) {
-      setCurrentWidth(handleRef.current.offsetWidth + 4);
+      setCurrentWidth(handleRef.current.offsetWidth +4);
       setFirstRender(false);
 
     } else {
