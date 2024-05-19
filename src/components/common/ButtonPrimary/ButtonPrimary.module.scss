@@ -17,6 +17,7 @@
     border: none;
     color: var(--white);
     transition: 0.2s ease-out;
+    gap: 12px;
 
     &:disabled {
         opacity: 0.2;
@@ -26,14 +27,16 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .button {       
+    .button {
         &:hover {
             background: linear-gradient(0deg, var(--gray-10-transparacy) 0%, var(--gray-10-transparacy) 100%), var(--accent-purple);
             transition: 0.2s ease-out;
         }
+
         &:disabled {
             &:hover {
-                background: var(--Accent-Purple, #5F42D9);;
+                background: var(--Accent-Purple, #5F42D9);
+                ;
             }
         }
     }
@@ -41,14 +44,16 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
-    .button {       
+    .button {
         &:active {
             background: linear-gradient(0deg, var(--gray-10-transparacy) 0%, var(--gray-10-transparacy) 100%), var(--accent-purple);
             transition: 0.2s ease-out;
         }
+
         &:disabled {
             &:active {
-                background: var(--Accent-Purple, #5F42D9);;
+                background: var(--Accent-Purple, #5F42D9);
+                ;
             }
         }
     }
@@ -70,5 +75,3 @@
 
     }
 }
-
- 

@@ -10,7 +10,7 @@ const Checkbox = ({ value, children, isChecked, setIsChecked }) => {
                     setIsChecked(value) 
                 }}
             />
-            <label for={value}>
+            <label htmlFor={value}>
             <div className={`${s.check} ${isChecked ? s.checked : ''}`}>
                     {isChecked
                         ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

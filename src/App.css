@@ -2,6 +2,7 @@
   background: var(--Background-far, #14111A);
 display: flex;
 flex-direction: column;
+height: 100vh;
 }
 
 .content-wrapper {

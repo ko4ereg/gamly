@@ -35,28 +35,28 @@ const Selector = ({ isChecked, setIsChecked, setShowAll, showAll, filterValue, o
     }
 
 
-    const listRef = useRef(null);
+    // const listRef = useRef(null);
 
 
-    const handleTouchStart = (e) => {
-        const touchStartY = e.touches[0].clientY;
-        const scrollTop = listRef.current.scrollTop;
+    // const handleTouchStart = (e) => {
+    //     const touchStartY = e.touches[0].clientY;
+    //     const scrollTop = listRef.current.scrollTop;
 
-        const onTouchMove = (e) => {
-            const touchMoveY = e.touches[0].clientY;
-            const touchDistance = touchStartY - touchMoveY;
+    //     const onTouchMove = (e) => {
+    //         const touchMoveY = e.touches[0].clientY;
+    //         const touchDistance = touchStartY - touchMoveY;
 
-            listRef.current.scrollTop = scrollTop + touchDistance;
-        };
+    //         listRef.current.scrollTop = scrollTop + touchDistance;
+    //     };
 
-        const onTouchEnd = () => {
-            document.removeEventListener('touchmove', onTouchMove);
-            document.removeEventListener('touchend', onTouchEnd);
-        };
+    //     const onTouchEnd = () => {
+    //         document.removeEventListener('touchmove', onTouchMove);
+    //         document.removeEventListener('touchend', onTouchEnd);
+    //     };
 
-        document.addEventListener('touchmove', onTouchMove);
-        document.addEventListener('touchend', onTouchEnd);
-    };
+    //     document.addEventListener('touchmove', onTouchMove);
+    //     document.addEventListener('touchend', onTouchEnd);
+    // };
 
 
     const selectorElement = useMemo(() => {
@@ -76,10 +76,7 @@ const Selector = ({ isChecked, setIsChecked, setShowAll, showAll, filterValue, o
         ));
     }, [filteredOptions, isChecked, showAll]);
 
-    // const selectorElement = useMemo(() =>
-    //     options.slice(0,5).map((creator, index) => <li value={creator.value}
-    //         key={index}> <Checkbox isChecked={isChecked.includes(creator.value)} setIsChecked={() => handleCheckboxChange(creator.value)} value={creator.value}>{creator.label}</Checkbox>  </li>), [options, isChecked]
-    // );
+
 
 
     return (
@@ -88,7 +85,10 @@ const Selector = ({ isChecked, setIsChecked, setShowAll, showAll, filterValue, o
             {/* {showAll ?
                 <TextButtonC1 text={'Выбрать все'} onClick={handleSelectAll} />
                 : null} */}
-            <ul onTouchStart={handleTouchStart} ref={listRef}>
+            <ul
+            // onTouchStart={handleTouchStart} 
+            // ref={listRef}
+            >
                 {selectorElement}
             </ul>
             {options.length > 5 ? (showAll ? <TextButtonC1 text={'Скрыть все'} onClick={() => setShowAll(!showAll)} />

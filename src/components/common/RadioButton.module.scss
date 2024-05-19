@@ -14,7 +14,7 @@
         align-items: center;
 
         &:hover .check:not(.checked) {
-            border: 1px solid var(--gray-40);
+
             transition: 0.2s ease-out;
         }
 
@@ -26,7 +26,7 @@
     width: 41px;
     height: 24px;
     border-radius: 40px;
-    border: 1px var(--dark-gray) solid;
+    background-color: var(--dark-gray);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -47,7 +47,7 @@
 
 .checked {
     background-color: var(--accent-purple);
-    border: 1px var(--accent-purple) solid;
+
     transition: 0.2s ease-out;
 
     .inner {
@@ -62,12 +62,13 @@
 
 
     .radiobutton {
-        label {
-            &:hover .check:not(.checked) {
-                border: 1px solid var(--gray-40);
+        .check:not(.checked) {
+            &:hover {
+                background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
                 transition: 0.2s ease-out;
             }
         }
+
     }
 
 }
@@ -77,9 +78,9 @@
 
 
     .radiobutton {
-        label {
-            &:active .check:not(.checked) {
-                border: 1px solid var(--gray-40);
+        .check:not(.checked) {
+            &:active {
+                background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
                 transition: 0.2s ease-out;
             }
         }

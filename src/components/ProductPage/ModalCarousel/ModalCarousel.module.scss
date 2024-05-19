@@ -1,0 +1,369 @@
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: var(--background-far);
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    overflow: hidden;
+
+    .closeButton {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        z-index: 2;
+    }
+
+    .carouselContainer {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 32px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .preview {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            gap: 8px;
+            flex: 0 0 auto;
+            overflow: scroll;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .preview_item {
+                border-radius: 8px;
+                width: 144px;
+                height: 144px;
+                background-color: rgba(26, 23, 33, 1);
+                cursor: pointer;
+
+                img {
+                    object-fit: contain;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            .selected {
+                border: 1.5px solid var(--gray-40);
+            }
+        }
+
+        .imageContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 100%;
+            position: relative;
+            height: 100%;
+
+            .fullsize {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .buttonLeft {
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: flex;
+                width: 72px;
+                height: 100%;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 8px;
+                flex-shrink: 0;
+
+                cursor: pointer;
+            }
+
+            .buttonRight {
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                width: 40px;
+                height: 100%;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+                flex-shrink: 0;
+
+                cursor: pointer;
+            }
+
+
+        }
+    }
+}
+
+
+.active {
+
+    background: var(--background-far);
+    opacity: 1;
+    transition: 0.3s;
+    pointer-events: all;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+
+    .preview_item {
+
+        &:hover {
+            border: 1.5px solid var(--gray-15);
+            transition: 0.2s ease-out;
+        }
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .preview_item {
+
+        &:active {
+            border: 1.5px solid var(--gray-15);
+            transition: 0.2s ease-out;
+        }
+    }
+
+
+}
+
+@media (max-width: 1439px) {
+    .modal_container {
+
+        .closeButton {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 2;
+        }
+
+        .carouselContainer {
+            padding: 0px;
+            position: relative;
+
+            .preview {
+                height: fit-content;
+                flex-direction: row;
+                position: absolute;
+                z-index: 2;
+                bottom: 24px;
+                left: 0;
+                width: 100%;
+                justify-content: center;
+
+                .preview_item {
+
+                    width: 96px;
+                    height: 96px;
+
+                }
+
+            }
+
+            .imageContainer {
+
+                .buttonLeft {
+                    width: 64px;
+                }
+
+                .buttonRight {
+                    width: 64px;
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .modal_container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+
+        .carouselContainer {
+            padding: 0px;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+
+            .preview {
+                height: fit-content;
+                flex-direction: row;
+                position: absolute;
+                z-index: 2;
+                bottom: 24px;
+                left: 0;
+                width: 100%;
+                justify-content: center;
+
+
+            }
+
+            .imageContainer {
+                height: auto;
+                max-width: 768px;
+                overflow: hidden;
+
+                .buttonLeft {
+                    width: 64px;
+                }
+
+                .buttonRight {
+                    width: 64px;
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .modal_container {
+
+
+        .carouselContainer {
+            padding: 0px;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+
+            .preview {
+
+                overflow: scroll;
+                padding: 0 24px;
+                justify-content: flex-start;
+
+                .preview_item {
+                    min-width: 96px;
+                }
+            }
+
+            .imageContainer {
+                height: auto;
+                max-width: 480px;
+                overflow: hidden;
+
+                .fullsize {
+                    max-width: 480px;
+                }
+
+                .buttonLeft {
+                    display: none;
+                }
+
+                .buttonRight {
+                    display: none;
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .modal_container {
+
+
+        .carouselContainer {
+            padding: 0px;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+
+            .preview {
+
+                .preview_item {
+                    min-width: 80px;
+                }
+            }
+
+            .imageContainer {
+                height: auto;
+                max-width: 375px;
+                overflow: hidden;
+                justify-content: flex-start;
+
+                .fullsize {
+                    max-width: 375px;
+                }
+ 
+
+
+            }
+        }
+    }
+}
+
+@media (max-width: 374px) {
+    .modal_container {
+
+
+        .closeButton {
+ 
+            top: 16px;
+            right: 16px;
+ 
+        }
+
+        .carouselContainer {
+            padding: 0px;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+           
+ .preview {
+                padding: 0 16px;
+                .preview_item {
+                    min-width: 80px;
+                }
+       
+
+            }
+           
+            .imageContainer {
+                height: auto;
+                max-width: 320px;
+                overflow: hidden;
+                justify-content: flex-start;
+
+                .fullsize {
+                    max-width: 320px;
+                }
+ 
+
+
+            }
+        }
+    }
+}

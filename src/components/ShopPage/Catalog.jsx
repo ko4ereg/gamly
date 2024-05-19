@@ -11,11 +11,11 @@ import FilterPopup from './FilterPopup/FilterPopup';
 
 
 
-const Catalog = ({prods, ...props}) => {
+const Catalog = ({ prods, ...props }) => {
   const [filterActive, setFilterActive] = useState(false);
   const [sortsOpen, setSortsOpen] = useState(false);
   const sortsRef = useRef(null);
-
+  const [selectedTypes, setSelectedTypes] = useState([]);
   const [currentSort, setSort] = useState('сначала популярные');
 
   const handleClick = (e) => {
@@ -48,7 +48,7 @@ const Catalog = ({prods, ...props}) => {
       <h1>Игровая периферия</h1>
 
       <div className={s.filters_panel}>
-        <TypesSlider />
+        <TypesSlider setSelectedTypes={setSelectedTypes} selectedTypes={selectedTypes} />
 
         <div className={s.filters_sorts}>
           <div className={s.sorts} ref={sortsRef}>
@@ -60,7 +60,7 @@ const Catalog = ({prods, ...props}) => {
           <div className={s.button} onClick={handleSetFilterActive}><img src={burger} alt="" />Фильтры</div>
         </div>
       </div>
-      {prods.length > 0 ? <Products prods={prods} prodsAmount={prods.length} /> : <NotFound />}
+      {prods.length > 0 ? <Products prods={prods} prodsAmount={prods.length} /> : <NotFound setSelectedTypes={setSelectedTypes} />}
 
       <FilterPopup prodsAmount={prods.length} filterActive={filterActive} setFilterActive={setFilterActive} />
     </div>

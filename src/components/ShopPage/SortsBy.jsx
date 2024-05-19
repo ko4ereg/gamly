@@ -19,22 +19,22 @@ const SortsBy = (props) => {
 
                 <li  >
                     <input type="checkbox" id="popular" checked={selectedOption === 'сначала популярные'} onChange={handleCheckboxChange} />
-                    <label for="popular"><div className={s.check}></div>сначала популярные</label>
+                    <label htmlFor="popular"><div className={s.check}></div>сначала популярные</label>
                 </li>
                 <li>
                     <input type="checkbox" id="cheap" checked={selectedOption === 'сначала дешевые'}
                         onChange={handleCheckboxChange} />
-                    <label for="cheap"><div className={s.check}></div>сначала дешевые</label>
+                    <label htmlFor="cheap"><div className={s.check}></div>сначала дешевые</label>
                 </li>
                 <li>
                     <input type="checkbox" id="exp" checked={selectedOption === 'сначала дорогие'}
                         onChange={handleCheckboxChange} />
-                    <label for="exp"><div className={s.check}></div>сначала дорогие</label>
+                    <label htmlFor="exp"><div className={s.check}></div>сначала дорогие</label>
                 </li>
                 <li>
                     <input type="checkbox" id="discont" checked={selectedOption === 'по скидке (%)'}
                         onChange={handleCheckboxChange} />
-                    <label for="discont"><div className={s.check}></div>по скидке (%)</label>
+                    <label htmlFor="discont"><div className={s.check}></div>по скидке (%)</label>
                 </li>
             </ul>
         </div>

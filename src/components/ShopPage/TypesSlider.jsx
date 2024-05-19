@@ -1,31 +1,47 @@
 import React, { useEffect, useRef, useState } from 'react';
 import s from './ShopPage.module.scss';
 import { useDraggable } from 'react-use-draggable-scroll';
+import { useDispatch } from 'react-redux';
+import { addTypeItems, deleteTypeItems, getTypeItems, setTypeItems } from '../../store/productsSlice';
 
 
 
 
-const TypesSlider = () => {
+const TypesSlider = ({ selectedTypes, setSelectedTypes }) => {
 
-    const [selectedTypes, setSelectedTypes] = useState([]);
+    const dispatch = useDispatch();
 
     const handleItemClick = (index) => {
-        if (selectedTypes.includes(index)) {
-            // Если категория уже выбрана, удаляем ее из списка выбранных
-            setSelectedTypes(selectedTypes.filter(item => item !== index));
+      
+        if (selectedTypes.length === 0) {
+            setSelectedTypes([index]);
+            dispatch(setTypeItems(index));
         } else {
-            // Если категория не выбрана, добавляем ее в список выбранных
-            setSelectedTypes([...selectedTypes, index]);
+
+
+            if (selectedTypes.includes(index)) {
+                // Если категория уже выбрана, удаляем ее из списка выбранных
+                setSelectedTypes(selectedTypes.filter(item => item !== index));
+                dispatch(deleteTypeItems(index)); 
+            } else {
+                // Если категория не выбрана, добавляем ее в список выбранных
+                setSelectedTypes([...selectedTypes, index]);
+                dispatch(addTypeItems(index));
+
+            }
         }
     }
 
+    useEffect(() => {
+        if (selectedTypes.length === 0) {
+            dispatch(getTypeItems());
+        }
+    }, [selectedTypes]);
 
+ 
     const sliderRef = useRef(null);
     const backgroundRightRef = useRef(null);
     const backgroundLeftRef = useRef(null);
-
-
-
 
 
 
@@ -91,12 +107,12 @@ const TypesSlider = () => {
 
     return (
         <div className={s.sliderContainer}>
-            <div 
-            ref={backgroundRightRef} 
-            className={s.filters_types_background_right}></div>
-            <div 
-            ref={backgroundLeftRef} 
-            className={s.filters_types_background_left}></div>
+            <div
+                ref={backgroundRightRef}
+                className={s.filters_types_background_right}></div>
+            <div
+                ref={backgroundLeftRef}
+                className={s.filters_types_background_left}></div>
             <div ref={sliderRef}
                 onScroll={checkScroll}
 

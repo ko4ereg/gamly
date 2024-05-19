@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage';
 import { Suspense, useEffect } from 'react';
 import ShopPage from './pages/ShopPage';
 import SubscribePage from './pages/SubscribePage';
+import ProductPage from './pages/ProductPage';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
           <Route path="" element={<MainPage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/subscribe" element={<SubscribePage />} />
+          <Route path="/shop/:productId?" element={<ProductPage />} />
         </Routes>
         </div>
         </div>

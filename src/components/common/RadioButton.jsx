@@ -16,7 +16,7 @@ const RadioButton = ({ value, isChecked, setIsChecked }) => {
             <input type="checkbox" id={value} checked={isChecked}
                 onChange={()=>handleCheckboxChange(value)}
             />
-            <label for={value}>
+            <label htmlFor={value}>
             <div className={`${s.check} ${isChecked ? s.checked : ''}`}>
                    <div className={s.inner} ></div>
                 </div>

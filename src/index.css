@@ -3,9 +3,9 @@
   font-family: 'VelaSans-GX';
   src:
 
-    url("fonts/VelaSans-Regular.woff2") format('woff2'),
-    url("fonts/VelaSans-Regular.woff") format('woff'),
-    url("fonts/VelaSans-Regular.ttf") format('truetype');
+    url("assets/fonts/VelaSans-Regular.woff2") format('woff2'),
+    url("assets/fonts/VelaSans-Regular.woff") format('woff'),
+    url("assets/fonts/VelaSans-Regular.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -15,9 +15,9 @@
   font-family: 'VelaSans-GX';
   src:
 
-    url("fonts/VelaSans-Bold.woff2") format('woff2'),
-    url("fonts/VelaSans-Bold.woff") format('woff'),
-    url("fonts/VelaSans-Bold.ttf") format('truetype');
+    url("assets/fonts/VelaSans-Bold.woff2") format('woff2'),
+    url("assets/fonts/VelaSans-Bold.woff") format('woff'),
+    url("assets/fonts/VelaSans-Bold.ttf") format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: 'Coolvetica';
-  src: url(./fonts/COOLVETICA\ RG.OTF) format('opentype');
+  src: url('assets/fonts/COOLVETICA\ RG.OTF') format('opentype');
   font-display: swap;
 }
 

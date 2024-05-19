@@ -1,7 +1,8 @@
-import React, { useEffect,  useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import s from './ProductCard.module.scss';
 import Carousel from '../Carousel/Carousel';
 import { formatValue } from '../../../utils/formatValue';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -22,14 +23,14 @@ export const ProductCard = (props) => {
 
   useEffect(() => {
     if (firstRender) {
-      setCurrentWidth(handleRef.current.offsetWidth +4);
+      setCurrentWidth(handleRef.current.offsetWidth + 4);
       setFirstRender(false);
 
     } else {
       setCurrentWidth(handleRef.current.offsetWidth);
-    
+
     }
-  }, [inCart])
+  }, [inCart, props])
 
 
 
@@ -44,17 +45,17 @@ export const ProductCard = (props) => {
     <div className={s.product_img} >
       <Carousel img={props.product.img} />
     </div>
-    <div className={s.product_title}> {props.product.title} </div>
+    <NavLink to={`/shop/${props.product.id}`}> <div className={s.product_title}> {props.product.title} </div></NavLink>
 
     <div className={s.product_button_container} >
 
       <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `}
         style={{ width: currentWidth + (window.innerWidth <= 480 ? 54 : 56) }}
-        // style={{  width: window.innerWidth >= 480 ? currentWidth + (window.innerWidth >= 768 ? 56 : 54) : '100%'  }}
+      // style={{  width: window.innerWidth >= 480 ? currentWidth + (window.innerWidth >= 768 ? 56 : 54) : '100%'  }}
       >
         {inCart
           ? (<div className={s.product_button_price} ref={handleRef}><span>В корзине</span></div>)
-          : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.discount ? <span>{actualPrice}</span> : null} {props.product.discount ? (<span className={s.oldprice}>{props.product.price} ₽</span>) : (<span>{props.product.price} ₽</span>)} </div>)}
+          : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.discount ? <span>{actualPrice}</span> : null} {props.product.discount ? (<span className={s.oldprice}>{actualPrice}</span>) : (<span>{actualPrice}</span>)} </div>)}
 
 
         <div className={`${s.plus} ${inCart ? s.minus : ''} `}>

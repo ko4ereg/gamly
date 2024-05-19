@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-// import s from './Carousel.module.css';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import s from './Carousel.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -7,22 +7,33 @@ import './Carousel.css';
 
 
 const Carousel = (props) => {
- 
+
     const [currentIndex, setIndex] = useState(0);
     const sliderRef = useRef();
-const dotsRef = useRef();
-    const amountOfSlides = Math.ceil(100 / (props.img.length));
-
+    const dotsRef = useRef();
 
     const [translate, setTranslate] = useState(0);
 
+    // const handleMouseEnter = () => {
+
+    //     if (dotsRef.current) {
+    //         dotsRef.current.style.opacity = '1';
+    //     }
+    // }
+
+    // const handleMouseLeave = (e) => {
+
+    //     if (dotsRef.current && !e.target !== dotsRef.current) {
+    //         dotsRef.current.style.opacity = '0';
+    //     }
+    // }
+
+
     const goToSlide = (index) => {
-        if (dotsRef.current) {
-            dotsRef.current.style.opacity = '1';
-        }
-       
+
+
         sliderRef.current.slickGoTo(index);
-        
+
         setIndex(index);
         if (index === 1) {
             setTranslate(0);
@@ -33,28 +44,57 @@ const dotsRef = useRef();
         }
     }
 
-    const handleMouseLeave = () => {
-        if (dotsRef.current) {
-            dotsRef.current.style.opacity = '0';
+
+
+    const scroll = useCallback(
+        y => {
+            if (y > 0) {
+                return sliderRef?.current?.slickNext(); /// ? <- using description below 
+            } else {
+                return sliderRef?.current?.slickPrev();
+            }
+        },
+        [sliderRef]
+    );
+    useEffect(() => {
+        if (window.innerWidth >= 1024) {
+            window.addEventListener("wheel", e => {
+                scroll(e.deltaY);
+            });
         }
-    }
+
+        return (() => {
+            window.removeEventListener("wheel", e => {
+                scroll(e.deltaY);
+            });
+        })
+    }, [scroll]);
+
+
+
 
     if (props.img.length === 1) {
         return (
-
-            <img   className='sliderImage' src={props.img[0]} alt="carousel" />
+            <img onClick={() => { props.setActive(true) }} className='sliderImage' src={props.img[0]} alt="carousel" />
 
         );
     } else {
         var settings = {
             dots: true,
             infinite: false,
-            speed: 0,
+            speed: 150,
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
+            className: 'ass',
+            swipeToSlide: true,
+            centerMode: false,
+            variableWidth: true,
+
+            afterChange: (currentIndex) => { goToSlide(currentIndex) },
             appendDots: dots => (
                 <div ref={dotsRef}
+
                     style={{
                         position: 'absolute',
                         bottom: '16px',
@@ -63,7 +103,7 @@ const dotsRef = useRef();
                         overflow: 'hidden',
                         transform: 'translateX(-50%)',
                         padding: '0 1px',
-
+                        opacity: '1',
                         transition: '0.2s ease-out'
 
                     }}
@@ -80,7 +120,9 @@ const dotsRef = useRef();
                             <li
 
                                 className={currentIndex === index ? 'slick-active' : ''}
-                                key={index}>
+                                key={index}
+                                onClick={() => goToSlide(index)}
+                            >
                             </li>
                         ))}
                     </ul>
@@ -91,30 +133,25 @@ const dotsRef = useRef();
                     breakpoint: 1023,
                     settings: {
                         speed: 500,
-                        dots: false
+                       
                     }
                 },
             ]
         };
         return (
-            <div style={{ height: '100%' }}>
-           
-                <Slider ref={sliderRef} {...settings}>
+            <div style={{ height: '100%', width: '100%', position: 'relative' }}>
+
+                <Slider ref={sliderRef} {...settings}   >
                     {(props.img).map((item, index) => (
-                        <div key={index}><img className='sliderImage' src={item} alt="" /></div>
+                        <div
+                            onClick={() => { props.setActive(true) }}
+                            // onMouseEnter={() => handleMouseEnter()}
+                            // onMouseLeave={(e) => handleMouseLeave(e)}
+                            key={index}><img className='sliderImage' src={item} alt="" /></div>
                     ))}
 
                 </Slider>
-                <div style={{ display: window.innerWidth > 1023 ? 'flex' : 'none' }} className='sliderThumbnails'>
-                    {props.img.map((item, index) => (
-                        <div style={{ flex: `${amountOfSlides}%` }}
-                            key={index}
-                            // className={s.imagethumbnail}
-                            onMouseEnter={() => goToSlide(index)}
-                            onMouseLeave={() => handleMouseLeave()}>
-                        </div>
-                    ))}
-                </div>
+
             </div>
         );
     }

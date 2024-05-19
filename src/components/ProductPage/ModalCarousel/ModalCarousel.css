@@ -1,0 +1,37 @@
+.popup-slider {
+  /* max-height: 100%; */
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+
+.popup-slider .slick-slide div {
+    display: flex;
+    align-items: center;
+}
+
+ /* @media (max-width: 1023px) {
+    .popup-slider {
+     
+          max-width: 768px;
+          
+      }
+
+      .popup-slider .slick-list {
+        max-width: 768px;
+      }
+ }
+ @media (max-width: 767px) {
+    .popup-slider {
+      
+          max-width: 480px;
+          
+      }
+
+      .popup-slider .slick-list {
+        max-width: 480px;
+      }
+ } */

@@ -1,9 +1,9 @@
 import s from './CloseButton.module.scss';
-import close from './../../../assets/icons/close.svg';
+ 
 
-const CloseButton = ({ onClick}) => {
+const CloseButton = ({ onClick, icon}) => {
     return (
-        <div className={s.button} onClick={onClick}><img src={close} alt="" /></div>
+        <div className={s.button} onClick={onClick}><img src={icon} alt="" /></div>
     )
 }
 

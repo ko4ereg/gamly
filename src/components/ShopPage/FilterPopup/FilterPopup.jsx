@@ -79,7 +79,7 @@ const FilterPopup = ({ filterActive, setFilterActive, prodsAmount }) => {
           </div>
 
 
-          <CloseButton onClick={() => { setFilterActive(false) }} />
+          <CloseButton icon={close} onClick={() => { setFilterActive(false) }} />
         </div>
         <div className={s.filters_container}>
 
