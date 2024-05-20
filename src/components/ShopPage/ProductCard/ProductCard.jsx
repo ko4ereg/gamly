@@ -42,9 +42,9 @@ export const ProductCard = (props) => {
 
   return (<div className={s.product_card}>
     {props.product.discount ? <div className={s.product_discont}>-{props.product.discount}%</div> : null}
-    <div className={s.product_img} >
+    <NavLink to={`/shop/${props.product.id}`}> <div className={s.product_img} >
       <Carousel img={props.product.img} />
-    </div>
+    </div></NavLink>
     <NavLink to={`/shop/${props.product.id}`}> <div className={s.product_title}> {props.product.title} </div></NavLink>
 
     <div className={s.product_button_container} >

@@ -31,37 +31,84 @@
         align-items: center;
         overflow: hidden;
 
-        .preview {
-            display: flex;
-            height: 100%;
-            flex-direction: column;
-            gap: 8px;
-            flex: 0 0 auto;
-            overflow: scroll;
-            scrollbar-width: none;
-            scroll-behavior: smooth;
+        .border {
 
-            &::-webkit-scrollbar {
-                display: none;
+            height: 100%;
+            min-width: 144px;
+            position: relative;
+
+
+        }
+
+        .preview_container {
+
+            height: 100%;
+            min-width: 144px;
+            position: relative;
+
+            .fadeLeft {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 52px;
+                opacity: 1;
+                background: linear-gradient(#14111A 0%, rgba(20, 17, 26, 0.00) 100%);
+                z-index: 3;
+                transition: 0.2s ease-out;
             }
 
-            .preview_item {
-                border-radius: 8px;
-                width: 144px;
-                height: 144px;
-                background-color: rgba(26, 23, 33, 1);
-                cursor: pointer;
+            .fadeRight {
+                width: 100%;
+                height: 32px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                opacity: 1;
+                background: linear-gradient(360deg, #14111A 0%, rgba(20, 17, 26, 0.00) 100%);
+                z-index: 3;
+                transition: 0.2s ease-out;
+            }
 
-                img {
-                    object-fit: contain;
-                    max-width: 100%;
-                    max-height: 100%;
+
+            .preview {
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                gap: 8px;
+                flex: 0 0 auto;
+                overflow: scroll;
+                scrollbar-width: none;
+                scroll-behavior: smooth;
+                position: relative;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .preview_item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+                    width: 144px;
+                    height: 144px;
+                    background-color: rgba(26, 23, 33, 1);
+                    cursor: pointer;
+                    user-select: none;
+
+                    img {
+                        object-fit: contain;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+
+                .selected {
+                    border: 1.5px solid var(--gray-40);
                 }
             }
 
-            .selected {
-                border: 1.5px solid var(--gray-40);
-            }
         }
 
         .imageContainer {
@@ -78,17 +125,19 @@
                 justify-content: center;
 
                 img {
+                    object-fit: contain;
                     width: 100%;
                 }
+
             }
 
             .buttonLeft {
                 cursor: pointer;
                 position: absolute;
-                left: 0;
+                left: 32px;
                 top: 0;
                 display: flex;
-                width: 72px;
+                width: 40px;
                 height: 100%;
                 justify-content: flex-end;
                 align-items: center;
@@ -168,28 +217,72 @@
             padding: 0px;
             position: relative;
 
-            .preview {
-                height: fit-content;
-                flex-direction: row;
+            .border {
+
+                width: 100%;
+                height: 96px;
                 position: absolute;
-                z-index: 2;
                 bottom: 24px;
                 left: 0;
-                width: 100%;
-                justify-content: center;
+                padding: 0 24px;
 
-                .preview_item {
 
-                    width: 96px;
-                    height: 96px;
+            }
 
+            .preview_container {
+
+                height: 100%;
+                min-width: auto;
+                position: relative;
+
+                .fadeLeft {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0px;
+                    width: 32px;
+                    height: 100%;
+                    opacity: 0;
+                    background: linear-gradient(90deg, #14111A 0%, rgba(20, 17, 26, 0.00) 100%);
+                    z-index: 3;
+                    transition: 0.2s ease-out;
                 }
 
+                .fadeRight {
+                    width: 32px;
+                    height: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: calc(100% - 32px);
+                    opacity: 0;
+                    background: linear-gradient(270deg, #14111A 0%, rgba(20, 17, 26, 0.00) 100%);
+                    z-index: 3;
+                    transition: 0.2s ease-out;
+                }
+
+
+                .preview {
+                    height: fit-content;
+                    flex-direction: row;
+
+                    z-index: 2;
+
+                    width: 100%;
+                    justify-content: flex-start;
+
+                    .preview_item {
+
+                         width: 96px;
+                        height: 96px;
+
+                    }
+
+                }
             }
 
             .imageContainer {
 
                 .buttonLeft {
+                    left: 0;
                     width: 64px;
                 }
 
@@ -203,53 +296,13 @@
     }
 }
 
-@media (max-width: 1023px) {
-    .modal_container {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-
-        .carouselContainer {
-            padding: 0px;
-            position: relative;
-            max-width: 100%;
-            overflow: hidden;
-
-            .preview {
-                height: fit-content;
-                flex-direction: row;
-                position: absolute;
-                z-index: 2;
-                bottom: 24px;
-                left: 0;
-                width: 100%;
-                justify-content: center;
-
-
-            }
-
-            .imageContainer {
-                height: auto;
-                max-width: 768px;
-                overflow: hidden;
-
-                .buttonLeft {
-                    width: 64px;
-                }
-
-                .buttonRight {
-                    width: 64px;
-                }
-
-
-            }
-        }
-    }
-}
+@media (max-width: 1023px) {}
 
 @media (max-width: 767px) {
     .modal_container {
 
+        width: 100%;
+        height: 100%;
 
         .carouselContainer {
             padding: 0px;
@@ -317,7 +370,7 @@
                 .fullsize {
                     max-width: 375px;
                 }
- 
+
 
 
             }
@@ -330,10 +383,10 @@
 
 
         .closeButton {
- 
+
             top: 16px;
             right: 16px;
- 
+
         }
 
         .carouselContainer {
@@ -341,16 +394,17 @@
             position: relative;
             max-width: 100%;
             overflow: hidden;
-           
- .preview {
+
+            .preview {
                 padding: 0 16px;
+
                 .preview_item {
                     min-width: 80px;
                 }
-       
+
 
             }
-           
+
             .imageContainer {
                 height: auto;
                 max-width: 320px;
@@ -360,7 +414,7 @@
                 .fullsize {
                     max-width: 320px;
                 }
- 
+
 
 
             }

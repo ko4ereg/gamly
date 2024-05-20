@@ -8,14 +8,14 @@ import ProductDescription from './ProductDescription';
 const ProductContainer = ({ productData }) => {
 
     const [active, setActive] = useState(false);
-   
+    const [selected, setSelected] = useState(0);
     return (
         <div className={s.container} >
-            <ProductCarousel active={active} setActive={setActive} productData={productData} />
+            <ProductCarousel setSelected={setSelected} selected={selected} active={active} setActive={setActive} productData={productData} />
 
             <ProductDescription productData={productData} />
             <DiscordBanner />
-            <ModalCarousel img={productData.img} active={active} setActive={setActive}/>
+            <ModalCarousel setSelected={setSelected} selected={selected} img={productData.img} active={active} setActive={setActive}/>
 
         </div>
     )

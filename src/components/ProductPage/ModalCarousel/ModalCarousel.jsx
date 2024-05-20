@@ -7,21 +7,81 @@ import next from './../../../assets/icons/arrowright.svg';
 import Slider from 'react-slick';
 import './ModalCarousel.css';
 
-const ModalCarousel = ({ active, setActive, img }) => {
+const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
 
-    const [selected, setSelected] = useState(0);
+
 
     const modalSliderRef = useRef();
+    const fadeLeft = useRef();
+    const fadeRight = useRef();
+    const previewSlider = useRef();
+
+    const checkScroll = () => {
+
+        const slider = previewSlider.current;
+        const backgroundRight = fadeRight.current;
+        const backgroundLeft = fadeLeft.current;
+
+        if (slider) {
+            if (window.innerWidth > 1439) {
+                if (slider.scrollHeight <= slider.clientHeight) {
+                    backgroundRight.style.opacity = '0';
+                } else if (slider.scrollHeight > slider.clientHeight) {
+                    backgroundRight.style.opacity = '1';
+                }
+
+                if (slider.scrollTop >= slider.scrollHeight - slider.clientHeight) {
+                    backgroundRight.style.opacity = '0';
+                } else {
+                    backgroundRight.style.opacity = '1';
+                }
+
+                if (slider.scrollTop === 0) {
+                    backgroundLeft.style.opacity = '0';
+                } else {
+                    backgroundLeft.style.opacity = '1';
+                }
+            } else {
+                if (slider.scrollWidth <= slider.clientWidth) {
+                    backgroundRight.style.opacity = '0';
+                } else if (slider.scrollWidth > slider.clientWidth) {
+                    backgroundRight.style.opacity = '1';
+                }
+
+                if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+                    backgroundRight.style.opacity = '0';
+                } else {
+                    backgroundRight.style.opacity = '1';
+                }
+
+                if (slider.scrollLeft === 0) {
+                    backgroundLeft.style.opacity = '0';
+                } else {
+                    backgroundLeft.style.opacity = '1';
+                }
+            }
+
+        }
+    };
+
+
+    useEffect(() => {
+
+        const slider = previewSlider.current;
+        const backgroundRight = fadeLeft.current;
+        const backgroundLeft = fadeLeft.current;
+
+        if (slider && backgroundRight && backgroundLeft) {
+            checkScroll();
+        }
+
+    }, []);
+
 
     useEffect(() => {
         if (active) {
             document.body.style.overflow = "hidden";
             document.body.style.marginRight = '17px';
-
-            // if (window.innerWidth < 1024) {
-      
-            //     document.body.style.marginRight = `auto`;
-            // }
 
 
 
@@ -43,6 +103,7 @@ const ModalCarousel = ({ active, setActive, img }) => {
             window.removeEventListener('keydown', handleKeyDown);
         }
     }, [active])
+
 
 
 
@@ -76,6 +137,8 @@ const ModalCarousel = ({ active, setActive, img }) => {
     }
 
 
+
+
     const settings = {
         dots: false,
         infinite: true,
@@ -87,41 +150,119 @@ const ModalCarousel = ({ active, setActive, img }) => {
         swipeToSlide: false,
         swipe: false,
         variableWidth: false,
+        waitForAnimate: false,
+        initialSlide: selected,
+        afterChange: (nextIndex) => setSelected(nextIndex),
         responsive: [
             {
                 breakpoint: 1023,
                 settings: {
                     swipe: true,
-                    speed: 500,
-                    dots: false
+                    speed: 300,
+                    dots: false,
+
                 }
             },
         ]
     };
 
+
+    // if (img.length === 1) {
+    //     return (
+
+    //         <div className={`${s.modal_container} ${active ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
+    //             <div className={s.closeButton}><CloseButton icon={close} onClick={() => { setActive(false) }} /></div>
+    //             <div className={s.carouselContainer}>
+    //                 <div className={s.preview}>
+    //                     {img.map((item, index) => (
+    //                         <div
+    //                             className={`${s.preview_item} ${s.selected} `}><img src={item} alt="" /></div>
+    //                     ))}
+    //                 </div>
+    //                 <div className={s.imageContainer}  >
+    //                     <div className={s.fullsize}><img className={s.lonelyImage} src={img[0]} alt="" /></div>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     );
+    // }
+
+    console.log(img);
+
+    if (img.length === 1) {
+        return (
+            <div className={`${s.modal_container} ${active ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
+                <div className={s.closeButton}><CloseButton icon={close} onClick={() => { setActive(false) }} /></div>
+                <div className={s.carouselContainer}>
+                    <div className={s.border}>
+                        <div className={s.preview_container}>
+                            <div
+                                ref={fadeLeft}
+                                className={s.fadeLeft}></div>
+                            <div
+                                ref={fadeRight}
+                                className={s.fadeRight}></div>
+                            <div className={s.preview} onScroll={checkScroll} ref={previewSlider}>
+
+                                {img.map((item, index) => (
+                                    <div onClick={() => handleClickOnItem(index)} className={`${s.preview_item} ${selected === index ? s.selected : ''} `}><img src={item} alt="" /></div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className={s.imageContainer}  >
+                        {active ?
+                            <Slider ref={modalSliderRef} {...settings}>
+                                {img.map((item, index) => (
+                                    <div className={s.fullsize}
+                                        key={index}><img src={item} alt="" /></div>
+                                ))}
+                            </Slider>
+                            : null}
+                    </div>
+                </div>
+            </div>)
+
+    }
+
     return (
         <div className={`${s.modal_container} ${active ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
             <div className={s.closeButton}><CloseButton icon={close} onClick={() => { setActive(false) }} /></div>
             <div className={s.carouselContainer}>
-                 
-                     <div className={s.preview}>
-                    {img.map((item, index) => (
-                        <div onClick={() => handleClickOnItem(index)} className={`${s.preview_item} ${selected === index ? s.selected : ''} `}><img src={item} alt="" /></div>
-                    ))}
+                <div className={s.border}>
+
+                    <div className={s.preview_container}>
+                        <div
+                            ref={fadeLeft}
+                            className={s.fadeLeft}></div>
+                        <div
+                            ref={fadeRight}
+                            className={s.fadeRight}></div>
+                        <div className={s.preview} onScroll={checkScroll} ref={previewSlider}>
+
+                            {img.map((item, index) => (
+                                <div onClick={() => handleClickOnItem(index)} className={`${s.preview_item} ${selected === index ? s.selected : ''} `}><img src={item} alt="" /></div>
+                            ))}
+                        </div>
+
+                    </div>
+
                 </div>
-               
-               
+
+
                 <div className={s.imageContainer}  >
-                    {img.length > 1 ? <div className={s.buttonLeft} onClick={handlePrev} ><CloseButton icon={prev} ></CloseButton></div> : null}
-                    <Slider ref={modalSliderRef} {...settings}>
-                        {img.map((item, index) => (
-                            <div className={s.fullsize}
-                                onClick={() => { setSelected(true) }}
-                                key={index}><img src={item} alt="" /></div>
-                        ))}
-                    </Slider>
-                    {/* <div className={s.fullsize}><img src={img[selected]} alt="" /></div> */}
-                    {img.length > 1 ? <div className={s.buttonRight} onClick={handleNext}> <CloseButton  icon={next} /></div> : null}
+                    <div className={s.buttonLeft} onClick={handlePrev} ><CloseButton icon={prev} ></CloseButton></div>
+                    {active ?
+                        <Slider ref={modalSliderRef} {...settings}>
+                            {img.map((item, index) => (
+                                <div className={s.fullsize}
+                                    onClick={() => { setSelected(true) }}
+                                    key={index}><img src={item} alt="" /></div>
+                            ))}
+                        </Slider>
+                        : null}
+
+                    <div className={s.buttonRight} onClick={handleNext}> <CloseButton icon={next} /></div>
 
                 </div>
 

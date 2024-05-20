@@ -71,26 +71,20 @@ const Carousel = (props) => {
     }, [scroll]);
 
 
-
-
-    if (props.img.length === 1) {
-        return (
-            <img onClick={() => { props.setActive(true) }} className='sliderImage' src={props.img[0]} alt="carousel" />
-
-        );
-    } else {
+ 
+   
         var settings = {
-            dots: true,
+            dots: props.img.length > 1 ? true : false ,
             infinite: false,
-            speed: 150,
+            speed: 250,
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
             className: 'ass',
             swipeToSlide: true,
-            centerMode: false,
+            centerMode:  props.img.length > 1 ? false : true,
             variableWidth: true,
-
+ 
             afterChange: (currentIndex) => { goToSlide(currentIndex) },
             appendDots: dots => (
                 <div ref={dotsRef}
@@ -144,7 +138,7 @@ const Carousel = (props) => {
                 <Slider ref={sliderRef} {...settings}   >
                     {(props.img).map((item, index) => (
                         <div
-                            onClick={() => { props.setActive(true) }}
+                            onClick={() => { props.setActive(true); props.setSelected(index) }}
                             // onMouseEnter={() => handleMouseEnter()}
                             // onMouseLeave={(e) => handleMouseLeave(e)}
                             key={index}><img className='sliderImage' src={item} alt="" /></div>
@@ -155,6 +149,6 @@ const Carousel = (props) => {
             </div>
         );
     }
-};
+// };
 
 export default Carousel;

@@ -208,11 +208,11 @@ const productsSlice = createSlice({
             state.products = initialState.products;
         },
         setTypeItems: (state, action) => {
- 
+
             state.products = state.products.filter((item) => item.type === action.payload)
         },
         addTypeItems: (state, action) => {
-  
+
             state.products = state.products.concat(initialState.products.filter((item) => item.type === action.payload))
         },
         deleteTypeItems: (state, action) => {

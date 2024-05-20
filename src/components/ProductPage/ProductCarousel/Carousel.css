@@ -101,7 +101,10 @@
      border-radius: 12px;
      /* background-color: var(--gray-4); */
      user-select: none;
+     max-width: 100%;
  }
+
+
 
  .ass .slick-track {
      display: flex;
@@ -123,7 +126,26 @@
  .ass .slick-slide {
      background-color: var(--gray-4);
      border-radius: 12px;
-  width: 100%;
+     width: 100%;
+     max-width: 100%;
  }
- 
-  
+
+ @media (max-width: 1023px) {
+     .ass .slick-slide {
+         max-width: 417px;
+     }
+ }
+
+ @media (max-width: 767px) {
+     .ass .slick-slide {
+
+         max-width: 360px;
+     }
+ }
+
+ @media (max-width: 479px) {
+     .ass .slick-slide {
+
+         max-width: 272px;
+     }
+ }

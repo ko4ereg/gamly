@@ -16,8 +16,9 @@
 
 
     .product_img {
-        height: 100%;
-        min-height: 732px;
+        // height: 100%;
+        height: 732px;
+        width: 732px;
         width: 100%;
         flex: 1 0 50%;
         overflow: hidden;
@@ -27,7 +28,9 @@
         display: flex;
         align-items: flex-start;
 
-
+        .lonelyImage {
+            justify-self: center;
+        }
     }
 
     .descriptionContainer {
@@ -39,9 +42,8 @@
 
         .button {
             position: fixed;
-            width: 696px;
-            // top: 845px;
-            bottom: 14%;
+            width: 708px;
+            bottom: 12%;
 
 
         }
@@ -173,15 +175,14 @@
 @media (min-width:2048px) {
     .container {
         .product_img {
-            height: 100%;
+            min-height: 732px;
+            min-width: 732px;
         }
 
         .descriptionContainer {
             padding-bottom: 28%;
 
             .button {
-                // width: 535px;
-                // top: 690px;
                 bottom: 26%;
             }
         }
@@ -191,13 +192,14 @@
 @media (max-width: 1919px) {
     .container {
         .product_img {
-            min-height: 566px;
+
+            width: 100%;
+            max-height: 566px;
         }
 
         .descriptionContainer {
             .button {
-                width: 535px;
-                // top: 690px;
+                width: 549px;
                 bottom: 48px
             }
         }
@@ -209,17 +211,17 @@
         gap: 17.5px;
 
         .product_img {
-            height: 100%;
-            min-height: 417px;
+            height: 417px;
+            width: 417px;
         }
 
         .descriptionContainer {
 
             .button {
-                // width: 405px;
-                width: 39.5%;
-                // top: 845px;
+                width: 41.5%;
+                margin-right: 96px;
                 bottom: 47px;
+
             }
 
             .description {
@@ -332,8 +334,8 @@
 
 
         .product_img {
-            height: 100%;
-            min-height: 417px;
+            max-height: 417px;
+
             width: 100%;
             flex: 1 0 50%;
             overflow: hidden;
@@ -346,13 +348,17 @@
             gap: 24px;
             flex-direction: column;
             position: relative;
-            padding-bottom: 420px;
+            padding-bottom: 25%;
 
             .button {
                 position: fixed;
-                // width: 576px;
-                width: 80%;
-                // top: 845px;
+
+                width: 100%;
+                max-width: 100%;
+                padding: 0 96px;
+                margin-left: -96px;
+                margin-right: 96px;
+
                 bottom: 39px;
             }
 
@@ -412,17 +418,23 @@
 
         .product_img {
 
-            height: 360px;
-            width: 100%;
+            max-height: 360px;
+
 
         }
 
         .descriptionContainer {
+            position: relative;
 
             gap: 16px;
 
+
             .button {
-                width: 90%;
+
+
+                padding: 0 24px;
+                margin-left: -24px;
+                margin-right: 24px;
                 bottom: 24px;
 
             }
@@ -487,10 +499,15 @@
 
         .descriptionContainer {
 
+            padding-bottom: 30%;
 
             .button {
 
-                width: 90%;
+
+                padding: 0 24px;
+                margin-left: -24px;
+                margin-right: 24px;
+
 
             }
 
@@ -559,11 +576,16 @@
 @media (max-width: 374px) {
     .container {
         .descriptionContainer {
-
+            padding-bottom: 35%;
 
             .button {
 
-                width: 90%;
+
+                padding: 0 16px;
+                margin-left: -16px;
+                margin-right: 16px;
+                bottom: 24px;
+
 
             }
 
