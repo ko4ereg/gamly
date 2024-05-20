@@ -124,13 +124,14 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
     }
 
     const handlePrev = () => {
-        setSelected(prevSelected => prevSelected === 0 ? img.length - 1 : prevSelected - 1);
+       
         if (modalSliderRef) {
             modalSliderRef.current.slickPrev();
-        }
+        }  
+        // setSelected(prevSelected => prevSelected === 0 ? img.length - 1 : prevSelected - 1);
     }
     const handleNext = () => {
-        setSelected(prevSelected => prevSelected === img.length - 1 ? 0 : prevSelected + 1);
+        // setSelected(prevSelected => prevSelected === img.length - 1 ? 0 : prevSelected + 1);
         if (modalSliderRef) {
             modalSliderRef.current.slickNext();
         }
@@ -240,7 +241,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
 
 
                 <div className={s.imageContainer}  >
-                    <div className={s.buttonLeft} onClick={handlePrev} ><CloseButton icon={prev} ></CloseButton></div>
+                   {selected === 0 ? null : <div className={s.buttonLeft} onClick={handlePrev} ><CloseButton icon={prev} ></CloseButton></div>} 
                     {active ?
                         <Slider ref={modalSliderRef} {...settings}>
                             {img.map((item, index) => (
@@ -251,7 +252,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
                         </Slider>
                         : null}
 
-                    <div className={s.buttonRight} onClick={handleNext}> <CloseButton icon={next} /></div>
+                   {selected === img.length - 1 ? null : <div className={s.buttonRight} onClick={handleNext}> <CloseButton icon={next} /></div>}  
 
                 </div>
 
