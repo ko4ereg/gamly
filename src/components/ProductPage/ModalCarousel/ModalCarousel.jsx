@@ -136,12 +136,11 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
         }
     }
 
-
-
+ 
 
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 0,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -152,7 +151,15 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
         variableWidth: false,
         waitForAnimate: false,
         initialSlide: selected,
-        afterChange: (nextIndex) => setSelected(nextIndex),
+        afterChange: (nextIndex) => {
+            setSelected(nextIndex);
+            const previewItem = document.getElementById(`preview${nextIndex}`);
+            if (previewItem) {
+                previewItem.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            };
+          
+
+        },
         responsive: [
             {
                 breakpoint: 1023,
@@ -167,25 +174,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
     };
 
 
-    // if (img.length === 1) {
-    //     return (
 
-    //         <div className={`${s.modal_container} ${active ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
-    //             <div className={s.closeButton}><CloseButton icon={close} onClick={() => { setActive(false) }} /></div>
-    //             <div className={s.carouselContainer}>
-    //                 <div className={s.preview}>
-    //                     {img.map((item, index) => (
-    //                         <div
-    //                             className={`${s.preview_item} ${s.selected} `}><img src={item} alt="" /></div>
-    //                     ))}
-    //                 </div>
-    //                 <div className={s.imageContainer}  >
-    //                     <div className={s.fullsize}><img className={s.lonelyImage} src={img[0]} alt="" /></div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-    // }
 
     console.log(img);
 
@@ -241,7 +230,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
                         <div className={s.preview} onScroll={checkScroll} ref={previewSlider}>
 
                             {img.map((item, index) => (
-                                <div onClick={() => handleClickOnItem(index)} className={`${s.preview_item} ${selected === index ? s.selected : ''} `}><img src={item} alt="" /></div>
+                                <div onClick={() => handleClickOnItem(index)} id={`preview${index}`} className={`${s.preview_item} ${selected === index ? s.selected : ''} `}><img src={item} alt="" /></div>
                             ))}
                         </div>
 
