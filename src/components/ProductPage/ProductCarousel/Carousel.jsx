@@ -118,6 +118,7 @@ const Carousel = (props) => {
                 settings: {
                     speed: 500,
                     variableWidth: true,
+                  
                 }
             },
         ]
