@@ -124,10 +124,10 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
     }
 
     const handlePrev = () => {
-       
+
         if (modalSliderRef) {
             modalSliderRef.current.slickPrev();
-        }  
+        }
         // setSelected(prevSelected => prevSelected === 0 ? img.length - 1 : prevSelected - 1);
     }
     const handleNext = () => {
@@ -137,11 +137,11 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
         }
     }
 
- 
+
 
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 0,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -158,7 +158,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
             if (previewItem) {
                 previewItem.scrollIntoView({ behavior: 'smooth', inline: 'center' });
             };
-          
+
 
         },
         responsive: [
@@ -168,7 +168,8 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
                     swipe: true,
                     speed: 300,
                     dots: false,
-
+                  
+                    infinite: img.length > 1 ? true : false
                 }
             },
         ]
@@ -241,7 +242,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
 
 
                 <div className={s.imageContainer}  >
-                   {selected === 0 ? null : <div className={s.buttonLeft} onClick={handlePrev} ><CloseButton icon={prev} ></CloseButton></div>} 
+                    <div className={s.buttonLeft} onClick={handlePrev} ><CloseButton icon={prev} ></CloseButton></div>
                     {active ?
                         <Slider ref={modalSliderRef} {...settings}>
                             {img.map((item, index) => (
@@ -252,7 +253,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
                         </Slider>
                         : null}
 
-                   {selected === img.length - 1 ? null : <div className={s.buttonRight} onClick={handleNext}> <CloseButton icon={next} /></div>}  
+                    <div className={s.buttonRight} onClick={handleNext}> <CloseButton icon={next} /></div>
 
                 </div>
 

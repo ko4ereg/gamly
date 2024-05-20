@@ -10,9 +10,15 @@ import pic5 from './../assets/shop/mock/mouse.png';
 export const initialState = {
     products: [
         {
-            title: 'Наушники Bloody G200S Black Red',
-            creator: 'A4Tech',
-            img: [pic1, pic2, pic3, pic4, pic2, pic3, pic4 ],
+            title: 'Наушники PRO X 2 LIGHTSPEED',
+            creator: 'Logitech',
+            img: ['https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-1-pro-x-2-lightspeed-gaming-headset-black.png?v=1',
+                'https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-2-pro-x-2-lightspeed-gaming-headset-black.png?v=1',
+                'https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-3-pro-x-2-lightspeed-gaming-headset-black.png?v=1',
+                'https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-4-pro-x-2-lightspeed-gaming-headset-black.png?v=1',
+                'https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-5-pro-x-2-lightspeed-gaming-headset-black.png?v=1',
+                'https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-2-lightspeed/gallery/gallery-6-pro-x-2-lightspeed-gaming-headset-black.png?v=1',
+            ],
             price: '1890',
             type: 'headphones',
             wires: 'wires',
@@ -28,7 +34,11 @@ export const initialState = {
             title: 'Наушники Bloody G200S Black White',
             creator: 'A4Tech',
             img: [
-                pic2
+                "https://resource.astrogaming.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/astro/en/products/a30/pdp-gallery-a30-white-01.png?v=1",
+                "https://resource.astrogaming.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/astro/en/products/a30/pdp-gallery-a30-white-02.png?v=1",
+                "https://resource.astrogaming.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/astro/en/products/a30/pdp-gallery-a30-white-03.png?v=1",
+                "https://resource.astrogaming.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/astro/en/products/a30/pdp-gallery-a30-white-04.png?v=1",
+                "https://resource.astrogaming.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/astro/en/products/a30/pdp-gallery-a30-white-05.png?v=1",
 
             ],
             price: '1290',
@@ -109,7 +119,9 @@ export const initialState = {
         {
             title: 'Клавиатура ASUS TUF Gaming K3',
             creator: 'ASUS',
-            img: [pic1, pic2, pic3],
+            img: ["https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x60-wireless-keyboard/gallery/pro-x-60-keyboard-black-gallery-1-us.png?v=1",
+                "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x60-wireless-keyboard/gallery/pro-x-60-keyboard-black-gallery-3-us.png?v=1",
+                'https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x60-wireless-keyboard/gallery/pro-x-60-keyboard-black-gallery-5-us.png?v=1'],
             price: '5890',
             type: 'keyboard',
             wires: 'wires',
@@ -124,11 +136,11 @@ export const initialState = {
         {
             title: 'Мышь Razor',
             creator: 'Razer',
-            img: [pic5],
+            img: ['https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g502x-plus/gallery/g502x-plus-gallery-1-black.png'],
             price: '1890',
             type: 'mouse',
             wires: 'wires',
-            connectToPhone: false,
+
             discount: 30,
             buys: 100,
             category: 'accessories',

@@ -61,6 +61,44 @@ const ProductDescription = ({ productData }) => {
                     </div> : null}
                 </div>
             </div>
+            <div className={s.section}>
+                <h2>Характеристики</h2>
+                <div className={s.features}>
+                    {productData.wires !== undefined
+                        ? <div className={s.featuresItem}>
+                            <h3>Подключение</h3>
+                            <span>{productData.wires && productData.wires === 'wires' ? 'Проводное' : 'Беспроводное'}</span>
+                        </div>
+                        : null}
+                    {productData.connectToPhone !== undefined ? <div className={s.featuresItem}>
+                        <h3>Можно подключить к телефону</h3>
+                        <span>{productData.connectToPhone && productData.connectToPhone === true ? 'Да' : 'Нет'}</span>
+                    </div> : null}
+                    {productData.micro !== undefined ? <div className={s.featuresItem}>
+                        <h3>Есть микрофон</h3>
+                        <span>{productData.micro && productData.micro === true ? 'Да' : 'Нет'}</span>
+                    </div> : null}
+                </div>
+            </div>
+            <div className={s.section}>
+                <h2>Характеристики</h2>
+                <div className={s.features}>
+                    {productData.wires !== undefined
+                        ? <div className={s.featuresItem}>
+                            <h3>Подключение</h3>
+                            <span>{productData.wires && productData.wires === 'wires' ? 'Проводное' : 'Беспроводное'}</span>
+                        </div>
+                        : null}
+                    {productData.connectToPhone !== undefined ? <div className={s.featuresItem}>
+                        <h3>Можно подключить к телефону</h3>
+                        <span>{productData.connectToPhone && productData.connectToPhone === true ? 'Да' : 'Нет'}</span>
+                    </div> : null}
+                    {productData.micro !== undefined ? <div className={s.featuresItem}>
+                        <h3>Есть микрофон</h3>
+                        <span>{productData.micro && productData.micro === true ? 'Да' : 'Нет'}</span>
+                    </div> : null}
+                </div>
+            </div>
 
             <div className={s.button} onClick={handleClick}>
                 {inCart ? <ButtonSecondary icon={cartminus} text={"Удалить из корзины"} /> : <ButtonPrimary icon={cart} text={'Добавить в корзину'} />}
