@@ -72,6 +72,7 @@ const ProductCarousel = ({ productData, active, setActive, selected, setSelected
             setTranslate((selectedIndex - 1) * 8);
         }
         setSelected(selectedIndex);
+        
 //         let selectedIndex;
 
 // if (window.innerWidth > 1023) {
@@ -91,9 +92,9 @@ const ProductCarousel = ({ productData, active, setActive, selected, setSelected
     };
 
     return (
-        <div className={s.product_img} style={{ justifyContent: productData.img.length === 1 ? 'center' : '' }} >
-            <div className={s.sliderContainer}>
-                <div className={s.dotsContainer}>
+        <div className={s.product_img}  >
+            <div className={s.sliderContainer} >
+                <div className={s.dotsContainer} style={{ display: productData.img.length === 1 ? 'none' : '' }}>
                     <div className={s.dots} style={{ transform: `translateX(-${translate}px)` }}>
                         {(productData.img).map((item, index) => (
                             <div
@@ -105,7 +106,7 @@ const ProductCarousel = ({ productData, active, setActive, selected, setSelected
                         ))}
                     </div>
                 </div>
-                <div className={s.slider} onScroll={handleSliderScroll} ref={sliderRef}>
+                <div className={s.slider} style={{ justifyContent: productData.img.length === 1 ? 'center' : '' }} onScroll={handleSliderScroll} ref={sliderRef}>
                     {(productData.img).map((item, index) => (
                         <div
                             onClick={() => { setActive(true); setSelected(index) }}
