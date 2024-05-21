@@ -3,10 +3,10 @@
   font-family: 'VelaSans-GX';
   src:
 
-    url("assets/fonts/VelaSans-Regular.woff2") format('woff2'),
-    url("assets/fonts/VelaSans-Regular.woff") format('woff'),
-    url("assets/fonts/VelaSans-Regular.ttf") format('truetype');
-  font-weight: 500;
+    url("assets/fonts/VelaSans-Medium.woff2") format('woff2'),
+    url("assets/fonts/VelaSans-Medium.woff") format('woff'),
+    url("assets/fonts/VelaSans-Medium.ttf") format('truetype');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -15,10 +15,10 @@
   font-family: 'VelaSans-GX';
   src:
 
-    url("assets/fonts/VelaSans-SemiBold.woff2") format('woff2'),
-    url("assets/fonts/VelaSans-SemiBold.woff") format('woff'),
-    url("assets/fonts/VelaSans-SemiBold.ttf") format('truetype');
-  font-weight: 600;
+    url("assets/fonts/VelaSans-Regular.woff2") format('woff2'),
+    url("assets/fonts/VelaSans-Regular.woff") format('woff'),
+    url("assets/fonts/VelaSans-Regular.ttf") format('truetype');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -56,10 +56,9 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smooth: always;
+  font-smooth: auto;
   text-rendering: optimizeLegibility;
   text-rendering: antialiased;
-
 }
 
 
