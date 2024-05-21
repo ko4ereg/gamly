@@ -1,0 +1,67 @@
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 32px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 22.4px */
+    letter-spacing: 0.32px;
+    background-color: var(--dark-gray);
+    border: none;
+    color: var(--light-gray);
+    transition: 0.2s ease-out;
+    gap: 12px;
+
+
+    &:disabled {
+        opacity: 0.4;
+        background-color: var(--dark-gray);
+        cursor: default;
+
+
+
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button {
+        &:not(:disabled):hover {
+            background: #27252F;
+            transition: 0.2s ease-out;
+        }
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .button {
+        &:not(:disabled):active {
+            background: #27252F;
+            transition: 0.2s ease-out;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .button {
+        font-size: 14px;
+        letter-spacing: 0.28px;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        padding: 20px 32px;
+        font-size: 13px;
+        letter-spacing: 0.26px;
+
+    }
+}
