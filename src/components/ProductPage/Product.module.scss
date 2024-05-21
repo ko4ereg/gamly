@@ -29,7 +29,7 @@
             width: 100%;
             bottom: 48px;
             transform: matrix3d(0, 0, 0);
-            -webkit-transform: matrix3d(0, 0 ,0);
+            -webkit-transform: matrix3d(0, 0, 0);
 
         }
 
@@ -42,7 +42,7 @@
                 h1 {
                     font-size: 36px;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: 700;
                     line-height: 140%;
                     /* 50.4px */
                     letter-spacing: 0.36px;
@@ -87,6 +87,9 @@
         }
 
         .sections {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
 
             .section {
                 display: flex;
@@ -98,7 +101,7 @@
                 h2 {
                     font-size: 24px;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: 700;
                     line-height: 120%;
                     /* 28.8px */
                     letter-spacing: 0.24px;
@@ -108,7 +111,7 @@
                 ol {
                     display: flex;
                     flex-direction: column;
-                    gap: 12px;
+                    gap: 4px;
 
                     li {
                         list-style-position: inside;
@@ -224,7 +227,7 @@
                     h1 {
                         font-size: 24px;
                         font-style: normal;
-                        font-weight: 600;
+                        font-weight: 700;
                         line-height: 120%;
                         /* 28.8px */
                         letter-spacing: 0.24px;
@@ -253,46 +256,27 @@
 
             }
 
-            .section {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
+            .sections {
 
-                h2 {
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 120%;
-                    /* 28.8px */
-                    letter-spacing: 0.24px;
-                }
 
-                ol {
+                .section {
                     display: flex;
                     flex-direction: column;
-                    gap: 12px;
+                    gap: 16px;
 
-                    li {
-                        font-size: 15px;
+                    h2 {
+                        font-size: 24px;
                         font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 21px */
-                        letter-spacing: 0.15px;
+                        font-weight: 700;
+                        line-height: 120%;
+                        /* 28.8px */
+                        letter-spacing: 0.24px;
                     }
-                }
 
-                .features {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 12px;
+                    ol {
 
-                    .featuresItem {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 6px;
 
-                        span {
+                        li {
                             font-size: 15px;
                             font-style: normal;
                             font-weight: 500;
@@ -302,6 +286,27 @@
                         }
                     }
 
+                    .features {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+
+                        .featuresItem {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 6px;
+
+                            span {
+                                font-size: 15px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 140%;
+                                /* 21px */
+                                letter-spacing: 0.15px;
+                            }
+                        }
+
+                    }
                 }
             }
         }
@@ -363,23 +368,24 @@
             }
 
             .sections {
+
+                gap: 24px;
+
                 .section {
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
 
                     ol {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 0;
 
                         li {
+
                             font-size: 15px;
-                            font-style: normal;
                             font-weight: 500;
-                            line-height: 140%;
-                            /* 21px */
-                            letter-spacing: 0.15px;
+                            line-height: 21px;
+                            letter-spacing: 0.01em;
+
+
                         }
                     }
 
@@ -467,6 +473,7 @@
 
             .sections {
 
+                gap: 16px;
 
                 .section {
                     ol {
@@ -477,6 +484,28 @@
                             line-height: 140%;
                             /* 19.6px */
                             letter-spacing: 0.28px;
+                        }
+                    }
+
+                    .features {
+                        .featuresItem {
+                            h3 {
+                                font-size: 13px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 120%;
+                                /* 15.6px */
+                                letter-spacing: 0.39px;
+                            }
+
+                            span {
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 140%;
+                                /* 19.6px */
+                                letter-spacing: 0.28px;
+                            }
                         }
                     }
 
@@ -553,29 +582,47 @@
                 }
             }
 
-            .section {
+            .sections {
+                .section {
+                    gap: 12px;
 
-                h2 {
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 120%;
-                    /* 24px */
-                    letter-spacing: 0.2px;
-                }
-
-                ol {
-                    li {
-                        font-size: 13px;
+                    h2 {
+                        font-size: 20px;
                         font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 18.2px */
-                        letter-spacing: 0.13px;
+                        font-weight: 700;
+                        line-height: 120%;
+                        /* 24px */
+                        letter-spacing: 0.2px;
                     }
-                }
 
+                    ol {
+
+                        li {
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 140%;
+                            /* 18.2px */
+                            letter-spacing: 0.13px;
+                        }
+                    }
+
+                    .features {
+                        .featuresItem {
+                            span {
+                                font-size: 13px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 140%;
+                                /* 18.2px */
+                                letter-spacing: 0.13px;
+                            }
+                        }
+                    }
+
+                }
             }
+
         }
     }
 }

@@ -22,6 +22,17 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'VelaSans-GX';
+  src:
+
+    url("assets/fonts/VelaSans-SemiBold.woff2") format('woff2'),
+    url("assets/fonts/VelaSans-SemiBold.woff") format('woff'),
+    url("assets/fonts/VelaSans-SemiBold.ttf") format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 @font-face {

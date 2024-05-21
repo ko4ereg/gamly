@@ -10,10 +10,11 @@
     span {
         font-size: 24px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 120%;
         /* 28.8px */
         letter-spacing: 0.24px;
+        color: var(--white);
     }
 
     .notfound_button {
@@ -30,7 +31,7 @@
         border-radius: 40px;
         background: var(--dark-gray);
         cursor: pointer;
-
+        transition: 0.2s ease-out;
 
     }
 }
@@ -40,7 +41,8 @@
     .notfound {
         .notfound_button {
             &:hover {
-                background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+                background:  #27252F; 
+                transition: 0.2s ease-out;
             }
         }
     }
@@ -51,7 +53,8 @@
     .notfound {
         .notfound_button {
             &:active {
-                background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+                background:#27252F;
+                transition: 0.2s ease-out;
             }
         }
     }
