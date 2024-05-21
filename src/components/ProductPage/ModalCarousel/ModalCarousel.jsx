@@ -152,6 +152,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
         variableWidth: false,
         waitForAnimate: false,
         initialSlide: selected,
+        onInit: checkScroll(),
         afterChange: (nextIndex) => {
             setSelected(nextIndex);
             const previewItem = document.getElementById(`preview${nextIndex}`);
@@ -168,7 +169,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
                     swipe: true,
                     speed: 300,
                     dots: false,
-                  
+
                     infinite: img.length > 1 ? true : false
                 }
             },
@@ -178,7 +179,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
 
 
 
-    console.log(img);
+    
 
     if (img.length === 1) {
         return (
