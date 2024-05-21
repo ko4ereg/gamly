@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import DiscordBanner from '../common/DiscordBanner/DiscordBanner';
 import ModalCarousel from './ModalCarousel/ModalCarousel';
 import s from './Product.module.scss';
@@ -15,9 +15,9 @@ const ProductContainer = ({ productData }) => {
         window.scrollTo(0, 0); // Скроллим страницу на самый верх
     }, []);
 
-    const handleClick = () => {
-        setInCart(!inCart);
-    }
+    const handleClick = useCallback(() => {
+        setInCart(prevInCart => !prevInCart);
+    }, [setInCart]);
     const [active, setActive] = useState(false);
     const [selected, setSelected] = useState(0);
     return (
