@@ -14,24 +14,36 @@
         right: 0;
     }
 
+    .descriptionbanner {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 220px;
+        grid-template-rows: 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 0px;
 
+
+        .button {
+            position: -webkit-sticky;
+            position: sticky;
+            width: auto;
+            bottom: 48px;
+            transform: matrix3d(0, 0, 0);
+            -webkit-transform: matrix3d(0, 0, 0);
+            grid-area: 2 / 1 / 3 / 3;
+        }
+    }
 
     .descriptionContainer {
         display: flex;
         gap: 24px;
         flex-direction: column;
         position: relative;
-        padding-bottom: 24px;
 
-        .button {
-            position: -webkit-sticky;
-            position: sticky;
-            width: 100%;
-            bottom: 48px;
-            transform: matrix3d(0, 0, 0);
-            -webkit-transform: matrix3d(0, 0, 0);
+        flex: 1 1 100%;
 
-        }
+        padding-bottom: 48px;
+
 
         .description {
             display: flex;
@@ -171,31 +183,33 @@
     }
 }
 
-// @media (min-width:2048px) {
-//     .container {
-//         .product_img {
-//             min-height: 732px;
-//             min-width: 732px;
-//         }
-
-
-//     }
-// }
+ 
 
 @media (max-width: 1919px) {
     .container {
-        // .product_img {
-        //     border-radius: 9.288px;
-        //     width: 100%;
-        //     max-height: 548px;
-        //     max-width: 548px;
-        //     min-width: 548px;
-        // }
 
-        .descriptionContainer {
-            min-width: 357px;
+      
+        .descriptionbanner {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr 220px;
+            grid-template-rows: 1fr;
+            grid-column-gap: 24px;
+            grid-row-gap: 0px;
 
+
+
+            .button {
+                position: -webkit-sticky;
+                position: sticky;
+                width: auto;
+
+                transform: matrix3d(0, 0, 0);
+                -webkit-transform: matrix3d(0, 0, 0);
+                grid-area: 2 / 1 / 3 / 3;
+            }
         }
+
 
 
     }
@@ -212,91 +226,73 @@
         //     min-width: 404px;
         //     border-radius: 8px;
         // }
-
-        .descriptionContainer {
-            // .button {
-            //     width: 405px;
-            // }
-
-            .description {
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
-
-                .heading {
-                    h1 {
-                        font-size: 24px;
-                        font-style: normal;
-                        font-weight: 700;
-                        line-height: 120%;
-                        /* 28.8px */
-                        letter-spacing: 0.24px;
-                    }
-
-                    .price {
-                        .oldprice {
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 140%;
-                            /* 22.4px */
-                            letter-spacing: 0.16px;
-                        }
-                    }
-                }
-
-                .text {
-                    font-size: 15px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 21px */
-                    letter-spacing: 0.15px;
-                }
-
-            }
-
-            .sections {
+        .descriptionbanner {
 
 
-                .section {
+            .descriptionContainer {
+
+                margin-bottom: 64px;
+                grid-area: 1 / 1 / 3 / 3;
+
+                .description {
                     display: flex;
                     flex-direction: column;
-                    gap: 16px;
+                    gap: 24px;
 
-                    h2 {
-                        font-size: 24px;
-                        font-style: normal;
-                        font-weight: 700;
-                        line-height: 120%;
-                        /* 28.8px */
-                        letter-spacing: 0.24px;
-                    }
-
-                    ol {
-
-
-                        li {
-                            font-size: 15px;
+                    .heading {
+                        h1 {
+                            font-size: 24px;
                             font-style: normal;
-                            font-weight: 500;
-                            line-height: 140%;
-                            /* 21px */
-                            letter-spacing: 0.15px;
+                            font-weight: 700;
+                            line-height: 120%;
+                            /* 28.8px */
+                            letter-spacing: 0.24px;
+                        }
+
+                        .price {
+                            .oldprice {
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 140%;
+                                /* 22.4px */
+                                letter-spacing: 0.16px;
+                            }
                         }
                     }
 
-                    .features {
+                    .text {
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 21px */
+                        letter-spacing: 0.15px;
+                    }
+
+                }
+
+                .sections {
+
+
+                    .section {
                         display: flex;
                         flex-direction: column;
-                        gap: 12px;
+                        gap: 16px;
 
-                        .featuresItem {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 6px;
+                        h2 {
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 120%;
+                            /* 28.8px */
+                            letter-spacing: 0.24px;
+                        }
 
-                            span {
+                        ol {
+
+
+                            li {
                                 font-size: 15px;
                                 font-style: normal;
                                 font-weight: 500;
@@ -306,6 +302,27 @@
                             }
                         }
 
+                        .features {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+
+                            .featuresItem {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 6px;
+
+                                span {
+                                    font-size: 15px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 140%;
+                                    /* 21px */
+                                    letter-spacing: 0.15px;
+                                }
+                            }
+
+                        }
                     }
                 }
             }
@@ -322,11 +339,11 @@
         margin-top: 16px;
         justify-content: flex-start;
 
-        .banner {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
+        // .banner {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        // }
 
 
         // .product_img {
@@ -338,14 +355,7 @@
         //     position: static;
 
         // }
-
-        .descriptionContainer {
-            display: flex;
-            gap: 24px;
-            flex-direction: column;
-            position: relative;
-            padding-bottom: 19.5px;
-
+        .descriptionbanner {
             .button {
 
 
@@ -358,57 +368,67 @@
                 bottom: 39px;
             }
 
-            .description {
-
-                .heading {
-                    h1 {
-                        margin-bottom: 8px;
-                    }
-                }
-            }
-
-            .sections {
-
+            .descriptionContainer {
+                display: flex;
                 gap: 24px;
-
-                .section {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 16px;
-
-                    ol {
-
-                        li {
-
-                            font-size: 15px;
-                            font-weight: 500;
-                            line-height: 21px;
-                            letter-spacing: 0.01em;
+                flex-direction: column;
+                position: relative;
 
 
+
+
+                .description {
+
+                    .heading {
+                        h1 {
+                            margin-bottom: 8px;
                         }
                     }
+                }
 
-                    .features {
-                        .featuresItem {
-                            gap: 4px;
+                .sections {
 
-                            h3 {
-                                font-size: 12px;
-                                font-style: normal;
+                    gap: 24px;
+
+                    .section {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+                        ol {
+
+                            li {
+
+                                font-size: 15px;
                                 font-weight: 500;
-                                line-height: 94%;
-                                /* 11.28px */
-                                letter-spacing: 0.36px;
+                                line-height: 21px;
+                                letter-spacing: 0.01em;
+
+
+                            }
+                        }
+
+                        .features {
+                            .featuresItem {
+                                gap: 4px;
+
+                                h3 {
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 94%;
+                                    /* 11.28px */
+                                    letter-spacing: 0.36px;
+                                }
+
                             }
 
                         }
-
                     }
-                }
 
-                .section:last-of-type {
-                    margin-bottom: 19.5px;
+                    .section:last-of-type {
+                        margin-bottom: 19.5px;
+                    }
                 }
             }
         }
@@ -425,80 +445,59 @@
 
 
         // }
-
-        .descriptionContainer {
-            position: relative;
-            min-width: unset;
-            gap: 16px;
-            padding-bottom: 12px;
-
+        .descriptionbanner {
             .button {
 
 
-                // padding: 0 24px;
-                // margin-left: -24px;
-                // margin-right: 24px;
+
                 bottom: 24px;
 
             }
 
-            .description {
+            .descriptionContainer {
+                position: relative;
+                min-width: unset;
                 gap: 16px;
 
-                .heading {
+                margin-bottom: 40px;
 
-                    .price {
-                        gap: 6px;
 
-                        .oldprice {
-                            font-size: 15px;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: 140%;
-                            /* 21px */
-                            letter-spacing: 0.15px;
-                        }
-                    }
-                }
+                .description {
+                    gap: 16px;
 
-                .text {
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 0.28px;
-                }
-            }
+                    .heading {
 
-            .sections {
+                        .price {
+                            gap: 6px;
 
-                gap: 16px;
-
-                .section {
-                    ol {
-                        li {
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 140%;
-                            /* 19.6px */
-                            letter-spacing: 0.28px;
-                        }
-                    }
-
-                    .features {
-                        .featuresItem {
-                            h3 {
-                                font-size: 13px;
+                            .oldprice {
+                                font-size: 15px;
                                 font-style: normal;
-                                font-weight: 500;
-                                line-height: 120%;
-                                /* 15.6px */
-                                letter-spacing: 0.39px;
+                                font-weight: 600;
+                                line-height: 140%;
+                                /* 21px */
+                                letter-spacing: 0.15px;
                             }
+                        }
+                    }
 
-                            span {
+                    .text {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 0.28px;
+                    }
+                }
+
+                .sections {
+
+                    gap: 16px;
+
+                    .section {
+                        ol {
+                            li {
                                 font-size: 14px;
                                 font-style: normal;
                                 font-weight: 500;
@@ -507,17 +506,40 @@
                                 letter-spacing: 0.28px;
                             }
                         }
+
+                        .features {
+                            .featuresItem {
+                                h3 {
+                                    font-size: 13px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 120%;
+                                    /* 15.6px */
+                                    letter-spacing: 0.39px;
+                                }
+
+                                span {
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 140%;
+                                    /* 19.6px */
+                                    letter-spacing: 0.28px;
+                                }
+                            }
+                        }
+
                     }
 
-                }
-
-                .section:last-of-type {
-                    padding-bottom: 0px;
-                    margin-bottom: 12px;
+                    .section:last-of-type {
+                        padding-bottom: 0px;
+                        margin-bottom: 12px;
+                    }
                 }
             }
         }
     }
+
 
 }
 

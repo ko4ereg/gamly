@@ -4,23 +4,32 @@ import ModalCarousel from './ModalCarousel/ModalCarousel';
 import s from './Product.module.scss';
 import ProductCarousel from './ProductCarousel/ProductCarousel';
 import ProductDescription from './ProductDescription';
-
+import cartminus from './../../assets/icons/cartminus.svg';
+import cart from './../../assets/icons/cart.svg';
+import ButtonSecondary from '../common/ButtonSecondary/ButtonSecondary';
+import ButtonPrimary from '../common/ButtonPrimary/ButtonPrimary';
 const ProductContainer = ({ productData }) => {
 
-
+    const [inCart, setInCart] = useState();
     useEffect(() => {
         window.scrollTo(0, 0); // Скроллим страницу на самый верх
-      }, []);
-    
+    }, []);
 
+    const handleClick = () => {
+        setInCart(!inCart);
+    }
     const [active, setActive] = useState(false);
     const [selected, setSelected] = useState(0);
     return (
         <div className={s.container} >
             <ProductCarousel setSelected={setSelected} selected={selected} active={active} setActive={setActive} productData={productData} />
-
-            <ProductDescription productData={productData} />
-            <DiscordBanner />
+            <div className={s.descriptionbanner}>
+                <ProductDescription productData={productData} />
+                <DiscordBanner />
+                <div className={s.button} onClick={handleClick}>
+                    {inCart ? <ButtonSecondary icon={cartminus} text={"Удалить из корзины"} /> : <ButtonPrimary icon={cart} text={'Добавить в корзину'} />}
+                </div>
+            </div>
             <ModalCarousel setSelected={setSelected} selected={selected} img={productData.img} active={active} setActive={setActive} />
 
         </div>

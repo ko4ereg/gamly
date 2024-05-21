@@ -9,6 +9,7 @@ const ProductDescription = ({ productData }) => {
 
 
     const [inCart, setInCart] = useState();
+   
     const handleClick = () => {
         setInCart(!inCart);
     }
@@ -101,10 +102,11 @@ const ProductDescription = ({ productData }) => {
                         </div> : null}
                     </div>
                 </div> */}
+                
             </div>
-            <div className={s.button} onClick={handleClick}>
-                {inCart ? <ButtonSecondary icon={cartminus} text={"Удалить из корзины"} /> : <ButtonPrimary icon={cart} text={'Добавить в корзину'} />}
-            </div>
+            {/* <div className={s.button} onClick={handleClick}>
+                    {inCart ? <ButtonSecondary icon={cartminus} text={"Удалить из корзины"} /> : <ButtonPrimary icon={cart} text={'Добавить в корзину'} />}
+                </div> */}
         </section>
     )
 }
