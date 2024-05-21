@@ -152,7 +152,11 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
         variableWidth: false,
         waitForAnimate: false,
         initialSlide: selected,
-        onInit: checkScroll(),
+        onInit: () => {const previewItem = document.getElementById(`preview${selected}`);
+        if (previewItem) {
+            previewItem.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+        };
+        },
         afterChange: (nextIndex) => {
             setSelected(nextIndex);
             const previewItem = document.getElementById(`preview${nextIndex}`);
