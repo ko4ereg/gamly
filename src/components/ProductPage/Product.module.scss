@@ -555,6 +555,8 @@
             min-height: 272px;
         }
 
+        .descriptionbanner {
+
         .descriptionContainer {
 
 
@@ -647,10 +649,13 @@
 
         }
     }
+    }
 }
 
 @media (max-width: 374px) {
     .container {
+
+        .descriptionbanner {
         .descriptionContainer {
 
 
@@ -668,4 +673,5 @@
 
         }
     }
+}
 }
