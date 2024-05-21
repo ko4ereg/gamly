@@ -62,8 +62,8 @@ const ProductCarousel = ({ productData, active, setActive, selected, setSelected
         } else if (window.innerWidth) {
             selectedIndex = Math.round(scrollPosition / 404);
         }
-     
-    
+
+
         if (selectedIndex === 1) {
             setTranslate(0);
         } else if (selectedIndex === productData.img.length - 2 || selectedIndex === productData.img.length - 1) {
@@ -72,23 +72,23 @@ const ProductCarousel = ({ productData, active, setActive, selected, setSelected
             setTranslate((selectedIndex - 1) * 8);
         }
         setSelected(selectedIndex);
-        
-//         let selectedIndex;
 
-// if (window.innerWidth > 1023) {
-//     selectedIndex = Math.round(scrollPosition / slideWidth);
-// } else if (window.innerWidth < 479) {
-//     selectedIndex = Math.round(scrollPosition / 272);
-// } else if (window.innerWidth < 767) {
-//     selectedIndex = Math.round(scrollPosition / 360);
-// } else {
-//     selectedIndex = Math.round(scrollPosition / 404);
-// }
+        //         let selectedIndex;
 
-// const translateValue = selectedIndex === 1 ? 0 : selectedIndex === productData.img.length - 2 || selectedIndex === productData.img.length - 1 ? (productData.img.length - 3) * 8 : (selectedIndex - 1) * 8;
+        // if (window.innerWidth > 1023) {
+        //     selectedIndex = Math.round(scrollPosition / slideWidth);
+        // } else if (window.innerWidth < 479) {
+        //     selectedIndex = Math.round(scrollPosition / 272);
+        // } else if (window.innerWidth < 767) {
+        //     selectedIndex = Math.round(scrollPosition / 360);
+        // } else {
+        //     selectedIndex = Math.round(scrollPosition / 404);
+        // }
 
-// setTranslate(translateValue);
-// setSelected(selectedIndex);
+        // const translateValue = selectedIndex === 1 ? 0 : selectedIndex === productData.img.length - 2 || selectedIndex === productData.img.length - 1 ? (productData.img.length - 3) * 8 : (selectedIndex - 1) * 8;
+
+        // setTranslate(translateValue);
+        // setSelected(selectedIndex);
     };
 
     return (
@@ -110,7 +110,7 @@ const ProductCarousel = ({ productData, active, setActive, selected, setSelected
                     {(productData.img).map((item, index) => (
                         <div
                             onClick={() => { setActive(true); setSelected(index) }}
-                            className={s.slide} style={{ background: `center / contain no-repeat url(${item}) var(--dark-gray)` }}
+                            className={s.slide} style={{ background: `center / contain no-repeat url(${item}) var(--gray-4)` }}
                             key={index}>
 
                         </div>
