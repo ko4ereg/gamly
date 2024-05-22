@@ -253,7 +253,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
                         <Slider ref={modalSliderRef} {...settings}>
                             {img.map((item, index) => (
                                 <div className={s.fullsize}
-                                    onClick={() => { setSelected(true) }}
+                                    // onClick={() => { setSelected(true) }}
                                     key={index}><img src={item} alt="" /></div>
                             ))}
                         </Slider>
