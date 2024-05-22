@@ -79,7 +79,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
 
 
     useEffect(() => {
-        if (active) {
+        if (active && window.innerWidth > 1023) {
             document.body.style.overflow = "hidden";
             document.body.style.marginRight = '17px';
 
@@ -152,10 +152,11 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
         variableWidth: false,
         waitForAnimate: false,
         initialSlide: selected,
-        onInit: () => {const previewItem = document.getElementById(`preview${selected}`);
-        if (previewItem) {
-            previewItem.scrollIntoView({ behavior: 'smooth', inline: 'center' });
-        };
+        onInit: () => {
+            const previewItem = document.getElementById(`preview${selected}`);
+            if (previewItem) {
+                previewItem.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+            };
         },
         afterChange: (nextIndex) => {
             setSelected(nextIndex);
@@ -183,7 +184,7 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
 
 
 
-    
+
 
     if (img.length === 1) {
         return (
