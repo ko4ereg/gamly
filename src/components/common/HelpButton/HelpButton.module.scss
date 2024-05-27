@@ -1,0 +1,35 @@
+.button {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 93px;
+    background: var(--dark-gray);
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.small {
+    width: 18px;
+    height: 18px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .button:hover {
+        background: rgba(39, 37, 47, 1);
+        transition: 0.2s ease-out;
+    }
+
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .button:active {
+        background: rgba(39, 37, 47, 1);
+    }
+
+}

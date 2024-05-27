@@ -1,0 +1,18 @@
+.indicator {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    border-radius: 69.75px;
+}
+
+.succes {
+    background: var(--green-10);
+}
+
+.error {
+    background: var(--red-10);
+}

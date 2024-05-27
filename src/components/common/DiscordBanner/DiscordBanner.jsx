@@ -1,7 +1,4 @@
-import SmallButton from '../SmallButton/SmallButton';
-import s from './DiscordBanner.module.scss';
-// import ProductCarousel from './ProductCarousel';
-// import ProductDescription from './ProductDescription';
+ import s from './DiscordBanner.module.scss';
 
 const DiscordBanner = () => {
     return (

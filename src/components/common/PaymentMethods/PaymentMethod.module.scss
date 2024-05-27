@@ -1,0 +1,221 @@
+.paymentsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.container {
+
+    display: flex;
+    // width: 608px;
+    width: 100%;
+    padding: 24px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    border: 1.5px solid var(--gray-4);
+
+    cursor: pointer;
+    transition: 0.2s ease-out;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: 0.2s ease-out;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        flex: 1 0 0;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+
+        .title {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 22.4px */
+            letter-spacing: 0.32px;
+            color: var(--white);
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 16.8px */
+            letter-spacing: 0.42px;
+            color: var(--gray-40);
+        }
+    }
+
+    .input {
+        input[type='checkbox'] {
+            display: none;
+
+            &:checked+label .check {
+                background-color: var(--accent-purple);
+                background-image: url('./../../../assets/icons/checkinbox.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                border: none;
+            }
+
+        }
+
+        label {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .check {
+            width: 24px;
+            height: 24px;
+            border-radius: 93px;
+            border: 1px solid var(--gray-4);
+        }
+    }
+}
+
+.container.selected {
+    background: var(--gray-10-transparacy);
+    border: 1.5px solid transparent;
+    transition: 0.2s ease-out;
+
+    .logo {
+        border-radius: 50%;
+        background: var(--accent-purple);
+        transition: 0.2s ease-out;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .container:hover {
+
+        border: 1.5px solid var(--gray-10-transparacy);
+
+        .input {
+            .check {
+                border: 1px solid var(--gray-10-transparacy);
+            }
+        }
+    }
+
+    .container.selected:hover {
+        border: 1.5px solid transparent;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .container:active {
+
+        border: 1.5px solid var(--gray-10-transparacy);
+
+        .input {
+            .check {
+                border: 1px solid var(--gray-10-transparacy);
+            }
+        }
+    }
+
+    .container.selected:active {
+        border: 1.5px solid transparent;
+
+
+    }
+}
+
+@media (max-width: 1439px) {
+
+    .paymentsContainer {
+        gap: 21px;
+    }
+
+    .container {
+        padding: 20px;
+        gap: 12px;
+
+        .text {
+
+            .title {
+                font-size: 15px;
+                line-height: 140%;
+                /* 21px */
+                letter-spacing: 0.15px;
+            }
+
+            .subtitle {
+                font-size: 12px;
+                line-height: 120%;
+                /* 14.4px */
+                letter-spacing: 0.36px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .paymentsContainer {
+        gap: 12px;
+    }
+
+    .container {
+        padding: 16px;
+        gap: 8px;
+        // width: 520px;
+        width: 100%;
+
+        .text {
+
+            .title {
+                font-size: 14px;
+                letter-spacing: 0.28px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+                letter-spacing: 0.39px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 479px) {
+    .paymentsContainer {
+        gap: 20px;
+    }
+
+    .container {
+        padding: 12px;
+        gap: 8px;
+
+
+        .text {
+
+            .title {
+                font-size: 13px;
+                letter-spacing: 0.13px;
+            }
+
+            .subtitle {
+                font-size: 12px;
+                letter-spacing: 0.36px;
+            }
+        }
+    }
+
+}

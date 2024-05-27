@@ -6,6 +6,7 @@ import { Suspense, useEffect } from 'react';
 import ShopPage from './pages/ShopPage';
 import SubscribePage from './pages/SubscribePage';
 import ProductPage from './pages/ProductPage';
+import ReplenishmentPage from './pages/ReplenishmentPage';
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/subscribe" element={<SubscribePage />} />
           <Route path="/shop/:productId?" element={<ProductPage />} />
+          <Route path='/replenishment' element={<ReplenishmentPage/>} />
         </Routes>
         </div>
         </div>

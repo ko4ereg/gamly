@@ -1,92 +1,94 @@
- 
-@font-face {
-  font-family: 'VelaSans-GX';
-  src:
+ @font-face {
+   font-family: 'VelaSans-GX';
+   src:
 
-    url("assets/fonts/VelaSans-Medium.woff2") format('woff2'),
-    url("assets/fonts/VelaSans-Medium.woff") format('woff'),
-    url("assets/fonts/VelaSans-Medium.ttf") format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
+     url("assets/fonts/VelaSans-Medium.woff2") format('woff2'),
+     url("assets/fonts/VelaSans-Medium.woff") format('woff'),
+     url("assets/fonts/VelaSans-Medium.ttf") format('truetype');
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+ }
 
-@font-face {
-  font-family: 'VelaSans-GX';
-  src:
+ @font-face {
+   font-family: 'VelaSans-GX';
+   src:
 
-    url("assets/fonts/VelaSans-Regular.woff2") format('woff2'),
-    url("assets/fonts/VelaSans-Regular.woff") format('woff'),
-    url("assets/fonts/VelaSans-Regular.ttf") format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'VelaSans-GX';
-  src:
+     url("assets/fonts/VelaSans-Regular.woff2") format('woff2'),
+     url("assets/fonts/VelaSans-Regular.woff") format('woff'),
+     url("assets/fonts/VelaSans-Regular.ttf") format('truetype');
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+ }
 
-    url("assets/fonts/VelaSans-SemiBold.woff2") format('woff2'),
-    url("assets/fonts/VelaSans-SemiBold.woff") format('woff'),
-    url("assets/fonts/VelaSans-SemiBold.ttf") format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+ @font-face {
+   font-family: 'VelaSans-GX';
+   src:
 
-
-@font-face {
-  font-family: 'Coolvetica';
-  src: url('assets/fonts/COOLVETICA\ RG.OTF') format('opentype');
-  font-display: swap;
-}
-
-:root {
-  --accent-color: #D4EE5D;
-  --gray-15: rgba(65, 63, 75, 1);
-  --gray-40: rgba(231, 229, 237, 0.40);
-  --gray-10: rgba(231, 229, 237, 0.1);
-  --gray-10-transparacy: rgba(231, 229, 237, 0.10);
-  --gray-4: rgba(178, 172, 191, 0.04);
-  --white: #F9F8FC;
-  --light-gray: rgba(178, 172, 191, 1);
-  --background-far: #14111A;
-  --accent-purple: #5F42D9;
-  --dark-gray: #211F29;
-
-}
+     url("assets/fonts/VelaSans-SemiBold.woff2") format('woff2'),
+     url("assets/fonts/VelaSans-SemiBold.woff") format('woff'),
+     url("assets/fonts/VelaSans-SemiBold.ttf") format('truetype');
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+ }
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "VelaSans-GX", sans-serif;
-  background-color: transparent;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smooth: auto;
-  text-rendering: optimizeLegibility;
-  text-rendering: antialiased;
-}
+ @font-face {
+   font-family: 'Coolvetica';
+   src: url('assets/fonts/COOLVETICA\ RG.OTF') format('opentype');
+   font-display: swap;
+ }
+
+ :root {
+   --accent-color: #D4EE5D;
+   --gray-15: rgba(65, 63, 75, 1);
+   --gray-40: rgba(231, 229, 237, 0.40);
+   --gray-10: rgba(231, 229, 237, 0.1);
+   --gray-10-transparacy: rgba(231, 229, 237, 0.10);
+   --gray-4: rgba(178, 172, 191, 0.04);
+   --white: #F9F8FC;
+   --light-gray: rgba(178, 172, 191, 1);
+   --background-far: #14111A;
+   --accent-purple: #5F42D9;
+   --dark-gray: #211F29;
+   --green-10: rgba(52, 61, 51, 1);
+   --red-10: rgba(61, 51, 51, 1);
+   --green-100: rgba(108, 238, 93, 1);
+ }
+
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "VelaSans-GX", sans-serif;
+   background-color: transparent;
+   touch-action: manipulation;
+   -webkit-tap-highlight-color: transparent;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-smooth: auto;
+   text-rendering: optimizeLegibility;
+   text-rendering: antialiased;
+ }
 
 
 
-body {
-  margin: 0;
-  font-family: 'Coolvetica', 'VelaSans-GX',
-    sans-serif,
-    /* -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+ body {
+   margin: 0;
+   font-family: 'Coolvetica', 'VelaSans-GX',
+     sans-serif,
+     /* -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',  */
-  ;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: var(--background-far);
-}
+   ;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   background: var(--background-far);
+ }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New'
-    monospace, 'Coolvetica', 'VelaSans-GX';
-}
+ code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New'
+     monospace, 'Coolvetica', 'VelaSans-GX';
+ }

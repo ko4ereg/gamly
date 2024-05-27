@@ -4,11 +4,9 @@ import ModalCarousel from './ModalCarousel/ModalCarousel';
 import s from './Product.module.scss';
 import ProductCarousel from './ProductCarousel/ProductCarousel';
 import ProductDescription from './ProductDescription';
-import cartminus from './../../assets/icons/cartminus.svg';
-import cart from './../../assets/icons/cart.svg';
 import ButtonSecondary from '../common/ButtonSecondary/ButtonSecondary';
 import ButtonPrimary from '../common/ButtonPrimary/ButtonPrimary';
-import ButtonRemoveFromCart from '../common/ButtonRemoveFromCart/ButtonRemoveFromCart';
+
 
 const ProductContainer = ({ productData }) => {
 
