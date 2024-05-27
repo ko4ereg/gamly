@@ -618,6 +618,48 @@
                             letter-spacing: 0.2px;
                         }
                     }
+
+                    .info_bottom {
+                        gap: 6px;
+
+                        .text_info {
+
+
+                            h3 {
+                                font-size: 13px;
+                                line-height: 140%;
+                                /* 18.2px */
+                                letter-spacing: 0.26px;
+                            }
+
+
+                            .text {
+                                font-size: 13px;
+                                line-height: 140%;
+                                /* 18.2px */
+                                letter-spacing: 0.26px;
+                            }
+
+                            .text_container {
+
+                                gap: 2px;
+
+                                span {
+                                    font-size: 13px;
+                                    line-height: 140%;
+                                    /* 18.2px */
+                                    letter-spacing: 0.26px;
+                                }
+                            }
+
+                            .promo {
+                                font-size: 13px;
+                                line-height: 140%;
+                                /* 18.2px */
+                                letter-spacing: 0.26px;
+                            }
+                        }
+                    }
                 }
 
                 .payments {
@@ -648,50 +690,10 @@
                     }
                 }
 
-
-
-                .info_bottom {
-                    gap: 6px;
-
-                    .text_info {
-
-
-                        h3 {
-                            font-size: 13px;
-                            line-height: 140%;
-                            /* 18.2px */
-                            letter-spacing: 0.26px;
-                        }
-
-
-                        .text {
-                            font-size: 13px;
-                            line-height: 140%;
-                            /* 18.2px */
-                            letter-spacing: 0.26px;
-                        }
-
-                        .text_container {
-
-                            gap: 2px;
-
-                            span {
-                                font-size: 13px;
-                                line-height: 140%;
-                                /* 18.2px */
-                                letter-spacing: 0.26px;
-                            }
-                        }
-
-                        .promo {
-                            font-size: 13px;
-                            line-height: 140%;
-                            /* 18.2px */
-                            letter-spacing: 0.26px;
-                        }
-                    }
-                }
             }
+
+
+
         }
     }
 }
@@ -729,11 +731,7 @@
                     }
                 }
 
-                .info_bottom {
-
-
-                    .text_info {}
-                }
+ 
             }
         }
 
