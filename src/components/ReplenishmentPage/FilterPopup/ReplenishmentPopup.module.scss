@@ -60,6 +60,7 @@
             width: 100%;
             padding-top: 16px;
             flex: 0 1 auto;
+            border-top: 1.5px solid var(--gray-4);
         }
     }
 
@@ -629,7 +630,7 @@
                                 font-size: 13px;
                                 line-height: 140%;
                                 /* 18.2px */
-                                letter-spacing: 0.26px;
+                                letter-spacing: 0.13px;
                             }
 
 
@@ -637,7 +638,7 @@
                                 font-size: 13px;
                                 line-height: 140%;
                                 /* 18.2px */
-                                letter-spacing: 0.26px;
+                                letter-spacing: 0.13px;
                             }
 
                             .text_container {
@@ -648,7 +649,7 @@
                                     font-size: 13px;
                                     line-height: 140%;
                                     /* 18.2px */
-                                    letter-spacing: 0.26px;
+                                    letter-spacing: 0.13px;
                                 }
                             }
 
@@ -656,7 +657,7 @@
                                 font-size: 13px;
                                 line-height: 140%;
                                 /* 18.2px */
-                                letter-spacing: 0.26px;
+                                letter-spacing: 0.13px;
                             }
                         }
                     }
