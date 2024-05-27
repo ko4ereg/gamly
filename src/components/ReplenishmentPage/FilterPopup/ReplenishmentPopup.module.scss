@@ -32,7 +32,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-       
+
             color: var(--white);
             margin-bottom: 40px;
             align-items: flex-start;
@@ -181,6 +181,10 @@
 
                     text-overflow: ellipsis;
 
+
+
+
+
                 }
 
                 .coins {
@@ -188,7 +192,7 @@
                     align-items: center;
                     gap: 6px;
                     align-self: stretch;
-
+                    // flex: 1 0 auto;
                 }
             }
 
@@ -214,7 +218,7 @@
 
                     h3 {
                         display: -webkit-box;
-                        width: 177px;
+                        min-width: 177px;
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 1;
                         overflow: hidden;
@@ -231,14 +235,16 @@
 
 
                     .text {
-
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 1;
-                        flex: 1 0 0;
-                        overflow: hidden;
+                        display: table;
+                        table-layout: fixed;
+                        width: 100%;
+                        // display: -webkit-box;
+                        // -webkit-box-orient: vertical;
+                        // -webkit-line-clamp: 1;
+                        // flex: 1 1 auto;
+                        // overflow: hidden;
                         color: var(--light-gray);
-                        text-overflow: ellipsis;
+                        // text-overflow: ellipsis;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 600;
@@ -246,6 +252,12 @@
                         /* 22.4px */
                         letter-spacing: 0.32px;
 
+                        .truncate {
+                            display: table-cell;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
                     }
 
                     .text_container {
@@ -316,7 +328,7 @@
 
         .replenishment_container {
             padding: 40px;
-            width: 900px;
+            width: 613px;
         }
     }
 }
@@ -377,7 +389,7 @@
                             h3 {
                                 overflow: visible;
                                 white-space: nowrap;
-                                width: 158px;
+                                min-width: 158px;
                                 font-size: 15px;
                                 line-height: 140%;
                                 /* 21px */
@@ -500,7 +512,7 @@
                     padding: 16px;
 
                     .info_top {
-                        
+
                         .price {
                             white-space: nowrap;
                             letter-spacing: -0.48px;
@@ -716,12 +728,11 @@
                         }
                     }
                 }
-         .info_bottom {
-               
 
-                    .text_info {
-  
-                    }
+                .info_bottom {
+
+
+                    .text_info {}
                 }
             }
         }

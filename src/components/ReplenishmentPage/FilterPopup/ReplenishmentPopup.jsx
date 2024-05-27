@@ -53,14 +53,14 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, prodsAmount }) => {
           <div className={s.infoAndBonuses}>
             <div className={s.info}>
               <div className={s.info_top}>
-                <div className={s.price}>  {formattedValue} на баланс скинами </div>
+                <div className={s.price}> <div className={s.truncate}> {formattedValue} на баланс скинами </div></div>
                 <div className={s.coins}> {formatValue('1000')}  <GamlyCoin /></div>
               </div>
               <div className={s.line}></div>
               <div className={s.info_bottom}>
                 <div className={s.text_info}>
                   <h3>Ссылка на обмен:</h3>
-                  <div className={s.text}>https://steamcommunity.com/tradeoffer/new/?partner=537680217&token=GByFigex</div>
+                  <div className={s.text}><div className={s.truncate}>https://steamcommunity.com/tradeoffer/new/?partner=537680217&token=GByFigex</div></div>
                 </div>
                 <div className={s.text_info}>
                   <h3>Применен промокод:</h3>
