@@ -20,7 +20,7 @@ const HeaderNavMenuBurger = (props) => {
             {isOpen && (
                 <nav className={s.navLinks}>
                     <NavLink className={navActive} to={"/"}><div>Главная</div></NavLink>
-                    <NavLink className={navActive} to={"/add"}><div>Пополнение</div></NavLink>
+                    <NavLink className={navActive} to={"/replenishment"}><div>Пополнение</div></NavLink>
                     <NavLink className={navActive} to={"/subscribe"}><div>Подписки</div></NavLink>
                     <NavLink className={navActive} to={"/acii"}><div>Акции</div></NavLink>
                     <NavLink className={navActive} to={"/shop"}><div>Магазин</div></NavLink>
