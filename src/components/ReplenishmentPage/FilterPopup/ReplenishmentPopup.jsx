@@ -36,7 +36,7 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, prodsAmount }) => {
     }
   }
 
-  const formattedValue = formatValue('1234') + ' ₽';
+  const formattedValue = formatValue('1050') + '₽';
 
 
   return (
@@ -53,8 +53,8 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, prodsAmount }) => {
           <div className={s.infoAndBonuses}>
             <div className={s.info}>
               <div className={s.info_top}>
-                <div className={s.price}> <h3>{formattedValue} на баланс скинами</h3></div>
-                <div className={s.coins}><h3>1000 </h3><GamlyCoin /></div>
+                <div className={s.price}>  {formattedValue} на баланс скинами </div>
+                <div className={s.coins}> {formatValue('1000')}  <GamlyCoin /></div>
               </div>
               <div className={s.line}></div>
               <div className={s.info_bottom}>

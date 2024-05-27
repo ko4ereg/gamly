@@ -32,10 +32,10 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+       
             color: var(--white);
             margin-bottom: 40px;
-
+            align-items: flex-start;
 
             .heading_title {
                 display: flex;
@@ -600,8 +600,16 @@
                         .price {
                             -webkit-line-clamp: 2;
                             white-space: unset;
+                            font-size: 20px;
+                            line-height: 120%;
+                            /* 24px */
+                            letter-spacing: 0.2px;
                         }
                     }
+                }
+
+                .payments {
+                    gap: 16px;
                 }
 
                 .infoAndBonuses {
