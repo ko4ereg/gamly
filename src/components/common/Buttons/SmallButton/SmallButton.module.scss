@@ -24,7 +24,7 @@
 @media (hover: hover) and (pointer: fine) {
     .button {
         &:hover {
-            background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+            background:rgba(39, 37, 47, 1);
             transition: 0.2s ease-out;
         }
     }
@@ -34,7 +34,7 @@
 @media (hover: none) and (pointer: coarse) {
     .button {
         &:active {
-            background: linear-gradient(0deg, var(--gray-4) 0%, var(--gray-4) 100%), var(--dark-gray);
+            background:rgba(39, 37, 47, 1);
             transition: 0.2s ease-out;
         }
 

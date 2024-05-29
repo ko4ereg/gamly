@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import { formatValue } from '../../utils/formatValue';
-import ButtonPrimary from '../common/ButtonPrimary/ButtonPrimary';
-import ButtonSecondary from '../common/ButtonSecondary/ButtonSecondary';
 import s from './Product.module.scss';
-import cartminus from './../../assets/icons/cartminus.svg';
-import cart from './../../assets/icons/cart.svg';
 const ProductDescription = ({ productData }) => {
 
 

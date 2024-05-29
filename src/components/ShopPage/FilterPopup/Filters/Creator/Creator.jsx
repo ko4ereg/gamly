@@ -2,9 +2,9 @@ import Search from "./Search";
 import s from './../../FilterPopup.module.scss';
 import Selector from "./Selector";
 import { useState } from "react";
-import TextButtonC2 from "../../../../common/TextButtonC2/TextButtonC2";
+import TextButtonC2 from "../../../../common/Buttons/TextButtonC2/TextButtonC2";
 import SmallSearchbar from "../../../../common/SmallSearchbar/SmallSearchbar";
-import TextButtonC1 from "../../../../common/TextButtonC1/TextButtonC1";
+import TextButtonC1 from "../../../../common/Buttons/TextButtonC1/TextButtonC1";
 
 
 

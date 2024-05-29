@@ -1,8 +1,8 @@
 import s from './Indicator.module.scss';
 
-const Indicator = ({ succes }) => {
+const Indicator = ({ succes, small }) => {
     return (
-        <div className={`${s.indicator} ${succes ? s.succes : s.error}`}>
+        <div className={`${s.indicator} ${succes ? s.succes : s.error} ${small && s.small}`}>
             {succes
                 ? <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
                     <path d="M2.5 6.99988L4.5 8.99988L9.5 3.99988" stroke="#6CEE5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

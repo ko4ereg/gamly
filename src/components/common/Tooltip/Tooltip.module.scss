@@ -1,0 +1,30 @@
+.tooltip {
+    display: inline-flex;
+    max-width: 300px;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: var(--dark-gray);
+    color: var(--light-gray);
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 94%;
+    /* 12.22px */
+    letter-spacing: 0.39px;
+    position: relative;
+    width: fit-content;
+    height: auto;
+
+}
+
+.rectangle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 6px;
+}

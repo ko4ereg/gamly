@@ -8,9 +8,9 @@ import RadioButton from '../../common/RadioButton';
 import Wires from './Filters/Wires.jsx/Wires';
 import InputWithSuffix from '../../common/InputWithSuffix';
 import PhoneConnect from './Filters/PhoneConnect/PhoneConnect';
-import ButtonPrimary from '../../common/ButtonPrimary/ButtonPrimary';
-import ButtonSecondary from '../../common/ButtonSecondary/ButtonSecondary';
-import CloseButton from '../../common/CloseButton/CloseButton';
+import ButtonPrimary from '../../common/Buttons/ButtonPrimary/ButtonPrimary';
+import ButtonSecondary from '../../common/Buttons/ButtonSecondary/ButtonSecondary';
+import CloseButton from '../../common/Buttons/CloseButton/CloseButton';
 import PriceFromTo from './Filters/PriceFromTo/PriceFromTo';
 import { getNoun } from '../../../utils/getNoun';
 

@@ -1,7 +1,7 @@
 
 import { formatValue } from '../../../../../utils/formatValue';
 import InputWithSuffix from '../../../../common/InputWithSuffix';
-import TextButtonC2 from '../../../../common/TextButtonC2/TextButtonC2';
+import TextButtonC2 from '../../../../common/Buttons/TextButtonC2/TextButtonC2';
 import g from './../../FilterPopup.module.scss';
 import s from './PriceFromTo.module.scss';
 

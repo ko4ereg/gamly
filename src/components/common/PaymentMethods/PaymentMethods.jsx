@@ -13,6 +13,14 @@ const PaymentMethods = () => {
        
     }
 
+
+    const handleCheckboxChange = (type) => {
+        setSelectedType(type);
+        // props.setSort(e.target.id === 'popular' ? 'сначала популярные' : e.target.id === 'cheap' ? 'сначала дешевые' : e.target.id === 'exp' ? 'сначала дорогие' : 'по скидке (%)');
+        // props.setSortsOpen(false);
+    };
+
+
     return (
         <div className={s.paymentsContainer}>
             <PaymentMethod
@@ -37,7 +45,8 @@ const PaymentMethods = () => {
                 title={'СБП / QR'}
                 subtitle={"Без комиссии"}
                 selectedType={selectedType}
-                onClick={handleClick}
+                // onClick={handleClick}
+                onChange={handleCheckboxChange}
                 type={'sbp'} />
             <PaymentMethod
                 logo={<svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +56,8 @@ const PaymentMethods = () => {
                 title={'Плайт / Оплата частями'}
                 subtitle={"Оплата частями без переплат"}
                 selectedType={selectedType}
-                onClick={handleClick}
+                  // onClick={handleClick}
+                  onChange={handleCheckboxChange}
                 type={'plait'} />
             <PaymentMethod
                 logo={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +69,8 @@ const PaymentMethods = () => {
                 title={'С банковской карты'}
                 subtitle={"Мир, UnionPay, MasterCard, Visa"}
                 selectedType={selectedType}
-                onClick={handleClick}
+                // onClick={handleClick}
+                onChange={handleCheckboxChange}
                 type={'card'} />
             <PaymentMethod
                 logo={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +82,8 @@ const PaymentMethods = () => {
                 title={'Криптовалюта'}
                 subtitle={"USDT (trc20, erc20), Bitcoin, Etherium, Tron, Litecoin, XRP"}
                 selectedType={selectedType}
-                onClick={handleClick}
+                    // onClick={handleClick}
+                    onChange={handleCheckboxChange}
                 type={'crypto'} />
         </div>
 

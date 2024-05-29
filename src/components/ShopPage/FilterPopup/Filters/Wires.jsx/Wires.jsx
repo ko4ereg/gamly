@@ -1,7 +1,7 @@
 import s from './Wires.module.scss';
 import g from './../../FilterPopup.module.scss';
 import Checkbox from "../../../../common/Checkbox";
-import TextButtonC2 from '../../../../common/TextButtonC2/TextButtonC2';
+import TextButtonC2 from '../../../../common/Buttons/TextButtonC2/TextButtonC2';
 
 
 

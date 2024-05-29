@@ -1,0 +1,315 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    // background-image: linear-gradient(to right, var(--gray-15) 70%, transparent 50%);
+    // background-position: -80% 100%;
+    // background-repeat: repeat-x;
+    // background-size: 8px 1.5px;
+    border-bottom: 2.5px dashed var(--gray-15);
+    padding-bottom: 3px;
+}
+
+.title {
+    color: var(--white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0.32px;
+    display: flex;
+    gap: 8px;
+
+    .ok {
+        color: var(--accent-color);
+    }
+
+    .error {
+        color: var(--red-100);
+    }
+}
+
+.inputWrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.input {
+    color: var(--white);
+    text-overflow: ellipsis;
+    letter-spacing: inherit;
+    border: none;
+    outline: none;
+    width: 100%;
+    outline: none;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+
+    letter-spacing: 0.36px;
+
+    &::placeholder {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0.36px;
+        color: var(--gray-40);
+    }
+}
+
+.inputFakeValueWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    user-select: none;
+    pointer-events: none;
+
+
+    text-overflow: ellipsis;
+
+    border: none;
+    outline: none;
+
+
+    span {
+        color: var(--white);
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        /* 50.4px */
+        letter-spacing: 0.36px;
+    }
+
+}
+
+// .inputFakeValue {
+//     overflow: hidden;
+// }
+
+.suffix {
+    visibility: visible;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+
+    text-overflow: ellipsis;
+
+    border: none;
+    outline: none;
+
+}
+
+.addition {
+
+    justify-self: flex-end;
+    // bottom: 16px;
+    // right: 0;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    // border-bottom: 1px dashed var(--gray-15);
+}
+
+.helpButton {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .container {
+
+        &:hover {
+
+            border-bottom: 2.5px dashed var(--gray-40);
+            transition: 0.2s ease-out;
+
+        }
+    }
+
+
+
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .container {
+
+        &:active {
+
+            border-bottom: 2.5px dashed var(--gray-40);
+            transition: 0.2s ease-out;
+
+        }
+    }
+
+}
+
+
+@media (max-width: 1439px) {
+
+    .title {
+        font-size: 15px;
+        line-height: 140%;
+        /* 21px */
+        letter-spacing: 0.15px;
+    }
+
+    .input {
+        font-size: 32px;
+        line-height: 140%;
+        /* 44.8px */
+        letter-spacing: 0.32px;
+
+        &::placeholder {
+            font-size: 32px;
+            line-height: 140%;
+            /* 44.8px */
+            letter-spacing: 0.32px;
+        }
+    }
+
+    .inputFakeValueWrapper {
+        span {
+            font-size: 32px;
+            line-height: 140%;
+            /* 44.8px */
+            letter-spacing: 0.32px;
+        }
+
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .container {
+        gap: 6px;
+    }
+
+    .title {
+        font-size: 15px;
+        line-height: 140%;
+        /* 21px */
+        letter-spacing: 0.15px;
+    }
+
+    .input {
+        font-size: 22px;
+        line-height: 140%;
+        /* 30.8px */
+        letter-spacing: 0.22px;
+
+        &::placeholder {
+            font-size: 22px;
+            line-height: 140%;
+            /* 30.8px */
+            letter-spacing: 0.22px;
+        }
+    }
+
+    .inputFakeValueWrapper {
+        span {
+            font-size: 22px;
+            line-height: 140%;
+            /* 30.8px */
+            letter-spacing: 0.22px;
+        }
+
+    }
+
+}
+
+@media (max-width:767px) {
+
+    .title {
+        font-size: 14px;
+        line-height: 140%;
+        /* 21px */
+        letter-spacing: 0.28px;
+    }
+
+    .input {
+        font-size: 14px;
+        line-height: 140%;
+        /* 21px */
+        letter-spacing: 0.28px;
+
+        &::placeholder {
+            font-size: 14px;
+            line-height: 140%;
+            /* 21px */
+            letter-spacing: 0.28px;
+        }
+    }
+
+    .inputFakeValueWrapper {
+        span {
+            font-size: 14px;
+            line-height: 140%;
+            /* 21px */
+            letter-spacing: 0.28px;
+        }
+
+    }
+
+    .addition {
+        gap: 4px;
+    }
+
+}
+
+@media (max-width:479px) {
+
+    .title {
+        font-size: 13px;
+        line-height: 140%;
+        /* 21px */
+        letter-spacing: 0.13px;
+    }
+
+    .input {
+        font-size: 13px;
+        line-height: 140%;
+        /* 21px */
+        letter-spacing: 0.13px;
+
+        &::placeholder {
+            font-size: 13px;
+            line-height: 140%;
+            /* 21px */
+            letter-spacing: 0.13px;
+        }
+    }
+
+    .inputFakeValueWrapper {
+        span {
+            font-size: 13px;
+            line-height: 140%;
+            /* 21px */
+            letter-spacing: 0.13px;
+        }
+
+    }
+}

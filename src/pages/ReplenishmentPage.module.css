@@ -1,0 +1,9 @@
+.topImage {
+    width: 100%;
+    height: 361px;
+    flex-shrink: 0;
+    background:   url('../assets/replenishment/backskins.png') lightgray 0px -283.118px / 100% 299.169% no-repeat ;
+position: relative;
+top: -64px;
+z-index: 1;
+}

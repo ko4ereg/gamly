@@ -6,7 +6,7 @@
     border-radius: 12px;
     border: 1px solid var(--gray-4);
     background: var(--gray-4);
-    min-width: 220px;
+    width: 220px;
     height: fit-content;
     position: relative;
     overflow: hidden;
@@ -51,6 +51,7 @@
     line-height: 120%;
     /* 16.8px */
     letter-spacing: 0.42px;
+    transition: 0.2s ease-out;
 }
 
 .text {
@@ -58,14 +59,14 @@
     flex-direction: column;
     gap: 6px;
 
-    h3 {
+   
         font-size: 17px;
         font-style: normal;
         font-weight: 600;
         line-height: 120%;
         /* 20.4px */
         color: var(--white);
-    }
+    
 
     p {
         font-size: 14px;
@@ -102,7 +103,7 @@
 
 @media (max-width: 1919px) {
     .container {
-        min-width: 180px;
+        width: 180px;
 
         .svg1 {
             width: 78.117px;

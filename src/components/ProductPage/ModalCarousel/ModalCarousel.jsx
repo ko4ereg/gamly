@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import s from './ModalCarousel.module.scss';
-import CloseButton from '../../common/CloseButton/CloseButton';
+import CloseButton from '../../common/Buttons/CloseButton/CloseButton';
 import close from './../../../assets/icons/close.svg';
 import prev from './../../../assets/icons/arrowleft.svg';
 import next from './../../../assets/icons/arrowright.svg';

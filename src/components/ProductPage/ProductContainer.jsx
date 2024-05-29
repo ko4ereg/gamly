@@ -4,8 +4,8 @@ import ModalCarousel from './ModalCarousel/ModalCarousel';
 import s from './Product.module.scss';
 import ProductCarousel from './ProductCarousel/ProductCarousel';
 import ProductDescription from './ProductDescription';
-import ButtonSecondary from '../common/ButtonSecondary/ButtonSecondary';
-import ButtonPrimary from '../common/ButtonPrimary/ButtonPrimary';
+import ButtonSecondary from '../common/Buttons/ButtonSecondary/ButtonSecondary';
+import ButtonPrimary from '../common/Buttons/ButtonPrimary/ButtonPrimary';
 
 
 const ProductContainer = ({ productData }) => {

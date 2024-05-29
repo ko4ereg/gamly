@@ -3,7 +3,7 @@ import { useMemo, useRef } from 'react';
 // import s from './../../FilterPopup.module.scss';
 import s from './Selector.module.scss';
 import Checkbox from '../../../../common/Checkbox';
-import TextButtonC1 from '../../../../common/TextButtonC1/TextButtonC1';
+import TextButtonC1 from '../../../../common/Buttons/TextButtonC1/TextButtonC1';
 
 
 

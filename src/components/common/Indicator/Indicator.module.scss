@@ -1,7 +1,7 @@
 .indicator {
     display: flex;
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     justify-content: center;
     align-items: center;
     gap: 6px;
@@ -15,4 +15,9 @@
 
 .error {
     background: var(--red-10);
+}
+
+.small {
+    width: 16px;
+    height: 16px;
 }
