@@ -8,13 +8,33 @@ import BottomContainer from '../components/ReplenishmentPage/BottomContainer/Bot
 const ReplenishmentPage = (props) => {
     const [popupActive, setPopupActive] = useState(false);
     const [selectedType, setSelectedType] = useState('skins');
+
+    const [link, setLink] = useState('');
+  
+    const [login, setLogin] = useState('');
+    const [price, setPrice] = useState('');
+    const [promo, setPromo] = useState('');
+    const [priceWithoutFormat, setPriceWithputFormat] = useState(0);
+
+
     return (
         <div style={{ background: 'transparent' }}>
             <TopContainer selectedType={selectedType} setSelectedType={setSelectedType} />
             <div className={g.container + ' ' + s.container}>
-                <BottomContainer selectedType={selectedType} setSelectedType={setSelectedType} />
+                <BottomContainer 
+                link={link}
+                setLink={setLink}
+                priceWithoutFormat={priceWithoutFormat}
+                setPriceWithputFormat={setPriceWithputFormat}
+                promo={promo}
+                setPromo={setPromo}
+                price={price}
+                setPrice={setPrice}
+                login={login}
+                setLogin={setLogin}
+                setPopupActive={setPopupActive} selectedType={selectedType} setSelectedType={setSelectedType} />
                 {/* <button onClick={() => setPopupActive(!popupActive)}>CLICK</button> */}
-                <ReplenishmentPopup setPopupActive={setPopupActive} popupActive={popupActive} />
+                <ReplenishmentPopup promo={promo} price={price} login={login} link={link} priceWithoutFormat={priceWithoutFormat} setPopupActive={setPopupActive} popupActive={popupActive} />
             </div>
         </div>)
 }

@@ -9,13 +9,15 @@ import Commision from './Commision/Commision';
 
 
 
-const BottomContainer = (props) => {
+const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithputFormat, login, setLogin, promo, price, setPrice, setPromo, ...props }) => {
 
-    const [link, setLink] = useState('');
-    const [price, setPrice] = useState('');
-    const [promo, setPromo] = useState('');
-const [priceWithoutFormat, setPriceWithputFormat] = useState(0);
-    const disabled = !link || !price;
+    // const [link, setLink] = useState('');
+  
+    // const [login, setLogin] = useState('');
+
+    // const [promo, setPromo] = useState('');
+    // const [priceWithoutFormat, setPriceWithputFormat] = useState(0);
+    const disabled = props.selectedType === 'skins' ? !link || !price : !login || !price;
 
 
     return (
@@ -38,22 +40,22 @@ const [priceWithoutFormat, setPriceWithputFormat] = useState(0);
                 <div className={s.inputsContainer}>
                     {props.selectedType === 'skins'
                         ? <BigInput
-                        tooltipText={'Введите ссылку'}
+                            tooltipText={'Введите ссылку'}
                             value={link}
                             setValue={setLink}
                             heading={'Ссылка на обмен*'}
                             placeholder={'Ваша трейд-ссылка'} />
                         : <BigInput
-                        tooltipText={'Требуется ваш логин'}
-                            value={link}
-                            setValue={setLink}
+                            tooltipText={'Требуется ваш логин'}
+                            value={login}
+                            setValue={setLogin}
                             heading={'Логин Steam*'}
                             placeholder={'Ваш логин Steam'} />
                     }
 
                     <div className={s.inputs}>
                         <BigInput
-tooltipText={'столько вы получите'}
+                            tooltipText={'столько вы получите aaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaa aaaaa'}
                             value={price}
                             setValue={setPrice}
                             setPriceWithputFormat={setPriceWithputFormat}
@@ -62,7 +64,7 @@ tooltipText={'столько вы получите'}
                             placeholder={'0'}
                         />
                         <BigInput
-tooltipText={'промокод на скидку'}
+                            tooltipText={'промокод на скидку'}
                             value={promo}
                             setValue={setPromo}
                             heading={'Промокод'}
@@ -75,10 +77,10 @@ tooltipText={'промокод на скидку'}
                         : <Commision sum={priceWithoutFormat} />}
                 </div>
                 <div className={s.button}>
-                   <div className={s.buttonItem}> <ButtonPrimary disabled={disabled} text={'Пополнить Steam'} /></div>
+                    <div className={s.buttonItem}> <ButtonPrimary onClick={() => props.setPopupActive(true)} disabled={disabled} text={'Пополнить Steam'} /></div>
                     <div className={s.cost}>
                         <div className={s.toPay}>К оплате</div>
-                        <div className={s.coins}>{price || 0}<GamlyCoin /></div>
+                        <div className={s.coins}>{Math.floor(priceWithoutFormat*0.95) || 0}<GamlyCoin /></div>
                     </div>
                 </div>
 

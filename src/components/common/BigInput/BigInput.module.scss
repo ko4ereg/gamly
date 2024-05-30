@@ -9,6 +9,7 @@
     // background-size: 8px 1.5px;
     border-bottom: 2.5px dashed var(--gray-15);
     padding-bottom: 3px;
+    background-color: var(--background-far);
 }
 
 .title {
@@ -132,10 +133,11 @@
 
 .tooltip {
     position: absolute;
-    bottom: 120%;
+    // bottom: 120%;
+    bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
-   
+
 }
 
 @media (hover: hover) and (pointer: fine) {

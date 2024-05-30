@@ -17,13 +17,15 @@
     color: var(--white);
     transition: 0.2s ease-out;
     gap: 12px;
-
+max-height: 100%;
     &:disabled {
         opacity: 0.2;
         background: var(--accent-purple);
         cursor: default;
     }
 }
+
+ 
 
 .small {
     padding: 10px 24px;

@@ -20,20 +20,7 @@
         }
     }
 
-    &:hover {
-        background-color: var(--accent-purple);
-        border: 1px solid var(--accent-purple);
-        transition: 0.2s ease-out;
-        padding: 10px;
 
-        svg path {
-            fill: white;
-            fill-opacity: 1;
-            transition: 0.2s ease-out;
-        }
-
-
-    }
 }
 
 
@@ -46,14 +33,19 @@
             border: 1px solid var(--accent-purple);
             transition: 0.2s ease-out;
             padding: 10px;
-    
+
             svg path {
                 fill: white;
                 fill-opacity: 1;
                 transition: 0.2s ease-out;
             }
-    
-    
+        }
+    }
+    @media (max-width: 1023px) {
+        .button {
+            &:hover {
+                padding: 7px;
+            }
         }
     }
 
@@ -66,14 +58,43 @@
             border: 1px solid var(--accent-purple);
             transition: 0.2s ease-out;
             padding: 10px;
-    
+
             svg path {
                 fill: white;
                 fill-opacity: 1;
                 transition: 0.2s ease-out;
             }
-    
-    
         }
     }
+    @media (max-width: 1023px) {
+        .button {
+            &:active {
+                padding: 7px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .button {
+
+        width: 36px;
+        height: 36px;
+        padding: 9px;
+
+        border-radius: 1687.5px;
+        border: 0.75px solid var(--gray-10-transparacy);
+        svg {
+            transition: 0.2s ease-out;
+
+            path {
+                fill: #E7E5ED;
+                fill-opacity: 0.4;
+            }
+        }
+
+
+    }
+
 }

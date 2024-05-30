@@ -38,13 +38,15 @@
     cursor: pointer;
     display: flex;
     height: 32px;
-    width: fit-content;
+    width: 100%;
+    // width: fit-content;
     padding: 0px 20px 1px 20px;
     align-items: center;
+    justify-content: center;
     gap: 4px;
-    border-radius: 40px;
+    border-radius: 8px;
     background: var(--dark-gray);
-    color: var(--white);
+    color: var(--light-gray);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -52,6 +54,7 @@
     /* 16.8px */
     letter-spacing: 0.42px;
     transition: 0.2s ease-out;
+    z-index: 1;
 }
 
 .text {
@@ -59,14 +62,14 @@
     flex-direction: column;
     gap: 6px;
 
-   
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 120%;
-        /* 20.4px */
-        color: var(--white);
-    
+
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 20.4px */
+    color: var(--white);
+
 
     p {
         font-size: 14px;
@@ -83,7 +86,7 @@
 @media (hover: hover) and (pointer: fine) {
     .button {
         &:hover {
-            background:rgba(39, 37, 47, 1);
+            background: rgba(39, 37, 47, 1);
             transition: 0.2s ease-out;
         }
     }
@@ -93,7 +96,7 @@
 @media (hover: none) and (pointer: coarse) {
     .button {
         &:active {
-            background:rgba(39, 37, 47, 1);
+            background: rgba(39, 37, 47, 1);
             transition: 0.2s ease-out;
         }
 
@@ -103,7 +106,7 @@
 
 @media (max-width: 1919px) {
     .container {
-        width: 180px;
+        width: 100%;
 
         .svg1 {
             width: 78.117px;
@@ -124,12 +127,218 @@
     }
 
 
+
+    .button {
+        cursor: pointer;
+        display: flex;
+        height: 32px;
+
+        width: 100%;
+        padding: 0px 20px 1px 20px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4px;
+        border-radius: 8px;
+        background: var(--dark-gray);
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 0.42px;
+        transition: 0.2s ease-out;
+        z-index: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        /* 20.4px */
+        color: var(--white);
+
+
+        p {
+
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 16.8px */
+            letter-spacing: 0.42px;
+            color: var(--gray-40);
+        }
+    }
+
 }
 
 @media (max-width: 1439px) {
+
+
     .container {
-        display: none;
+
+
+        padding: 16px 20px;
+        border-radius: 12px;
+        width: 100%;
+
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 122px;
+
+
+        .svg2 {
+            position: absolute;
+            right: 10.561px;
+            bottom: -189.226px;
+            width: 124.517px;
+            height: 283.693px;
+            transform: rotate(-144.987deg);
+        }
     }
 
+    .button {
+        padding: 0px 12px 1px 12px;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        font-size: 12px;
+        line-height: 120%;
+        /* 14.4px */
+        letter-spacing: 0.36px;
+    }
+
+    .text {
+        gap: 2px;
+        font-size: 15px;
+        line-height: 140%;
+        /* 21px */
+        letter-spacing: 0.15px;
+
+
+        p {
+            font-size: 15px;
+            line-height: 140%;
+            /* 21px */
+            letter-spacing: 0.15px;
+        }
+    }
+
+}
+
+@media (max-width: 1023px) {
+
+
+    .container {
+
+        // flex-direction: row;
+        padding: 16px 20px;
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 140px;
+
+        .svg2 {
+            position: absolute;
+            left: 158.682px;
+            right: unset;
+            bottom: -235.226px;
+            width: 124.517px;
+            height: 283.693px;
+            transform: rotate(-144.987deg);
+        }
+    }
+
+    .text {
+        align-self: flex-start;
+    }
+
+    .button {
+        padding: 0px 20px 1px 20px;
+        font-size: 12px;
+        line-height: 120%;
+        /* 14.4px */
+        letter-spacing: 0.36px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+
+    .container {
+
+        // flex-direction: row;
+        padding: 16px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: space-between;
+        min-height: unset;
+
+        .svg2 {
+            position: absolute;
+            left: 158.682px;
+            right: unset;
+            bottom: -235.226px;
+            width: 124.517px;
+            height: 283.693px;
+            transform: rotate(-144.987deg);
+        }
+    }
+
+    .text {
+        align-self: flex-start;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+
+        /* 16.8px */
+        p {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            /* 16.8px */
+        }
+    }
+
+    .button {
+        padding: 12px 24px;
+        font-size: 12px;
+        line-height: 120%;
+        /* 14.4px */
+        letter-spacing: 0.36px;
+        height: auto;
+    }
+
+}
+@media (max-width: 479px) {
+
+ 
+    .text {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 18.2px */
+        letter-spacing: 0.13px;
+        p {
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 18.2px */
+            letter-spacing: 0.13px;
+        }
+    }
 
 }

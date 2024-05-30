@@ -41,6 +41,10 @@
    font-display: swap;
  }
 
+ html {
+  background-color: var(--background-far);
+ }
+
  :root {
    --accent-color: #D4EE5D;
    --gray-15: rgba(65, 63, 75, 1);

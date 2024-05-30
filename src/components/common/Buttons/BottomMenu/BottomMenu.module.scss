@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+    border-top: 1.5px solid var(--gray-4);
+    max-height: 86px;
+    
+
+    .separator {
+        width: 100%;
+        min-height: 16px;
+
+    }
+
+    .buttons {
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+    }
+}
