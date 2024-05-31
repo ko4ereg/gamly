@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react';
 import s from './ReplenishmentPopup.module.scss';
 import close from './../../../assets/icons/close.svg';
-import ruby from './../../../assets/icons/ruby.png';
 import ButtonPrimary from '../../common/Buttons/ButtonPrimary/ButtonPrimary';
-import ButtonSecondary from '../../common/Buttons/ButtonSecondary/ButtonSecondary';
 import CloseButton from '../../common/Buttons/CloseButton/CloseButton';
-import { formatValue } from '../../../utils/formatValue';
 import GamlyCoin from '../../common/GamlyCoin/GamlyCoin';
 import PaymentMethods from '../../common/PaymentMethods/PaymentMethods';
 import SuccesPopupContent from './SuccesPopupContent';
 import BottomMenu from '../../common/Buttons/BottomMenu/BottomMenu';
+import ButtonSuccesPopup from '../../common/Buttons/ButtonSuccesPopup/ButtonSuccesPopup';
 
 
 
@@ -72,7 +70,7 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, login, link, priceWit
                     <h3>Применен промокод:</h3>
                     <div className={s.text_container}>
                       <div className={s.promo}>{promo}</div>
-                      <span>+10% к пополнению</span>
+                      {promo && <span>+10% к пополнению</span>}
                     </div>
                   </div>
                 </div>
@@ -117,20 +115,20 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, login, link, priceWit
           </div>
         </div>
         :
-        <div className={s.replenishment_container} >
+        <div className={`${s.replenishment_container} ${s.succes_container}`} >
           <div style={{ justifyContent: 'flex-end' }} className={s.heading}>
             <CloseButton icon={close} onClick={() => {
               setPopupActive(false);
               setSucces(false)
             }} />
           </div>
-          <SuccesPopupContent />
+          <SuccesPopupContent coins={Math.floor(priceWithoutFormat * 0.95)} />
           <BottomMenu separator={true}>
 
-            <ButtonSecondary icon={<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <ButtonSuccesPopup icon={<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
               <path d="M13.3708 18.072C6.70844 18.072 2.90835 13.5045 2.75 5.9043H6.0873C6.19691 11.4827 8.6572 13.8456 10.606 14.3328V5.9043H13.7485V10.7153C15.6729 10.5083 17.6945 8.31591 18.3766 5.9043H21.5191C20.9953 8.8762 18.803 11.0685 17.244 11.9698C18.803 12.7006 21.3 14.6129 22.25 18.072H18.7908C18.0478 15.7578 16.1966 13.9674 13.7485 13.7237V18.072H13.3708Z" fill="#B2ACBF" />
             </svg>} text={'Поддержка VK'} />
-            <ButtonSecondary icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <ButtonSuccesPopup icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M19.0312 5.75813L16.4954 18.9966C16.4954 18.9966 16.1406 19.9145 15.1659 19.4743L9.31511 14.8287L9.28798 14.815C10.0783 14.0802 16.2067 8.37412 16.4746 8.11548C16.8892 7.7149 16.6318 7.47643 16.1504 7.77902L7.09792 13.7322L3.60551 12.5153C3.60551 12.5153 3.0559 12.3129 3.00303 11.8727C2.94946 11.4318 3.6236 11.1933 3.6236 11.1933L17.8611 5.40942C17.8611 5.40942 19.0312 4.877 19.0312 5.75813Z" fill="#B2ACBF" />
             </svg>} text={'Поддержка Telegram'} />
           </BottomMenu>

@@ -7,6 +7,7 @@ import ShopPage from './pages/ShopPage';
 import SubscribePage from './pages/SubscribePage';
 import ProductPage from './pages/ProductPage';
 import ReplenishmentPage from './pages/ReplenishmentPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
           <Route path='/replenishment' element={<ReplenishmentPage/>} />
         </Routes>
         </div>
+        <Footer/>
         </div>
       
       {/*         

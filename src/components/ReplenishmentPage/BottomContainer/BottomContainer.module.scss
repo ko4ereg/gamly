@@ -1,6 +1,6 @@
 .container {
     display: inline-flex;
-    padding: 48px 0px 125px 0px;
+    padding: 48px 0px 80px 0px;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 268px;
@@ -59,12 +59,12 @@
         width: 100%;
 
         .buttonItem {
-           width: 100%;
+            width: 100%;
         }
 
         .cost {
             display: flex;
-           width: 342px;
+            width: 342px;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
@@ -133,7 +133,7 @@
 
             .cost {
 
-               width: 167px;
+                width: 167px;
 
             }
         }
@@ -143,7 +143,7 @@
 @media (max-width: 1439px) {
     .container {
         display: flex;
-        padding: 40px 0px 162px 0px;
+        padding: 40px 0px 72px 0px;
         flex-direction: column;
         gap: 32px;
         width: 100%;
@@ -177,14 +177,14 @@
         }
 
         .button {
-    
+
             gap: 16px;
-   
+
             .cost {
 
                 width: 261px;
- 
-             }
+
+            }
         }
     }
 }
@@ -193,7 +193,7 @@
     .container {
         display: flex;
         flex-direction: column;
-      
+ 
         width: 100%;
     }
 
@@ -209,6 +209,7 @@
     .mainContent {
 
         .inputsContainer {
+
             // gap: 32px;
             .inputs {
                 flex-direction: column;
@@ -224,7 +225,7 @@
         }
 
         .button {
-     
+
 
             .cost {
                 width: 176px;
@@ -237,101 +238,106 @@
 @media (max-width: 767px) {
 
     .container {
-         padding: 24px  0 136px 0;
+        padding: 24px 0 40px 0;
     }
-        .banners {
-            // display: flex;
-            // flex-direction: column;
-            // align-items: flex-start;
-            // gap: 8px;
-            // width: 100%;
-            flex-direction: column;
-            gap: 8px;
-            order: 3;
-            margin-top: 8px;
-        }
-    
-        .mainContent {
-    
-            .inputsContainer {
-    
-                .inputs {
-                    flex-direction: column;
-                }
-            }
-    
-            .info {
-                font-size: 15px;
-                letter-spacing: 0.15px;
-                color: var(--light-gray);
-                border-radius: 8px;
-                padding: 24px 32px;
-            }
-    
-            .button {
-    
+
+    .banners {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-start;
+        // gap: 8px;
+        // width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        order: 3;
+        margin-top: 8px;
+    }
+
+    .mainContent {
+
+        .inputsContainer {
+
+            .inputs {
                 flex-direction: column;
-    
-                .buttonItem {
-                    order: 2;
+            }
+        }
+
+        .info {
+            font-size: 14px;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 0.28px;
+            padding: 24px 24px;
+        }
+
+        .button {
+
+            flex-direction: column;
+
+            .buttonItem {
+                order: 2;
+            }
+
+            .cost {
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                order: 1;
+                width: 100%;
+
+                .coins {
+                    font-size: 15px;
+                    line-height: 140%;
+                    /* 21px */
+                    letter-spacing: 0.15px;
                 }
-    
-                .cost {
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    order: 1;
-                    width: 100%;
-    
-                    .coins {
-                        font-size: 15px;
-                        line-height: 140%;
-                        /* 21px */
-                        letter-spacing: 0.15px;
-                    }
-    
-                    .toPay {
-                        font-size: 14px;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 0.28px;
-                    }
+
+                .toPay {
+                    font-size: 14px;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 0.28px;
                 }
             }
         }
     }
+}
+
 @media (max-width: 479px) {
 
-    .container {
-         padding: 24px  0 130px 0;
-    }
- 
-        .mainContent {
      
-     
-            .button {
-     
-                .cost {
-         
-                    .coins {
-                        font-size: 14px;
-                        line-height: 140%; /* 19.6px */
-                        letter-spacing: 0.14px;
-                    }
-    
-                    .toPay {
-                        font-size: 13px;
-                        line-height: 140%; /* 18.2px */
-                        letter-spacing: 0.13px;
-                    }
+
+    .mainContent {
+
+        .info {
+            font-size: 13px;
+            line-height: 140%;
+            /* 18.2px */
+            letter-spacing: 0.13px;
+            padding: 16px;
+            min-width: unset;
+        }
+
+        .button {
+
+            .cost {
+
+                .coins {
+                    font-size: 14px;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 0.14px;
+                }
+
+                .toPay {
+                    font-size: 13px;
+                    line-height: 140%;
+                    /* 18.2px */
+                    letter-spacing: 0.13px;
                 }
             }
         }
     }
-@media (max-width: 374px) {
+}
 
-    .container {
-         padding: 24px  0 148px 0;
-    }
  
-    }

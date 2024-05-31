@@ -12,7 +12,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
     const [suffix, setSuffix] = useState('₽');
 
     const handleChangeNumberInput = (e) => {
-
+      
         let formattedValue = formatValue(e.target.value);
         props.setPriceWithputFormat && props.setPriceWithputFormat(parseInt(unformatValue(formattedValue)));
         setValue(formattedValue);

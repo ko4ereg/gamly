@@ -1,0 +1,146 @@
+footer {
+    background-color: var(--background-far);
+    padding: 14px 0;
+}
+
+.container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .rights {
+        color: var(--gray-15);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 0.42px;
+    }
+
+    .options {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: var(--gray-40);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 0.42px;
+    }
+
+    .design {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+        color: var(--gray-40);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 0.42px;
+    }
+}
+
+@media (max-width: 1439px) {
+    footer {
+        padding: 16px 0;
+    }
+
+    .container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+
+        .rights {
+            font-size: 12px;
+            letter-spacing: 0.36px;
+        }
+
+        .options {
+            font-size: 12px;
+            letter-spacing: 0.36px;
+            gap: 16px;
+        }
+
+        .design {
+            font-size: 12px;
+            letter-spacing: 0.36px;
+
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .container {
+
+
+        .rights {
+            font-size: 13px;
+            letter-spacing: 0.39px;
+        }
+
+        .options {
+            font-size: 13px;
+            letter-spacing: 0.39px;
+        }
+
+        .design {
+            margin-top: -8px;
+            align-items: center;
+            height: 30px;
+            font-size: 13px;
+            letter-spacing: 0.39px;
+        }
+a {
+    align-self: flex-end;
+}
+     
+    }
+}
+
+@media (max-width: 479px) {
+
+    .container {
+
+
+        .rights {
+            font-size: 12px;
+            letter-spacing: 0.36px;
+        }
+
+        .options {
+            font-size: 12px;
+            letter-spacing: 0.36px;
+        }
+
+        .design {
+            margin-top: -8px;
+            height: auto;
+            font-size: 12px;
+            letter-spacing: 0.36px;
+        }
+    }
+}
+@media (max-width: 374px) {
+
+    .container {
+
+ 
+
+        .options {
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        
+    }
+}

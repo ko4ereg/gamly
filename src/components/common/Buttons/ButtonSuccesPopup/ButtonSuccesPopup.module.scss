@@ -1,0 +1,140 @@
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 32px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 22.4px */
+    letter-spacing: 0.32px;
+    background-color: var(--dark-gray);
+    border: none;
+    color: var(--light-gray);
+    transition: 0.2s ease-out;
+    gap: 12px;
+    max-height: 100%;
+
+    &:disabled {
+        opacity: 0.4;
+        background-color: var(--dark-gray);
+        cursor: default;
+
+
+
+    }
+
+
+}
+
+.small {
+    padding: 10px 24px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 94%;
+    /* 12.22px */
+    letter-spacing: 0.39px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button {
+        &:not(:disabled):hover {
+            background: #27252F;
+            transition: 0.2s ease-out;
+        }
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .button {
+        &:not(:disabled):active {
+            background: #27252F;
+            transition: 0.2s ease-out;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .button {
+        font-size: 15px;
+        letter-spacing: 0.15px;
+
+    }
+
+    .small {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        /* 14.4px */
+        letter-spacing: 0.36px;
+        padding: 10px 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        padding: 18px 32px;
+        font-size: 14px;
+        font-style: normal;
+        letter-spacing: 0.28px;
+      
+  
+  
+    }
+
+    .small {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        /* 14.4px */
+        letter-spacing: 0.36px;
+        padding: 10px 24px;
+        border-radius: 4px;
+    }
+}
+@media (max-width: 479px) {
+    .button {
+ 
+        font-size: 13px;
+        line-height: 140%; /* 18.2px */
+        letter-spacing: 0.13px;
+    }
+
+    .small {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        /* 14.4px */
+        letter-spacing: 0.36px;
+        padding: 10px 24px;
+        border-radius: 4px;
+    }
+}
+@media (max-width: 374px) {
+    .button {
+ 
+        padding: 16px 32px;
+ 
+    }
+
+    .small {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        /* 14.4px */
+        letter-spacing: 0.36px;
+        padding: 10px 24px;
+        border-radius: 4px;
+    }
+}
