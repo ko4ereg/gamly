@@ -12,7 +12,7 @@ import Commision from './Commision/Commision';
 const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithputFormat, login, setLogin, promo, price, setPrice, setPromo, ...props }) => {
 
     // const [link, setLink] = useState('');
-  
+
     // const [login, setLogin] = useState('');
 
     // const [promo, setPromo] = useState('');
@@ -80,7 +80,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithputFor
                     <div className={s.buttonItem}> <ButtonPrimary onClick={() => props.setPopupActive(true)} disabled={disabled} text={'Пополнить Steam'} /></div>
                     <div className={s.cost}>
                         <div className={s.toPay}>К оплате</div>
-                        <div className={s.coins}>{Math.floor(priceWithoutFormat*0.95) || 0}<GamlyCoin /></div>
+                        <div className={s.coins}>{Math.floor(priceWithoutFormat * 0.95) || 0}<GamlyCoin /></div>
                     </div>
                 </div>
 

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import PaymentMethod from "./PaymentMethod"
 import s from './PaymentMethod.module.scss';
-const PaymentMethods = () => {
+const PaymentMethods = ({selectedType, setSelectedType}) => {
 
 
-    const [selectedType, setSelectedType] = useState('');
+    
 
 
     const handleClick = (type) => {

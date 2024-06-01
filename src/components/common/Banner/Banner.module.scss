@@ -1,10 +1,10 @@
 .container {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     padding: 16px 20px;
     border-radius: 12px;
-    border: 1px solid var(--gray-4);
+    border: 1.5px solid var(--gray-4);
     background: var(--gray-4);
     width: 220px;
     height: fit-content;
@@ -12,10 +12,13 @@
     overflow: hidden;
 
     .svg1 {
+        width: 78.117px;
+        height: 177.977px;
+        transform: rotate(35.013deg);
         position: absolute;
         left: -80.673px;
         top: -88.396px;
-        fill: var(--accent-color);
+        background: var(--accent-color);
         opacity: 0.1;
         filter: blur(40px);
     }
@@ -34,28 +37,35 @@
     }
 }
 
+
+
+.withoutText {
+    gap: 6px;
+}
+
 .button {
     cursor: pointer;
     display: flex;
-    height: 32px;
+    // height: 32px;
     width: 100%;
     // width: fit-content;
-    padding: 0px 20px 1px 20px;
+    padding: 10px 24px;
     align-items: center;
     justify-content: center;
     gap: 4px;
     border-radius: 8px;
     background: var(--dark-gray);
     color: var(--light-gray);
-    font-size: 14px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%;
-    /* 16.8px */
-    letter-spacing: 0.42px;
+    line-height: 94%;
+    /* 12.22px */
+    letter-spacing: 0.39px;
     transition: 0.2s ease-out;
     z-index: 1;
 }
+
 
 .text {
     display: flex;
@@ -65,7 +75,7 @@
 
     font-size: 17px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     /* 20.4px */
     color: var(--white);
@@ -112,7 +122,9 @@
             width: 78.117px;
             height: 177.977px;
             transform: rotate(35.013deg);
+            position: absolute;
             left: -80.673px;
+
             top: -88.396px;
         }
 
@@ -131,22 +143,22 @@
     .button {
         cursor: pointer;
         display: flex;
-        height: 32px;
+        // height: 32px;
 
         width: 100%;
-        padding: 0px 20px 1px 20px;
+
         align-items: center;
-        justify-content: flex-start;
-        gap: 4px;
+        text-align: center;
+        // gap: 4px;
         border-radius: 8px;
         background: var(--dark-gray);
 
-        font-size: 14px;
+        font-size: 13px;
         font-style: normal;
         font-weight: 500;
-        line-height: 120%;
-        /* 16.8px */
-        letter-spacing: 0.42px;
+        line-height: 94%;
+        /* 12.22px */
+        letter-spacing: 0.39px;
         transition: 0.2s ease-out;
         z-index: 1;
     }
@@ -161,6 +173,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: 120%;
+        letter-spacing: 0%;
         /* 20.4px */
         color: var(--white);
 
@@ -171,6 +184,7 @@
             font-style: normal;
             font-weight: 500;
             line-height: 120%;
+
             /* 16.8px */
             letter-spacing: 0.42px;
             color: var(--gray-40);
@@ -185,7 +199,7 @@
     .container {
 
 
-        padding: 16px 20px;
+
         border-radius: 12px;
         width: 100%;
 
@@ -205,13 +219,10 @@
     }
 
     .button {
-        padding: 0px 12px 1px 12px;
+        // padding: 0px 12px 1px 12px;
         align-items: center;
         justify-content: center;
-        gap: 4px;
         font-size: 12px;
-        line-height: 120%;
-        /* 14.4px */
         letter-spacing: 0.36px;
     }
 
@@ -237,10 +248,7 @@
 
 
     .container {
-
-        // flex-direction: row;
-        padding: 16px 20px;
-        border-radius: 8px;
+ 
         width: 100%;
         height: auto;
         align-items: center;
@@ -263,7 +271,7 @@
     }
 
     .button {
-        padding: 0px 20px 1px 20px;
+    
         font-size: 12px;
         line-height: 120%;
         /* 14.4px */
@@ -296,6 +304,9 @@
         }
     }
 
+    .withoutText {
+        gap: 8px;
+    }
     .text {
         align-self: flex-start;
         font-size: 14px;
@@ -307,7 +318,7 @@
         p {
             font-size: 14px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: 500;
             line-height: 120%;
             /* 16.8px */
         }
@@ -319,24 +330,28 @@
         line-height: 120%;
         /* 14.4px */
         letter-spacing: 0.36px;
-        height: auto;
+        // height: auto;
     }
 
 }
+
 @media (max-width: 479px) {
 
- 
+
     .text {
         font-size: 13px;
         font-style: normal;
         font-weight: 500;
-        line-height: 140%; /* 18.2px */
+        line-height: 140%;
+        /* 18.2px */
         letter-spacing: 0.13px;
+
         p {
             font-size: 13px;
             font-style: normal;
             font-weight: 500;
-            line-height: 140%; /* 18.2px */
+            line-height: 140%;
+            /* 18.2px */
             letter-spacing: 0.13px;
         }
     }

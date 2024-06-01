@@ -40,7 +40,7 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, login, link, priceWit
   }
 
 
-
+  const [selectedType, setSelectedType] = useState('');
 
   return (
     <div className={`${s.modal_container} ${popupActive ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
@@ -101,7 +101,10 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, login, link, priceWit
             </div>
             <div className={s.payments}>
               <h4>Метод оплаты</h4>
-              <PaymentMethods />
+              <PaymentMethods
+                selectedType={selectedType}
+                setSelectedType={setSelectedType}
+              />
             </div>
 
           </div>
@@ -109,7 +112,7 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, login, link, priceWit
 
           <div className={s.buttons}>
 
-            <ButtonPrimary onClick={() => setSucces(true)} text={'Перейти к оплате'} />
+            <ButtonPrimary disabled={!selectedType} onClick={() => setSucces(true)} text={'Перейти к оплате'} />
 
 
           </div>

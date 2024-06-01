@@ -137,7 +137,9 @@
     bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
+  
 
+    
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -247,31 +249,23 @@
 
     .title {
         font-size: 14px;
-        line-height: 140%;
-        /* 21px */
         letter-spacing: 0.28px;
     }
 
     .input {
-        font-size: 14px;
-        line-height: 140%;
-        /* 21px */
-        letter-spacing: 0.28px;
+        font-size: 24px;
+        letter-spacing: -0.48px;
 
         &::placeholder {
-            font-size: 14px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.28px;
+            font-size: 24px;
+            letter-spacing: -0.48px;
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 14px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.28px;
+            font-size: 24px;
+            letter-spacing: -0.48px;
         }
 
     }
@@ -280,38 +274,40 @@
         gap: 4px;
         padding-bottom: 4px;
     }
-
+    .tooltip {
+        // position: absolute;
+        // // bottom: 120%;
+        // bottom: 32px;
+        // left: 50%;
+        // transform: translateX(-50%);
+      
+    
+        
+    }
+ 
 }
 
 @media (max-width:479px) {
 
     .title {
         font-size: 13px;
-        line-height: 140%;
-        /* 21px */
         letter-spacing: 0.13px;
     }
 
     .input {
-        font-size: 13px;
-        line-height: 140%;
-        /* 21px */
-        letter-spacing: 0.13px;
+        font-size: 28px;
+        letter-spacing: -0.56px;
 
         &::placeholder {
-            font-size: 13px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.13px;
+            font-size: 28px;
+            letter-spacing: -0.56px;
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 13px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.13px;
+            font-size: 28px;
+            letter-spacing: -0.56px;
         }
 
     }

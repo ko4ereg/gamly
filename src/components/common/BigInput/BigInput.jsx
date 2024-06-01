@@ -5,14 +5,18 @@ import SmallButton from '../Buttons/SmallButton/SmallButton';
 import Indicator from '../Indicator/Indicator';
 import HelpButton from '../HelpButton/HelpButton';
 import CurrencyButton from '../CurrencyButton/CurrencyButton';
+
 import Tooltip from '../Tooltip/Tooltip';
+import { FloatingArrow, arrow, useTransitionStyles, autoUpdate, shift, flip } from '@floating-ui/react';
+import { offset, useFloating } from '@floating-ui/react-dom';
+import Mda from '../mda';
 
 const BigInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
 
     const handleChangeNumberInput = (e) => {
-      
+
         let formattedValue = formatValue(e.target.value);
         props.setPriceWithputFormat && props.setPriceWithputFormat(parseInt(unformatValue(formattedValue)));
         setValue(formattedValue);
@@ -75,10 +79,14 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
     const handleMouseLeave = () => {
         setShowTooltip(false);
     }
+    //Tooltip logic
+
+    //aaa
 
 
     return (
         <div className={s.container}>
+
             <div className={s.title}>{heading} {value.trim().length > 0 && promoClicked && <span className={error ? s.error : s.ok}>-10% на первый заказ</span>}</div>
             <div className={s.wrapper}>
                 <div className={s.inputWrapper}>
@@ -105,8 +113,12 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
                 <div className={s.addition}>
                     {number && <CurrencyButton setSuffix={setSuffix} />}
                     {promo && value.trim().length > 0 && <SmallButton onClick={promoClick} text={'Применить'} />}
-                    {promo && value.trim().length > 0 && <Indicator succes={error ? false : true} />}
-                    <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}><HelpButton /> {showTooltip && <div className={s.tooltip}><Tooltip text={tooltipText} /></div>} </div></div>
+                    {promoClicked && <Indicator succes={error ? false : true} />}
+                    <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
+                        <Tooltip tooltipText={tooltipText}  />
+                    </div>
+
+                </div>
             </div>
 
         </div>

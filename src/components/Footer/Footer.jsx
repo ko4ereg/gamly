@@ -9,12 +9,12 @@ const Footer = () => {
             <div className={g.container + ' ' + s.container}>
                 <div className={s.rights}>2024, all rights reserved</div>
                 <div className={s.options}>
-                    <div>Публичная оферта</div>
-                    <div>Политика конфиденциальности</div>
+                <NavLink to={'https://www.google.com'} target='_blank'><div>Публичная оферта</div></NavLink>
+                <NavLink to={'https://www.google.com'} target='_blank'>    <div>Политика конфиденциальности</div></NavLink>
                 </div>
                 <div className={s.design}>
                     Designed by:
-                    <NavLink>
+                    <NavLink to={'https://www.google.com'} target='_blank'>
                         <TextButtonC1 text={'Kirill Lukovich'} />
                     </NavLink>
                 </div>

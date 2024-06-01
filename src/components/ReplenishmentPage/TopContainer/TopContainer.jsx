@@ -1,7 +1,8 @@
 import SocialMediaButton from '../../common/Buttons/SocialMediaButton/SocialMediaButton';
 import s from './TopContainer.module.scss';
 import g from './../../../Globalstyles.module.css';
-import img from './../../../assets/replenishment/backskins.png';
+import backskins from './../../../assets/replenishment/backskins.png';
+import backbalance from './../../../assets/replenishment/backbalance.png';
 
 const TopContainer = (props) => {
     console.log(props);
@@ -10,10 +11,17 @@ const TopContainer = (props) => {
         props.setSelectedType(type);
     }
 
-
+    const imagesPreload = [backskins, backbalance];
+    imagesPreload.forEach((image) => {
+        const newImage = new Image();
+        newImage.src = image;
+        window[image] = newImage;
+    });
 
     return (
-        <div className={`${props.selectedType === 'skins' ? s.topImage : s.topImageBalance}`}>
+        <div className={`${props.selectedType === 'skins' ? s.topImage : s.topImageBalance}`}
+
+            style={{ backgroundImage: `linear-gradient(0deg, rgba(20, 17, 26, 0.80) 0%, rgba(20, 17, 26, 0.80) 100%), url(${props.selectedType === 'skins' ? backskins : backbalance})` }}>
 
             <div className={g.container}>
                 <div className={s.container}>
