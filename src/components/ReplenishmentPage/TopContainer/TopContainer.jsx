@@ -18,6 +18,8 @@ const TopContainer = (props) => {
         window[image] = newImage;
     });
 
+    
+
     return (
         <div className={`${props.selectedType === 'skins' ? s.topImage : s.topImageBalance}`}
 

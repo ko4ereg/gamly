@@ -63,7 +63,9 @@ import {
     useInteractions,
     FloatingPortal,
     FloatingArrow,
-    arrow
+    arrow,
+    size,
+    limitShift
 } from "@floating-ui/react";
 
 import s from './Tooltip.module.scss';
@@ -77,17 +79,21 @@ const Tooltip = ({ tooltipText }) => {
     const { refs, floatingStyles, context } = useFloating({
         open: isOpen,
         onOpenChange: setIsOpen,
-        placement: "top",
+        placement: "top-left",
         // Make sure the tooltip stays on the screen
         whileElementsMounted: autoUpdate,
         middleware: [
-            offset(7),
-
+            offset(
+                {
+                    mainAxis: 7,
+                }
+            ),
             flip(),
             shift(),
             arrow({
                 element: arrowRef,
             }),
+
         ]
     });
 

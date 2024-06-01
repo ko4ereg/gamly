@@ -55,7 +55,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithputFor
 
                     <div className={s.inputs}>
                         <BigInput
-                            tooltipText={'столько вы получите aaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaa aaaaa'}
+                            tooltipText={'столько вы получите'}
                             value={price}
                             setValue={setPrice}
                             setPriceWithputFormat={setPriceWithputFormat}
