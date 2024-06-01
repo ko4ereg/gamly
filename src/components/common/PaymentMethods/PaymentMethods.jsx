@@ -1,16 +1,16 @@
 import { useState } from "react";
 import PaymentMethod from "./PaymentMethod"
 import s from './PaymentMethod.module.scss';
-const PaymentMethods = ({selectedType, setSelectedType}) => {
+const PaymentMethods = ({ selectedType, setSelectedType }) => {
 
 
-    
+
 
 
     const handleClick = (type) => {
         setSelectedType(type);
         console.log(type);
-       
+
     }
 
 
@@ -56,8 +56,8 @@ const PaymentMethods = ({selectedType, setSelectedType}) => {
                 title={'Плайт / Оплата частями'}
                 subtitle={"Оплата частями без переплат"}
                 selectedType={selectedType}
-                  // onClick={handleClick}
-                  onChange={handleCheckboxChange}
+                // onClick={handleClick}
+                onChange={handleCheckboxChange}
                 type={'plait'} />
             <PaymentMethod
                 logo={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,11 +67,24 @@ const PaymentMethods = ({selectedType, setSelectedType}) => {
                 </svg>
                 }
                 title={'С банковской карты'}
-                subtitle={"Мир, UnionPay, MasterCard, Visa"}
+                subtitle={"Мир, MasterCard, Visa (Россия)"}
                 selectedType={selectedType}
                 // onClick={handleClick}
                 onChange={handleCheckboxChange}
-                type={'card'} />
+                type={'cardRUS'} />
+            <PaymentMethod
+                logo={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M4 4.75C2.48122 4.75 1.25 5.98122 1.25 7.5V17.5C1.25 19.0188 2.48122 20.25 4 20.25H20C21.5188 20.25 22.75 19.0188 22.75 17.5V10.25H6C5.58579 10.25 5.25 9.91421 5.25 9.5C5.25 9.08579 5.58579 8.75 6 8.75H22.75V7.5C22.75 5.98122 21.5188 4.75 20 4.75H4Z" fill="#F9F8FC" />
+                    </g>
+                </svg>
+                }
+                title={'С банковской карты'}
+                subtitle={"Mastercard, Visa, Unionpay (Мир)"}
+                selectedType={selectedType}
+                // onClick={handleClick}
+                onChange={handleCheckboxChange}
+                type={'cardEU'} />
             <PaymentMethod
                 logo={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Frame">
@@ -82,8 +95,8 @@ const PaymentMethods = ({selectedType, setSelectedType}) => {
                 title={'Криптовалюта'}
                 subtitle={"USDT (trc20, erc20), Bitcoin, Etherium, Tron, Litecoin, XRP"}
                 selectedType={selectedType}
-                    // onClick={handleClick}
-                    onChange={handleCheckboxChange}
+                // onClick={handleClick}
+                onChange={handleCheckboxChange}
                 type={'crypto'} />
         </div>
 
