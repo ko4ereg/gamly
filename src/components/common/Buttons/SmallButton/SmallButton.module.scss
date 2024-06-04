@@ -21,20 +21,24 @@
     color: var(--light-gray);
 }
 
+
+
 @media (hover: hover) and (pointer: fine) {
     .button {
-        &:hover {
-            background:rgba(39, 37, 47, 1);
+        &:hover:not(.small) {
+            background: rgba(39, 37, 47, 1);
             transition: 0.2s ease-out;
         }
     }
+
+
 
 }
 
 @media (hover: none) and (pointer: coarse) {
     .button {
-        &:active {
-            background:rgba(39, 37, 47, 1);
+        &:active:not(.small) {
+            background: rgba(39, 37, 47, 1);
             transition: 0.2s ease-out;
         }
 
@@ -54,5 +58,3 @@
 
     }
 }
-
- 

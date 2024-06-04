@@ -1,0 +1,31 @@
+.input {
+    input[type='checkbox'] {
+        display: none;
+
+        &:checked+label .check {
+            background-color: var(--accent-purple);
+            // background-image: url('./../../../assets/icons/checkinbox.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            border: none;
+        }
+
+    }
+
+    label {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .check {
+        width: 24px;
+        height: 24px;
+        border-radius: 93px;
+        border: 1px solid var(--gray-4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

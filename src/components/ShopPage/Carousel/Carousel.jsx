@@ -7,10 +7,10 @@ import './Carousel.css';
 
 
 const Carousel = (props) => {
- 
+
     const [currentIndex, setIndex] = useState(0);
     const sliderRef = useRef();
-const dotsRef = useRef();
+    const dotsRef = useRef();
     const amountOfSlides = Math.ceil(100 / (props.img.length));
 
 
@@ -20,9 +20,9 @@ const dotsRef = useRef();
         if (dotsRef.current) {
             dotsRef.current.style.opacity = '1';
         }
-       
+
         sliderRef.current.slickGoTo(index);
-        
+
         setIndex(index);
         if (index === 1) {
             setTranslate(0);
@@ -42,7 +42,7 @@ const dotsRef = useRef();
     if (props.img.length === 1) {
         return (
 
-            <img   className='sliderImage' src={props.img[0]} alt="carousel" />
+            <img className='sliderImage' src={props.img[0]} alt="carousel" />
 
         );
     } else {
@@ -98,7 +98,7 @@ const dotsRef = useRef();
         };
         return (
             <div style={{ height: '100%' }}>
-           
+
                 <Slider ref={sliderRef} {...settings}>
                     {(props.img).map((item, index) => (
                         <div key={index}><img className='sliderImage' src={item} alt="" /></div>

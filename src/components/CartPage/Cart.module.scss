@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 952px;
+    flex: 0 0 auto;
+
+    .heading {
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        /* 89.6px */
+        letter-spacing: -1.28px;
+        color: var(--white);
+    }
+}

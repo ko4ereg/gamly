@@ -3,7 +3,7 @@ import s from './CloseButton.module.scss';
 
 const CloseButton = ({ onClick, icon}) => {
     return (
-        <div className={s.button} onClick={onClick}><img src={icon} alt="" /></div>
+        <div className={s.button} onClick={onClick}>{icon}</div>
     )
 }
 

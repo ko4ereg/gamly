@@ -62,6 +62,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithputFor
                             heading={'Сумма к получению*'}
                             number={true}
                             placeholder={'0'}
+                           
                         />
                         <BigInput
                             tooltipText={'промокод на скидку'}

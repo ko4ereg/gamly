@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 12px;
+    background: var(--gray-4);
+    width: 100%;
+
+    .cartItemImg {
+        width: 136px;
+        height: 136px;
+        background-size: cover;
+        background-position: 50%;
+        flex: 0 0 auto;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: stretch;
+        width: 100%;
+
+
+        .top {
+            display: flex;
+            align-items: flex-start;
+            gap: 4px;
+            align-self: stretch;
+
+            .title {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                flex: 1 0 auto;
+                overflow: hidden;
+                color: var(--white);
+                text-overflow: ellipsis;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                /* 28.8px */
+                letter-spacing: 0.24px;
+            }
+
+            .price {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                color: var(--accent-color);
+                text-overflow: ellipsis;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                /* 25.2px */
+                letter-spacing: -0.18px;
+            }
+        }
+
+        .controls {
+            display: flex;
+            gap: 16px;
+      
+            .button {
+                height: 100%;
+            }
+
+            .count {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                overflow: hidden;
+                color: var(--white);
+                text-overflow: ellipsis;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 22.4px */
+                letter-spacing: 0.32px;
+            }
+        }
+    }
+}

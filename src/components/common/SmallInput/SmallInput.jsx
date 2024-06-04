@@ -1,15 +1,13 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import s from './BigInput.module.scss';
+import s from './SmallInput.module.scss';
 import { formatValue, unformatValue } from '../../../utils/formatValue';
-import SmallButton from '../Buttons/SmallButton/SmallButton';
 import Indicator from '../Indicator/Indicator';
 import CurrencyButton from '../CurrencyButton/CurrencyButton';
-
 import Tooltip from '../Tooltip/Tooltip';
- 
 import GamlyCoin from '../GamlyCoin/GamlyCoin';
+import TextButtonC2 from '../Buttons/TextButtonC2/TextButtonC2';
 
-const BigInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, ...props }) => {
+const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
 
@@ -85,7 +83,15 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
     return (
         <div className={s.container}>
 
-            <div className={s.title}>{heading} {value.trim().length > 0 && promoClicked && <span className={error ? s.error : s.ok}>-10% на первый заказ</span>}</div>
+            <div className={s.title}>
+                <div className={s.heading}>
+                    {heading} {value.trim().length > 0 && promoClicked && <div className={error ? s.error : s.ok}>-10% на первый заказ</div>}
+                </div>
+                {note && <div className={s.noteContainer}>
+                    <div style={{ WebkitLineClamp: addInfo ? 1 : 2 }} className={s.info}>Приблизительное время доставки: </div>
+                    <div className={s.addInfo}>{addInfo}</div>
+                </div>}
+            </div>
             <div className={s.wrapper}>
                 <div className={s.inputWrapper}>
                     <input
@@ -100,21 +106,25 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
                         onChange={number ? handleChangeNumberInput : handleChangeTextInput}
                         {...props}
                     />
+
                     {number && <div className={s.inputFakeValueWrapper} style={{ gap: suffixGap, padding: inputPadding }}>
                         <span className={s.inputFakeValue}>{value || placeholder}</span>
                         <span ref={suffixRef} className={s.suffix}>
-                            {coin ?  <div className={s.coin}><GamlyCoin/></div> : suffix}
+                            {coin ? <div className={s.coin}><GamlyCoin /></div> : suffix}
                         </span>
                     </div>}
 
                 </div>
                 <div className={s.addition}>
                     {number && <CurrencyButton setSuffix={setSuffix} />}
-                    {promo && value.trim().length > 0 && <SmallButton onClick={promoClick} text={'Применить'} />}
-                    {promoClicked && <Indicator succes={error ? false : true} />}
-                    <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
-                        <Tooltip tooltipText={tooltipText}  />
+                    <div className={s.promo}>
+
+                        {promo && value.trim().length > 0 && <TextButtonC2 onClick={promoClick} text={'Применить'} />}
+                        {promoClicked && <Indicator small={true} succes={error ? false : true} />}
                     </div>
+                    {tooltipText && <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
+                        <Tooltip small={true} tooltipText={tooltipText} />
+                    </div>}
 
                 </div>
             </div>
@@ -123,4 +133,4 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
     )
 }
 
-export default BigInput;
+export default SmallInput;

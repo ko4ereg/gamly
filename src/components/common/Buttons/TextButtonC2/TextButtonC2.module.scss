@@ -9,42 +9,29 @@
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
-    line-height: 94%; /* 12.22px */
+    line-height: 94%;
+    /* 12.22px */
     letter-spacing: 0.39px;
     color: var(--white);
     transition: transform 0.2s ease-out;
     position: relative;
 
-    &:after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 1px;
-        left: 0;
-        bottom: 0;
-        background-color: #fff;
-        transform: scale(0);
-        transform-origin: 100% 50%;
-        transition: transform 0.2s ease-out;
-    }
-
-    // &:hover::after {
-
-    //     transform: scaleX(1);
-    //     transform-origin: 0% 50%;
-    //     transition: transform 0.2s ease-out;
-    // }
 
 
 }
 
+
+.button {
+    background:
+        linear-gradient(currentColor 0 0) var(--p, 0) 100% /var(--d, 0) 1px no-repeat;
+    transition: 0.2s ease-out, background-position 0s 0.2s ease-out;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .button {
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: 0% 50%;
-            transition: transform 0.2s ease-out;
+        &:hover {
+            --d: 100%;
+            --p: 100%;
         }
     }
 
@@ -52,10 +39,9 @@
 
 @media (hover: none) and (pointer: coarse) {
     .button {
-        &:active::after {
-            transform: scaleX(1);
-            transform-origin: 0% 50%;
-            transition: transform 0.2s ease-out;
+        &:active {
+            --d: 100%;
+            --p: 100%;
         }
     }
 }
@@ -82,5 +68,3 @@
         letter-spacing: 0.36px;
     }
 }
-
- 

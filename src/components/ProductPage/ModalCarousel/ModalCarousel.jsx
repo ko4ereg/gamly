@@ -189,7 +189,12 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
     if (img.length === 1) {
         return (
             <div className={`${s.modal_container} ${active ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
-                <div className={s.closeButton}><CloseButton icon={close} onClick={() => { setActive(false) }} /></div>
+                <div className={s.closeButton}><CloseButton icon={<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <path id="Vector" d="M4.50391 11.495L7.99899 7.99998M7.99899 7.99998L11.4941 4.50488M7.99899 7.99998L4.50391 4.50488M7.99899 7.99998L11.4941 11.495" stroke="#B2ACBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                </svg>
+                } onClick={() => { setActive(false) }} /></div>
                 <div className={s.carouselContainer}>
                     <div className={s.border}>
                         <div className={s.preview_container}>
@@ -224,7 +229,12 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
 
     return (
         <div className={`${s.modal_container} ${active ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
-            <div className={s.closeButton}><CloseButton icon={close} onClick={() => { setActive(false) }} /></div>
+            <div className={s.closeButton}><CloseButton icon={<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame">
+                    <path id="Vector" d="M4.50391 11.495L7.99899 7.99998M7.99899 7.99998L11.4941 4.50488M7.99899 7.99998L4.50391 4.50488M7.99899 7.99998L11.4941 11.495" stroke="#B2ACBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+            </svg>
+            } onClick={() => { setActive(false) }} /></div>
             <div className={s.carouselContainer}>
                 <div className={s.border}>
 
@@ -248,7 +258,9 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
 
 
                 <div className={s.imageContainer}  >
-                    <div className={s.buttonLeft} onClick={handlePrev} ><CloseButton icon={prev} ></CloseButton></div>
+                    <div className={s.buttonLeft} onClick={handlePrev} ><CloseButton icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 4L6 8L10 12" stroke="#B2ACBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>} ></CloseButton></div>
                     {active ?
                         <Slider ref={modalSliderRef} {...settings}>
                             {img.map((item, index) => (
@@ -259,7 +271,9 @@ const ModalCarousel = ({ active, setActive, img, selected, setSelected }) => {
                         </Slider>
                         : null}
 
-                    <div className={s.buttonRight} onClick={handleNext}> <CloseButton icon={next} /></div>
+                    <div className={s.buttonRight} onClick={handleNext}> <CloseButton icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 4L10 8L6 12" stroke="#B2ACBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>} /></div>
 
                 </div>
 

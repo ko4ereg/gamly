@@ -7,7 +7,8 @@ import ShopPage from './pages/ShopPage';
 import SubscribePage from './pages/SubscribePage';
 import ProductPage from './pages/ProductPage';
 import ReplenishmentPage from './pages/ReplenishmentPage';
-import Footer from './components/Footer/Footer';
+import CartPage from './pages/CartPage';
+import MiniFooter from './components/MiniFooter/MiniFooter';
 
 function App() {
 
@@ -48,9 +49,10 @@ function App() {
           <Route path="/subscribe" element={<SubscribePage />} />
           <Route path="/shop/:productId?" element={<ProductPage />} />
           <Route path='/replenishment' element={<ReplenishmentPage/>} />
+          <Route path='/cart' element={<CartPage/>} />
         </Routes>
         </div>
-        <Footer/>
+        <MiniFooter/>
         </div>
       
       {/*         

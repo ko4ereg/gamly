@@ -71,7 +71,7 @@ import {
 import s from './Tooltip.module.scss';
 import HelpButton from "../HelpButton/HelpButton";
 
-const Tooltip = ({ tooltipText }) => {
+const Tooltip = ({ tooltipText, small }) => {
 
     const arrowRef = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -116,7 +116,7 @@ const Tooltip = ({ tooltipText }) => {
     return (
         <>
             <div ref={refs.setReference} {...getReferenceProps()}>
-                <HelpButton />
+                <HelpButton small={small} />
             </div>
 
             <FloatingPortal>

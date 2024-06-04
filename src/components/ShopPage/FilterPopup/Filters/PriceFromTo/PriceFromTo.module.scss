@@ -32,6 +32,22 @@
                 color: var(--white);
             }
 
+            &::-webkit-input-placeholder {
+                color: var(--gray-40);
+            }
+
+            &::-moz-placeholder {
+                color: var(--gray-40);
+            }
+
+            &:-ms-input-placeholder {
+                color: var(--gray-40);
+            }
+
+            &::-ms-input-placeholder {
+                color: var(--gray-40);
+            }
+
             &::placeholder {
                 color: var(--gray-40);
             }
