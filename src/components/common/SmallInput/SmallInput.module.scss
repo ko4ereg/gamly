@@ -15,11 +15,15 @@
 
 
 .title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
     .noteContainer {
         display: flex;
         gap: 4px;
         align-items: center;
-
+        width: fit-content;
 
         .info {
             display: -webkit-box;
@@ -55,10 +59,9 @@
         font-weight: 500;
         line-height: 140%;
         letter-spacing: 0.32px;
-        display: flex;
-        gap: 8px;
 
-     
+
+
 
         .ok {
             color: var(--accent-color);
@@ -258,7 +261,7 @@
             /* 21px */
             letter-spacing: 0.15px;
 
-          
+
         }
 
         .noteContainer {
@@ -311,7 +314,7 @@
             /* 21px */
             letter-spacing: 0.15px;
 
-           
+
         }
 
     }
@@ -362,7 +365,7 @@
         .heading {
             font-size: 14px;
             letter-spacing: 0.28px;
- 
+
         }
 
     }
@@ -410,7 +413,7 @@
         .heading {
             font-size: 13px;
             letter-spacing: 0.13px;
- 
+
         }
 
         .noteContainer {

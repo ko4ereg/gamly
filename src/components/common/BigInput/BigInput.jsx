@@ -6,7 +6,7 @@ import Indicator from '../Indicator/Indicator';
 import CurrencyButton from '../CurrencyButton/CurrencyButton';
 
 import Tooltip from '../Tooltip/Tooltip';
- 
+
 import GamlyCoin from '../GamlyCoin/GamlyCoin';
 
 const BigInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, ...props }) => {
@@ -103,7 +103,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
                     {number && <div className={s.inputFakeValueWrapper} style={{ gap: suffixGap, padding: inputPadding }}>
                         <span className={s.inputFakeValue}>{value || placeholder}</span>
                         <span ref={suffixRef} className={s.suffix}>
-                            {coin ?  <div className={s.coin}><GamlyCoin/></div> : suffix}
+                            {coin ? <div className={s.coin}><GamlyCoin /></div> : suffix}
                         </span>
                     </div>}
 
@@ -113,7 +113,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
                     {promo && value.trim().length > 0 && <SmallButton onClick={promoClick} text={'Применить'} />}
                     {promoClicked && <Indicator succes={error ? false : true} />}
                     <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
-                        <Tooltip tooltipText={tooltipText}  />
+                        <Tooltip tooltipText={tooltipText} />
                     </div>
 
                 </div>

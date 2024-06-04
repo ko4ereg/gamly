@@ -74,7 +74,7 @@ const Tabs = ({ children }) => {
                 className={s.tabs}>
 
                 {children}
-
+                <div className={s.border}></div>
             </div>
         </div>
     )

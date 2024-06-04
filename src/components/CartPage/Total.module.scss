@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 40px;
     width: 100%;
+    padding-top: 16px;
 
     .heading {
         overflow: hidden;
@@ -19,7 +20,7 @@
     .order {
         display: flex;
         flex-direction: column;
-      
+
         width: 100%;
 
         .string {

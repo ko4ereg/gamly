@@ -56,7 +56,7 @@ const CartItem = ({ prod, deleteItem, prods, addItem, reduceItem }) => {
                 </div>
                 <div className={s.controls}>
                     <div className={s.count}>
-                        <CloseButton onClick={() => handleDecreaseAmount()} icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <CloseButton disabled={totalQuantity === 1} onClick={() => handleDecreaseAmount()} icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M3.05078 7.99872L7.99359 7.99872L12.9364 7.99872" stroke="#B2ACBF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>} />
                         {totalQuantity}

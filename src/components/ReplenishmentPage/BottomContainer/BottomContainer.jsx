@@ -62,7 +62,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithputFor
                             heading={'Сумма к получению*'}
                             number={true}
                             placeholder={'0'}
-                           
+
                         />
                         <BigInput
                             tooltipText={'промокод на скидку'}
@@ -81,7 +81,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithputFor
                     <div className={s.buttonItem}> <ButtonPrimary onClick={() => props.setPopupActive(true)} disabled={disabled} text={'Пополнить Steam'} /></div>
                     <div className={s.cost}>
                         <div className={s.toPay}>К оплате</div>
-                        <div className={s.coins}>{Math.floor(priceWithoutFormat * 0.95) || 0}<GamlyCoin /></div>
+                        <div className={s.coins}>{Math.floor(priceWithoutFormat * 0.95) || 0}<GamlyCoin size={24} /></div>
                     </div>
                 </div>
 
