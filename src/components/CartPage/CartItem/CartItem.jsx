@@ -3,6 +3,7 @@ import CloseButton from '../../common/Buttons/CloseButton/CloseButton';
 import s from './CartItem.module.scss';
 import ButtonSecondary from '../../common/Buttons/ButtonSecondary/ButtonSecondary';
 import { formatValue } from '../../../utils/formatValue';
+import { NavLink } from 'react-router-dom';
 
 
 const CartItem = ({ prod, deleteItem, prods, addItem, reduceItem }) => {
@@ -51,7 +52,7 @@ const CartItem = ({ prod, deleteItem, prods, addItem, reduceItem }) => {
             </div>
             <div className={s.info}>
                 <div className={s.top}>
-                    <div className={s.title}>{prod.title}</div>
+                   <NavLink to={`/shop/${prod.id}`}> <div className={s.title}>{prod.title}</div></NavLink>
                     <div className={s.price}>{formatValue(prod.price)} ₽</div>
                 </div>
                 <div className={s.controls}>

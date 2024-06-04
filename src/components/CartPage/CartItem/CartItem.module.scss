@@ -8,6 +8,10 @@
     background: var(--gray-4);
     width: 100%;
 
+    a {
+        text-decoration: none;
+    }
+
     .cartItemImg {
         width: 136px;
         height: 136px;
@@ -27,6 +31,7 @@
         .top {
             display: flex;
             align-items: flex-start;
+            justify-content: space-between;
             gap: 4px;
             align-self: stretch;
 
@@ -65,7 +70,7 @@
         .controls {
             display: flex;
             gap: 16px;
-      
+
             .button {
                 height: 100%;
             }
