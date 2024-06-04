@@ -102,7 +102,7 @@ const Delivery = () => {
                     :
                     <div className={s.point}>
 
-                        <SmallInput heading={'Пункт выдачи'} note={'Приблизительное время доставки'} addInfo={'6-7 дней'} placeholder={'Укажите ближайший адрес или метро'} setValue={handleAddressChange} value={address} />
+                        <SmallInput heading={'Адрес доставки'} note={'Приблизительное время доставки'} addInfo={'6-7 дней'} placeholder={'Укажите ближайший адрес или метро'} setValue={handleAddressChange} value={address} />
 
                         <div className={s.address}>
                             <SmallInput heading={'Подъезд'} placeholder={'1'} setValue={setEnter} value={enter} />
