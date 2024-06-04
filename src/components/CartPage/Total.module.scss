@@ -19,7 +19,7 @@
     .order {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+      
         width: 100%;
 
         .string {
@@ -36,6 +36,7 @@
             font-weight: 600;
             line-height: 120%;
             /* 20.4px */
+            margin-bottom: 12px;
         }
 
         span {
@@ -57,9 +58,9 @@
                 color: var(--green-100);
             }
 
-          
-            }
-       
+
+        }
+
         .line {
             min-height: 1px;
             width: 100%;
@@ -71,9 +72,10 @@
             max-height: 0px;
             transition: 0.2s ease-out;
             overflow: hidden;
+            margin-bottom: 0;
         }
 
-  
+
 
         .visible {
 

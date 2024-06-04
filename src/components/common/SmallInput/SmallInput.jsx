@@ -7,7 +7,7 @@ import Tooltip from '../Tooltip/Tooltip';
 import GamlyCoin from '../GamlyCoin/GamlyCoin';
 import TextButtonC2 from '../Buttons/TextButtonC2/TextButtonC2';
 
-const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, ...props }) => {
+const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
 
@@ -37,9 +37,11 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
         setPromoClicked(true);
         console.log(value);
         if (value === goodPromo) {
-            setError(false)
+            setError(false);
+            setShowPromo(true);
         } else {
-            setError(true)
+            setError(true);
+            setShowPromo(false);
         }
 
 

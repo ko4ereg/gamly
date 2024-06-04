@@ -14,8 +14,9 @@ const Total = ({ price }) => {
     const shipping = '1209';
     const promoCost = '502';
     const ruby = '147';
+    const [showPromo, setShowPromo] = useState(false);
     const [promo, setPromo] = useState('');
-    const goodPromo = 'lala';
+
 
     const [selectedType, setSelectedType] = useState('');
     const disabled = !selectedType;
@@ -33,7 +34,7 @@ const Total = ({ price }) => {
                 <div className={s.string}>
                     Доставка <span>{formatValue(shipping)} ₽</span>
                 </div>
-                <div className={`${s.string} ${s.green} ${promo === goodPromo ? s.visible : s.hidden}`}>
+                <div className={`${s.string} ${s.green} ${showPromo ? s.visible : s.hidden}`}>
                     Промокод <span>- {formatValue(promoCost)} ₽</span>
                 </div>
                 <div className={`${s.string} ${s.green} ${payRuby ? s.visible : s.hidden}`}>
@@ -60,7 +61,7 @@ const Total = ({ price }) => {
                         </div>
                     </div>
                 </div>
-                <SmallInput heading={'Промокод'} value={promo} setValue={setPromo} promo={true} placeholder={'Ваш промокод'} />
+                <SmallInput heading={'Промокод'} setShowPromo={setShowPromo} value={promo} setValue={setPromo} promo={true} placeholder={'Ваш промокод'} />
             </div>
             <div className={s.payment}>
                 <div className={s.method}>Метод оплаты</div>
