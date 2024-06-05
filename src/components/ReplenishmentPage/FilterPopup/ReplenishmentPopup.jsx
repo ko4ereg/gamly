@@ -125,7 +125,11 @@ const ReplenishmentPopup = ({ popupActive, setPopupActive, login, link, priceWit
         :
         <div className={`${s.replenishment_container} ${s.succes_container}`} >
           <div style={{ justifyContent: 'flex-end' }} className={s.heading}>
-            <CloseButton icon={close} onClick={() => {
+            <CloseButton icon={<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="Frame">
+                <path id="Vector" d="M4.50391 11.495L7.99899 7.99998M7.99899 7.99998L11.4941 4.50488M7.99899 7.99998L4.50391 4.50488M7.99899 7.99998L11.4941 11.495" stroke="#B2ACBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </g>
+            </svg>} onClick={() => {
               setPopupActive(false);
               setSucces(false)
             }} />
