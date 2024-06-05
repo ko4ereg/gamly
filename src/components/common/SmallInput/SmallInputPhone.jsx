@@ -8,7 +8,7 @@ import GamlyCoin from '../GamlyCoin/GamlyCoin';
 import TextButtonC2 from '../Buttons/TextButtonC2/TextButtonC2';
 import ReactInputMask from 'react-input-mask';
 
-const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo, phone, ...props }) => {
+const SmallInputPhone = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo, phone, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
 
@@ -88,49 +88,13 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
 
             <div className={s.title}>
                 <div className={s.heading}>
-                    {heading} {value.trim().length > 0 && promoClicked && <div className={error ? s.error : s.ok}>-10% на первый заказ</div>}
+                    {heading} 
                 </div>
-                {note && <div className={s.noteContainer}>
-                    <div style={{ WebkitLineClamp: addInfo ? 1 : 2 }} className={s.info}>Приблизительное время доставки: </div>
-                    <div className={s.addInfo}>{addInfo}</div>
-                </div>}
             </div>
             <div className={s.wrapper}>
                 <div className={s.inputWrapper}>
-         
-                    <input
-                        type='text'
-                        style={{
-                            padding: inputPadding,
-                            paddingRight: inputRightPadding,
-                            wordWrap: 'break-word'
-                        }}
-                        className={s.input}
-                        value={value}
-                        placeholder={placeholder}
-                        onChange={number ? handleChangeNumberInput : handleChangeTextInput}
-                        {...props}
-                    />
-
-                    {number && <div className={s.inputFakeValueWrapper} style={{ gap: suffixGap, padding: inputPadding }}>
-                        <span className={s.inputFakeValue}>{value || placeholder}</span>
-                        <span ref={suffixRef} className={s.suffix}>
-                            {coin ? <div className={s.coin}><GamlyCoin /></div> : suffix}
-                        </span>
-                    </div>}
-
-                </div>
-                <div className={s.addition}>
-                    {number && <CurrencyButton setSuffix={setSuffix} />}
-                    <div className={s.promo}>
-
-                        {promo && value.trim().length > 0 && <TextButtonC2 onClick={promoClick} text={'Применить'} />}
-                        {promoClicked && <Indicator small={true} succes={error ? false : true} />}
-                    </div>
-                    {tooltipText && <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
-                        <Tooltip small={true} tooltipText={tooltipText} />
-                    </div>}
-
+              {phone && <ReactInputMask type='text'  placeholder={placeholder} className={s.input} mask="+7 (999) 999-99-99" value={value} onChange={handleChangeTextInput} />} 
+                   
                 </div>
             </div>
 
@@ -138,4 +102,4 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
     )
 }
 
-export default SmallInput;
+export default SmallInputPhone;

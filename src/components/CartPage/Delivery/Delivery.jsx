@@ -9,6 +9,8 @@ import RoundCheckbox from '../../common/RoundCheckbox/RoundCheckbox';
 import ButtonPrimary from '../../common/Buttons/ButtonPrimary/ButtonPrimary';
 import TextArea from '../../common/TextArea/TextArea';
 import SearchResults from '../../common/SearchResults/SearchResults';
+import SmallInputPhone from '../../common/SmallInput/SmallInputPhone';
+ 
 
 const Delivery = () => {
 
@@ -74,7 +76,6 @@ const Delivery = () => {
                     </div>
                 </div>
                 <Tabs>
-
                     <SmallTab setSelectedType={setSelectedType} selected={selectedType} type={'point'} text={'Получение в пункте выдачи'} />
                     <SmallTab setSelectedType={setSelectedType} selected={selectedType} type={'courier'} text={'Получение курьером'} />
                 </Tabs>
@@ -83,7 +84,10 @@ const Delivery = () => {
                        <div className={s.input}> <SmallInput value={secondName} setValue={setSecondName} heading={'Фамилия'} placeholder={'Попов'} /></div>
                        <div className={s.input}>  <SmallInput value={firstName} setValue={setFirstName} heading={'Имя'} placeholder={'Иван'} /></div>
                        <div className={s.input}>    <SmallInput value={surName} setValue={setsurName} heading={'Отчество'} placeholder={'Александрович'} /></div>
-                       <div className={s.input}>  <SmallInput value={phone} setValue={setPhone} heading={'Телефон'} placeholder={'+7 (000) 000-00-00'} /></div>
+                       <div className={s.input}>  
+                       <SmallInputPhone value={phone} phone={true} setValue={setPhone} heading={'Телефон'} placeholder={'+7 (000) 000-00-00'} />
+                    
+                       </div>
                        <div className={s.input}> <SmallInput value={email} setValue={setEmail} heading={'E-mail'} placeholder={'email@gmail.com'} /></div>
                     </div>
 

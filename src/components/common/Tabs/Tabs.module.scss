@@ -28,6 +28,14 @@
         z-index: 1;
         transition: 0.2s ease-out;
     }
+    .border {
+        position: absolute;
+        min-height: 1px;
+        width: 100%;
+        background-color: var(--gray-10);
+        bottom: 0px;
+        left: 0;
+    }
 }
 
 .tabs {
@@ -45,14 +53,7 @@
         display: none;
     }
 
-    .border {
-        position: absolute;
-        min-height: 1px;
-        width: 100%;
-        background-color: var(--gray-10);
-        bottom: 0px;
-        left: 0;
-    }
+    
 
 }
 
