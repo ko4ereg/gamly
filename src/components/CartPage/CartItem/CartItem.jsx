@@ -4,6 +4,7 @@ import s from './CartItem.module.scss';
 import ButtonSecondary from '../../common/Buttons/ButtonSecondary/ButtonSecondary';
 import { formatValue } from '../../../utils/formatValue';
 import { NavLink } from 'react-router-dom';
+import ProductCarousel from '../../ProductPage/ProductCarousel/ProductCarousel';
 
 
 const CartItem = ({ prod, deleteItem, prods, addItem, reduceItem }) => {
@@ -47,12 +48,19 @@ const CartItem = ({ prod, deleteItem, prods, addItem, reduceItem }) => {
 
     return (
         <div className={s.container}>
+            {window.innerWidth > 767
+                ? <div className={s.cartItemImg} style={{ backgroundImage: `url(${prod.img[0]})` }}> </div>
+                : <div className={s.cartGallery}>
+                    {prod.img.map(img => {
+                        return <div style={{ backgroundImage: `url(${img})` }} className={s.galleryCard}></div>
+                    })}
+                </div>
+            }
 
-            <div className={s.cartItemImg} style={{ backgroundImage: `url(${prod.img[0]})` }}>
-            </div>
+
             <div className={s.info}>
                 <div className={s.top}>
-                   <NavLink to={`/shop/${prod.id}`}> <div className={s.title}>{prod.title}</div></NavLink>
+                    <NavLink to={`/shop/${prod.id}`}> <div className={s.title}>{prod.title}</div></NavLink>
                     <div className={s.price}>{formatValue(prod.price)} ₽</div>
                 </div>
                 <div className={s.controls}>

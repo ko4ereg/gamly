@@ -95,7 +95,7 @@
             line-height: 120%;
             /* 28.8px */
             letter-spacing: 0.24px;
-            margin-bottom: 20px;
+            margin-bottom: 32px;
 
             .addition {
                 display: flex;
@@ -149,3 +149,287 @@
         letter-spacing: 0.39px;
     }
 }
+
+
+@media (max-width: 1919px) {
+    .container {
+        padding-top: 0px;
+
+        .heading {
+            font-size: var(--fs-H_6-1920);
+            font-weight: var(--fw-H_6);
+            line-height: var(--lh-H_6-1920);
+            letter-spacing: var(--ls-H_6-1920);
+        }
+
+        .order {
+
+            .string {
+                font-size: var(--fs-T_2-1920);
+                font-weight: var(--fw-T_2);
+                line-height: var(--lh-T_2);
+            }
+
+            span {
+                font-size: var(--fs-T_1-1920);
+                font-weight: var(--fw-T_1-Bold);
+                line-height: var(--lh-T_1);
+                letter-spacing: var(--ls-T_1-Bold-1920);
+                ;
+            }
+
+            .toPay {
+                font-size: var(--fs-H_7-1920);
+                font-weight: var(--fw-H_7);
+                line-height: var(--lh-H_7-1920);
+                letter-spacing: var(--ls-H_7-1920);
+
+                .addition {
+
+                    .ruby {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                        /* 16.8px */
+                        letter-spacing: 0.42px;
+                    }
+
+                    .coin {
+                        font-size: var(--fs-H_7-1920);
+                        font-weight: var(--fw-H_7);
+                        line-height: var(--lh-H_7-1920);
+                        letter-spacing: var(--ls-H_7-1920);
+                    }
+                }
+            }
+        }
+
+        .payment {
+            font-size: var(--fs-C_2-1920);
+            font-weight: var(--fw-C_2);
+            line-height: var(--lh-C_2);
+            letter-spacing: var(--ls-C_2-1920);
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .container {
+        gap: 20px;
+
+        .heading {
+            font-size: var(--fs-H_5-1024);
+            font-weight: var(--fw-H_5);
+            line-height: var(--lh-H_5-1920);
+            letter-spacing: var(--ls-H_5-1024);
+        }
+
+        .order {
+
+            .string {
+                font-size: var(--fs-T_2-1024);
+                line-height: var(--lh-T_2-1024);
+                margin-bottom: 8px;
+            }
+
+            .hidden {
+                margin-bottom: 0px;
+            }
+
+            span {
+                font-size: var(--fs-T_1-1024);
+                letter-spacing: var(--ls-T_1-1024);
+            }
+
+            .line {
+                min-height: 1px;
+                width: 100%;
+                background-color: var(--gray-10);
+                margin: 0px 0 16px;
+            }
+
+            .toPay {
+                font-size: var(--fs-H_7-1024);
+                letter-spacing: var(--ls-H_7-1024);
+                margin-bottom: 20px;
+
+                .addition {
+
+                    .ruby {
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                        /* 14.4px */
+                        letter-spacing: 0.36px;
+                    }
+
+                    .coin {
+                        font-size: var(--fs-H_7-1024);
+                        letter-spacing: var(--ls-H_7-1024);
+                    }
+                }
+            }
+        }
+
+        .payment {
+            margin-top: 12px;
+            font-size: var(--fs-C_2-1920);
+            font-weight: var(--fw-C_2);
+            line-height: var(--lh-C_2);
+            letter-spacing: var(--ls-C_2-1920);
+            margin-bottom: 12px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .container {
+
+
+        .heading {
+            font-size: var(--fs-H_6-768);
+            font-weight: var(--fw-H_6);
+            letter-spacing: var(--ls-H_6-768);
+        }
+
+        .order {
+
+            .string {
+                font-size: var(--fs-T_2-768);
+                line-height: var(--lh-T_2-768);
+            }
+
+            .hidden {
+                margin-bottom: 0px;
+            }
+
+            span {
+                font-size: var(--fs-T_1-768);
+                letter-spacing: var(--ls-T_1-768);
+            }
+
+
+
+            .toPay {
+                font-size: var(--fs-H_7-768);
+                letter-spacing: var(--ls-H_7-768);
+
+                .addition {
+                    .coin {
+                        font-size: var(--fs-H_7-768);
+                        letter-spacing: var(--ls-H_7-768);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        gap: 16px;
+
+        .heading {
+            font-size: var(--fs-H_6-480);
+            font-weight: var(--fw-H_6);
+            letter-spacing: var(--ls-H_6-480);
+        }
+
+        .order {
+
+            .string {
+                font-size: var(--fs-T_2-480);
+                line-height: var(--lh-T_2-480);
+                margin-bottom: 4px;
+            }
+
+            .hidden {
+                margin-bottom: 0px;
+            }
+
+            span {
+                font-size: var(--fs-T_1-480);
+                letter-spacing: var(--ls-T_1-480);
+            }
+
+            .line {
+                margin: 8px 0 12px;
+            }
+
+
+            .toPay {
+                font-size: var(--fs-H_6-480);
+                letter-spacing: var(--ls-H_6-480);
+                margin-bottom: 12px;
+
+                .addition {
+                    .coin {
+                        font-size: var(--fs-H_6-480);
+                        letter-spacing: var(--ls-H_6-480);
+                    }
+                }
+            }
+        }
+
+        .payment {
+            margin-top: 8px;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+    }
+}
+@media (max-width: 479px) {
+    .container {
+        
+
+        .heading {
+            font-size: var(--fs-H_6-375);
+            font-weight: var(--fw-H_6);
+            letter-spacing: var(--ls-H_6-375);
+        }
+
+        .order {
+
+            .string {
+                font-size: var(--fs-T_2-375);
+                line-height: var(--lh-T_2-375);
+                margin-bottom: 2px;
+            }
+
+            .hidden {
+                margin-bottom: 0px;
+            }
+
+            span {
+                font-size: var(--fs-T_1-375);
+                letter-spacing: var(--ls-T_1-375);
+            }
+
+            .line {
+                margin: 8px 0 12px;
+            }
+
+
+            .toPay {
+                font-size: var(--fs-H_7-375);
+                letter-spacing: var(--ls-H_7-375);
+                margin-bottom: 12px;
+
+                .addition {
+                    .coin {
+                        font-size: var(--fs-H_7-375);
+                        letter-spacing: var(--ls-H_7-375);
+                    }
+                }
+            }
+        }
+
+        .payment {
+            margin-top: 8px;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+    }
+} 

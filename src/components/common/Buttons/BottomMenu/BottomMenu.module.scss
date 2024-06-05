@@ -54,7 +54,38 @@
 }
 
 
-@media (max-width: 479px) {
+@media (max-width: 1439px) {
+    .container {
+        .switcher {
+            font-size: var(--fs-T_3-1024);
+            letter-spacing: var(--ls-T_3-1024);
+
+            .points {
+                .ruby {
+                    font-size: var(--fs-T_3-1024);
+                    letter-spacing: var(--ls-T_3-1024);
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1023px) {
+    .container {
+        .switcher {
+            font-size: var(--fs-T_3-768);
+            letter-spacing: var(--ls-T_3-768);
+        }
+
+        .ruby {
+            font-size: var(--fs-T_3-768);
+            letter-spacing: var(--ls-T_3-768);
+        }
+    }
+}
+
+@media (max-width: 767px) {
     .container {
         .buttons {
             display: flex;
@@ -62,5 +93,37 @@
             gap: 8px;
             justify-content: space-between;
         }
+
+        .switcher {
+            font-size: var(--fs-T_3-480);
+            letter-spacing: var(--ls-T_3-480);
+
+            .points {
+                .ruby {
+                    font-size: var(--fs-T_3-480);
+                    letter-spacing: var(--ls-T_3-480);
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 479px) {
+    .container {
+
+        .switcher {
+            font-size: var(--fs-T_3-375);
+            letter-spacing: var(--ls-T_3-375);
+
+            .points {
+                .ruby {
+                    font-size: var(--fs-T_3-375);
+                    letter-spacing: var(--ls-T_3-375);
+                }
+            }
+        }
+
     }
 }

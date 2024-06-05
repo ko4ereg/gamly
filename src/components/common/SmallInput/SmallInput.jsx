@@ -101,6 +101,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
                         style={{
                             padding: inputPadding,
                             paddingRight: inputRightPadding,
+                            wordWrap: 'break-word'
                         }}
                         className={s.input}
                         value={value}

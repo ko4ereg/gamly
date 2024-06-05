@@ -66,15 +66,15 @@ const CartPage = (props) => {
         setProds([...prods, prod]);
     }
 
-const reduceItem = (item) => {
-    const index = prods.findIndex(prod => prod.id === item.id);
-    if (index !== -1) {
-        setProds([
-            ...prods.slice(0, index),
-            ...prods.slice(index + 1)
-        ]);
+    const reduceItem = (item) => {
+        const index = prods.findIndex(prod => prod.id === item.id);
+        if (index !== -1) {
+            setProds([
+                ...prods.slice(0, index),
+                ...prods.slice(index + 1)
+            ]);
+        }
     }
-}
 
     const deleteItem = (item) => {
         setProds(prods.filter(prod => prod.id !== item.id))

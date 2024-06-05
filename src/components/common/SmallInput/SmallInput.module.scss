@@ -24,6 +24,7 @@
         gap: 4px;
         align-items: center;
         width: fit-content;
+        flex-wrap: wrap;
 
         .info {
             display: -webkit-box;
@@ -79,6 +80,7 @@
     width: 100%;
     height: auto;
     position: relative;
+
 }
 
 .wrapper {
@@ -100,6 +102,7 @@
     line-height: 140%;
     /* 25.2px */
     letter-spacing: 0.18px;
+    flex: 1 1 auto;
 
     &::placeholder {
         font-size: 18px;
@@ -111,6 +114,7 @@
         color: var(--gray-40);
         transition: 0.2s ease-out;
         display: none;
+
     }
 }
 
@@ -142,6 +146,7 @@
         /* 25.2px */
         letter-spacing: 0.18px;
         transition: 0.2s ease-out;
+
     }
 
 }
@@ -155,13 +160,9 @@
     height: 100%;
     display: flex;
     align-items: center;
-
-
     text-overflow: ellipsis;
-
     border: none;
     outline: none;
-
 }
 
 .addition {
@@ -407,7 +408,9 @@
 }
 
 @media (max-width:479px) {
-
+.container {
+    padding-bottom: 3px;
+}
     .title {
 
         .heading {

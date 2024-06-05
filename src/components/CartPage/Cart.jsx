@@ -1,6 +1,6 @@
 import s from './Cart.module.scss';
 import CartItem from './CartItem/CartItem';
-import Delivery from './Delivery';
+import Delivery from './Delivery/Delivery';
 import Total from './Total';
 
 const Cart = ({ prods, deleteItem, addItem, reduceItem }) => {
@@ -20,7 +20,7 @@ const Cart = ({ prods, deleteItem, addItem, reduceItem }) => {
                         return null;
                     })
                 )
-                :  <div className={s.heading}>Корзина пуста</div>}
+                : <div className={s.heading}>Корзина пуста</div>}
 
             <Delivery />
         </div>
