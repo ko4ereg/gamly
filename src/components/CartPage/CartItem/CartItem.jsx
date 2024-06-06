@@ -4,24 +4,8 @@ import s from './CartItem.module.scss';
 import ButtonSecondary from '../../common/Buttons/ButtonSecondary/ButtonSecondary';
 import { formatValue } from '../../../utils/formatValue';
 import { NavLink } from 'react-router-dom';
-import ProductCarousel from '../../ProductPage/ProductCarousel/ProductCarousel';
-
 
 const CartItem = ({ prod, deleteItem, prods, addItem, reduceItem }) => {
-    // const [count, setCount] = useState(1);
-
-
-    // const handleIncreaseAmount = () => {
-    //     setCount(count + 1);
-    // }
-    // const handleDecreaseAmount = () => {
-    //     if (count === 1) {
-    //         deleteItem(prod);
-    //     }
-    //     setCount(count - 1);
-
-
-    // }
 
     const [totalQuantity, setTotalQuantity] = useState(1);
 

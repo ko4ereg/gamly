@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import RadioButton from '../../RadioButton';
 import s from './BottomMenu.module.scss';
+import TextButtonC1 from '../TextButtonC1/TextButtonC1';
+import { NavLink } from 'react-router-dom';
 
-const BottomMenu = ({ separator, switcher, children, setPayRuby, payRuby }) => {
+const BottomMenu = ({ separator, switcher, children, setPayRuby, payRuby, footerSeparator }) => {
     const points = '147';
-  
+
 
     return (
         <div className={s.container}>
@@ -28,6 +30,20 @@ const BottomMenu = ({ separator, switcher, children, setPayRuby, payRuby }) => {
             <div className={s.buttons}>
                 {children}
             </div>
+            {!children && <div style={{ borderTop: footerSeparator ? ' 1.5px solid var(--gray-4)' : 'none' }} className={s.footer}>
+                <div className={s.rights}>2024, all rights reserved</div>
+                <div className={s.links}>
+                    Поддержка:
+                    <div className={s.link}>
+                        <NavLink to={'https://www.google.com'} target='_blank'>
+                            <TextButtonC1 text={'Telegram'} />
+                        </NavLink>
+                        <NavLink to={'https://www.google.com'} target='_blank'>
+                            <TextButtonC1 text={'Vk'} />
+                        </NavLink>
+
+                    </div></div>
+            </div>}
         </div>
     )
 }

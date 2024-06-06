@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
 }
 
 .container {
@@ -49,7 +50,7 @@
         }
 
         .subtitle {
-            
+
             font-size: 14px;
             font-style: normal;
             font-weight: 500;

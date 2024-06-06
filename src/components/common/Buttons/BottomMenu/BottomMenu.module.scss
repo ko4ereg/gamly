@@ -51,7 +51,56 @@
         gap: 12px;
         justify-content: space-between;
     }
+
+    .footer {
+        display: flex;
+        width: 100%;
+        padding-top: 16px;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+        row-gap: 2px;
+        flex-wrap: wrap;
+
+        .rights {
+            color: var(--gray-15);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 16.8px */
+            letter-spacing: 0.42px;
+        }
+
+        .links {
+            display: flex;
+            align-items: flex-start;
+            align-content: flex-start;
+            gap: 2px 8px;
+            flex-wrap: wrap;
+            color: var(--gray-40);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 16.8px */
+            letter-spacing: 0.42px;
+
+            .link {
+                display: flex;
+                padding-bottom: 3px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
+
 
 
 @media (max-width: 1439px) {
@@ -68,6 +117,24 @@
             }
         }
 
+        .footer {
+
+
+            .rights {
+                font-size: 12px;
+                letter-spacing: 0.36px;
+            }
+
+            .links {
+                font-size: 12px;
+                letter-spacing: 0.36px;
+
+                .link {
+                    padding-bottom: 0px;
+                    gap: 6px;
+                }
+            }
+        }
     }
 }
 
@@ -81,6 +148,24 @@
         .ruby {
             font-size: var(--fs-T_3-768);
             letter-spacing: var(--ls-T_3-768);
+        }
+
+        .footer {
+            align-items: center;
+            align-content: center;
+            padding-top: 4px;
+
+            .rights {
+                font-size: 12px;
+                letter-spacing: 0.36px;
+            }
+
+            .links {
+                font-size: 12px;
+                letter-spacing: 0.36px;
+                align-items: center;
+                align-content: center;
+            }
         }
     }
 }
@@ -106,6 +191,19 @@
             }
         }
 
+        .footer {
+            padding-top: 6px;
+
+            .rights {
+                font-size: 13px;
+                letter-spacing: 0.39px;
+            }
+
+            .links {
+                font-size: 13px;
+                letter-spacing: 0.39px;
+            }
+        }
 
     }
 }
@@ -125,5 +223,17 @@
             }
         }
 
+        .footer {
+
+            .rights {
+                font-size: 12px;
+                letter-spacing: 0.36px;
+            }
+
+            .links {
+                font-size: 12px;
+                letter-spacing: 0.36px;
+            }
+        }
     }
 }

@@ -1,0 +1,214 @@
+.container {
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    outline: 1.5px solid var(--gray-10-transparacy);
+    outline-width: 1.5px;
+    outline-offset: 0px;
+    transition: 0.2s ease-out;
+
+    cursor: pointer;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+        flex: 1 0 auto;
+        color: var(--white);
+        font-size: var(--fs-T_3-1920);
+        font-style: normal;
+        font-weight: 500;
+        line-height: var(--lh-T_3);
+        letter-spacing: var(--ls-T_3-1920);
+        transition: 0.2s ease-out;
+    }
+
+    .subtext {
+        color: var(--gray-40);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 0.42px;
+        transition: 0.2s ease-out;
+    }
+
+    .button {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        justify-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+        border: none;
+        border-radius: 93px;
+        background: var(--gray-10-transparacy);
+        transition: 0.2s ease-out;
+
+        svg {
+            .extend {
+                stroke-dasharray: 10;
+                stroke-dashoffset: 10;
+                transition: stroke-dashoffset .2s;
+            }
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .container {
+        padding: 20px;
+        gap: 12px;
+
+        .text {
+
+            font-size: var(--fs-T_3-1024);
+            letter-spacing: var(--ls-T_3-1024);
+        }
+
+        .subtext {
+            font-size: 12px;
+            letter-spacing: 0.36px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .container {
+
+
+        .text {
+
+            font-size: var(--fs-T_3-768);
+            letter-spacing: var(--ls-T_3-768);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 12px 16px;
+        gap: 8px;
+        border-radius: 4px;
+
+        .text {
+            gap: 0px;
+            font-size: var(--fs-T_3-480);
+            letter-spacing: var(--ls-T_3-480);
+        }
+
+        .subtext {
+            font-size: 13px;
+            letter-spacing: 0.39px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .container {
+
+
+        .text {
+            gap: 0px;
+            font-size: var(--fs-T_3-375);
+            letter-spacing: var(--ls-T_3-375);
+        }
+
+        .subtext {
+            font-size: 12px;
+            letter-spacing: 0.36px;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .container {
+        &:hover {
+            background: var(--accent-purple);
+            outline: 1.5px solid var(--white);
+            outline-width: 1.5px;
+            outline-offset: 0px;
+            transition: 0.2s ease-out;
+
+            .button {
+                background: transparent;
+
+                svg {
+                    .arrow {
+                        fill: #F9F8FC;
+                        transition: 0.2s ease-out;
+                    }
+
+                    .extend {
+                        stroke-dashoffset: 20;
+                        stroke: #F9F8FC;
+                        transition: 0.2s ease-out;
+                    }
+                }
+            }
+
+            .text {
+
+                font-weight: 600;
+                transition: 0.2s ease-out;
+            }
+
+            .subtext {
+                transition: 0.2s ease-out;
+                color: var(--light-gray);
+            }
+        }
+
+
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .container {
+        &:active {
+            background: var(--accent-purple);
+            outline: 1.5px solid var(--white);
+            outline-width: 1.5px;
+            outline-offset: 0px;
+            transition: 0.2s ease-out;
+
+            .button {
+                background: transparent;
+
+                svg {
+                    .arrow {
+                        fill: #F9F8FC;
+                        transition: 0.2s ease-out;
+                    }
+
+                    .extend {
+                        stroke-dashoffset: 20;
+                        stroke: #F9F8FC;
+                        transition: 0.2s ease-out;
+                    }
+                }
+            }
+
+            .text {
+
+                font-weight: 600;
+                transition: 0.2s ease-out;
+            }
+
+            .subtext {
+                transition: 0.2s ease-out;
+                color: var(--light-gray);
+            }
+        }
+
+
+    }
+}

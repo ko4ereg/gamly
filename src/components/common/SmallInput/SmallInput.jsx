@@ -31,7 +31,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
 
     const [promoClicked, setPromoClicked] = useState(false);
     const [error, setError] = useState(false);
-
+    const [promoOk, setPromoOk] = useState(false);
     const goodPromo = 'lala';
 
     const promoClick = () => {
@@ -40,6 +40,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
         if (value === goodPromo) {
             setError(false);
             setShowPromo(true);
+            setPromoOk(true);
         } else {
             setError(true);
             setShowPromo(false);
@@ -124,7 +125,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
                     {number && <CurrencyButton setSuffix={setSuffix} />}
                     <div className={s.promo}>
 
-                        {promo && value.trim().length > 0 && <TextButtonC2 onClick={promoClick} text={'Применить'} />}
+                        {promo && value.trim().length > 0 && !promoOk && <TextButtonC2 onClick={promoClick} text={'Применить'} />}
                         {promoClicked && <Indicator small={true} succes={error ? false : true} />}
                     </div>
                     {tooltipText && <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>

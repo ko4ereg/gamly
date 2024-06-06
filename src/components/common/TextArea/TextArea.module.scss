@@ -47,9 +47,12 @@
     letter-spacing: 0.18px;
 
     resize: none;
-    overflow-y: scroll;
+    overflow-y: auto;
+   
+    scroll-behavior: smooth;
     height: auto;
     /* высота одной строки */
+
 
     &::-webkit-input-placeholder {
         font-size: 18px;

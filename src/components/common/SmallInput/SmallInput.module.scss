@@ -60,7 +60,9 @@
         font-weight: 500;
         line-height: 140%;
         letter-spacing: 0.32px;
-
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
 
 
 
@@ -261,7 +263,7 @@
             line-height: 140%;
             /* 21px */
             letter-spacing: 0.15px;
-
+            gap: 4px;
 
         }
 
@@ -408,9 +410,10 @@
 }
 
 @media (max-width:479px) {
-.container {
-    padding-bottom: 3px;
-}
+    .container {
+        padding-bottom: 3px;
+    }
+
     .title {
 
         .heading {

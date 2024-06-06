@@ -1,0 +1,200 @@
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+
+
+    .replenishment_container {
+        padding: 32px 32px 32px 64px;
+        border-right: 1px solid var(--gray-10);
+        background: var(--background-far);
+        width: 704px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        transition: 0.5s;
+        transform: translateX(-100%);
+        max-height: 100%;
+
+        .children {
+            overflow-y: scroll;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+            flex: 1 1 100%;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .heading {
+            display: flex;
+            padding-bottom: 40px;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-self: stretch;
+
+            .heading_title {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                color: var(--white);
+                font-size: var(--fs-H_7-1920);
+                font-style: normal;
+                font-weight: var(--fw-H_7);
+                line-height: var(--lh-H_7-1920);
+                letter-spacing: var(--ls-H_7-1920);
+
+                .note {
+                    color: var(--gray-40);
+                    font-size: var(--fs-H_7-1920);
+                    font-style: normal;
+                    font-weight: var(--fw-H_7);
+                    line-height: var(--lh-H_7-1920);
+                    letter-spacing: var(--ls-H_7-1920);
+                }
+            }
+        }
+    }
+
+}
+
+.active {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    transition: 0.3s;
+    pointer-events: all;
+
+    .replenishment_container {
+        opacity: 1;
+        transition: 0.5s;
+        transform: translateX(0%);
+    }
+
+}
+
+
+@media (max-width: 1919px) {
+    .modal_container {
+
+        .replenishment_container {
+            padding: 40px;
+            width: 613px;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .modal_container {
+
+        .replenishment_container {
+            width: 512px;
+
+            .heading {
+                padding-bottom: 24px;
+
+                .heading_title {
+
+                    font-size: var(--fs-H_7-1024);
+                    letter-spacing: var(--ls-H_7-1024);
+
+                    .note {
+                        font-size: var(--fs-H_7-1024);
+                        letter-spacing: var(--ls-H_7-1024);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .modal_container {
+        .replenishment_container {
+            width: 100%;
+
+            .heading {
+                .heading_title {
+                    font-size: var(--fs-H_7-V-768);
+                    letter-spacing: var(--ls-H_7-V-768);
+
+                    .note {
+                        font-size: var(--fs-H_7-V-768);
+                        letter-spacing: var(--ls-H_7-V-768);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .modal_container {
+        .replenishment_container {
+            padding: 24px 24px;
+
+            .heading {
+                .heading_title {
+                    gap: 8px;
+                    font-size: var(--fs-H_7-nevela-480);
+                    letter-spacing: var(--ls-H_7-nevela-480);
+
+                    .note {
+                        font-size: var(--fs-H_7-nevela-480);
+                        letter-spacing: var(--ls-H_7-nevela-480);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 479px) {
+    .modal_container {
+
+        .replenishment_container {
+            padding: 24px;
+
+            .heading {
+                padding-bottom: 16px;
+
+                .heading_title {
+                    gap: 8px;
+                    font-size: var(--fs-H_7-375);
+                    letter-spacing: var(--ls-H_7-375);
+
+                    .note {
+                        font-size: var(--fs-H_7-375);
+                        letter-spacing: var(--ls-H_7-375);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 374px) {
+    .modal_container {
+
+        .replenishment_container {
+            padding: 16px;
+
+        }
+    }
+}

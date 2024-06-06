@@ -38,7 +38,7 @@ export const ProductCard = (props) => {
 
   const actualPrice = formatValue(newPrice.toString()) + ' ₽';
 
-  const oldPrice = formatValue((props.product.price).toString()) + ' ₽'; 
+  const oldPrice = formatValue((props.product.price).toString()) + ' ₽';
 
   return (<div className={s.product_card}>
     {props.product.discount ? <div className={s.product_discont}>-{props.product.discount}%</div> : null}
@@ -51,34 +51,20 @@ export const ProductCard = (props) => {
 
       <div onClick={handleAddToCart} className={`${s.product_button} ${inCart ? s.inCart : ''} `}
         style={{ width: currentWidth + (window.innerWidth <= 480 ? 54 : 56) }}
-      // style={{  width: window.innerWidth >= 480 ? currentWidth + (window.innerWidth >= 768 ? 56 : 54) : '100%'  }}
       >
         {inCart
           ? (<div className={s.product_button_price} ref={handleRef}><span>В корзине</span></div>)
           : (<div className={s.product_button_price} ref={handleRef}  >   {props.product.discount ? <span>{actualPrice}</span> : null} {props.product.discount ? (<span className={s.oldprice}>{oldPrice}</span>) : (<span>{actualPrice}</span>)} </div>)}
 
-
         <div className={`${s.plus} ${inCart ? s.minus : ''} `}>
-
           <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 8 8">
             <rect className={s.verticalLine} fill="#D4EE5D" x="3.5" y="1" width="1" height="6" rx="0.5" ry="0.5" />
             <rect fill="#D4EE5D" x="1" y="3.5" width="6" height="1" rx="0.5" ry="0.5" />
           </svg>
-
         </div>
-
       </div>
-
-
       <div className={`${s.product_price} ${inCart ? s.activePrice : ''} `} >{actualPrice}</div>
-
-
-
-
-
     </div>
-
-
   </div>
 
   );
