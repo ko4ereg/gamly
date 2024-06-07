@@ -3,7 +3,6 @@ import s from './PopupFiltersLayout.module.scss';
 import PopupWithoutImage from '../../PopupWithoutImage';
 import BottomMenu from '../../../Buttons/BottomMenu/BottomMenu';
 import ButtonPrimary from '../../../Buttons/ButtonPrimary/ButtonPrimary';
-import PopupSkinsReplenishment from '../../PopupContent/PopupSkinsReplenihshment/PopupSkinsReplenishment';
 import PopupFilters from '../../PopupContent/PopupFilters/PopupFilters';
 import ButtonSecondary from '../../../Buttons/ButtonSecondary/ButtonSecondary';
 

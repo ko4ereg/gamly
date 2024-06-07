@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import s from './ShopPage.module.scss';
 import { useDraggable } from 'react-use-draggable-scroll';
 import { useDispatch } from 'react-redux';
@@ -12,7 +12,7 @@ const TypesSlider = ({ selectedTypes, setSelectedTypes }) => {
     const dispatch = useDispatch();
 
     const handleItemClick = (index) => {
-      
+
         if (selectedTypes.length === 0) {
             setSelectedTypes([index]);
             dispatch(setTypeItems(index));
@@ -22,7 +22,7 @@ const TypesSlider = ({ selectedTypes, setSelectedTypes }) => {
             if (selectedTypes.includes(index)) {
                 // Если категория уже выбрана, удаляем ее из списка выбранных
                 setSelectedTypes(selectedTypes.filter(item => item !== index));
-                dispatch(deleteTypeItems(index)); 
+                dispatch(deleteTypeItems(index));
             } else {
                 // Если категория не выбрана, добавляем ее в список выбранных
                 setSelectedTypes([...selectedTypes, index]);
@@ -38,7 +38,7 @@ const TypesSlider = ({ selectedTypes, setSelectedTypes }) => {
         }
     }, [selectedTypes]);
 
- 
+
     const sliderRef = useRef(null);
     const backgroundRightRef = useRef(null);
     const backgroundLeftRef = useRef(null);

@@ -6,11 +6,8 @@ import { useEffect, useRef, useState } from 'react';
 import Products from './Products';
 import TypesSlider from './TypesSlider';
 import NotFound from './NotFound';
-import FilterPopup from './FilterPopup/FilterPopup';
-import PopupWithoutImage from '../common/Popup/PopupWithoutImage';
-import PopupFilters from '../common/Popup/PopupContent/PopupFilters/PopupFilters';
 import { getNoun } from '../../utils/getNoun';
-import PopupFiltersLayout from '../common/Popup/PopupLayouts/PopupFilters/PopupFiltersLayout';
+import PopupFiltersLayout from '../common/Popup/PopupLayouts/PopupFiltersLayout/PopupFiltersLayout';
 
 
 
@@ -67,7 +64,7 @@ const Catalog = ({ prods, ...props }) => {
         </div>
       </div>
       {prods.length > 0 ? <Products prods={prods} prodsAmount={prods.length} /> : <NotFound setSelectedTypes={setSelectedTypes} />}
-    
+
       <PopupFiltersLayout popupActive={filterActive} note={amount} setPopupActive={setFilterActive} />
       {/* 
       <FilterPopup prodsAmount={prods.length} filterActive={filterActive} setFilterActive={setFilterActive} /> */}

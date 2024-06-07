@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import HelpButton from '../components/common/HelpButton/HelpButton';
-import Indicator from '../components/common/Indicator/Indicator';
-import PaymentMethods from '../components/common/PaymentMethods/PaymentMethods';
 import g from './../Globalstyles.module.css';
 import PopupReplenishment from '../components/common/Popup/PopupLayouts/PopupReplenishment/PopupReplenishment';
 import PopupWithImage from '../components/common/Popup/PopupWithImage';
@@ -10,9 +7,7 @@ import BottomMenu from '../components/common/Buttons/BottomMenu/BottomMenu';
 import PopupReplenishmentSucces from '../components/common/Popup/PopupLayouts/PopupReplenishmentSucces/PopupReplenishmentSucces';
 import PopupReplenishmentFailure from '../components/common/Popup/PopupLayouts/PopupReplenishmentFailure/PopupReplenishmentFailure';
 import loginback from './../assets/popup/loginback.png';
-import PopupWithoutImage from '../components/common/Popup/PopupWithoutImage';
-import PopupFilters from '../components/common/Popup/PopupContent/PopupFilters/PopupFilters';
-import PopupFiltersLayout from '../components/common/Popup/PopupLayouts/PopupFilters/PopupFiltersLayout';
+import PopupFiltersLayout from '../components/common/Popup/PopupLayouts/PopupFiltersLayout/PopupFiltersLayout';
 
 
 const SubscribePage = (props) => {
