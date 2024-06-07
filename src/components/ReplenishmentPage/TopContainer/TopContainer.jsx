@@ -3,21 +3,26 @@ import s from './TopContainer.module.scss';
 import g from './../../../Globalstyles.module.css';
 import backskins from './../../../assets/replenishment/backskins.png';
 import backbalance from './../../../assets/replenishment/backbalance.png';
+import { useEffect } from 'react';
 
 const TopContainer = (props) => {
-    console.log(props);
 
     const handleClick = (type) => {
         props.setSelectedType(type);
     }
 
     const imagesPreload = [backskins, backbalance];
-    imagesPreload.forEach((image) => {
-        const newImage = new Image();
-        newImage.src = image;
-        window[image] = newImage;
-    });
 
+
+    useEffect(() => {
+        imagesPreload.forEach((image) => {
+            const newImage = new Image();
+            newImage.src = image;
+            window[image] = newImage;
+            console.log('succes');
+        });
+
+    }, [])
 
 
     return (

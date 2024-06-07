@@ -1,0 +1,116 @@
+.shownSelector {
+    ul {
+        padding: 12px 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-bottom: 1px solid var(--gray-10-transparacy);
+        border-top: 1px solid var(--gray-10-transparacy);
+        max-height: 232px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.selector {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--white);
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        li {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+
+            font-size: var(--fs-T_3-1920);
+            font-style: normal;
+            font-weight: var(--fw-T_3);
+            line-height: var(--lh-T_3);
+            letter-spacing: var(--ls-T_3-1920);
+        }
+    }
+
+}
+
+@media (max-width: 1439px) {
+
+
+    .selector {
+
+        ul {
+
+            li {
+                font-size: var(--fs-T_3-1024);
+                letter-spacing: var(--ls-T_3-1024);
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1023px) {
+
+
+    .selector {
+
+        ul {
+
+            li {
+                font-size: var(--fs-T_3-768);
+                letter-spacing: var(--ls-T_3-768);
+            }
+        }
+
+    }
+}
+@media (max-width: 767px) {
+
+
+    .selector {
+
+        ul {
+
+            li {
+                font-size: var(--fs-T_3-480);
+                letter-spacing: var(--ls-T_3-480);
+            }
+        }
+
+    }
+}
+
+@media (max-width: 479px) {
+
+
+    .selector {
+
+        ul {
+
+            li {
+                font-size: var(--fs-C_2-375);
+                line-height: var(--lh-C_2);
+                letter-spacing: var(--ls-C_2-375);
+            }
+        }
+
+    }
+}

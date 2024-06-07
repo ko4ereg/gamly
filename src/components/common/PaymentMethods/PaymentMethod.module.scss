@@ -73,6 +73,12 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 border: none;
+
+                svg {
+                    opacity: 1;
+                    visibility: visible;
+                    transition: 0.2s ease-out;
+                }
             }
 
         }
@@ -92,6 +98,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            svg {
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.2s ease-out;
+            }
         }
     }
 }

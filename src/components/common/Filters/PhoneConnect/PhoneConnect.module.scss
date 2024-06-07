@@ -1,0 +1,51 @@
+
+
+.connectPhone {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--fs-T_3-1920);
+    font-style: normal;
+    font-weight: var(--fw-T_3);
+    line-height: var(--lh-T_3);
+    letter-spacing: var(--ls-T_3-1920);
+    color: var(--white);
+}
+
+@media (max-width: 1439px) {
+
+    .connectPhone {
+        font-size: var(--fs-T_3-1024);
+        letter-spacing: var(--ls-T_3-1024);
+    }
+
+}
+
+@media (max-width: 1023px) {
+
+    .connectPhone {
+        font-size: var(--fs-T_3-768);
+        letter-spacing: var(--ls-T_3-768);
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .connectPhone {
+        font-size: var(--fs-T_3-480);
+        letter-spacing: var(--ls-T_3-480);
+    }
+
+}
+
+@media (max-width: 479px) {
+
+    .connectPhone {
+        font-size: var(--fs-C_2-375);
+        line-height: var(--lh-C_2);
+        letter-spacing: var(--ls-C_2-375);
+    }
+
+}

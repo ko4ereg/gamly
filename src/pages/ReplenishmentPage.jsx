@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReplenishmentPopup from '../components/ReplenishmentPage/FilterPopup/ReplenishmentPopup';
 import g from './../Globalstyles.module.css';
 import s from './ReplenishmentPage.module.css';
@@ -11,10 +11,9 @@ import PopupLogin from '../components/common/Popup/PopupContent/PopupLogin/Popup
 import PopupWithoutImage from '../components/common/Popup/PopupWithoutImage';
 import PopupAccountReplenishment from '../components/common/Popup/PopupContent/PopupAccountReplenishment/PopupAccountReplenishment';
 import ButtonPrimary from '../components/common/Buttons/ButtonPrimary/ButtonPrimary';
-import RedirectButton from '../components/common/Buttons/RedirectButton/RedirectButton';
-import { NavLink } from 'react-router-dom';
-import PopupReplenishmentSucces from '../components/common/Popup/PopupLayouts/PopupReplenishmentSucces/PopupReplenishmentSucces';
-import PopupReplenishmentFailure from '../components/common/Popup/PopupLayouts/PopupReplenishmentFailure/PopupReplenishmentFailure';
+import PopupReplenishment from '../components/common/Popup/PopupLayouts/PopupReplenishment/PopupReplenishment';
+import loginback from './../assets/popup/loginback.png';
+
 
 const ReplenishmentPage = (props) => {
     const [popupActive, setPopupActive] = useState(false);
@@ -46,8 +45,9 @@ const ReplenishmentPage = (props) => {
                     setLogin={setLogin}
                     setPopupActive={setPopupActive} selectedType={selectedType} setSelectedType={setSelectedType} />
 
-                {selectedType === 'skins' && <ReplenishmentPopup promo={promo} setToLogin={setToLogin} price={price} login={login} link={link} priceWithoutFormat={priceWithoutFormat} setPopupActive={setPopupActive} popupActive={popupActive} />}
-                {toLogin && <PopupWithImage popupActive={toLogin} setPopupActive={setToLogin} heading={'Войти в аккаунт'} note={'Начните получать бонусы и сохраняйте свои данные для быстрого пополнения!'}>
+                {selectedType === 'skins' && <PopupReplenishment promo={promo} setToLogin={setToLogin} price={price} login={login} link={link} priceWithoutFormat={priceWithoutFormat} setPopupActive={setPopupActive} popupActive={popupActive} />}
+                {/* {selectedType === 'skins' && <ReplenishmentPopup promo={promo} setToLogin={setToLogin} price={price} login={login} link={link} priceWithoutFormat={priceWithoutFormat} setPopupActive={setPopupActive} popupActive={popupActive} />} */}
+                {toLogin && <PopupWithImage image={loginback} popupActive={toLogin} setPopupActive={setToLogin} heading={'Войти в аккаунт'} note={'Начните получать бонусы и сохраняйте свои данные для быстрого пополнения!'}>
                     <PopupLogin />
                     <BottomMenu></BottomMenu>
                 </PopupWithImage>}

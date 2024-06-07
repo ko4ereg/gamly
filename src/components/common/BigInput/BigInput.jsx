@@ -32,7 +32,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
 
     const [promoClicked, setPromoClicked] = useState(false);
     const [error, setError] = useState(false);
-const [promoOk, setPromoOk] = useState(false);
+    const [promoOk, setPromoOk] = useState(false);
     const goodPromo = 'lala';
 
     const promoClick = () => {
@@ -111,7 +111,7 @@ const [promoOk, setPromoOk] = useState(false);
                 </div>
                 <div className={s.addition}>
                     {number && !coin && <CurrencyButton setSuffix={setSuffix} />}
-                    {promo && value.trim().length > 0 && !promoOk  && <SmallButton onClick={promoClick} text={'Применить'} />}
+                    {promo && value.trim().length > 0 && !promoOk && <SmallButton onClick={promoClick} text={'Применить'} />}
                     {promoClicked && <Indicator succes={error ? false : true} />}
                     <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
                         <Tooltip tooltipText={tooltipText} />

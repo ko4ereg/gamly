@@ -3,9 +3,6 @@ import s from './Tabs.module.scss';
 import { useDraggable } from 'react-use-draggable-scroll';
 
 const Tabs = ({ children }) => {
-
-
-
     const sliderRef = useRef(null);
     const backgroundRightRef = useRef(null);
     const backgroundLeftRef = useRef(null);
@@ -74,7 +71,7 @@ const Tabs = ({ children }) => {
                 className={s.tabs}>
 
                 {children}
-              
+
             </div>
             <div className={s.border}></div>
         </div>

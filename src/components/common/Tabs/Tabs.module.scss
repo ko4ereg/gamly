@@ -28,6 +28,7 @@
         z-index: 1;
         transition: 0.2s ease-out;
     }
+
     .border {
         position: absolute;
         min-height: 1px;
@@ -42,7 +43,7 @@
     display: flex;
     width: 100%;
     align-items: flex-start;
-    gap: 32px;
+    // gap: 32px;
     position: relative;
 
     overflow-x: scroll;
@@ -53,18 +54,20 @@
         display: none;
     }
 
-    
+    & div:last-child {
+        margin-right: 0px;
+    }
 
 }
 
 @media (max-width:1439px) {
     .tabs {
-        gap: 24px;
+        // gap: 24px;
     }
 }
 
 @media (max-width:767px) {
     .tabs {
-        gap: 16px;
+        // gap: 16px;
     }
 }

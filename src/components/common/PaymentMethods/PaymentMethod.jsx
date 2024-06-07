@@ -1,3 +1,4 @@
+import RoundCheckbox from '../RoundCheckbox/RoundCheckbox';
 import s from './PaymentMethod.module.scss';
 
 const PaymentMethod = ({ logo, title, subtitle, type, selectedType, onChange }) => {
@@ -12,13 +13,12 @@ const PaymentMethod = ({ logo, title, subtitle, type, selectedType, onChange }) 
             <div className={s.input}>
                 <input type="checkbox" id={type} onChange={() => onChange(type)} checked={selectedType === type} />
                 <label htmlFor={type}><div className={s.check}>
-                    {selectedType === type
-                        ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="Frame">
-                                <path id="Vector" d="M3.33594 8.66602L6.0026 11.3327L12.6693 4.66602" stroke="#F9F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </g>
-                        </svg>
-                        : null}
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Frame">
+                            <path id="Vector" d="M3.33594 8.66602L6.0026 11.3327L12.6693 4.66602" stroke="#F9F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+
                 </div>
                 </label>
             </div>

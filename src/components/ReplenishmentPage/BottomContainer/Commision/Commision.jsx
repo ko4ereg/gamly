@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import s from './Commision.module.scss';
 
 const Commision = ({ sum }) => {
-    console.log(parseInt(sum));
+  
 
     return (
         <div className={s.container}>
