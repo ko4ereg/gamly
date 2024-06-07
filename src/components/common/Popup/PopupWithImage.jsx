@@ -30,14 +30,14 @@ const PopupWithImage = ({ popupActive, setPopupActive, children, heading, note, 
         }
     }
 
- 
+
 
     return (
         <div className={`${s.modal_container} ${popupActive ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
             <div className={s.popup_container} >
-                <div className={s.top_container} 
-                // style={{ backgroundImage: `url(${image})`  }} 
-                style={{ background: `linear-gradient(0deg, rgba(20, 17, 26, 0.40) 0%, rgba(20, 17, 26, 0.40) 100%), url(${image})` }} 
+                <div className={s.top_container}
+                    // style={{ backgroundImage: `url(${image})`  }} 
+                    style={{ background: `linear-gradient(0deg, rgba(20, 17, 26, 0.40) 0%, rgba(20, 17, 26, 0.40) 100%), url(${image}) 0px -124px / 160% ` }}
                 >
                     <CloseButton icon={<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="Frame">

@@ -38,11 +38,11 @@
             align-self: stretch;
             // background: linear-gradient(0deg, rgba(20, 17, 26, 0.20) 0%, rgba(20, 17, 26, 0.20) 100%), url('./../../../assets/popup/loginback.png') lightgray 50% / cover no-repeat;
 
+
+      
+            background-size: 160%;
+            background-position: 0px -174px;
          
-            // background: linear-gradient(0deg, rgba(20, 17, 26, 0.20), rgba(20, 17, 26, 0.20));
-             background-size: 160%;
-             background-position: 0px -174px;
-            // // background-size: -136.716% 149.441%;
             background-repeat: repeat-x;
 
             .heading {
@@ -148,7 +148,7 @@
             width: 100%;
 
             .top_container {
-         
+
                 .heading {
                     font-size: var(--fs-H_7-V-768);
                     letter-spacing: var(--ls-H_7-V-768);
