@@ -8,7 +8,7 @@ import GamlyCoin from '../GamlyCoin/GamlyCoin';
 import TextButtonC2 from '../Buttons/TextButtonC2/TextButtonC2';
 import ReactInputMask from 'react-input-mask';
 
-const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo,  currencyOff , ...props }) => {
+const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo, currencyOff, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
 
@@ -79,7 +79,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
     const handleMouseLeave = () => {
         setShowTooltip(false);
     }
-    
+
 
 
     return (

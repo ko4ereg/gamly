@@ -745,7 +745,7 @@ h1 {
 
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media  (max-width: 1439px) {
     h1 {
         font-size: 40px;
         font-weight: 700;
@@ -785,11 +785,12 @@ h1 {
                 letter-spacing: 0.16px;
             }
 
-            .item:nth-child(3) {
-                h2 {
-                    max-width: none;
-                }
+           
 
+        }
+        .item:nth-child(3) {
+            h2 {
+                max-width: none;
             }
 
         }

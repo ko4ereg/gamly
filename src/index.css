@@ -1,4 +1,4 @@
- @font-face {
+ /* @font-face {
    font-family: 'VelaSans-GX';
    src:
 
@@ -32,8 +32,18 @@
    font-weight: 700;
    font-style: normal;
    font-display: swap;
- }
+ } */
+ 
+ @font-face {
+   font-family: 'VelaSans-GX';
+   src:
 
+     url("assets/fonts/VelaSans-GX.woff2") format('woff2'),
+     url("assets/fonts/VelaSans-GX.woff") format('woff'),
+     url("assets/fonts/VelaSans-GX.ttf") format('truetype');
+    
+ }
+ 
 
  @font-face {
    font-family: 'Coolvetica';
