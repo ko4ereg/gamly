@@ -4,6 +4,7 @@ import Total from '../components/CartPage/Total';
 import g from './../Globalstyles.module.css';
 import s from './CartPage.module.css';
 import { useSelector } from 'react-redux';
+import Empty from '../components/CartPage/Empty';
 
 
 
@@ -78,6 +79,14 @@ const CartPage = (props) => {
 
     const deleteItem = (item) => {
         setProds(prods.filter(prod => prod.id !== item.id))
+    }
+
+    if (prods.length === 0) {
+        return (
+            <div className={g.container + ' ' + s.container}>
+                <Empty />
+            </div>
+        )
     }
 
     return (

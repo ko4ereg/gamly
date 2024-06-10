@@ -97,6 +97,14 @@
                 line-height: 140%;
                 /* 25.2px */
                 letter-spacing: 0.18px;
+
+                .coin {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
     }
@@ -113,7 +121,7 @@
     }
 
     .banners {
-         width: 168px;
+        width: 168px;
     }
 
     .mainContent {
@@ -184,6 +192,13 @@
 
                 width: 261px;
 
+                .coins {
+                    .coin {
+
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
             }
         }
     }
@@ -193,7 +208,7 @@
     .container {
         display: flex;
         flex-direction: column;
- 
+
         width: 100%;
     }
 
@@ -290,6 +305,12 @@
                     line-height: 140%;
                     /* 21px */
                     letter-spacing: 0.15px;
+
+
+                    .coin {
+                        width: 18px;
+                        height: 18px;
+                    }
                 }
 
                 .toPay {
@@ -305,7 +326,7 @@
 
 @media (max-width: 479px) {
 
-     
+
 
     .mainContent {
 
@@ -339,5 +360,3 @@
         }
     }
 }
-
- 

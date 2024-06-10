@@ -39,12 +39,6 @@
 
             position: relative;
 
-
-            background-size: 160%;
-            background-position: 0px -74px;
-
-            background-repeat: no-repeat;
-
             .gradient {
                 position: absolute;
                 left: 0;
@@ -67,6 +61,7 @@
                 font-weight: var(--fw-H_7);
                 line-height: var(--lh-H_7-1920);
                 letter-spacing: var(--ls-H_7-1920);
+                z-index: 1;
 
                 .note {
                     color: var(--white);
@@ -77,6 +72,28 @@
                     letter-spacing: var(--ls-T_3-1920);
                 }
             }
+        }
+
+        .succes {
+
+            background-size: 151.536%, 166.111%;
+            background-position: right -181.408px top -186.53px;
+            background-repeat: no-repeat;
+        }
+
+        .fail {
+
+            background-size: 140.625%, 140.92%;
+            background-position: left 0px top -177.725px;
+            background-repeat: no-repeat;
+
+        }
+
+        .login {
+
+            background-size: 136.716%, 149.441%;
+            background-position: left 0px top -174px;
+            background-repeat: no-repeat;
         }
 
         .bottom_container {
@@ -121,8 +138,23 @@
 
             .top_container {
                 padding: 40px 40px 24px 40px;
-                background-position: 0px -131.42px;
-                background-size: 142.741% 136.505%;
+            }
+
+            .succes {
+                background-size: 155.795%, 148.705%;
+                background-position: right -130.206px top -168px;
+            }
+
+            .fail {
+
+                background-size: 142.741%, 136.505%;
+                background-position: left 0px top -131.42px;
+
+            }
+
+            .login {
+                background-size: 161.209%, 154.167%;
+                background-position: left 0px top -185.575px;
             }
 
             .bottom_container {
@@ -139,8 +171,6 @@
             width: 512px;
 
             .top_container {
-                background-position: 0px -111.589px;
-                background-size: 164.258% 130.997%;
 
                 .heading {
                     font-size: var(--fs-H_7-1024);
@@ -152,6 +182,23 @@
                     }
                 }
             }
+
+            .succes {
+                background-size: 174.564%, 139.167%;
+                background-position: right -190.885px top -141px;
+            }
+
+            .fail {
+                background-size: 164.258%, 130.997%;
+                background-position: left 0px top -111.589px;
+
+            }
+
+            .login {
+                background-size: 155.664%, 128.548%;
+                background-position: left 0px top  -92.321px;
+            }
+
         }
     }
 }
@@ -163,9 +210,6 @@
             width: 100%;
 
             .top_container {
-                background-size: 127.865%, 151.328%;
-
-                background-position: 0px 0.729px;
 
                 .heading {
                     font-size: var(--fs-H_7-V-768);
@@ -176,6 +220,22 @@
                         letter-spacing: var(--ls-T_3-768);
                     }
                 }
+            }
+
+            .succes {
+                background-size: 131.533%, 157.292%;
+                background-position: right -121.087px top -171px;
+            }
+
+
+            .fail {
+                background-size: 127.865%, 151.328%;
+                background-position: left 0px top -177.729px;
+
+            }
+            .login {
+                background-size: 134.635%, 159.342%;
+                background-position: left 0px top -178.38px;
             }
         }
     }
@@ -190,8 +250,6 @@
             .top_container {
                 height: 320px;
                 padding: 24px 24px 16px 24px;
-                background-size: 164.792%, 135.445%;
-                background-position: 0 0.425px;
 
                 .heading {
                     gap: 8px;
@@ -205,6 +263,20 @@
                 }
             }
 
+            .succes {
+                background-size: 162.044%, 136.25%;
+                background-position: right -148.906px top -116px;
+            }
+
+            .fail {
+                background-size: 164.792%, 135.445%;
+                background-position: left 0px top -113.425px;
+
+            }
+            .login {
+                background-size: 156.44%, 134.091%;
+                background-position: left 0px top -102.038px ;
+            }
             .bottom_container {
                 padding: 16px 24px 24px 24px;
             }
@@ -218,10 +290,6 @@
 
         .popup_container {
             .top_container {
-
-                background-size: 176.267%, 152.224%;
-                background-position: 0px 0.117px;
-
                 .heading {
 
                     font-size: var(--fs-H_7-375);
@@ -234,6 +302,21 @@
                 }
             }
 
+            .succes {
+                background-size: 205.989%, 135.313%;
+                background-position: right -198.73px top -113px;
+            }
+
+            .fail {
+                background-size: 176.267%, 112.224%;
+                background-position: left 0px top -39.117px;
+
+            }
+
+            .login {
+                background-size: 190.772%, 128.437%;
+                background-position: left 0px top -85.452px ;
+            }
         }
     }
 }
@@ -243,11 +326,23 @@
 
         .popup_container {
             .top_container {
-                background-position: 0px -52.784px;
-                background-size: 211.875% 116.495%;
                 padding: 16px 16px 12px 16px;
             }
 
+            .succes {
+                background-size: 243.066%, 136.25%;
+                background-position: right -228.906px top -116px;
+            }
+
+            .fail {
+                background-size: 211.875%, 116.495%;
+                background-position: left 0px top -52.784px;
+
+            }
+            .login {
+                background-size: 216.367%, 119.375% ;
+                background-position: left 0px top  -59.295px ;
+            }
             .bottom_container {
                 padding: 12px 16px 16px 16px;
             }

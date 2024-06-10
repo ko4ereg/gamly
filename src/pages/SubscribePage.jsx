@@ -23,7 +23,7 @@ const SubscribePage = (props) => {
             <button onClick={() => setReplenishment(!replenishment)} style={{ color: 'white' }}> Пополнение</button>
             <PopupReplenishment popupActive={replenishment} setPopupActive={setReplenishment} />
             <button onClick={() => setLogin(!login)} style={{ color: 'white' }}> Логин</button>
-            <PopupWithImage image={loginback} popupActive={login} setPopupActive={setLogin} heading={'Войти в аккаунт'} note={'Начните получать бонусы и сохраняйте свои данные для быстрого пополнения!'}>
+            <PopupWithImage image={loginback} back={'login'} popupActive={login} setPopupActive={setLogin} heading={'Войти в аккаунт'} note={'Начните получать бонусы и сохраняйте свои данные для быстрого пополнения!'}>
                 <PopupLogin />
                 <BottomMenu></BottomMenu>
             </PopupWithImage>

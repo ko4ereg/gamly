@@ -4,7 +4,7 @@ import CloseButton from '../Buttons/CloseButton/CloseButton';
 
 
 
-const PopupWithImage = ({ popupActive, setPopupActive, children, heading, note, image }) => {
+const PopupWithImage = ({ popupActive, setPopupActive, children, heading, note, image, back }) => {
     console.log(image);
     useEffect(() => {
         if (popupActive) {
@@ -35,9 +35,8 @@ const PopupWithImage = ({ popupActive, setPopupActive, children, heading, note, 
     return (
         <div className={`${s.modal_container} ${popupActive ? s.active : ''} `} onClick={(e) => { handleClick(e) }}>
             <div className={s.popup_container} >
-                <div className={s.top_container}
-                    // style={{ backgroundImage: `url(${image})`  }} 
-                    style={{ backgroundImage: ` url(${image})`    }}
+                <div className={`${s.top_container} ${back === 'succes' ? s.succes : back === 'failure' ? s.fail : s.login}`}
+                    style={{ backgroundImage: ` url(${image})` }}
                 >
                     <div className={s.gradient}></div>
                     <CloseButton icon={<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
