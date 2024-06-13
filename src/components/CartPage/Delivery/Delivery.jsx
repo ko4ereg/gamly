@@ -57,7 +57,7 @@ const Delivery = () => {
     }
 
 
-    const { register, handleSubmit, control, setValue, formState: { errors } } = useForm({});
+    const { register, handleSubmit, control, setValue,getValues, formState: { errors } } = useForm({});
 
     const handleClick = (address) => {
         setValue('addressPoint', address);
@@ -66,8 +66,9 @@ const Delivery = () => {
 
     console.log(errors);
  
-
-    const disabled = Object.keys(errors).length !== 0;
+    const disabled =  !getValues("secondName") || !getValues("firstName") || !getValues("surName") || !getValues("phone") || !getValues("email") || selectedType === 'point' 
+    ? !getValues("addressPoint") : !getValues("addressHome") || !getValues("flat") || !getValues("floor") || !getValues('enter');
+    
     console.log(disabled);
     const onSubmit = (data) => console.log(data)
 
