@@ -23,7 +23,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
         console.log(data);
     }
 
-
+ 
 
     const handleChangeInput = (e) => {
         const formattedValue = formatValue(e.target.value);
@@ -50,7 +50,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
             <div className={s.mainContent}>
                 <form onSubmit={handleSubmit(onSubmit)} className={s.inputsContainer}>
                     {props.selectedType === 'skins'
-                        ?
+                        &&
 
                         <Controller
                             control={control}
@@ -78,7 +78,8 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
                                     heading={'Ссылка на обмен'} placeholder={'Ваша трейд-ссылка'} />
                             )}
                         />
-                        :
+                    }
+                    {props.selectedType === 'balance' &&
                         <Controller
                             control={control}
                             name="login"
@@ -99,8 +100,8 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
                                             clearErrors("login"); // Очистить ошибку по имени поля
                                         }
                                     }}
-                                    value={login}
-                                    onChange={(e) => setLogin(e.target.value)}
+                                    value={field.value}
+                                    onChange={(e) => { setLogin(e.target.value); setValue('login', e.target.value) }}
                                     ref={register}
                                     heading={'Логин Steam*'} placeholder={'Ваш логин Steam'} />
                             )}
