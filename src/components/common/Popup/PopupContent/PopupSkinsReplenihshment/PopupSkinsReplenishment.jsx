@@ -5,7 +5,7 @@ import ButtonPrimary from '../../../Buttons/ButtonPrimary/ButtonPrimary';
 import GamlyCoin from '../../../GamlyCoin/GamlyCoin';
 
 const PopupSkinsReplenishment = ({ setToLogin, promo, link, priceWithoutFormat, price, selectedType, setSelectedType }) => {
-    console.log(promo);
+ 
     return (
         <div className={s.container}>
             <div className={s.top}>

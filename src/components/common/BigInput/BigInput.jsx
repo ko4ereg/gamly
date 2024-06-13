@@ -9,15 +9,24 @@ import Tooltip from '../Tooltip/Tooltip';
 
 import GamlyCoin from '../GamlyCoin/GamlyCoin';
 
-const BigInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, ...props }) => {
+const BigInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, invalid, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
 
-    const handleChangeNumberInput = (e) => {
+    // const handleChangeNumberInput = (e) => {
+    //     console.log(e.target.value);
+    //     // let formattedValue = formatValue(e.target.value);
+    //     props.setPriceWithputFormat && props.setPriceWithputFormat(parseInt(unformatValue(e.target.value)));
+    //     // setValue(formattedValue);
+    // }
 
-        let formattedValue = formatValue(e.target.value);
-        props.setPriceWithputFormat && props.setPriceWithputFormat(parseInt(unformatValue(formattedValue)));
-        setValue(formattedValue);
+    const handleChangeInput = (e) => {
+        if (number) {
+            console.log(e.target.value);
+        }
+        else {
+            console.log('notnumber');
+        }
     }
 
     const handleChangeTextInput = (e) => {
@@ -27,7 +36,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
     const [inputRightPadding, setInputRightPadding] = useState(0);
 
     const inputPadding = 0;
-    const suffixGap = 3;
+    const suffixGap = 4;
     const suffixRef = useRef();
 
     const [promoClicked, setPromoClicked] = useState(false);
@@ -84,7 +93,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
 
 
     return (
-        <div className={s.container}>
+        <div className={`${s.container} ${invalid && s.invalid}`}>
 
             <div className={s.title}>{heading} {value.trim().length > 0 && promoClicked && <span className={error ? s.error : s.ok}>-10% на первый заказ</span>}</div>
             <div className={s.wrapper}>
@@ -98,7 +107,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
                         className={s.input}
                         value={value}
                         placeholder={placeholder}
-                        onChange={number ? handleChangeNumberInput : handleChangeTextInput}
+                        onChange={props.onChange}
                         {...props}
                     />
                     {number && <div className={s.inputFakeValueWrapper} style={{ gap: suffixGap, padding: inputPadding }}>

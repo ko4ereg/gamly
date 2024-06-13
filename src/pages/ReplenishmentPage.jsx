@@ -24,7 +24,7 @@ const ReplenishmentPage = (props) => {
     const [login, setLogin] = useState('');
     const [price, setPrice] = useState('');
     const [promo, setPromo] = useState('');
-    const [priceWithoutFormat, setPriceWithputFormat] = useState(0);
+    const [priceWithoutFormat, setPriceWithoutFormat] = useState(0);
 
     const [toLogin, setToLogin] = useState(false);
 
@@ -36,7 +36,7 @@ const ReplenishmentPage = (props) => {
                     link={link}
                     setLink={setLink}
                     priceWithoutFormat={priceWithoutFormat}
-                    setPriceWithputFormat={setPriceWithputFormat}
+                    setPriceWithoutFormat={setPriceWithoutFormat}
                     promo={promo}
                     setPromo={setPromo}
                     price={price}

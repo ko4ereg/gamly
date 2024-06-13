@@ -1,7 +1,7 @@
 import ReactTextareaAutosize from 'react-textarea-autosize';
 import s from './TextArea.module.scss';
 
-const TextArea = ({ heading, value, setValue, placeholder  }) => {
+const TextArea = ({ heading, value, setValue, placeholder, onChange  }) => {
 
 
 
@@ -21,7 +21,7 @@ const TextArea = ({ heading, value, setValue, placeholder  }) => {
             <div className={s.wrapper}>
                 <ReactTextareaAutosize
                     value={value}
-                    onChange={handleChangeTextInput}
+                    onChange={onChange}
                     placeholder={placeholder}
                     className={s.input}
                     maxRows={3}

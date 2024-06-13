@@ -34,12 +34,11 @@
     }
 
     .info {
-        font-size: 16px;
+        font-size: var(--fs-T_3-1920);
         font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        /* 22.4px */
-        letter-spacing: 0.32px;
+        font-weight: var(--fw-T_3);
+        line-height: var(--lh-T_3);
+        letter-spacing: var(--ls-T_3-1920);
         color: var(--light-gray);
         border-radius: 12px;
         background: var(--gray-4);
@@ -72,12 +71,11 @@
             flex-shrink: 0;
 
             .toPay {
-                font-size: 16px;
+                font-size: var(--fs-T_3-1920);
                 font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 22.4px */
-                letter-spacing: 0.32px;
+                font-weight: var(--fw-T_3);
+                line-height: var(--lh-T_3);
+                letter-spacing: var(--ls-T_3-1920);
                 color: var(--gray-40);
                 display: flex;
                 align-items: center;
@@ -91,12 +89,11 @@
                 overflow: hidden;
                 color: var(--white);
                 text-overflow: ellipsis;
-                font-size: 18px;
+                font-size: var(--fs-T_1-1920);
                 font-style: normal;
-                font-weight: 600;
-                line-height: 140%;
-                /* 25.2px */
-                letter-spacing: 0.18px;
+                font-weight: var(--fw-T_1);
+                line-height: var(--lh-T_1);
+                letter-spacing: var(--ls-T_1-1920);
 
                 .coin {
                     display: flex;
@@ -117,7 +114,6 @@
         align-items: flex-start;
         gap: 216px;
         width: 100%;
-        // overflow: hidden;
     }
 
     .banners {
@@ -130,19 +126,14 @@
             gap: 32px;
         }
 
-
         .info {
             padding: 24px 32px;
             gap: 20px;
         }
 
         .button {
-
-
             .cost {
-
                 width: 167px;
-
             }
         }
     }
@@ -177,8 +168,8 @@
         }
 
         .info {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_3-1024);
+            letter-spacing: var(--ls-T_3-1024);
             color: var(--light-gray);
             border-radius: 8px;
             padding: 24px 32px;
@@ -189,12 +180,18 @@
             gap: 16px;
 
             .cost {
+                .toPay {
+                    font-size: var(--fs-T_3-1024);
+                    letter-spacing: var(--ls-T_3-1024);
+                }
 
                 width: 261px;
 
                 .coins {
-                    .coin {
+                    font-size: var(--fs-T_1-1024);
+                    letter-spacing: var(--ls-T_1-1024);
 
+                    .coin {
                         width: 20px;
                         height: 20px;
                     }
@@ -213,27 +210,20 @@
     }
 
     .banners {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: flex-start;
-        // gap: 8px;
-        // width: 100%;
         align-items: stretch;
     }
 
     .mainContent {
 
         .inputsContainer {
-
-            // gap: 32px;
             .inputs {
                 flex-direction: column;
             }
         }
 
         .info {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_3-768);
+            letter-spacing: var(--ls-T_3-768);
             color: var(--light-gray);
             border-radius: 8px;
             padding: 24px 32px;
@@ -244,6 +234,16 @@
 
             .cost {
                 width: 176px;
+
+                .toPay {
+                    font-size: var(--fs-T_3-768);
+                    letter-spacing: var(--ls-T_3-768);
+                }
+
+                .coins {
+                    font-size: var(--fs-T_1-768);
+                    letter-spacing: var(--ls-T_1-768);
+                }
             }
         }
     }
@@ -257,11 +257,6 @@
     }
 
     .banners {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: flex-start;
-        // gap: 8px;
-        // width: 100%;
         flex-direction: column;
         gap: 8px;
         order: 3;
@@ -269,6 +264,7 @@
     }
 
     .mainContent {
+        gap: 24px;
 
         .inputsContainer {
 
@@ -278,10 +274,8 @@
         }
 
         .info {
-            font-size: 14px;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 0.28px;
+            font-size: var(--fs-T_3-480);
+            letter-spacing: var(--ls-T_3-480);
             padding: 24px 24px;
         }
 
@@ -301,10 +295,8 @@
                 width: 100%;
 
                 .coins {
-                    font-size: 15px;
-                    line-height: 140%;
-                    /* 21px */
-                    letter-spacing: 0.15px;
+                    font-size: var(--fs-T_1-480);
+                    letter-spacing: var(--ls-T_1-480);
 
 
                     .coin {
@@ -314,10 +306,8 @@
                 }
 
                 .toPay {
-                    font-size: 14px;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 0.28px;
+                    font-size: var(--fs-T_3-480);
+                    letter-spacing: var(--ls-T_3-480);
                 }
             }
         }
@@ -331,10 +321,8 @@
     .mainContent {
 
         .info {
-            font-size: 13px;
-            line-height: 140%;
-            /* 18.2px */
-            letter-spacing: 0.13px;
+            font-size: var(--fs-T_3-375);
+            letter-spacing: var(--ls-T_3-375);
             padding: 16px;
             min-width: unset;
         }
@@ -344,17 +332,13 @@
             .cost {
 
                 .coins {
-                    font-size: 14px;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 0.14px;
+                    font-size: var(--fs-T_1-375);
+                    letter-spacing: var(--ls-T_1-375);
                 }
 
                 .toPay {
-                    font-size: 13px;
-                    line-height: 140%;
-                    /* 18.2px */
-                    letter-spacing: 0.13px;
+                    font-size: var(--fs-T_3-375);
+                    letter-spacing: var(--ls-T_3-375);
                 }
             }
         }

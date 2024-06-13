@@ -13,6 +13,10 @@
     // background-color: var(--background-far);
 }
 
+.invalid {
+    border-bottom: 2.5px dashed var(--red-100);
+}
+
 
 .title {
     display: flex;
@@ -208,7 +212,7 @@
 @media (hover: hover) and (pointer: fine) {
     .container {
 
-        &:hover {
+        &:hover:not(.invalid) {
 
 
 
@@ -235,7 +239,7 @@
 @media (hover: none) and (pointer: coarse) {
     .container {
 
-        &:active {
+        &:active:not(.invalid) {
 
             border-bottom: 2.5px dashed var(--gray-40);
             transition: 0.2s ease-out;

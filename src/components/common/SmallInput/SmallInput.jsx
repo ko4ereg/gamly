@@ -6,16 +6,16 @@ import CurrencyButton from '../CurrencyButton/CurrencyButton';
 import Tooltip from '../Tooltip/Tooltip';
 import GamlyCoin from '../GamlyCoin/GamlyCoin';
 import TextButtonC2 from '../Buttons/TextButtonC2/TextButtonC2';
-import ReactInputMask from 'react-input-mask';
 
-const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo, currencyOff, ...props }) => {
+
+const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo, currencyOff, invalid, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
 
     const handleChangeNumberInput = (e) => {
 
         let formattedValue = formatValue(e.target.value);
-        props.setPriceWithputFormat && props.setPriceWithputFormat(parseInt(unformatValue(formattedValue)));
+        props.setPriceWithoutFormat && props.setPriceWithoutFormat(parseInt(unformatValue(formattedValue)));
         setValue(formattedValue);
     }
 
@@ -83,7 +83,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
 
 
     return (
-        <div className={s.container}>
+        <div className={`${s.container} ${invalid && s.invalid}`}>
 
             <div className={s.title}>
                 <div className={s.heading}>

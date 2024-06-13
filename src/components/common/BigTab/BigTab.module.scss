@@ -1,0 +1,130 @@
+.tab {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 7px;
+    color: var(--gray-40);
+    font-size: var(--fs-H_6-1920);
+    font-style: normal;
+    font-weight: var(--fw-H_6);
+    line-height: var(--lh-H_6-1920);
+    letter-spacing: var(--ls-H_6-1920);
+    cursor: pointer;
+    transition: 0.2s ease-out;
+    white-space: nowrap;
+    margin-right: 32px;
+
+    .border {
+        min-height: 1px;
+        width: 100%;
+        transition: 0.2s ease-out;
+        transform-origin: left;
+    }
+
+
+}
+
+.selected {
+    color: var(--accent-color);
+    transition: 0.2s ease-out;
+
+    .border {
+        min-height: 1px;
+        width: 100%;
+        background-color: var(--accent-color);
+        transition: 0.2s ease-out;
+    }
+
+    .right {
+        animation: slideFromLeft 0.2s ease-out;
+    }
+
+    .left {
+        animation: slideFromRight 0.2s ease-out;
+    }
+
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .tab {
+        &:hover:not(.selected) {
+            color: var(--light-gray);
+
+            .border {
+                transition: 0.2s ease-out;
+                background-color: var(--light-gray);
+
+            }
+        }
+    }
+
+
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .tab {
+        &:focus:not(.selected) {
+            color: var(--light-gray);
+
+            .border {
+                transition: 0.2s ease-out;
+                background-color: var(--light-gray);
+            }
+        }
+    }
+}
+
+@media (max-width:1439px) {
+    .tab {
+        gap: 4px;
+        font-size: var(--fs-H_5-1024);
+        letter-spacing:var(--ls-H_5-1024);
+    }
+}
+
+@media (max-width:1023px) {
+    .tab {
+        font-size: var(--fs-H_5-768);
+        letter-spacing:var(--ls-H_5-768);
+    }
+}
+
+@media (max-width:767px) {
+    .tab {
+        margin-right: 24px;
+        font-size: var(--fs-H_5-480);
+        letter-spacing:var(--ls-H_5-480);
+    }
+}
+
+@media (max-width:479px) {
+    .tab {
+        gap: 0px;
+        font-size: var(--fs-H_5-375);
+        letter-spacing:var(--ls-H_5-375);
+    }
+}

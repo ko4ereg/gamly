@@ -10,7 +10,8 @@ import ButtonPrimary from '../../common/Buttons/ButtonPrimary/ButtonPrimary';
 import TextArea from '../../common/TextArea/TextArea';
 import SearchResults from '../../common/SearchResults/SearchResults';
 import SmallInputPhone from '../../common/SmallInput/SmallInputPhone';
- 
+import { Controller, useForm } from 'react-hook-form';
+
 
 const Delivery = () => {
 
@@ -43,8 +44,8 @@ const Delivery = () => {
 
     const [filteredAddresses, setFilteredAddresses] = useState([]);
     const [showResult, setShowResult] = useState(false);
+ 
     const handleAddressChange = (value) => {
-        setAddress(value);
         if (value.trim() === '') {
             setFilteredAddresses([]);
             setShowResult(false);
@@ -56,12 +57,20 @@ const Delivery = () => {
     }
 
 
+    const { register, handleSubmit, control, setValue, formState: { errors } } = useForm({});
+
     const handleClick = (address) => {
-        setAddress(address);
+        setValue('addressPoint', address);
         setShowResult(false);
     }
 
-    const disabled = !secondName || !surName || !firstName || !phone || !email || !address;
+    console.log(errors);
+ 
+
+    const disabled = Object.keys(errors).length !== 0;
+    console.log(disabled);
+    const onSubmit = (data) => console.log(data)
+
 
     return (
         <div className={s.container}>
@@ -79,60 +88,320 @@ const Delivery = () => {
                     <SmallTab setSelectedType={setSelectedType} selected={selectedType} type={'point'} text={'Получение в пункте выдачи'} />
                     <SmallTab setSelectedType={setSelectedType} selected={selectedType} type={'courier'} text={'Получение курьером'} />
                 </Tabs>
-                <div className={s.userInfo}>
-                    <div className={s.inputs}>
-                       <div className={s.input}> <SmallInput value={secondName} setValue={setSecondName} heading={'Фамилия'} placeholder={'Попов'} /></div>
-                       <div className={s.input}>  <SmallInput value={firstName} setValue={setFirstName} heading={'Имя'} placeholder={'Иван'} /></div>
-                       <div className={s.input}>    <SmallInput value={surName} setValue={setsurName} heading={'Отчество'} placeholder={'Александрович'} /></div>
-                       <div className={s.input}>  
-                       <SmallInputPhone value={phone} phone={true} setValue={setPhone} heading={'Телефон'} placeholder={'+7 (000) 000-00-00'} />
-                    
-                       </div>
-                       <div className={s.input}> <SmallInput value={email} setValue={setEmail} heading={'E-mail'} placeholder={'email@gmail.com'} /></div>
-                    </div>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className={s.userInfo}>
+                        <div className={s.inputs}>
+                            <div className={s.input}>
+                                <Controller
+                                    control={control}
+                                    name="secondName"
+                                    defaultValue=''
+                                    rules={{ required: true }}
+                                    render={({ field, fieldState: { isDirty } }) => (
+                                        <SmallInput
 
-                </div>
-                {selectedType === 'point' ? <div className={s.point}>
-                    <div className={s.searchResults}>   <SmallInput heading={'Пункт выдачи'} note={'Приблизительное время доставки'} addInfo={'6-7 дней'} placeholder={'Укажите ближайший адрес или метро'} setValue={handleAddressChange} value={address} />
-                        {showResult &&
-                            // <ul>
-                            //     {filteredAddresses.map((addr) => {
-                            //         return <li onClick={() => handleClick(addr)} key={addr}>{addr}</li>
-                            //     }
-                            //     )}
-                            // </ul>
-                            <SearchResults>
-                                 {filteredAddresses.map((addr) => {
-                                    return <li onClick={() => handleClick(addr)} key={addr}>{addr}</li>
-                                }
-                                )}
-                            </SearchResults>
-                        }
-                    </div>
-                    <div className={s.map}></div>
-                </div>
-                    :
-                    <div className={s.point}>
+                                            invalid={isDirty && !field.value} // Устанавливаем invalid в true, если поле пустое и пользователь его потрогал
+                                            onBlur={() => {
+                                                if (!field.value) {
+                                                    field.onChange('');
+                                                    // Если поле пустое, установить значение пустой строки
+                                                }
+                                            }}
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            ref={register}
+                                            heading={'Фамилия'} placeholder={'Попов'} />
+                                    )}
+                                />
 
-                        <SmallInput heading={'Адрес доставки'} note={'Приблизительное время доставки'} addInfo={'6-7 дней'} placeholder={'Укажите ближайший адрес или метро'} setValue={handleAddressChange} value={address} />
+                                {/* <SmallInput value={secondName} setValue={setSecondName} heading={'Фамилия'} placeholder={'Попов'} /> */}
 
-                        <div className={s.address}>
-                        <div className={s.input}>    <SmallInput heading={'Подъезд'} placeholder={'1'} setValue={setEnter} value={enter} /></div>
-                        <div className={s.input}>  <SmallInput heading={'Этаж'} placeholder={'1'} setValue={setFloor} value={floor} /></div>
-                        <div className={s.input}>    <SmallInput heading={'Квартира'} placeholder={'1'} setValue={setFlat} value={flat} /></div>
-                        <div className={s.input}>   <SmallInput heading={'Домофон'} placeholder={'1'} setValue={setCode} value={code} /></div>
+                            </div>
+                            <div className={s.input}>
+                                <Controller
+                                    control={control}
+                                    name="firstName"
+                                    defaultValue=''
+                                    rules={{ required: true }}
+                                    render={({ field, fieldState: { isDirty } }) => (
+                                        <SmallInput
+                                            invalid={isDirty && !field.value}
+                                            onBlur={() => {
+                                                if (!field.value) {
+                                                    field.onChange('');
+
+                                                }
+                                            }}
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            ref={register}
+                                            heading={'Имя'} placeholder={'Иван'} />
+                                    )}
+                                />
+                                {/* <SmallInput value={firstName} setValue={setFirstName} heading={'Имя'} placeholder={'Иван'} /> */}
+                            </div>
+                            <div className={s.input}>
+                                <Controller
+                                    control={control}
+                                    name="surName"
+                                    defaultValue=''
+                                    rules={{ required: true }}
+                                    render={({ field, fieldState: { isDirty } }) => (
+                                        <SmallInput
+                                            invalid={isDirty && !field.value}
+                                            onBlur={() => {
+                                                if (!field.value) {
+                                                    field.onChange('');
+
+                                                }
+                                            }}
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            ref={register}
+                                            heading={'Отчество'} placeholder={'Александрович'} />
+                                    )}
+                                />
+                                {/* <SmallInput value={surName} setValue={setsurName} heading={'Отчество'} placeholder={'Александрович'} /> */}
+
+                            </div>
+                            <div className={s.input}>
+                                <Controller
+                                    control={control}
+                                    name="phone"
+                                    defaultValue=''
+                                    rules={{ required: true }}
+                                    render={({ field, fieldState: { isDirty } }) => (
+                                        <SmallInputPhone
+                                            invalid={(isDirty && !field.value)}
+                                            onBlur={() => {
+                                                if (!field.value) {
+                                                    field.onChange('');
+                                                }
+
+                                            }}
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            ref={register}
+                                            heading={'Телефон'} placeholder={'+7 (000) 000-00-00'} />
+                                    )}
+                                />
+                                {/* <SmallInputPhone value={phone} setValue={setPhone} heading={'Телефон'} placeholder={'+7 (000) 000-00-00'} /> */}
+
+
+                            </div>
+                            <div className={s.input}>
+                                <Controller
+                                    control={control}
+                                    name="email"
+                                    defaultValue=''
+                                    rules={{ required: true }}
+                                    render={({ field, fieldState: { isDirty } }) => (
+                                        <SmallInput
+                                            invalid={isDirty && !field.value}
+                                            onBlur={() => {
+                                                if (!field.value) {
+                                                    field.onChange('');
+
+                                                }
+                                            }}
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                            ref={register}
+                                            heading={'E-mail'} placeholder={'email@gmail.com'} />
+                                    )}
+                                />
+                                {/* <SmallInput value={email} setValue={setEmail} heading={'E-mail'} placeholder={'email@gmail.com'} /> */}
+                            </div>
                         </div>
-                        {/* <SmallInput heading={'Комментарий'} placeholder={'Комментарий курьеру'} setValue={setComment} value={comment} /> */}
-                        <TextArea heading={'Комментарий'} placeholder={'Комментарий курьеру'} setValue={setComment} value={comment} />
-                    </div>}
 
+                    </div>
+                    {selectedType === 'point' ? <div className={s.point}>
+                        <div className={s.searchResults}>
+                            {/* <SmallInput heading={'Пункт выдачи'} note={'Приблизительное время доставки'} addInfo={'6-7 дней'} placeholder={'Укажите ближайший адрес или метро'} setValue={handleAddressChange} value={address} /> */}
+                            <Controller
+                                control={control}
+                                name="addressPoint"
+                                defaultValue=''
+                                rules={{ required: true }}
+                                render={({ field, fieldState: { isDirty } }) => (
+                                    <SmallInput heading={'Пункт выдачи'}
+                                        note={'Приблизительное время доставки'}
+                                        addInfo={'6-7 дней'}
+                                        ref={register}
+                                        invalid={isDirty && !field.value}
+                                        onBlur={() => {
+                                            if (!field.value) {
+                                                field.onChange('');
+
+                                            }
+                                        }}
+                                        placeholder={'Укажите ближайший адрес или метро'}
+                                        value={field.value}
+                                        onChange={(e) => {
+                                            field.onChange(e);
+                                            handleAddressChange(e.target.value);
+                                        }}
+                                    />
+                                )}
+                            />
+                            {showResult &&
+                                <SearchResults>
+                                    {filteredAddresses.map((addr) => {
+                                        return <li onClick={() => handleClick(addr)} key={addr}>{addr}</li>
+                                    }
+                                    )}
+                                </SearchResults>
+                            }
+                        </div>
+                        <div className={s.map}></div>
+                    </div>
+                        :
+                        <div className={s.point}>
+                            <Controller
+                                control={control}
+                                name="addressHome"
+                                rules={{ required: true }}
+                                defaultValue=''
+                                render={({ field, fieldState: { isDirty } }) => (
+                                    <SmallInput
+                                        invalid={isDirty && !field.value}
+                                        onBlur={() => {
+                                            if (!field.value) {
+                                                field.onChange('');
+
+                                            }
+                                        }}
+                                        value={field.value}
+                                        onChange={field.onChange}
+                                        ref={register}
+                                        heading={'Адрес доставки'}
+                                        note={'Приблизительное время доставки'}
+                                        addInfo={'6-7 дней'}
+                                        placeholder={'Укажите ближайший адрес или метро'} />
+                                )}
+                            />
+                            {/* <SmallInput heading={'Адрес доставки'} note={'Приблизительное время доставки'} addInfo={'6-7 дней'} placeholder={'Укажите ближайший адрес или метро'} setValue={handleAddressChange} value={address} /> */}
+
+                            <div className={s.address}>
+                                <div className={s.input}>
+                                    <Controller
+                                        control={control}
+                                        name="enter"
+                                        defaultValue=''
+                                        rules={{ required: true }}
+                                        render={({ field, fieldState: { isDirty } }) => (
+                                            <SmallInput
+                                                invalid={isDirty && !field.value}
+                                                onBlur={() => {
+                                                    if (!field.value) {
+                                                        field.onChange('');
+
+                                                    }
+                                                }}
+                                                value={field.value}
+                                                onChange={field.onChange}
+                                                ref={register}
+                                                heading={'Подъезд'} placeholder={'1'} />
+                                        )}
+                                    />
+                                    {/* <SmallInput heading={'Подъезд'} placeholder={'1'} setValue={setEnter} value={enter} /> */}
+                                </div>
+                                <div className={s.input}>
+                                    <Controller
+                                        control={control}
+                                        name="floor"
+                                        defaultValue=''
+                                        rules={{ required: true }}
+                                        render={({ field, fieldState: { isDirty } }) => (
+                                            <SmallInput
+                                                invalid={isDirty && !field.value}
+                                                onBlur={() => {
+                                                    if (!field.value) {
+                                                        field.onChange('');
+
+                                                    }
+                                                }}
+                                                value={field.value}
+                                                onChange={field.onChange}
+                                                ref={register}
+                                                heading={'Этаж'} placeholder={'1'} />
+                                        )}
+                                    />
+                                    {/* <SmallInput heading={'Этаж'} placeholder={'1'} setValue={setFloor} value={floor} /> */}
+                                </div>
+                                <div className={s.input}>
+                                    <Controller
+                                        control={control}
+                                        name="flat"
+                                        defaultValue=''
+                                        rules={{ required: true }}
+                                        render={({ field, fieldState: { isDirty } }) => (
+                                            <SmallInput
+                                                invalid={isDirty && !field.value}
+                                                onBlur={() => {
+                                                    if (!field.value) {
+                                                        field.onChange('');
+
+                                                    }
+                                                }}
+                                                value={field.value}
+                                                onChange={field.onChange}
+                                                ref={register}
+                                                heading={'Квартира'} placeholder={'1'} />
+                                        )}
+                                    />
+                                    {/* <SmallInput heading={'Квартира'} placeholder={'1'} setValue={setFlat} value={flat} /> */}
+                                </div>
+                                <div className={s.input}>
+                                    <Controller
+                                        control={control}
+                                        name="code"
+                                        defaultValue=''
+                                        rules={{ required: true }}
+                                        render={({ field, fieldState: { isDirty } }) => (
+                                            <SmallInput
+                                                invalid={isDirty && !field.value}
+                                                onBlur={() => {
+                                                    if (!field.value) {
+                                                        field.onChange('');
+
+                                                    }
+                                                }}
+                                                value={field.value}
+                                                onChange={field.onChange}
+                                                ref={register}
+                                                heading={'Домофон'} placeholder={'1'} />
+                                        )}
+                                    />
+                                    {/* <SmallInput heading={'Домофон'} placeholder={'1'} setValue={setCode} value={code} /> */}
+
+                                </div>
+                            </div>
+                            <Controller
+                                control={control}
+                                name="comment"
+                                defaultValue=''
+                                render={({ field }) => (
+                                    <TextArea
+                                        value={field.value}
+                                        onChange={field.onChange}
+                                        ref={register}
+                                        heading={'Комментарий'} placeholder={'Комментарий курьеру'} />
+                                )}
+                            />
+                            {/* <TextArea heading={'Комментарий'} placeholder={'Комментарий курьеру'} setValue={setComment} value={comment} /> */}
+                        </div>}
+                </form>
             </div>
 
             <div className={s.bottom}>
                 <div className={s.saveChanges}>
                     <RoundCheckbox type={'saveData'} selectedType={saveData} onChange={setSaveData} /> <span onClick={() => setSaveData(!saveData)}>Сохранить данные для заполнения</span>
                 </div>
-                <ButtonPrimary disabled={disabled} text={'Сохранить изменения'} />
+                <ButtonPrimary
+                    onClick={handleSubmit(onSubmit)}
+                    disabled={disabled} 
+                    text={'Сохранить изменения'} />
             </div>
         </div>
     )

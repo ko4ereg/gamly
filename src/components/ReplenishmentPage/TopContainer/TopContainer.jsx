@@ -4,22 +4,18 @@ import g from './../../../Globalstyles.module.css';
 import backskins from './../../../assets/replenishment/backskins.png';
 import backbalance from './../../../assets/replenishment/backbalance.png';
 import { useEffect } from 'react';
+import Tabs from '../../common/Tabs/Tabs';
+import BigTab from '../../common/BigTab/BigTab';
 
 const TopContainer = (props) => {
 
-    const handleClick = (type) => {
-        props.setSelectedType(type);
-    }
-
     const imagesPreload = [backskins, backbalance];
-
 
     useEffect(() => {
         imagesPreload.forEach((image) => {
             const newImage = new Image();
             newImage.src = image;
             window[image] = newImage;
-            console.log('succes');
         });
 
     }, [])
@@ -48,8 +44,10 @@ const TopContainer = (props) => {
                             } />
                     </div>
                     <div className={s.type}>
-                        <div onClick={() => handleClick('skins')} className={`${s.tab} ${props.selectedType === 'skins' ? s.active : ''}`}><h4>Скинами</h4></div>
-                        <div onClick={() => handleClick('balance')} className={`${s.tab} ${props.selectedType === 'balance' ? s.active : ''}`}><h4>На баланс</h4></div>
+                        <Tabs>
+                            <BigTab setSelectedType={props.setSelectedType} selected={props.selectedType} type={'skins'} text={'Скинами'} />
+                            <BigTab setSelectedType={props.setSelectedType} selected={props.selectedType} type={'balance'} text={'На баланс'} />
+                        </Tabs>
                     </div>
                 </div>
             </div>

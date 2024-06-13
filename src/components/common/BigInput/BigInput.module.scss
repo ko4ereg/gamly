@@ -13,6 +13,11 @@
     background-color: transparent;
 }
 
+.invalid {
+    border-bottom: 2.5px dashed var(--red-100);
+}
+
+
 .title {
     color: var(--white);
     font-size: 16px;
@@ -154,7 +159,7 @@
 @media (hover: hover) and (pointer: fine) {
     .container {
 
-        &:hover {
+        &:hover:not(.invalid) {
 
             border-bottom: 2.5px dashed var(--gray-40);
             transition: 0.2s ease-out;
@@ -170,7 +175,7 @@
 @media (hover: none) and (pointer: coarse) {
     .container {
 
-        &:active {
+        &:active:not(.invalid) {
 
             border-bottom: 2.5px dashed var(--gray-40);
             transition: 0.2s ease-out;

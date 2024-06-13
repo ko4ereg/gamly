@@ -1,8 +1,7 @@
 import s from './RoundCheckbox.module.scss';
 
 const RoundCheckbox = ({ type, selectedType, onChange, label }) => {
- console.log(type);
- console.log(selectedType);
+
     return (
         <div className={s.input}>
             <input type="checkbox" id={type} onChange={() => onChange(!selectedType)} checked={selectedType} />
