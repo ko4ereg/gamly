@@ -1,37 +1,14 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import s from './BigInput.module.scss';
-import { formatValue, unformatValue } from '../../../utils/formatValue';
 import SmallButton from '../Buttons/SmallButton/SmallButton';
 import Indicator from '../Indicator/Indicator';
 import CurrencyButton from '../CurrencyButton/CurrencyButton';
-
 import Tooltip from '../Tooltip/Tooltip';
-
 import GamlyCoin from '../GamlyCoin/GamlyCoin';
 
-const BigInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, invalid, ...props }) => {
+const BigInput = ({ heading, value, onChange, number, placeholder, promo, tooltipText, coin, invalid, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
-
-    // const handleChangeNumberInput = (e) => {
-    //     console.log(e.target.value);
-    //     // let formattedValue = formatValue(e.target.value);
-    //     props.setPriceWithputFormat && props.setPriceWithputFormat(parseInt(unformatValue(e.target.value)));
-    //     // setValue(formattedValue);
-    // }
-
-    const handleChangeInput = (e) => {
-        if (number) {
-            console.log(e.target.value);
-        }
-        else {
-            console.log('notnumber');
-        }
-    }
-
-    const handleChangeTextInput = (e) => {
-        setValue(e.target.value);
-    }
 
     const [inputRightPadding, setInputRightPadding] = useState(0);
 
@@ -57,10 +34,8 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
 
     }
 
-
-
     useEffect(() => {
-        if (value.trim().length === 0) {
+        if (promo && value.trim().length === 0) {
             setPromoClicked(false);
         }
     }, [value])
@@ -75,25 +50,12 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
         )
     }, [suffix])
 
-    if (value === null) {
-        value = '';
-    }
-
-    const [showTooltip, setShowTooltip] = useState(false);
-
-    const handleMouseEnter = () => {
-        setShowTooltip(true);
-    }
-    const handleMouseLeave = () => {
-        setShowTooltip(false);
-    }
-    //Tooltip logic
-
-    //aaa
-
+    // if (value === null) {
+    //     value = '';
+    // }
 
     return (
-        <div className={`${s.container} ${invalid && s.invalid}`}>
+        <div className={`${s.container} ${invalid && s.invalid} `}>
 
             <div className={s.title}>{heading} {value.trim().length > 0 && promoClicked && <span className={error ? s.error : s.ok}>-10% на первый заказ</span>}</div>
             <div className={s.wrapper}>
@@ -107,7 +69,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
                         className={s.input}
                         value={value}
                         placeholder={placeholder}
-                        onChange={props.onChange}
+                        onChange={onChange}
                         {...props}
                     />
                     {number && <div className={s.inputFakeValueWrapper} style={{ gap: suffixGap, padding: inputPadding }}>
@@ -122,7 +84,7 @@ const BigInput = ({ heading, value, setValue, number, placeholder, promo, toolti
                     {number && !coin && <CurrencyButton setSuffix={setSuffix} />}
                     {promo && value.trim().length > 0 && !promoOk && <SmallButton onClick={promoClick} text={'Применить'} />}
                     {promoClicked && <Indicator succes={error ? false : true} />}
-                    <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
+                    <div className={s.helpButton}  >
                         <Tooltip tooltipText={tooltipText} />
                     </div>
 

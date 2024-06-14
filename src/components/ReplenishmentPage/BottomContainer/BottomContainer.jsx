@@ -5,7 +5,6 @@ import ButtonPrimary from '../../common/Buttons/ButtonPrimary/ButtonPrimary';
 import Commision from './Commision/Commision';
 import { Controller, useForm } from 'react-hook-form';
 import { formatValue, unformatValue } from '../../../utils/formatValue';
-import { useEffect, useState } from 'react';
 
 const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFormat, login, setLogin, promo, price, setPrice, setPromo, ...props }) => {
     const { register, handleSubmit, control, setValue, getValues, clearErrors, formState: { errors } } = useForm({});
@@ -19,11 +18,10 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
         data.link && setLink(data.link);
         data.login && setLogin(data.link);
         setPrice(data.price);
-        console.log(price);
         console.log(data);
     }
 
- 
+
 
     const handleChangeInput = (e) => {
         const formattedValue = formatValue(e.target.value);
@@ -57,7 +55,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
                             name="link"
                             defaultValue=''
                             rules={{ required: true }}
-                            render={({ field, fieldState: { isDirty } }) => (
+                            render={({ field, fieldState: { isDirty, isTouched } }) => (
                                 <BigInput
                                     tooltipText={'Введите ссылку'}
                                     invalid={isDirty && !field.value} // Устанавливаем invalid в true, если поле пустое и пользователь его потрогал
@@ -71,10 +69,11 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
                                         if (isDirty && !field.value) {
                                             clearErrors("link"); // Очистить ошибку по имени поля
                                         }
+                                         
                                     }}
+                               
                                     value={field.value}
                                     onChange={field.onChange}
-                                    ref={register}
                                     heading={'Ссылка на обмен'} placeholder={'Ваша трейд-ссылка'} />
                             )}
                         />
@@ -102,7 +101,6 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
                                     }}
                                     value={field.value}
                                     onChange={(e) => { setLogin(e.target.value); setValue('login', e.target.value) }}
-                                    ref={register}
                                     heading={'Логин Steam*'} placeholder={'Ваш логин Steam'} />
                             )}
                         />
@@ -132,7 +130,6 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
                                     }}
                                     value={field.value}
                                     onChange={handleChangeInput}
-                                    ref={register}
                                     number={true}
                                     heading={'Сумма к получению*'} placeholder={'0'} />
                             )}
@@ -140,7 +137,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
                         <BigInput
                             tooltipText={'промокод на скидку'}
                             value={promo}
-                            setValue={setPromo}
+                            onChange={setPromo}
                             heading={'Промокод'}
                             placeholder={'Промокод'}
                             promo={true}

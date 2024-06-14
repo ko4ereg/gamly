@@ -11,8 +11,8 @@ const PriceFromTo = ({ fromPrice, toPrice, setToPrice, setFromPrice }) => {
 
 
     const handleFilterReset = () => {
-        setFromPrice(null);
-        setToPrice(null);
+        setFromPrice('');
+        setToPrice('');
     }
 
     const handleChangeFromInput = (e) => {
@@ -33,8 +33,8 @@ const PriceFromTo = ({ fromPrice, toPrice, setToPrice, setFromPrice }) => {
                 Цена
                 <TextButtonC2 hidden={hiddenFrom} onClick={handleFilterReset} text={'Сбросить'} /></div>
             <div className={s.pricing}>
-                <SmallInput value={fromPrice} setValue={setFromPrice} placeholder={0} heading={'от'} number={true} currencyOff={true} />
-                <SmallInput value={toPrice} setValue={setToPrice} placeholder={0} heading={'до'} number={true} currencyOff={true} />
+                <SmallInput value={fromPrice} onChange={handleChangeFromInput} placeholder={0} heading={'от'} number={true} currencyOff={true} />
+                <SmallInput value={toPrice} onChange={handleChangeToInput} placeholder={0} heading={'до'} number={true} currencyOff={true} />
             </div>
         </div>
 

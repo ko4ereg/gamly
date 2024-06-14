@@ -1,55 +1,4 @@
-// import { useRef, useState } from 'react';
-// import s from './Tooltip.module.scss';
-// import { FloatingArrow, arrow, useFloating } from '@floating-ui/react';
-// import HelpButton from '../HelpButton/HelpButton';
-
-// const Tooltip = ({ text, showTooltip }) => {
-
-//     const arrowRef = useRef(null);
-//     const { refs, floatingStyles, context } = useFloating({
-//         middleware: [
-//             arrow({
-//                 element: arrowRef,
-//             }),
-//         ],
-//     });
-
-//     // const [showTooltip, setShowTooltip] = useState(false);
-
-//     // const handleMouseEnter = () => {
-//     //     setShowTooltip(true);
-//     // }
-//     // const handleMouseLeave = () => {
-//     //     setShowTooltip(false);
-//     //     console.log('leave');
-//     // }
-//     return (
-
-//         <>
-//             <div className={s.tooltipContainer} ref={refs.setReference}/>
-//             <HelpButton />
-
-//             {showTooltip && <div  ref={refs.setFloating}  style={floatingStyles} className={s.tooltip}>
-//                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam minus quos at omnis aspernatur explicabo id voluptatibus, tempora ea beatae non corporis ipsum adipisci et vel ullam reprehenderit optio sint.
-//                <div> <FloatingArrow ref={arrowRef} fill='#211F29' tipRadius={8} staticOffset={'50%'} context={context} d='M11 6C11 0 21.25 0 21.25 0H0.75C0.75 0 11 0 11 6Z' height={6} width={20.5} /></div>
-//             </div>}
-//         </>
-//         //     <div className={s.tooltip}>
-//         //         {text}
-//         //         <div className={s.rectangle}>
-//         //         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="6" viewBox="0 0 22 6" fill="none">
-//         // <path d="M11 6C11 0 21.25 0 21.25 0H0.75C0.75 0 11 0 11 6Z" fill="#211F29"/>
-//         // </svg>
-//         //         </div>
-//         //     </div>
-
-
-//     )
-// }
-
-// export default Tooltip;
-
-import { useRef, useState } from "react";
+ import { useRef, useState } from "react";
 import {
     useFloating,
     autoUpdate,
@@ -64,8 +13,6 @@ import {
     FloatingPortal,
     FloatingArrow,
     arrow,
-    size,
-    limitShift
 } from "@floating-ui/react";
 
 import s from './Tooltip.module.scss';

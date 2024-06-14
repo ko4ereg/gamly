@@ -11,11 +11,19 @@
     padding-bottom: 3px;
     // background-color: var(--background-far);
     background-color: transparent;
+    transition: 0.2s ease-out;
 }
 
 .invalid {
     border-bottom: 2.5px dashed var(--red-100);
+    transition: 0.2s ease-out;
 }
+ 
+.active {
+    border-bottom: 2.5px dashed var(--gray-40);
+    transition: 0.2s ease-out;
+}
+ 
 
 
 .title {
@@ -165,6 +173,7 @@
             transition: 0.2s ease-out;
 
         }
+ 
     }
 
 

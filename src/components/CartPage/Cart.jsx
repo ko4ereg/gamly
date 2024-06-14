@@ -14,7 +14,7 @@ const Cart = ({ prods, deleteItem, addItem, reduceItem }) => {
                 prods.map(prod => {
                     if (!uniqueIds.includes(prod.id)) {
                         uniqueIds.push(prod.id);
-                        return <CartItem addItem={addItem} prods={prods} deleteItem={deleteItem} reduceItem={reduceItem} prod={prod} />
+                        return <CartItem addItem={addItem} prods={prods} deleteItem={deleteItem} key={prod.id} reduceItem={reduceItem} prod={prod} />
                     }
                     return null;
                 })

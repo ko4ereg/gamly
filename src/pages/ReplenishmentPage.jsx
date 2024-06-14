@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import ReplenishmentPopup from '../components/ReplenishmentPage/FilterPopup/ReplenishmentPopup';
+import { useState } from 'react';
 import g from './../Globalstyles.module.css';
 import s from './ReplenishmentPage.module.css';
 import TopContainer from '../components/ReplenishmentPage/TopContainer/TopContainer';
@@ -46,7 +45,6 @@ const ReplenishmentPage = (props) => {
                     setPopupActive={setPopupActive} selectedType={selectedType} setSelectedType={setSelectedType} />
 
                 {selectedType === 'skins' && <PopupReplenishment promo={promo} setToLogin={setToLogin} price={price} login={login} link={link} priceWithoutFormat={priceWithoutFormat} setPopupActive={setPopupActive} popupActive={popupActive} />}
-                {/* {selectedType === 'skins' && <ReplenishmentPopup promo={promo} setToLogin={setToLogin} price={price} login={login} link={link} priceWithoutFormat={priceWithoutFormat} setPopupActive={setPopupActive} popupActive={popupActive} />} */}
                 {toLogin && <PopupWithImage image={loginback} popupActive={toLogin} setPopupActive={setToLogin} heading={'Войти в аккаунт'} note={'Начните получать бонусы и сохраняйте свои данные для быстрого пополнения!'}>
                     <PopupLogin />
                     <BottomMenu></BottomMenu>

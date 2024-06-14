@@ -1,12 +1,10 @@
+import { useRef } from 'react';
 import s from './SmallInput.module.scss';
 import ReactInputMask from 'react-input-mask';
 
-const SmallInputPhone = ({ heading, value, setValue, number,  placeholder, invalid,...props }) => {
+const SmallInputPhone = ({ heading, value, onChange, number,  placeholder, invalid,...props }) => {
 
-    const handleChangeTextInput = (e) => {
-        setValue(e.target.value);
-    }
- 
+    const inputRef = useRef();
     return (
         <div className={`${s.container} ${ invalid && s.invalid}`}>
 
@@ -17,7 +15,7 @@ const SmallInputPhone = ({ heading, value, setValue, number,  placeholder, inval
             </div>
             <div className={s.wrapper}>
                 <div className={s.inputWrapper}>
-                    <ReactInputMask type='text' placeholder={placeholder} className={s.input} mask="+7 (999) 999-99-99" value={value} onChange={props.onChange} />
+                    <ReactInputMask type='text' placeholder={placeholder} className={s.input} mask="+7 (999) 999-99-99" value={value} onChange={onChange}    ref={inputRef.current} />
 
                 </div>
             </div>

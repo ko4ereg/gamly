@@ -50,11 +50,11 @@ const CartItem = ({ prod, deleteItem, prods, addItem, reduceItem }) => {
                 <div className={s.controls}>
                     <div className={s.count}>
                         <CloseButton disabled={totalQuantity === 1} onClick={() => handleDecreaseAmount()} icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3.05078 7.99872L7.99359 7.99872L12.9364 7.99872" stroke="#B2ACBF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3.05078 7.99872L7.99359 7.99872L12.9364 7.99872" stroke="#B2ACBF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>} />
                         {totalQuantity}
                         <CloseButton onClick={() => handleIncreaseAmount()} icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M7.99357 12.9415L7.99359 7.99872M7.99359 7.99872L7.99357 3.05593M7.99359 7.99872L3.05078 7.99872M7.99359 7.99872L12.9364 7.99872" stroke="#B2ACBF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M7.99357 12.9415L7.99359 7.99872M7.99359 7.99872L7.99357 3.05593M7.99359 7.99872L3.05078 7.99872M7.99359 7.99872L12.9364 7.99872" stroke="#B2ACBF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>} />
                     </div>
                     <div className={s.button}>

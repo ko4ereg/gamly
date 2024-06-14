@@ -1,6 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import s from './SmallInput.module.scss';
-import { formatValue, unformatValue } from '../../../utils/formatValue';
 import Indicator from '../Indicator/Indicator';
 import CurrencyButton from '../CurrencyButton/CurrencyButton';
 import Tooltip from '../Tooltip/Tooltip';
@@ -8,23 +7,10 @@ import GamlyCoin from '../GamlyCoin/GamlyCoin';
 import TextButtonC2 from '../Buttons/TextButtonC2/TextButtonC2';
 
 
-const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo, currencyOff, invalid, ...props }) => {
+const SmallInput = ({ heading, value, onChange, number, placeholder, promo, tooltipText, coin, note, addInfo, setShowPromo, currencyOff, invalid, ...props }) => {
 
     const [suffix, setSuffix] = useState('₽');
-
-    const handleChangeNumberInput = (e) => {
-
-        let formattedValue = formatValue(e.target.value);
-        props.setPriceWithoutFormat && props.setPriceWithoutFormat(parseInt(unformatValue(formattedValue)));
-        setValue(formattedValue);
-    }
-
-    const handleChangeTextInput = (e) => {
-        setValue(e.target.value);
-    }
-
     const [inputRightPadding, setInputRightPadding] = useState(0);
-
     const inputPadding = 0;
     const suffixGap = 3;
     const suffixRef = useRef();
@@ -52,7 +38,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
 
 
     useEffect(() => {
-        if (value.trim().length === 0) {
+        if (promo && value.trim().length === 0) {
             setPromoClicked(false);
         }
     }, [value])
@@ -66,22 +52,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
                 : inputPadding,
         )
     }, [suffix])
-
-    if (value === null) {
-        value = '';
-    }
-
-    const [showTooltip, setShowTooltip] = useState(false);
-
-    const handleMouseEnter = () => {
-        setShowTooltip(true);
-    }
-    const handleMouseLeave = () => {
-        setShowTooltip(false);
-    }
-
-
-
+    
     return (
         <div className={`${s.container} ${invalid && s.invalid}`}>
 
@@ -107,7 +78,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
                         className={s.input}
                         value={value}
                         placeholder={placeholder}
-                        onChange={number ? handleChangeNumberInput : handleChangeTextInput}
+                        onChange={onChange}
                         {...props}
                     />
 
@@ -126,7 +97,7 @@ const SmallInput = ({ heading, value, setValue, number, placeholder, promo, tool
                         {promo && value.trim().length > 0 && !promoOk && <TextButtonC2 onClick={promoClick} text={'Применить'} />}
                         {promoClicked && <Indicator small={true} succes={error ? false : true} />}
                     </div>
-                    {tooltipText && <div className={s.helpButton} onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseEnter}>
+                    {tooltipText && <div className={s.helpButton}  >
                         <Tooltip small={true} tooltipText={tooltipText} />
                     </div>}
 

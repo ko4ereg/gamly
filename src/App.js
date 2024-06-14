@@ -9,6 +9,11 @@ import ProductPage from './pages/ProductPage';
 import ReplenishmentPage from './pages/ReplenishmentPage';
 import CartPage from './pages/CartPage';
 import MiniFooter from './components/MiniFooter/MiniFooter';
+import backskins from './assets/replenishment/backskins.png';
+import backbalance from './assets/replenishment/backbalance.png';
+import popuplogin from './assets/popup/loginback.png';
+import popupsucces from './assets/popup/succesreplenishmentback.png';
+import popupfail from './assets/popup/failreplenishmentback.png';
 
 function App() {
 
@@ -30,9 +35,17 @@ function App() {
     }
   }
 
+  const imagesPreload = [backskins, backbalance, popuplogin, popupsucces, popupfail];
+ 
+
+
   useEffect(() => {
     document.addEventListener('touchstart', preventZoom, { passive: false });
-
+    imagesPreload.forEach((image) => {
+      const newImage = new Image();
+      newImage.src = image;
+      window[image] = newImage;
+  });
     return () => {
       document.removeEventListener('touchstart', preventZoom);
     };

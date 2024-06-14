@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { formatValue } from '../../utils/formatValue';
 import GamlyCoin from '../common/GamlyCoin/GamlyCoin';
-import RubyCoin from '../common/RubyCoin/RubyCoin';
 import SmallInput from '../common/SmallInput/SmallInput';
 import s from './Total.module.scss';
 import PaymentMethods from '../common/PaymentMethods/PaymentMethods';
@@ -17,6 +16,10 @@ const Total = ({ price }) => {
     const [showPromo, setShowPromo] = useState(false);
     const [promo, setPromo] = useState('');
 
+
+const handleChangeInput = (e) => {
+    setPromo(e.target.value)
+}
 
     const [selectedType, setSelectedType] = useState('');
     const disabled = !selectedType;
@@ -61,7 +64,7 @@ const Total = ({ price }) => {
                         </div>
                     </div>
                 </div>
-                <SmallInput heading={'Промокод'} setShowPromo={setShowPromo} value={promo} setValue={setPromo} promo={true} placeholder={'Ваш промокод'} />
+                <SmallInput heading={'Промокод'} setShowPromo={setShowPromo} value={promo} onChange={handleChangeInput} promo={true} placeholder={'Ваш промокод'} />
             </div>
             <div className={s.payment}>
                 <div className={s.method}>Метод оплаты</div>

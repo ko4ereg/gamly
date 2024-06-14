@@ -15,21 +15,8 @@ import { Controller, useForm } from 'react-hook-form';
 
 const Delivery = () => {
 
-    const [secondName, setSecondName] = useState('');
-    const [firstName, setFirstName] = useState('');
-    const [surName, setsurName] = useState('');
     const [selectedType, setSelectedType] = useState('point');
-    const [phone, setPhone] = useState('');
-    const [email, setEmail] = useState('');
-    const [address, setAddress] = useState('');
-
     const [saveData, setSaveData] = useState(false);
-
-    const [enter, setEnter] = useState('');
-    const [floor, setFloor] = useState('');
-    const [flat, setFlat] = useState('');
-    const [code, setCode] = useState('');
-    const [comment, setComment] = useState('');
 
     const addresses = [
         'Свердловская область, Екатеринбург, ул. Циолковского 27',
@@ -57,19 +44,19 @@ const Delivery = () => {
     }
 
 
-    const { register, handleSubmit, control, setValue,getValues, formState: { errors } } = useForm({});
+    const { handleSubmit, control, setValue,getValues, formState: { errors } } = useForm({});
 
     const handleClick = (address) => {
         setValue('addressPoint', address);
         setShowResult(false);
     }
 
-    console.log(errors);
+
  
     const disabled =  !getValues("secondName") || !getValues("firstName") || !getValues("surName") || !getValues("phone") || !getValues("email") || selectedType === 'point' 
     ? !getValues("addressPoint") : !getValues("addressHome") || !getValues("flat") || !getValues("floor") || !getValues('enter');
     
-    console.log(disabled);
+
     const onSubmit = (data) => console.log(data)
 
 
@@ -110,7 +97,6 @@ const Delivery = () => {
                                             }}
                                             value={field.value}
                                             onChange={field.onChange}
-                                            ref={register}
                                             heading={'Фамилия'} placeholder={'Попов'} />
                                     )}
                                 />
@@ -135,7 +121,6 @@ const Delivery = () => {
                                             }}
                                             value={field.value}
                                             onChange={field.onChange}
-                                            ref={register}
                                             heading={'Имя'} placeholder={'Иван'} />
                                     )}
                                 />
@@ -158,7 +143,6 @@ const Delivery = () => {
                                             }}
                                             value={field.value}
                                             onChange={field.onChange}
-                                            ref={register}
                                             heading={'Отчество'} placeholder={'Александрович'} />
                                     )}
                                 />
@@ -182,7 +166,6 @@ const Delivery = () => {
                                             }}
                                             value={field.value}
                                             onChange={field.onChange}
-                                            ref={register}
                                             heading={'Телефон'} placeholder={'+7 (000) 000-00-00'} />
                                     )}
                                 />
@@ -207,18 +190,15 @@ const Delivery = () => {
                                             }}
                                             value={field.value}
                                             onChange={field.onChange}
-                                            ref={register}
                                             heading={'E-mail'} placeholder={'email@gmail.com'} />
                                     )}
                                 />
-                                {/* <SmallInput value={email} setValue={setEmail} heading={'E-mail'} placeholder={'email@gmail.com'} /> */}
                             </div>
                         </div>
 
                     </div>
                     {selectedType === 'point' ? <div className={s.point}>
                         <div className={s.searchResults}>
-                            {/* <SmallInput heading={'Пункт выдачи'} note={'Приблизительное время доставки'} addInfo={'6-7 дней'} placeholder={'Укажите ближайший адрес или метро'} setValue={handleAddressChange} value={address} /> */}
                             <Controller
                                 control={control}
                                 name="addressPoint"
@@ -228,7 +208,6 @@ const Delivery = () => {
                                     <SmallInput heading={'Пункт выдачи'}
                                         note={'Приблизительное время доставки'}
                                         addInfo={'6-7 дней'}
-                                        ref={register}
                                         invalid={isDirty && !field.value}
                                         onBlur={() => {
                                             if (!field.value) {
@@ -274,15 +253,12 @@ const Delivery = () => {
                                         }}
                                         value={field.value}
                                         onChange={field.onChange}
-                                        ref={register}
                                         heading={'Адрес доставки'}
                                         note={'Приблизительное время доставки'}
                                         addInfo={'6-7 дней'}
                                         placeholder={'Укажите ближайший адрес или метро'} />
                                 )}
                             />
-                            {/* <SmallInput heading={'Адрес доставки'} note={'Приблизительное время доставки'} addInfo={'6-7 дней'} placeholder={'Укажите ближайший адрес или метро'} setValue={handleAddressChange} value={address} /> */}
-
                             <div className={s.address}>
                                 <div className={s.input}>
                                     <Controller
@@ -301,11 +277,9 @@ const Delivery = () => {
                                                 }}
                                                 value={field.value}
                                                 onChange={field.onChange}
-                                                ref={register}
                                                 heading={'Подъезд'} placeholder={'1'} />
                                         )}
                                     />
-                                    {/* <SmallInput heading={'Подъезд'} placeholder={'1'} setValue={setEnter} value={enter} /> */}
                                 </div>
                                 <div className={s.input}>
                                     <Controller
@@ -324,11 +298,9 @@ const Delivery = () => {
                                                 }}
                                                 value={field.value}
                                                 onChange={field.onChange}
-                                                ref={register}
                                                 heading={'Этаж'} placeholder={'1'} />
                                         )}
                                     />
-                                    {/* <SmallInput heading={'Этаж'} placeholder={'1'} setValue={setFloor} value={floor} /> */}
                                 </div>
                                 <div className={s.input}>
                                     <Controller
@@ -347,11 +319,9 @@ const Delivery = () => {
                                                 }}
                                                 value={field.value}
                                                 onChange={field.onChange}
-                                                ref={register}
                                                 heading={'Квартира'} placeholder={'1'} />
                                         )}
                                     />
-                                    {/* <SmallInput heading={'Квартира'} placeholder={'1'} setValue={setFlat} value={flat} /> */}
                                 </div>
                                 <div className={s.input}>
                                     <Controller
@@ -370,12 +340,9 @@ const Delivery = () => {
                                                 }}
                                                 value={field.value}
                                                 onChange={field.onChange}
-                                                ref={register}
                                                 heading={'Домофон'} placeholder={'1'} />
                                         )}
                                     />
-                                    {/* <SmallInput heading={'Домофон'} placeholder={'1'} setValue={setCode} value={code} /> */}
-
                                 </div>
                             </div>
                             <Controller
@@ -386,11 +353,9 @@ const Delivery = () => {
                                     <TextArea
                                         value={field.value}
                                         onChange={field.onChange}
-                                        ref={register}
                                         heading={'Комментарий'} placeholder={'Комментарий курьеру'} />
                                 )}
                             />
-                            {/* <TextArea heading={'Комментарий'} placeholder={'Комментарий курьеру'} setValue={setComment} value={comment} /> */}
                         </div>}
                 </form>
             </div>

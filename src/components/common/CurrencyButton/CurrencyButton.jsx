@@ -20,17 +20,17 @@ const CurrencyButton = ({ setSuffix }) => {
             <div className={s.chevron}>
                 {open
                     ? <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M4 10L8 6L12 10" stroke="#B2ACBF" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 10L8 6L12 10" stroke="#B2ACBF" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     :
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M4 6L8 10L12 6" stroke="#E7E5ED" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 6L8 10L12 6" stroke="#E7E5ED" strokeOpacity="0.4" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>}
             </div>
             {open && value === '₽ RUB' && <div className={s.list}>
                 <div suffix='₽' value='₽ RUB' onClick={handleClick} className={s.container + ' ' + s.item}><div className={s.value}>₽ RUB</div><div className={s.chevron}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M4 10L8 6L12 10" stroke="#B2ACBF" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 10L8 6L12 10" stroke="#B2ACBF" strokeLinecap="round" strokeLinejoin="round" />
                     </svg></div> </div>
                 <div suffix='₺' value='₺ TRY' onClick={handleClick} className={s.container + ' ' + s.item}>₺ TRY</div>
                 <div suffix='$' value='$ USD' onClick={handleClick} className={s.container + ' ' + s.item}>$ USD</div>
@@ -39,7 +39,7 @@ const CurrencyButton = ({ setSuffix }) => {
             {open && value === '₺ TRY' && <div className={s.list}>
                 <div suffix='₺' value='₺ TRY' onClick={handleClick} className={s.container + ' ' + s.item}><div className={s.value}>₺ TRY</div><div className={s.chevron}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M4 10L8 6L12 10" stroke="#B2ACBF" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 10L8 6L12 10" stroke="#B2ACBF" strokeLinecap="round" strokeLinejoin="round" />
                     </svg></div> </div>
                 <div suffix='₽' value='₽ RUB' onClick={handleClick} className={s.container + ' ' + s.item}>₽ RUB</div>
                 <div suffix='$' value='$ USD' onClick={handleClick} className={s.container + ' ' + s.item}>$ USD</div>
@@ -48,7 +48,7 @@ const CurrencyButton = ({ setSuffix }) => {
             {open && value === '$ USD' && <div className={s.list}>
                 <div suffix='$' value='$ USD' onClick={handleClick} className={s.container + ' ' + s.item}><div className={s.value}>$ USD</div><div className={s.chevron}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M4 10L8 6L12 10" stroke="#B2ACBF" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 10L8 6L12 10" stroke="#B2ACBF" strokeLinecap="round" strokeLinejoin="round" />
                     </svg></div> </div>
                 <div suffix='₺' value='₺ TRY' onClick={handleClick} className={s.container + ' ' + s.item}>₺ TRY</div>
                 <div suffix='₽' value='₽ RUB' onClick={handleClick} className={s.container + ' ' + s.item}>₽ RUB</div>
