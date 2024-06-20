@@ -8,7 +8,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    font-size: var(--fs-C_1-1920);
+    font-style: normal;
+    font-weight: var(--fw-C_1);
+    line-height: var(--lh-C_1);
+    letter-spacing: var(--ls-C_1-1920);
     a,
     a:hover,
     a:visited {
@@ -18,12 +22,6 @@ footer {
 
     .rights {
         color: var(--gray-15);
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        /* 16.8px */
-        letter-spacing: 0.42px;
     }
 
     .options {
@@ -33,12 +31,7 @@ footer {
         text-align: center;
         gap: 24px;
         color: var(--gray-40);
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        /* 16.8px */
-        letter-spacing: 0.42px;
+      
 
         a {
             align-self: center;
@@ -50,14 +43,6 @@ footer {
         align-items: flex-start;
         gap: 4px;
         color: var(--gray-40);
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        /* 16.8px */
-        letter-spacing: 0.42px;
-
-
     }
 }
 
@@ -71,52 +56,31 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 8px;
-
-
-        .rights {
-            font-size: 12px;
-            letter-spacing: 0.36px;
-        }
-
+        font-size: var(--fs-C_1-1024);
+        letter-spacing: var(--ls-C_1-1024);
+       
         .options {
-            font-size: 12px;
-            letter-spacing: 0.36px;
+
             gap: 16px;
         }
 
-        .design {
-            font-size: 12px;
-            letter-spacing: 0.36px;
-
-        }
     }
 }
 
 @media (max-width: 1023px) {
 
     .container {
-
-
-        .rights {
-            font-size: 13px;
-            letter-spacing: 0.39px;
-        }
-
-        .options {
-            font-size: 13px;
-            letter-spacing: 0.39px;
-        }
-
+        font-size: var(--fs-C_1-768);
+        letter-spacing: var(--ls-C_1-768);
+       
         .design {
             margin-top: -8px;
             align-items: center;
             height: 30px;
-            font-size: 13px;
-            letter-spacing: 0.39px;
         }
 
         a {
-            align-self: flex-start;
+            align-self: center;
 
         }
 
@@ -126,13 +90,14 @@ footer {
 @media (max-width: 768px) {
 
     .container {
+        font-size: var(--fs-C_1-480);
+        letter-spacing: var(--ls-C_1-480);
 
 
-
-        a {
-            align-self: flex-start;
-            margin-top: -1px;
-        }
+        // a {
+        //     align-self: flex-start;
+            
+        // }
 
     }
 }
@@ -140,27 +105,18 @@ footer {
 @media (max-width: 479px) {
 
     .container {
+        font-size: var(--fs-C_1-375);
+        letter-spacing: var(--ls-C_1-375);
 
-
-        .rights {
-            font-size: 12px;
-            letter-spacing: 0.36px;
-        }
-
-        .options {
-            font-size: 12px;
-            letter-spacing: 0.36px;
-        }
+    
 
         .design {
             margin-top: -8px;
             height: auto;
-            font-size: 12px;
-            letter-spacing: 0.36px;
 
-            a {
-                margin-top: 0px;
-            }
+            // a {
+            //     margin-top: 0px;
+            // }
         }
     }
 }
@@ -168,8 +124,6 @@ footer {
 @media (max-width: 374px) {
 
     .container {
-
-
 
         .options {
             flex-direction: column;

@@ -10,12 +10,11 @@
     .value {
         // width: 47px;
         white-space: nowrap;
-        font-size: 16px;
+        font-size: var(--fs-T_3-1920);
         font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        /* 22.4px */
-        letter-spacing: 0.32px;
+        font-weight: var( --fw-T_3);
+        line-height: var(--lh-T_3);
+        letter-spacing: var(--ls-T_3-1920);
         color: var(--gray-40);
         transition: 0.2s ease-out;
     }
@@ -50,10 +49,11 @@
 
             color: var(--light-gray);
 
-            font-size: 16px;
+            font-size: var(--fs-T_3-1920);
             font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
+            font-weight: var( --fw-T_3);
+            line-height: var(--lh-T_3);
+            letter-spacing: var(--ls-T_3-1920);
         }
 
         .item:not(:first-child) {
@@ -141,10 +141,8 @@
         .value {
             width: fit-content;
             min-width: fit-content;
-            font-size: 15px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_3-1024);
+            letter-spacing: var(--ls-T_3-1024);
         }
 
         .list {
@@ -152,10 +150,8 @@
             .item {
                 width: auto;
                 min-width: fit-content;
-                font-size: 15px;
-                line-height: 140%;
-                /* 21px */
-                letter-spacing: 0.15px;
+                font-size: var(--fs-T_3-1024);
+                letter-spacing: var(--ls-T_3-1024);
             }
 
         }
@@ -168,19 +164,15 @@
         padding: 6px 8px 6px 12px;
 
         .value {
-            font-size: 14px;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 0.28px;
+            font-size: var(--fs-T_3-480);
+            letter-spacing: var(--ls-T_3-480);
         }
 
         .list {
 
             .item {
-                font-size: 14px;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 0.28px;
+                font-size: var(--fs-T_3-480);
+                letter-spacing: var(--ls-T_3-480);
             }
 
         }
@@ -193,19 +185,15 @@
 
 
         .value {
-            font-size: 13px;
-            line-height: 140%;
-            /* 18.2px */
-            letter-spacing: 0.13px;
+            font-size: var(--fs-T_3-375);
+            letter-spacing: var(--ls-T_3-375);
         }
 
         .list {
 
             .item {
-                font-size: 13px;
-                line-height: 140%;
-                /* 18.2px */
-                letter-spacing: 0.13px;
+                font-size: var(--fs-T_3-375);
+                letter-spacing: var(--ls-T_3-375);
             }
 
         }

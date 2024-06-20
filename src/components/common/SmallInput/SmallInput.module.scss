@@ -37,33 +37,31 @@
             overflow: hidden;
             color: var(--gray-40);
             text-overflow: ellipsis;
-            font-size: 16px;
+            font-size: var(--fs-T_3-1920);
             font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 22.4px */
-            letter-spacing: 0.32px;
+            font-weight: var(--fw-T_3);
+            line-height: var(--lh-T_3);
+            letter-spacing: var(--ls-T_3-1920);
             flex: 0 0 auto;
         }
 
         .addInfo {
             color: var(--white);
-            font-size: 16px;
+            font-size: var(--fs-T_3-1920);
             font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 22.4px */
-            letter-spacing: 0.32px;
+            font-weight: var(--fw-T_3);
+            line-height: var(--lh-T_3);
+            letter-spacing: var(--ls-T_3-1920);
         }
     }
 
     .heading {
         color: var(--white);
-        font-size: 16px;
+        font-size: var(--fs-T_3-1920);
         font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        letter-spacing: 0.32px;
+        font-weight: var(--fw-T_3);
+        line-height: var(--lh-T_3);
+        letter-spacing: var(--ls-T_3-1920);
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
@@ -102,21 +100,19 @@
     outline: none;
     width: 100%;
     outline: none;
-    font-size: 18px;
+    font-size: var(--fs-T_1-1920);
     font-style: normal;
-    font-weight: 600;
-    line-height: 140%;
-    /* 25.2px */
-    letter-spacing: 0.18px;
+    font-weight: var(--fw-T_1);
+    line-height: var(--lh-T_1);
+    letter-spacing: var(--ls-T_1-1920);
     flex: 1 1 auto;
 
     &::placeholder {
-        font-size: 18px;
+        font-size: var(--fs-T_1-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 25.2px */
-        letter-spacing: 0.18px;
+        font-weight: var(--fw-T_1);
+        line-height: var(--lh-T_1);
+        letter-spacing: var(--ls-T_1-1920);
         color: var(--gray-40);
         transition: 0.2s ease-out;
         display: none;
@@ -145,12 +141,11 @@
 
     span {
         color: var(--white);
-        font-size: 18px;
+        font-size: var(--fs-T_1-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 25.2px */
-        letter-spacing: 0.18px;
+        font-weight: var(--fw-T_1);
+        line-height: var(--lh-T_1);
+        letter-spacing: var(--ls-T_1-1920);
         transition: 0.2s ease-out;
 
     }
@@ -263,10 +258,8 @@
     .title {
 
         .heading {
-            font-size: 15px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_3-1024);
+            letter-spacing: var(--ls-T_3-1024);
             gap: 4px;
 
         }
@@ -275,32 +268,32 @@
 
             .info {
 
-                font-size: 15px;
-                letter-spacing: 0.15px;
+                font-size: var(--fs-T_3-1024);
+                letter-spacing: var(--ls-T_3-1024);
             }
 
             .addInfo {
-                font-size: 15px;
-                letter-spacing: 0.15px;
+                font-size: var(--fs-T_3-1024);
+                letter-spacing: var(--ls-T_3-1024);
             }
         }
 
     }
 
     .input {
-        font-size: 16px;
-        letter-spacing: 0.16px;
+        font-size: var(--fs-T_1-1024);
+        letter-spacing: var(--ls-T_1-1024);
 
         &::placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-1024);
+            letter-spacing: var(--ls-T_1-1024);
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-1024);
+            letter-spacing: var(--ls-T_1-1024);
         }
 
     }
@@ -316,30 +309,26 @@
     .title {
 
         .heading {
-            font-size: 15px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.15px;
-
-
+            font-size: var(--fs-T_3-768);
+            letter-spacing: var(--ls-T_3-768);
         }
 
     }
 
     .input {
-        font-size: 16px;
-        letter-spacing: 0.16px;
+        font-size: var(--fs-T_1-768);
+        letter-spacing: var(--ls-T_1-768);
 
         &::placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-768);
+            letter-spacing: var(--ls-T_1-768);
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-768);
+            letter-spacing: var(--ls-T_1-768);
         }
 
     }
@@ -359,38 +348,38 @@
         .noteContainer {
 
             .info {
-                font-size: 14px;
-                letter-spacing: 0.28px;
+                font-size: var(--fs-T_3-480);
+                letter-spacing: var(--ls-T_3-480);
             }
 
             .addInfo {
-                font-size: 14px;
-                letter-spacing: 0.28px;
+                font-size: var(--fs-T_3-480);
+                letter-spacing: var(--ls-T_3-480);
             }
         }
 
         .heading {
-            font-size: 14px;
-            letter-spacing: 0.28px;
+            font-size: var(--fs-T_3-480);
+            letter-spacing: var(--ls-T_3-480);
 
         }
 
     }
 
     .input {
-        font-size: 15px;
-        letter-spacing: 0.15px;
+        font-size: var(--fs-T_1-480);
+        letter-spacing: var(--ls-T_1-480);
 
         &::placeholder {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_1-480);
+            letter-spacing: var(--ls-T_1-480);
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_1-480);
+            letter-spacing: var(--ls-T_1-480);
         }
 
     }
@@ -421,39 +410,39 @@
     .title {
 
         .heading {
-            font-size: 13px;
-            letter-spacing: 0.13px;
+            font-size: var(--fs-T_3-375);
+            letter-spacing: var(--ls-T_3-375);
 
         }
 
         .noteContainer {
 
             .info {
-                font-size: 13px;
-                letter-spacing: 0.13px;
+                font-size: var(--fs-T_3-375);
+                letter-spacing: var(--ls-T_3-375);
             }
 
             .addInfo {
-                font-size: 13px;
-                letter-spacing: 0.13px;
+                font-size: var(--fs-T_3-375);
+                letter-spacing: var(--ls-T_3-375);
             }
         }
     }
 
     .input {
-        font-size: 14px;
-        letter-spacing: 0.14px;
+        font-size: var(--fs-T_1-375);
+        letter-spacing: var(--ls-T_1-375);
 
         &::placeholder {
-            font-size: 14px;
-            letter-spacing: 0.14px;
+            font-size: var(--fs-T_1-375);
+            letter-spacing: var(--ls-T_1-375);
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 14px;
-            letter-spacing: 0.14px;
+            font-size: var(--fs-T_1-375);
+            letter-spacing: var(--ls-T_1-375);
         }
 
     }

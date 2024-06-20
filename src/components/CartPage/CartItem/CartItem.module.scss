@@ -43,12 +43,11 @@
                 overflow: hidden;
                 color: var(--white);
                 text-overflow: ellipsis;
-                font-size: 24px;
+                font-size: var(--fs-H_7-1920);
                 font-style: normal;
-                font-weight: 600;
-                line-height: 120%;
-                /* 28.8px */
-                letter-spacing: 0.24px;
+                font-weight: var(--fw-H_7);
+                line-height: var(--lh-H_7-1920);
+                letter-spacing: var(--ls-H_7-1920);
             }
 
             .price {
@@ -58,12 +57,11 @@
                 overflow: hidden;
                 color: var(--accent-color);
                 text-overflow: ellipsis;
-                font-size: 18px;
+                font-size: var(--fs-T_1-1920);
                 font-style: normal;
-                font-weight: 700;
-                line-height: 140%;
-                /* 25.2px */
-                letter-spacing: -0.18px;
+                font-weight: var(--fw-T_1-Bold);
+                line-height: var(--lh-T_1);
+                letter-spacing: var(--ls-T_1-Bold-1920);
             }
         }
 
@@ -82,12 +80,11 @@
                 overflow: hidden;
                 color: var(--white);
                 text-overflow: ellipsis;
-                font-size: 16px;
+                font-size: var(--fs-T_3-1920);
                 font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 22.4px */
-                letter-spacing: 0.32px;
+                font-weight: var(--fw-T_3);
+                line-height: var(--lh-T_3);
+                letter-spacing: var(--ls-T_3-1920);
             }
         }
     }

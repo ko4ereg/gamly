@@ -9,18 +9,15 @@
     background: var(--dark-gray);
     color: var(--light-gray);
     text-align: center;
-    font-size: 13px;
+    font-size: var(--fs-C_2-1920);
     font-style: normal;
-    font-weight: 500;
-    line-height: 94%;
-    /* 12.22px */
-    letter-spacing: 0.39px;
+    font-weight: var(--fw-C_2);
+    line-height: var(--lh-C_2);
+    letter-spacing: var(--ls-C_2-1920);
     position: relative;
     // width: fit-content;
     // height: auto;
     z-index: 1;
-
-
 }
 
 .rectangle {

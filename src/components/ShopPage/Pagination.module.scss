@@ -1,0 +1,118 @@
+.pagination {
+    display: flex;
+    gap: 12px;
+    height: 40px;
+
+    .page {
+        height: 100%;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid var(--gray-10);
+        border-radius: 8px;
+        font-style: normal;
+        font-size: var(--fs-T_3-1920);
+        font-weight: var(--fw-T_3);
+        line-height: var(--lh-T_3);
+        letter-spacing: var(--ls-T_3-1920);
+        text-align: left;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    .activePage {
+        background-color: var(--gray-10-transparacy);
+        border: none;
+        border-radius: 8px;
+        transition: 0.2s ease-out;
+    }
+
+    .pageEmpty {
+        color: var(--gray-40);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 120%;
+        /* 16.8px */
+        letter-spacing: 0.42px;
+        display: flex;
+        align-items: flex-end;
+
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .pagination {
+        .page {
+            &:hover {
+                transition: 0.2s ease-out;
+                border: 1.5px solid var(--gray-40);
+            }
+        }
+        .activePage {
+            &:hover {
+                border: none;
+            }
+        }
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .pagination {
+        .page {
+            &:active {
+                transition: 0.2s ease-out;
+                border: 1.5px solid var(--gray-40);
+            }
+        }
+        .activePage {
+            &:active {
+                border: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .pagination {
+
+        .page {
+
+            font-size: var(--fs-T_3-1024);
+            letter-spacing: var(--ls-T_3-1024);
+        }
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .pagination {
+
+        .page {
+            font-size: var(--fs-T_3-768);
+            letter-spacing: var(--ls-T_3-768);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .pagination {
+
+        .page {
+            font-size: var(--fs-T_3-480);
+            letter-spacing: var(--ls-T_3-480);
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .pagination {
+        .page {
+            font-size: var(--fs-T_3-375);
+            letter-spacing: var(--ls-T_3-375);
+        }
+    }
+}
+
+ 

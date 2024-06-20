@@ -7,12 +7,11 @@
     border-radius: 8px;
     width: 100%;
     cursor: pointer;
-    font-size: 16px;
+    font-size: var(--fs-T_3-1920);
     font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-    /* 22.4px */
-    letter-spacing: 0.32px;
+    font-weight: var( --fw-T_3);
+    line-height: var(--lh-T_3);
+    letter-spacing: var(--ls-T_3-1920);
     background-color: var(--dark-gray);
     border: none;
     color: var(--light-gray);
@@ -63,9 +62,8 @@
 
 @media (max-width: 1439px) {
     .button {
-        font-size: 15px;
-        letter-spacing: 0.15px;
-
+        font-size: var(--fs-T_3-1024);
+        letter-spacing: var(--ls-T_3-1024);
     }
 
     .small {
@@ -82,12 +80,8 @@
 @media (max-width: 767px) {
     .button {
         padding: 18px 32px;
-        font-size: 14px;
-        font-style: normal;
-        letter-spacing: 0.28px;
-      
-  
-  
+        font-size: var(--fs-T_3-480);
+        letter-spacing: var(--ls-T_3-480);
     }
 
     .small {
@@ -103,10 +97,8 @@
 }
 @media (max-width: 479px) {
     .button {
- 
-        font-size: 13px;
-        line-height: 140%; /* 18.2px */
-        letter-spacing: 0.13px;
+        font-size: var(--fs-T_3-375);
+        letter-spacing: var(--ls-T_3-375);
     }
 
     .small {

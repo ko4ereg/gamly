@@ -12,12 +12,11 @@
     border-radius: 93px;
     background: var(--dark-gray);
     transition: 0.2s ease-out;
-    font-size: 13px;
+    font-size: var(--fs-C_2-1920);
     font-style: normal;
-    font-weight: 500;
-    line-height: 94%;
-    /* 12.22px */
-    letter-spacing: 0.39px;
+    font-weight: var(--fw-C_2);
+    line-height:  var(--lh-C_2);
+    letter-spacing: var(--ls-C_2-1920);
     color: var(--light-gray);
 }
 
@@ -53,8 +52,7 @@
 
 @media (max-width: 1439px) {
     .button {
-        font-size: 12px;
-        letter-spacing: 0.36px;
-
+        font-size: var(--fs-C_2-1024);
+        letter-spacing: var(--ls-C_2-1024);
     }
 }

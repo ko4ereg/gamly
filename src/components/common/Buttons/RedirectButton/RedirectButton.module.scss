@@ -30,12 +30,11 @@
 
     .subtext {
         color: var(--gray-40);
-        font-size: 14px;
+        font-size: var(--fs-C_1-1920);
         font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        /* 16.8px */
-        letter-spacing: 0.42px;
+        font-weight: var(--fw-C_1);
+        line-height:  var(--lh-C_1);
+        letter-spacing: var(--ls-C_1-1920);
         transition: 0.2s ease-out;
     }
 
@@ -74,8 +73,8 @@
         }
 
         .subtext {
-            font-size: 12px;
-            letter-spacing: 0.36px;
+            font-size: var(--fs-C_1-1024);
+            letter-spacing: var(--ls-C_1-1024);
         }
     }
 }
@@ -105,8 +104,8 @@
         }
 
         .subtext {
-            font-size: 13px;
-            letter-spacing: 0.39px;
+            font-size: var(--fs-C_1-480);
+            letter-spacing: var(--ls-C_1-480);
         }
     }
 }
@@ -122,8 +121,8 @@
         }
 
         .subtext {
-            font-size: 12px;
-            letter-spacing: 0.36px;
+            font-size: var(--fs-C_1-375);
+            letter-spacing: var(--ls-C_1-375);
         }
     }
 }

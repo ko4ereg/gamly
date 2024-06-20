@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import s from './NotFound.module.scss';
 import { useDispatch } from 'react-redux';
 import { getTypeItems } from '../../store/productsSlice';

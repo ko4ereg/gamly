@@ -5,12 +5,11 @@
     align-items: flex-start;
     gap: 7px;
     color: var(--gray-40);
-    font-size: 18px;
+    font-size: var(--fs-T_1-1920);
     font-style: normal;
-    font-weight: 600;
-    line-height: 140%;
-    /* 25.2px */
-    letter-spacing: 0.18px;
+    font-weight: var(--fw-T_1);
+    line-height: var(--lh-T_1);
+    letter-spacing: var(--ls-T_1-1920);
     cursor: pointer;
     transition: 0.2s ease-out;
     white-space: nowrap;
@@ -39,11 +38,13 @@
     }
 
     .right {
-        animation: slideFromLeft 0.2s ease-out;
+        -webkit-animation: slideFromLeft 0.2s ease-out;
+                animation: slideFromLeft 0.2s ease-out;
     }
 
     .left {
-        animation: slideFromRight 0.2s ease-out;
+        -webkit-animation: slideFromRight 0.2s ease-out;
+                animation: slideFromRight 0.2s ease-out;
     }
 
 }
@@ -65,9 +66,31 @@
 
 }
 
+@-webkit-keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 @keyframes slideFromLeft {
     0% {
         transform: translateX(-100%);
+
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
 
     }
 
@@ -104,8 +127,8 @@
     .tab {
         margin-right: 24px;
         gap: 3px;
-        font-size: 16px;
-        letter-spacing: 0.16px;
+        font-size: var(--fs-T_1-1024);
+    letter-spacing: var(--ls-T_1-1024);
     }
 }
 
@@ -113,22 +136,22 @@
     .tab {
         padding-top: 8px;
         gap: 7px;
-        font-size: 16px;
-        letter-spacing: 0.16px;
+        font-size: var(--fs-T_1-768);
+        letter-spacing: var(--ls-T_1-768);
     }
 }
 
 @media (max-width:767px) {
     .tab {
         margin-right: 16px;
-        font-size: 15px;
-        letter-spacing: 0.15px;
+        font-size: var(--fs-T_1-480);
+        letter-spacing: var(--ls-T_1-480);
     }
 }
 
 @media (max-width:479px) {
     .tab {
-        font-size: 14px;
-        letter-spacing: 0.14px;
+        font-size: var(--fs-T_1-375);
+        letter-spacing: var(--ls-T_1-375);
     }
 }

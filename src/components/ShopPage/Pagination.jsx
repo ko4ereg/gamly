@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import s from './ShopPage.module.scss';
+import s from './Pagination.module.scss';
 
 const Pagination = ({ portionSize = 10, prodsAmount = 200,  pageSize = 12, }) => {
 

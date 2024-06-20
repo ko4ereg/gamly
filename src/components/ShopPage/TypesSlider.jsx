@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import s from './ShopPage.module.scss';
+import s from './TypesSlider.module.scss';
 import { useDraggable } from 'react-use-draggable-scroll';
 import { useDispatch } from 'react-redux';
 import { addTypeItems, deleteTypeItems, getTypeItems, setTypeItems } from '../../store/productsSlice';
@@ -122,7 +122,7 @@ const TypesSlider = ({ selectedTypes, setSelectedTypes }) => {
 
                 {
                     types.map((type, index) => (
-                        <div key={index} className={`${s.filters_types_item} ${selectedTypes.includes(type.value) ? s.selected : ''}`} onClick={() => handleItemClick(type.value)}>{type.label}</div>
+                        <div key={index} style={{transition: '0.2s ease-out'}} className={`${s.filters_types_item} ${selectedTypes.includes(type.value) ? s.selected : ''}`} onClick={() => handleItemClick(type.value)}>{type.label}</div>
                     ))
                 }
 

@@ -36,7 +36,7 @@ const PopupFiltersLayout = ({ popupActive, setPopupActive, note }) => {
                 <ButtonPrimary text={'Перейти к оплате'} />
                 <ButtonSecondary disabled={disabled} onClick={handleReset} text={'Сбросить'} />
             </BottomMenu>}
-            popupActive={popupActive} setPopupActive={setPopupActive} note={note} heading={"Пополнение steam"}>
+            popupActive={popupActive} setPopupActive={setPopupActive} note={note} heading={"Фильтры"}>
             <div className={s.container}>
                 <PopupFilters
                     fromPrice={fromPrice}

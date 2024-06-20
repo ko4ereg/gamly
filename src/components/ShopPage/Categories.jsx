@@ -1,11 +1,10 @@
-import s from './ShopPage.module.scss';
+import s from './Categories.module.scss';
 import categoryPic1 from './../../assets/shop/category1.png';
 import categoryPic2 from './../../assets/shop/category2.png';
 import categoryPic3 from './../../assets/shop/category3.png';
 import categoryPic4 from './../../assets/shop/category4.png';
 import { useState } from 'react';
 import { getNoun } from '../../utils/getNoun';
-import { useSelector } from 'react-redux';
 import { initialState } from '../../store/productsSlice';
 
 const Categories = (props) => {
@@ -17,7 +16,7 @@ const Categories = (props) => {
    }
 
    const prods = initialState.products;
-  
+
    const categories = [
       {
          title: 'Игровая периферия',

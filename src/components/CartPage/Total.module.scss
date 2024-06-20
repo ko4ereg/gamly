@@ -9,12 +9,11 @@
         overflow: hidden;
         color: var(--white);
         text-overflow: ellipsis;
-        font-size: 36px;
+        font-size:  var(--fs-H_6-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 50.4px */
-        letter-spacing: 0.36px;
+        font-weight:  var(--fw-H_6);
+        line-height:  var(--lh-H_6-1920);
+        letter-spacing:  var(--ls-H_6-1920);
     }
 
     .order {
@@ -32,11 +31,10 @@
             overflow: hidden;
             color: var(--gray-40);
             text-overflow: ellipsis;
-            font-size: 17px;
+            font-size:  var(--fs-T_2-1920);
             font-style: normal;
-            font-weight: 600;
-            line-height: 120%;
-            /* 20.4px */
+            font-weight: var(--fw-T_2);
+            line-height: var(--lh-T_2);
             margin-bottom: 12px;
         }
 
@@ -44,12 +42,11 @@
             overflow: hidden;
             color: var(--white);
             text-overflow: ellipsis;
-            font-size: 18px;
+            font-size: var(--fs-T_1-1920);
             font-style: normal;
-            font-weight: 700;
-            line-height: 140%;
-            /* 25.2px */
-            letter-spacing: -0.18px;
+            font-weight: var(--fw-T_1-Bold);
+            line-height: var(--lh-T_1);
+            letter-spacing: var(--ls-T_1-Bold-1920);
 
 
         }
@@ -89,12 +86,11 @@
             align-items: center;
             justify-content: space-between;
             color: var(--gray-40);
-            font-size: 24px;
+            font-size: var(--fs-H_7-1920);
             font-style: normal;
-            font-weight: 600;
-            line-height: 120%;
-            /* 28.8px */
-            letter-spacing: 0.24px;
+            font-weight: var(--fw-H_7);
+            line-height: var(--lh-H_7-1920);
+            letter-spacing: var(--ls-H_7-1920);
             margin-bottom: 32px;
 
             .addition {
@@ -110,24 +106,22 @@
                     border-radius: 8px;
                     background: var(--gray-4);
                     color: var(--white);
-                    font-size: 14px;
+                    font-size: var(--fs-C_1-1920);
                     font-style: normal;
-                    font-weight: 500;
-                    line-height: 120%;
-                    /* 16.8px */
-                    letter-spacing: 0.42px;
+                    font-weight: var(--fw-C_1);
+                    line-height: var(--lh-C_1);
+                    letter-spacing: var(--ls-C_1-1920);
                 }
 
                 .coin {
                     display: flex;
                     gap: 6px;
                     color: var(--white);
-                    font-size: 24px;
+                    font-size: var(--fs-H_7-1920);
                     font-style: normal;
-                    font-weight: 600;
-                    line-height: 120%;
-                    /* 28.8px */
-                    letter-spacing: 0.24px;
+                    font-weight: var(--fw-H_7);
+                    line-height: var(--lh-H_7-1920);
+                    letter-spacing: var(--ls-H_7-1920);
                 }
             }
         }
@@ -141,12 +135,11 @@
         color: var(--gray-40);
         text-overflow: ellipsis;
         white-space: nowrap;
-        font-size: 13px;
+        font-size: var(--fs-C_2-1920);
         font-style: normal;
-        font-weight: 500;
-        line-height: 94%;
-        /* 12.22px */
-        letter-spacing: 0.39px;
+        font-weight: var(--fw-C_2);
+        line-height: var(--lh-C_2);
+        letter-spacing: var(--ls-C_2-1920);
     }
 }
 
@@ -187,12 +180,11 @@
                 .addition {
 
                     .ruby {
-                        font-size: 14px;
+                        font-size: var(--fs-C_1-1920);
                         font-style: normal;
-                        font-weight: 500;
-                        line-height: 120%;
-                        /* 16.8px */
-                        letter-spacing: 0.42px;
+                        font-weight: var(--fw-C_1);
+                        line-height: var(--lh-C_1);
+                        letter-spacing: var(--ls-C_1-1920);
                     }
 
                     .coin {
@@ -257,12 +249,8 @@
                 .addition {
 
                     .ruby {
-                        font-size: 12px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 120%;
-                        /* 14.4px */
-                        letter-spacing: 0.36px;
+                        font-size: var(--fs-C_1-1024);
+                        letter-spacing: var(--ls-C_1-1024);
                     }
 
                     .coin {

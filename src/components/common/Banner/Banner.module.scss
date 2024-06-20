@@ -23,7 +23,7 @@
         background: var(--accent-color);
         opacity: 0.1;
         -webkit-filter: blur(40px);
-                filter: blur(40px);
+        filter: blur(40px);
     }
 
     .svg2 {
@@ -34,7 +34,7 @@
         opacity: 0.2;
         background: var(--accent-purple);
         -webkit-filter: blur(40px);
-                filter: blur(40px);
+        filter: blur(40px);
         width: 124.517px;
         height: 283.693px;
         transform: rotate(-144.987deg);
@@ -60,12 +60,11 @@
     border-radius: 8px;
     background: var(--dark-gray);
     color: var(--light-gray);
-    font-size: 13px;
+    font-size: var(--fs-C_2-1920);
     font-style: normal;
-    font-weight: 500;
-    line-height: 94%;
-    /* 12.22px */
-    letter-spacing: 0.39px;
+    font-weight: var(--fw-C_2);
+    line-height: var(--lh-C_2);
+    letter-spacing: var(--ls-C_2-1920);
     transition: 0.2s ease-out;
     z-index: 1;
 }
@@ -77,21 +76,19 @@
     gap: 6px;
 
 
-    font-size: 17px;
+    font-size: var(--fs-T_2-1920);
     font-style: normal;
-    font-weight: 600;
-    line-height: 120%;
-    /* 20.4px */
+    font-weight: var(--fw-T_2);
+    line-height: var(--lh-T_2);
     color: var(--white);
 
 
     p {
-        font-size: 14px;
+        font-size: var(--fs-C_1-1920);
         font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        /* 16.8px */
-        letter-spacing: 0.42px;
+        font-weight: var(--fw-C_1);
+        line-height: var(--lh-C_1);
+        letter-spacing: var(--ls-C_1-1920);
         color: var(--gray-40);
     }
 }
@@ -152,12 +149,6 @@
         text-align: center;
         border-radius: 8px;
         background: var(--dark-gray);
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 94%;
-        /* 12.22px */
-        letter-spacing: 0.39px;
         transition: 0.2s ease-out;
         z-index: 1;
     }
@@ -166,26 +157,10 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
-
-
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 120%;
-        letter-spacing: 0%;
-        /* 20.4px */
         color: var(--white);
 
 
         p {
-
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-
-            /* 16.8px */
-            letter-spacing: 0.42px;
             color: var(--gray-40);
         }
     }
@@ -221,23 +196,18 @@
         // padding: 0px 12px 1px 12px;
         align-items: center;
         justify-content: center;
-        font-size: 12px;
-        letter-spacing: 0.36px;
+        font-size: var(--fs-C_2-1024);
+    letter-spacing: var(--ls-C_2-1024);
     }
 
     .text {
         gap: 2px;
-        font-size: 15px;
-        line-height: 140%;
-        /* 21px */
-        letter-spacing: 0.15px;
+        font-size: var(--fs-T_2-1024);
 
 
         p {
-            font-size: 15px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.15px;
+            font-size: var(--fs-C_1-1024);
+            letter-spacing: var(--ls-C_1-1024);
         }
     }
 
@@ -267,14 +237,12 @@
 
     .text {
         align-self: flex-start;
+        font-size: var(--fs-T_2-768);
     }
 
     .button {
-
-        font-size: 12px;
-        line-height: 120%;
-        /* 14.4px */
-        letter-spacing: 0.36px;
+        font-size: var(--fs-C_2-768);
+        letter-spacing: var(--ls-C_2-768);
     }
 
 }
@@ -309,51 +277,26 @@
 
     .text {
         align-self: flex-start;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 120%;
-
-        /* 16.8px */
-        p {
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-            /* 16.8px */
-        }
+        font-size: var(--fs-T_2-480);
     }
 
     .button {
         padding: 12px 24px;
-        font-size: 12px;
-        line-height: 120%;
-        /* 14.4px */
-        letter-spacing: 0.36px;
-        // height: auto;
+        font-size: var(--fs-C_2-480);
+        letter-spacing: var(--ls-C_2-480);
     }
 
 }
 
 @media (max-width: 479px) {
-
+    .button {
+        font-size: var(--fs-C_2-375);
+        letter-spacing: var(--ls-C_2-375);
+    }
 
     .text {
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        /* 18.2px */
-        letter-spacing: 0.13px;
-
-        p {
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 18.2px */
-            letter-spacing: 0.13px;
-        }
+        font-size: var(--fs-T_2-375);
+    
     }
 
 }

@@ -16,11 +16,11 @@
 
     .heading {
         color: var(--white);
-        font-size: 16px;
+        font-size: var(--fs-T_3-1920);
         font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        letter-spacing: 0.32px;
+        font-weight: var(--fw-T_3);
+        line-height: var(--lh-T_3);
+        letter-spacing: var(--ls-T_3-1920);
     }
 
 }
@@ -39,12 +39,11 @@
     outline: none;
     width: 100%;
     outline: none;
-    font-size: 18px;
+    font-size: var(--fs-T_1-1920);
     font-style: normal;
-    font-weight: 600;
-    line-height: 140%;
-    /* 25.2px */
-    letter-spacing: 0.18px;
+    font-weight: var(--fw-T_1);
+    line-height: var(--lh-T_1);
+    letter-spacing: var(--ls-T_1-1920);
 
     resize: none;
     overflow-y: auto;
@@ -55,12 +54,11 @@
 
 
     &::-webkit-input-placeholder {
-        font-size: 18px;
+        font-size: var(--fs-T_1-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 25.2px */
-        letter-spacing: 0.18px;
+        font-weight: var(--fw-T_1);
+        line-height: var(--lh-T_1);
+        letter-spacing: var(--ls-T_1-1920);
         color: var(--gray-40);
         -webkit-transition: 0.2s ease-out;
         transition: 0.2s ease-out;
@@ -68,12 +66,11 @@
     }
 
     &::-moz-placeholder {
-        font-size: 18px;
+        font-size: var(--fs-T_1-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 25.2px */
-        letter-spacing: 0.18px;
+        font-weight: var(--fw-T_1);
+        line-height: var(--lh-T_1);
+        letter-spacing: var(--ls-T_1-1920);
         color: var(--gray-40);
         -moz-transition: 0.2s ease-out;
         transition: 0.2s ease-out;
@@ -81,12 +78,11 @@
     }
 
     &:-ms-input-placeholder {
-        font-size: 18px;
+        font-size: var(--fs-T_1-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 25.2px */
-        letter-spacing: 0.18px;
+        font-weight: var(--fw-T_1);
+        line-height: var(--lh-T_1);
+        letter-spacing: var(--ls-T_1-1920);
         color: var(--gray-40);
         -ms-transition: 0.2s ease-out;
         transition: 0.2s ease-out;
@@ -94,12 +90,11 @@
     }
 
     &::-ms-input-placeholder {
-        font-size: 18px;
+        font-size: var(--fs-T_1-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 25.2px */
-        letter-spacing: 0.18px;
+        font-weight: var(--fw-T_1);
+        line-height: var(--lh-T_1);
+        letter-spacing: var(--ls-T_1-1920);
         color: var(--gray-40);
         -ms-transition: 0.2s ease-out;
         transition: 0.2s ease-out;
@@ -107,12 +102,11 @@
     }
 
     &::placeholder {
-        font-size: 18px;
+        font-size: var(--fs-T_1-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 25.2px */
-        letter-spacing: 0.18px;
+        font-weight: var(--fw-T_1);
+        line-height: var(--lh-T_1);
+        letter-spacing: var(--ls-T_1-1920);
         color: var(--gray-40);
         transition: 0.2s ease-out;
         display: none;
@@ -222,40 +216,38 @@
     .title {
 
         .heading {
-            font-size: 15px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_3-1024);
+            letter-spacing: var(--ls-T_3-1024);
         }
     }
 
     .input {
-        font-size: 16px;
-        letter-spacing: 0.16px;
+        font-size: var(--fs-T_1-1024);
+        letter-spacing: var(--ls-T_1-1024);
 
         &::-webkit-input-placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-1024);
+            letter-spacing: var(--ls-T_1-1024);
         }
 
         &::-moz-placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-1024);
+            letter-spacing: var(--ls-T_1-1024);
         }
 
         &:-ms-input-placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-1024);
+            letter-spacing: var(--ls-T_1-1024);
         }
 
         &::-ms-input-placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-1024);
+            letter-spacing: var(--ls-T_1-1024);
         }
 
         &::placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-1024);
+            letter-spacing: var(--ls-T_1-1024);
         }
     }
 }
@@ -269,12 +261,8 @@
     .title {
 
         .heading {
-            font-size: 15px;
-            line-height: 140%;
-            /* 21px */
-            letter-spacing: 0.15px;
-
-
+            font-size: var(--fs-T_3-768);
+            letter-spacing: var(--ls-T_3-768);
         }
 
     }
@@ -284,28 +272,28 @@
         letter-spacing: 0.16px;
 
         &::-webkit-input-placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-768);
+            letter-spacing: var(--ls-T_1-768);
         }
 
         &::-moz-placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-768);
+            letter-spacing: var(--ls-T_1-768);
         }
 
         &:-ms-input-placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-768);
+            letter-spacing: var(--ls-T_1-768);
         }
 
         &::-ms-input-placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-768);
+            letter-spacing: var(--ls-T_1-768);
         }
 
         &::placeholder {
-            font-size: 16px;
-            letter-spacing: 0.16px;
+            font-size: var(--fs-T_1-768);
+            letter-spacing: var(--ls-T_1-768);
         }
     }
 
@@ -320,46 +308,41 @@
     .title {
 
         .heading {
-            font-size: 14px;
-            letter-spacing: 0.28px;
-
+            font-size: var(--fs-T_3-480);
+            letter-spacing: var(--ls-T_3-480);
         }
 
     }
 
     .input {
-        font-size: 15px;
-        letter-spacing: 0.15px;
+        font-size: var(--fs-T_1-480);
+        letter-spacing: var(--ls-T_1-480);
 
         &::-webkit-input-placeholder {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_1-480);
+        letter-spacing: var(--ls-T_1-480);
         }
 
         &::-moz-placeholder {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_1-480);
+            letter-spacing: var(--ls-T_1-480);
         }
 
         &:-ms-input-placeholder {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_1-480);
+            letter-spacing: var(--ls-T_1-480);
         }
 
         &::-ms-input-placeholder {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_1-480);
+            letter-spacing: var(--ls-T_1-480);
         }
 
         &::placeholder {
-            font-size: 15px;
-            letter-spacing: 0.15px;
+            font-size: var(--fs-T_1-480);
+            letter-spacing: var(--ls-T_1-480);
         }
     }
-
-
-
-
 }
 
 @media (max-width:479px) {
@@ -367,47 +350,40 @@
     .title {
 
         .heading {
-            font-size: 13px;
-            letter-spacing: 0.13px;
+            font-size: var(--fs-T_3-375);
+            letter-spacing: var(--ls-T_3-375);
 
         }
     }
 
     .input {
-        font-size: 14px;
-        letter-spacing: 0.14px;
+        font-size: var(--fs-T_1-375);
+        letter-spacing: var(--ls-T_1-375);
 
         &::-webkit-input-placeholder {
-            font-size: 14px;
-            letter-spacing: 0.14px;
+            font-size: var(--fs-T_1-375);
+            letter-spacing: var(--ls-T_1-375);
         }
 
         &::-moz-placeholder {
-            font-size: 14px;
-            letter-spacing: 0.14px;
+            font-size: var(--fs-T_1-375);
+            letter-spacing: var(--ls-T_1-375);
         }
 
         &:-ms-input-placeholder {
-            font-size: 14px;
-            letter-spacing: 0.14px;
+            font-size: var(--fs-T_1-375);
+            letter-spacing: var(--ls-T_1-375);
         }
 
         &::-ms-input-placeholder {
-            font-size: 14px;
-            letter-spacing: 0.14px;
+            font-size: var(--fs-T_1-375);
+            letter-spacing: var(--ls-T_1-375);
         }
 
         &::placeholder {
-            font-size: 14px;
-            letter-spacing: 0.14px;
+            font-size: var(--fs-T_1-375);
+            letter-spacing: var(--ls-T_1-375);
         }
     }
-
-    .inputFakeValueWrapper {
-        span {
-            font-size: 14px;
-            letter-spacing: 0.14px;
-        }
-
-    }
+ 
 }

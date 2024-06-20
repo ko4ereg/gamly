@@ -9,7 +9,7 @@
 
 .search {
 
-height: auto;
+    height: auto;
     width: 100%;
     display: flex;
     gap: 6px;
@@ -18,25 +18,25 @@ height: auto;
     box-sizing: border-box;
     border-radius: 8px;
     border: 1px var(--gray-10) solid;
-    transition:   0.2s ease-out;
+    transition: 0.2s ease-out;
     background: var(--background-far);
-  
+
 
     &:hover {
 
         border: 1px solid var(--gray-15);
-    
+
         // transition: 0.2s ease-out;
     }
 
     & input {
 
         width: 100%;
-        font-size: 16px;
+        font-size: var(--fs-T_3-1920);
         font-style: normal;
-        font-weight: 500;
-        line-height: 22.4px;
-        letter-spacing: 0.32px;
+        font-weight: var(--fw-T_3);
+        line-height: var(--lh-T_3);
+        letter-spacing: var(--ls-T_3-1920);
         outline: none;
         border: none;
         background-color: transparent;
@@ -75,7 +75,7 @@ height: auto;
 @media (max-width: 1439px) {
     .search.activesearch {
         border: 1px solid var(--gray-15);
- 
+
         transition: 0.2s ease-out;
         max-height: 40px;
     }
@@ -84,26 +84,32 @@ height: auto;
 
 
         & input {
-
-            font-size: 14px;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 0.14px;
+            font-size: var(--fs-T_3-1024);
+            letter-spacing: var(--ls-T_3-1024);
         }
     }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1023px) {
 
     .search {
-        max-height: 40px;
+
 
         & input {
+            font-size: var(--fs-T_3-768);
+            letter-spacing: var(--ls-T_3-768);
+        }
+    }
+}
 
-            font-size: 14px;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 0.14px;
+@media (max-width: 767px) {
+
+    .search {
+
+
+        & input {
+            font-size: var(--fs-T_3-480);
+            letter-spacing: var(--ls-T_3-480);
         }
     }
 }
@@ -111,18 +117,15 @@ height: auto;
 @media (max-width: 479px) {
     .search.activesearch {
         border: 1px solid var(--gray-15);
- 
+
         transition: 0.2s ease-out;
         max-height: 38px;
     }
 
     .search {
-
-
         & input {
-
-            font-size: 13px;
-            letter-spacing: 0.13px;
+            font-size: var(--fs-T_3-375);
+            letter-spacing: var(--ls-T_3-375);
         }
     }
 }

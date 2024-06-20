@@ -5,6 +5,7 @@ import ButtonPrimary from '../../common/Buttons/ButtonPrimary/ButtonPrimary';
 import Commision from './Commision/Commision';
 import { Controller, useForm } from 'react-hook-form';
 import { formatValue, unformatValue } from '../../../utils/formatValue';
+import { useState } from 'react';
 
 const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFormat, login, setLogin, promo, price, setPrice, setPromo, ...props }) => {
     const { register, handleSubmit, control, setValue, getValues, clearErrors, formState: { errors } } = useForm({});
@@ -12,6 +13,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
     // const disabled = Object.keys(errors).length !== 0;
 
     const disabled = props.selectedType === 'skins' ? !getValues("price") || !getValues('link') : !getValues("price") || !getValues('login');
+
 
     const onSubmit = (data) => {
         const price = unformatValue(data.price);
@@ -31,7 +33,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
 
     return (
         <div className={s.container}>
-            <div className={s.banners}>
+            <div className={s.banners} style={{order: `${props.selectedType === 'skins' ? 0 : ''}`}}>
                 <Banner
                     title={'Получи +5% к пополнению'}
                     text={'за аватарку и никнейм нашего сайта'}
@@ -137,7 +139,7 @@ const BottomContainer = ({ link, setLink, priceWithoutFormat, setPriceWithoutFor
                         <BigInput
                             tooltipText={'промокод на скидку'}
                             value={promo}
-                            onChange={setPromo}
+                            onChange={(e) => setPromo(e.target.value)}
                             heading={'Промокод'}
                             placeholder={'Промокод'}
                             promo={true}

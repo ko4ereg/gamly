@@ -1,0 +1,119 @@
+.container {
+    .cards {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        border: 1px solid var(--gray-10-transparacy);
+        background: var(--gray-4);
+        position: relative;
+        z-index: 1;
+.line {
+    width: 1px;
+height: 320px;
+background: var(--gray-10-transparacy);
+}
+        .card {
+            display: flex;
+            height: 400px;
+            padding: 40px;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            align-items: flex-start;
+            flex: 1 0 0;
+            transition: 0.2s ease-out;
+
+            .icon {
+                position: absolute;
+                top: 40px;
+                width: 68px;
+                height: 64px;
+                flex-shrink: 0;
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                transform-style: preserve-3d;
+                transition: 0.2s ease-out;
+                background-position: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                // url('./../../../../assets/icons/mainpage/razoricon.png') 50% / cover no-repeat;
+            }
+
+            .cardInfo {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                transform: translate3d(0px, 82px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                transform-style: preserve-3d;
+                transition: 0.2s ease-out;
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                align-self: stretch;
+                margin-bottom: 20px;
+                transition: 0.2s ease-out;
+
+                .card_title {
+                    align-self: stretch;
+                    color: var(--white);
+
+                    /* 1920-0000/Headline/H_3 */
+                    font-family: 'Coolvetica';
+                    font-size: var(--fs-H_3-1920);
+                    font-style: normal;
+                    font-weight: var(--fw-H_3);
+                    line-height: var(--lh-H_3);
+                    letter-spacing: var(--ls-H_3-1920);
+                }
+
+                .card_subtitle {
+                    max-width: 320px;
+                    align-self: stretch;
+                    color: var(--light-gray);
+
+                    /* 1920-0000/Text/T_3 */
+                    font-size: var(--fs-T_3-1920);
+                    font-style: normal;
+                    font-weight: var(--fw-T_3);
+                    line-height: var(--lh-T_3);
+                    letter-spacing: var(--ls-T_3-1920);
+                }
+            }
+
+            .button {
+                width: fit-content;
+
+            }
+        }
+
+        .card:hover {
+
+            .icon {
+                transform: translate3d(0px, -122px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                transform-style: preserve-3d;
+                transition: 0.2s ease-out;
+
+            }
+
+            .cardInfo {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                transform-style: preserve-3d;
+                transition: 0.2s ease-out;
+
+            }
+
+            .text {
+                transition: 0.2s ease-out;
+                margin-bottom: 0px;
+            }
+
+            .button {}
+        }
+    }
+}

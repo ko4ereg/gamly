@@ -6,12 +6,11 @@
     flex: 0 0 auto;
 
     .heading {
-        font-size: 64px;
+        font-size: var(--fs-H_5-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 89.6px */
-        letter-spacing: -1.28px;
+        font-weight:  var(--fw-H_5);
+        line-height:  var(--lh-H_5-1920);
+        letter-spacing:  var(--ls-H_5-1920);
         color: var(--white);
     }
 }

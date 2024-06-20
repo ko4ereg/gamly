@@ -18,21 +18,21 @@
     border-bottom: 2.5px dashed var(--red-100);
     transition: 0.2s ease-out;
 }
- 
+
 .active {
     border-bottom: 2.5px dashed var(--gray-40);
     transition: 0.2s ease-out;
 }
- 
+
 
 
 .title {
     color: var(--white);
-    font-size: 16px;
+    font-size: var(--fs-T_3-1920);
     font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-    letter-spacing: 0.32px;
+    font-weight: var(--fw-T_3);
+    line-height: var(--lh-T_3);
+    letter-spacing: var(--ls-T_3-1920);
     display: flex;
     gap: 8px;
 
@@ -64,19 +64,55 @@
     outline: none;
     width: 100%;
     outline: none;
-    font-size: 36px;
+    font-size: var(--fs-H_6-1920);
     font-style: normal;
-    font-weight: 600;
-    line-height: 140%;
+    font-weight: var(--fw-H_6);
+    line-height: var(--lh-H_6-1920);
 
-    letter-spacing: 0.36px;
+    letter-spacing: var(--ls-H_6-1920);
+
+    &::-webkit-input-placeholder {
+        font-size: var(--fs-H_6-1920);
+        font-style: normal;
+        font-weight: var(--fw-H_6);
+        line-height: var(--lh-H_6-1920);
+        letter-spacing: var(--ls-H_6-1920);
+        color: var(--gray-40);
+    }
+
+    &::-moz-placeholder {
+        font-size: var(--fs-H_6-1920);
+        font-style: normal;
+        font-weight: var(--fw-H_6);
+        line-height: var(--lh-H_6-1920);
+        letter-spacing: var(--ls-H_6-1920);
+        color: var(--gray-40);
+    }
+
+    &:-ms-input-placeholder {
+        font-size: var(--fs-H_6-1920);
+        font-style: normal;
+        font-weight: var(--fw-H_6);
+        line-height: var(--lh-H_6-1920);
+        letter-spacing: var(--ls-H_6-1920);
+        color: var(--gray-40);
+    }
+
+    &::-ms-input-placeholder {
+        font-size: var(--fs-H_6-1920);
+        font-style: normal;
+        font-weight: var(--fw-H_6);
+        line-height: var(--lh-H_6-1920);
+        letter-spacing: var(--ls-H_6-1920);
+        color: var(--gray-40);
+    }
 
     &::placeholder {
-        font-size: 36px;
+        font-size: var(--fs-H_6-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        letter-spacing: 0.36px;
+        font-weight: var(--fw-H_6);
+        line-height: var(--lh-H_6-1920);
+        letter-spacing: var(--ls-H_6-1920);
         color: var(--gray-40);
     }
 }
@@ -90,7 +126,10 @@
     display: flex;
     align-items: center;
     visibility: hidden;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 
 
@@ -102,43 +141,32 @@
 
     span {
         color: var(--white);
-        font-size: 36px;
+        font-size: var(--fs-H_6-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        /* 50.4px */
-        letter-spacing: 0.36px;
+        font-weight: var(--fw-H_6);
+        line-height: var(--lh-H_6-1920);
+        letter-spacing: var(--ls-H_6-1920);
     }
 
 }
 
-// .inputFakeValue {
-//     overflow: hidden;
-// }
+
 
 .suffix {
     visibility: visible;
     height: 100%;
     display: flex;
     align-items: center;
-
-
     text-overflow: ellipsis;
-
     border: none;
     outline: none;
-
 }
 
 .addition {
-
     justify-self: flex-end;
-    // bottom: 16px;
-    // right: 0;
     display: flex;
     gap: 6px;
     align-items: center;
-    // border-bottom: 1px dashed var(--gray-15);
 }
 
 .helpButton {
@@ -151,9 +179,6 @@
     bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
-
-
-
 }
 
 .coin {
@@ -168,24 +193,16 @@
     .container {
 
         &:hover:not(.invalid) {
-
             border-bottom: 2.5px dashed var(--gray-40);
             transition: 0.2s ease-out;
-
         }
- 
     }
-
-
-
-
 }
 
 @media (hover: none) and (pointer: coarse) {
     .container {
 
         &:active:not(.invalid) {
-
             border-bottom: 2.5px dashed var(--gray-40);
             transition: 0.2s ease-out;
 
@@ -198,26 +215,44 @@
 @media (max-width: 1439px) {
 
     .title {
-        font-size: 15px;
-        line-height: 140%;
-        /* 21px */
-        letter-spacing: 0.15px;
+        font-size: var(--fs-T_3-1024);
+        letter-spacing: var(--ls-T_3-1024);
     }
 
     .input {
-        font-size: 28px;
-        letter-spacing: 0.28px;
+        font-size: var(--fs-H_6-1024);
+        letter-spacing: var(--ls-H_6-1024);
+
+        &::-webkit-input-placeholder {
+            font-size: var(--fs-H_6-1024);
+            letter-spacing: var(--ls-H_6-1024);
+        }
+
+        &::-moz-placeholder {
+            font-size: var(--fs-H_6-1024);
+            letter-spacing: var(--ls-H_6-1024);
+        }
+
+        &:-ms-input-placeholder {
+            font-size: var(--fs-H_6-1024);
+            letter-spacing: var(--ls-H_6-1024);
+        }
+
+        &::-ms-input-placeholder {
+            font-size: var(--fs-H_6-1024);
+            letter-spacing: var(--ls-H_6-1024);
+        }
 
         &::placeholder {
-            font-size: 28px;
-            letter-spacing: 0.28px;
+            font-size: var(--fs-H_6-1024);
+            letter-spacing: var(--ls-H_6-1024);
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 28px;
-            letter-spacing: 0.28px;
+            font-size: var(--fs-H_6-1024);
+            letter-spacing: var(--ls-H_6-1024);
         }
 
     }
@@ -230,26 +265,44 @@
     }
 
     .title {
-        font-size: 15px;
-        line-height: 140%;
-        /* 21px */
-        letter-spacing: 0.15px;
+        font-size: var(--fs-T_3-768);
+        letter-spacing: var(--ls-T_3-768);
     }
 
     .input {
-        font-size: 28px;
-        letter-spacing: 0.28px;
+        font-size: var(--fs-H_6-768);
+        letter-spacing: var(--ls-H_6-768);
+
+        &::-webkit-input-placeholder {
+            font-size: var(--fs-H_6-768);
+            letter-spacing: var(--ls-H_6-768);
+        }
+
+        &::-moz-placeholder {
+            font-size: var(--fs-H_6-768);
+            letter-spacing: var(--ls-H_6-768);
+        }
+
+        &:-ms-input-placeholder {
+            font-size: var(--fs-H_6-768);
+            letter-spacing: var(--ls-H_6-768);
+        }
+
+        &::-ms-input-placeholder {
+            font-size: var(--fs-H_6-768);
+            letter-spacing: var(--ls-H_6-768);
+        }
 
         &::placeholder {
-            font-size: 28px;
-            letter-spacing: 0.28px;
+            font-size: var(--fs-H_6-768);
+            letter-spacing: var(--ls-H_6-768);
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 28px;
-            letter-spacing: 0.28px;
+            font-size: var(--fs-H_6-768);
+            letter-spacing: var(--ls-H_6-768);
         }
 
     }
@@ -259,24 +312,44 @@
 @media (max-width:767px) {
 
     .title {
-        font-size: 14px;
-        letter-spacing: 0.28px;
+        font-size: var(--fs-T_3-480);
+        letter-spacing: var(--ls-T_3-480);
     }
 
     .input {
-        font-size: 24px;
-        letter-spacing: -0.48px;
+        font-size: var(--fs-H_6-480);
+        letter-spacing: var(--ls-H_6-480);
+
+        &::-webkit-input-placeholder {
+            font-size: var(--fs-H_6-480);
+            letter-spacing: var(--ls-H_6-480);
+        }
+
+        &::-moz-placeholder {
+            font-size: var(--fs-H_6-480);
+            letter-spacing: var(--ls-H_6-480);
+        }
+
+        &:-ms-input-placeholder {
+            font-size: var(--fs-H_6-480);
+            letter-spacing: var(--ls-H_6-480);
+        }
+
+        &::-ms-input-placeholder {
+            font-size: var(--fs-H_6-480);
+            letter-spacing: var(--ls-H_6-480);
+        }
 
         &::placeholder {
-            font-size: 24px;
-            letter-spacing: -0.48px;
+            font-size: var(--fs-H_6-480);
+            letter-spacing: var(--ls-H_6-480);
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 24px;
-            letter-spacing: -0.48px;
+            font-size: var(--fs-H_6-480);
+            letter-spacing: var(--ls-H_6-480);
         }
 
     }
@@ -285,42 +358,49 @@
         gap: 4px;
         padding-bottom: 4px;
     }
-
-    .tooltip {
-        // position: absolute;
-        // // bottom: 120%;
-        // bottom: 32px;
-        // left: 50%;
-        // transform: translateX(-50%);
-
-
-
-    }
-
 }
 
 @media (max-width:479px) {
 
     .title {
-        font-size: 13px;
-        letter-spacing: 0.13px;
+        font-size: var(--fs-T_3-375);
+        letter-spacing: var(--ls-T_3-375);
     }
 
     .input {
-        font-size: 28px;
-        letter-spacing: -0.56px;
+        font-size: var(--fs-H_6-375);
+        letter-spacing: var(--ls-H_6-375);
+
+        &::-webkit-input-placeholder {
+            font-size: var(--fs-H_6-375);
+            letter-spacing: var(--ls-H_6-375);
+        }
+
+        &::-moz-placeholder {
+            font-size: var(--fs-H_6-375);
+            letter-spacing: var(--ls-H_6-375);
+        }
+
+        &:-ms-input-placeholder {
+            font-size: var(--fs-H_6-375);
+            letter-spacing: var(--ls-H_6-375);
+        }
+
+        &::-ms-input-placeholder {
+            font-size: var(--fs-H_6-375);
+            letter-spacing: var(--ls-H_6-375);
+        }
 
         &::placeholder {
-            font-size: 28px;
-            letter-spacing: -0.56px;
+            font-size: var(--fs-H_6-375);
+            letter-spacing: var(--ls-H_6-375);
         }
     }
 
     .inputFakeValueWrapper {
         span {
-            font-size: 28px;
-            letter-spacing: -0.56px;
+            font-size: var(--fs-H_6-375);
+            letter-spacing: var(--ls-H_6-375);
         }
-
     }
 }
