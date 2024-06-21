@@ -53,6 +53,7 @@
 
  html {
    background-color: var(--background-far);
+   scroll-behavior: smooth;
  }
 
  :root {

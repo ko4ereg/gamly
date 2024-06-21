@@ -1,8 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import s from './Paragraph.module.scss';
-import { useMotionValueEvent, useScroll, motion, useTransform, useMotionValue } from 'framer-motion';
-import Character from './Character';
-import CharacterAccent from './CharacterAccent';
+import { useScroll } from 'framer-motion';
 import Word from './Word';
 
 const Paragraph = (props) => {
@@ -35,9 +33,7 @@ const Paragraph = (props) => {
                     words.map((word, i) => {
 
                         const start = i / words.length
-
                         const end = start + (1 / words.length)
-
                         return <Word totalChars={totalChars} key={i} index={i} progress={scrollYProgress} range={[start, end]}>{word + '\u00A0'}</Word>
 
                     })
