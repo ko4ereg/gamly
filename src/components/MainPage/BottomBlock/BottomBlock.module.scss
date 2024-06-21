@@ -1,0 +1,15 @@
+.bottomBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 16px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 240px;
+}
+
+.bottom {
+    display: flex;
+    gap: 16px;
+}

@@ -12,7 +12,8 @@ const TextBlock = (props) => {
 
   const text = 'Мы хотели чтобы геймеры в России могли покупать игры, все для компьютера, пополнять Steam и т.д. внутри одной экосистемы, и кажется...';
  
- 
+  const words = text.split(' ');
+  
   const additionalText = 'у нас это получилось'; // Дополнительный текст
   const additionalCharacters = Array.from(additionalText);
   // additionalText.split(' '); 
@@ -20,7 +21,7 @@ const TextBlock = (props) => {
 
   const textRef = useRef(null);
   // const characters = Array.from(text);
-  const characters = text.split(' ');
+  const characters = Array.from(text);
   console.log(characters);
 
   const { scrollY, scrollYProgress } = useScroll({
@@ -40,7 +41,7 @@ const TextBlock = (props) => {
       {characters.map((char, index) => (
           <Character ref={ref} key={index} length={characters.length} scrollYProgress={scrollYProgress} index={index} char={char}/>
         ))}
-        {/* Отображение дополнительного текста с зеленым цветом */}
+   
         {additionalCharacters.map((char, index) => (
           <CharacterAccent ref={ref} key={`additional-${index}`} length={additionalCharacters.length} scrollYProgress={accentOpacity} index={index} char={char} />
         ))}

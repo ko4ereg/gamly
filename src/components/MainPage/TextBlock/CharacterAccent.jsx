@@ -15,9 +15,9 @@ const CharacterAccent = ({ char, index, length, scrollYProgress }) => {
     
     const character = char === ' ' ? '\u00A0' : char;
     return (
-        <motion.p key={index} className={s.green} style={{ opacity: opacity }}  >
+        <motion.span key={index} className={s.green} style={{ opacity: opacity }}  >
             {character} 
-        </motion.p>
+        </motion.span>
 
     )
 }

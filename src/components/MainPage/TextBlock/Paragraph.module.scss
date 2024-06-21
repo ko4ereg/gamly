@@ -1,0 +1,101 @@
+// .textBlock {
+//     display: flex;
+//     width: 1920px;
+//     min-height: 100vh;
+//     padding: 160px 240px;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 64px;
+
+//     .text {
+//       display: flex;
+//       flex-wrap: wrap;
+//     }
+//     .green {
+//       color: var(--accent-color);
+//     }
+
+
+//     .word{
+
+//         position: relative;
+
+//         margin-right: 12px;
+
+//         margin-top: 12px;
+
+//         .shadow{
+
+//           position: absolute;
+
+//           opacity: 20%;
+
+//         }
+
+//       } 
+
+//     span {
+//       align-self: stretch;
+//       color: var(--white);
+//       opacity: 0.1;
+//       /* 1920-0000/Headline/H_5 Vela */
+//       font-size: var(--fs-H_5-1920);
+//       font-style: normal;
+//       font-weight: var(--fw-H_5);
+//       line-height: var(--lh-H_5-1920);
+//       letter-spacing: var(--ls-H_5-1920);
+//     }
+//   }
+
+.textBlock {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    padding: 160px 0px;
+    // justify-content: center;
+    align-items: center;
+    // flex-wrap: wrap;
+    overflow: hidden;
+
+    .word {
+        display: inline-block;
+
+
+        .span {
+            display: inline-block;
+            align-self: stretch;
+            color: var(--white);
+
+            /* 1920-0000/Headline/H_5 Vela */
+            font-size: var(--fs-H_5-1920);
+            font-style: normal;
+            font-weight: var(--fw-H_5);
+            line-height: var(--lh-H_5-1920);
+            letter-spacing: var(--ls-H_5-1920);
+            position: relative;
+            transition: 0.2s ease-out;
+        }
+
+        .accent {
+            color: var(--accent-color);
+        }
+
+        // margin-right: 12px;
+
+
+        .shadow {
+            color: var(--gray-10-transparacy);
+            position: absolute;
+            font-size: var(--fs-H_5-1920);
+            font-style: normal;
+            font-weight: var(--fw-H_5);
+            line-height: var(--lh-H_5-1920);
+            letter-spacing: var(--ls-H_5-1920);
+
+
+        }
+
+    }
+
+}

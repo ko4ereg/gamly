@@ -56,6 +56,8 @@
  }
 
  :root {
+
+  /* Colors*/
    --accent-color: #D4EE5D;
    --gray-15: rgba(65, 63, 75, 1);
    --gray-40: rgba(231, 229, 237, 0.40);
@@ -71,6 +73,10 @@
    --red-10: rgba(61, 51, 51, 1);
    --red-100: #EE5D5D;
    --green-100: rgba(108, 238, 93, 1);
+
+/*Sizes*/
+
+--header-height: 64px;
 
    /*Text styles*/
    --fs-T_1-1920: 18px;

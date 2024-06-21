@@ -51,12 +51,19 @@
             gap: 32px;
 
             .heading {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                align-self: stretch;
+
                 h1 {
                     font-size: var(--fs-H_6-1920);
                     font-style: normal;
                     font-weight: var(--fw-H_6);
                     line-height: var(--lh-H_6-1920);
                     letter-spacing: var(--ls-H_6-1920);
+                    color: var(--white);
                 }
 
                 .price {
@@ -224,6 +231,8 @@
                     gap: 24px;
 
                     .heading {
+                        gap: 8px;
+
                         h1 {
                             font-size: var(--fs-H_7-1024);
                             font-weight: var(--fw-H_7);
@@ -320,9 +329,7 @@
                 .description {
 
                     .heading {
-                        h1 {
-                            margin-bottom: 8px;
-                        }
+                        h1 {}
                     }
 
                     .text {
@@ -397,9 +404,12 @@
                     gap: 16px;
 
                     .heading {
+                        gap: 4px;
+
                         h1 {
-                            font-size: var(--fs-H_7-480);
-                            letter-spacing: var(--ls-H_7-480);
+                            font-size: var(--fs-H_7-nevela-480);
+                            line-height: var(--lh-H_7-nevela-480);
+                            letter-spacing: var(--ls-H_7-nevela-480);
                         }
 
                         .price {
@@ -494,7 +504,11 @@
 
 
                     .heading {
-
+                        h1 {
+                            font-size: var(--fs-H_7-375);
+                            line-height: var(--lh-H_7-1920);
+                            letter-spacing: var(--ls-H_7-375);
+                        }
                         .price {
                             font-size: var(--fs-H_7-480);
                             letter-spacing: var(--ls-H_7-480);

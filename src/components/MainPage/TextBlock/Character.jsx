@@ -20,9 +20,9 @@ const Character = ({ char, index, length, scrollYProgress }) => {
     
     const character = char === ' ' ? '\u00A0' : char;
     return (
-        <motion.p key={index} style={{ opacity: opacity }}  >
-            {character + '\u00A0'} 
-        </motion.p>
+        <motion.span key={index} style={{ opacity: opacity }}  >
+            {character} 
+        </motion.span>
 
     )
 }
