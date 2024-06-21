@@ -14,14 +14,14 @@ const MainPage = (props) => {
       })
     
     return (
-        <ReactLenis root>
+      
         <div className={g.container + ' ' + s.container}>
             <HeadingBlock />
             {/* <TextBlock/> */}
             <Paragraph />
             <BottomBlock />
         </div>
-        </ReactLenis>)
+     )
 }
 
 export default MainPage;
