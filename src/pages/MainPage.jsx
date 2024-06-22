@@ -12,7 +12,7 @@ const MainPage = (props) => {
     const { scrollY } = useScroll(); // Отслеживаем значение Y-скролла
     const opacity = useTransform(scrollY, [0, 700], [1, 0]);
     return (
-
+<>
         <div className={g.container + ' ' + s.container}>
             <motion.div
                 style={{ opacity }}
@@ -26,10 +26,13 @@ const MainPage = (props) => {
             >
                 <Paragraph />
                 <BottomBlock />
-                <BigFooter />
+              
             </ div>
-            <div className={s.backEllipse} ></div>
+           
+            {/* <div className={s.backEllipse} ></div> */}
         </div>
+        <BigFooter />
+        </>
     )
 }
 

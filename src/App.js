@@ -67,7 +67,7 @@ function App() {
           <Route path='/cart' element={<CartPage/>} />
         </Routes>
         </div>
-        <MiniFooter/> 
+        {/* <MiniFooter/>  */}
         </div>
       
       {/*         

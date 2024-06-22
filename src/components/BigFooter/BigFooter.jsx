@@ -6,10 +6,11 @@ import MenuColumn from './MenuColumn/MenuColumn';
 const BigFooter = () => {
     return (
         <div className={s.container}>
-            <LinksColumn />
-            <MenuColumn />
-            
-                 {/* <div className={s.backEllipse} ></div> */}
+            <div className={s.top}><LinksColumn />
+                <MenuColumn />
+            </div>
+           <div className={s.bottom}> <MiniFooter/></div>
+            <div className={s.backEllipse} ></div>
         </div>
     )
 }

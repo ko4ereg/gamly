@@ -5,10 +5,10 @@
     scroll-behavior: smooth;
     position: relative;
     z-index: 1;
-   
+   overflow: hidden;
 }
 
-.backEllipse {
+/* .backEllipse {
     z-index: -2;
     position: absolute;
     bottom: 0%;
@@ -22,7 +22,7 @@
     background-position: bottom;
     filter: blur(100px);
     transform: translateY(47px);
-}
+} */
 
 
 .headingBlock {

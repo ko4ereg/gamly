@@ -19,12 +19,13 @@ const MenuColumn = () => {
                 <div className={s.menu}>
                     <div className={s.heading}>ПРОДУКТЫ</div>
                     <div className={s.menu_buttons}>
+                        <div className={s.menu_button}  ><MenuButton text={'Пополнение Steam'} /> </div>
                         <div className={s.menu_button}  ><MenuButton text={'Магазин'} /> </div>
                         <div className={s.menu_button}  ><MenuButton text={'Внутриигровые предметы'} /> </div>
                         <div className={s.menu_button}  ><MenuButton text={'Гарант'} /> </div>
                     </div>
                 </div>
-                <div className={`${s.menu}`}>
+                <div className={`${s.menu} ${s.small}`}>
                         <div className={s.heading}>gamly</div>
                         <div className={s.menu_buttons}>
                             <div className={s.menu_button}  >   <MenuButton small={true} text={'Главная'} /></div>
