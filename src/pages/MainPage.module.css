@@ -28,6 +28,7 @@
 .headingBlock {
     transition: opacity 0.5s ease-out;
     position: fixed;
+    max-width: 1440px;
     top: 64px;
     z-index: -1;
 }
