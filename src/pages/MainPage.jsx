@@ -12,7 +12,7 @@ import MiniFooter from "../components/MiniFooter/MiniFooter";
 
 const MainPage = (props) => {
     const { scrollY } = useScroll(); // Отслеживаем значение Y-скролла
-    const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+    const opacity = useTransform(scrollY, [0, 700], [1, 0]);
     return (
 
         <div className={g.container + ' ' + s.container}>
