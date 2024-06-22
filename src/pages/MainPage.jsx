@@ -1,13 +1,11 @@
 import HeadingBlock from "../components/MainPage/HeadingBlock/HeadingBlock";
-
 import g from './../Globalstyles.module.css';
 import s from './MainPage.module.css';
 import BottomBlock from "../components/MainPage/BottomBlock/BottomBlock";
-
 import Paragraph from "../components/MainPage/TextBlock/Paragraph";
 import BigFooter from "../components/BigFooter/BigFooter";
 import { motion, useScroll, useTransform } from "framer-motion";
-import MiniFooter from "../components/MiniFooter/MiniFooter";
+ 
 
 
 const MainPage = (props) => {

@@ -15,7 +15,8 @@ const Paragraph = (props) => {
 
         target: container,
 
-        offset: ["start center", "start 0"]
+        offset: ["start 20%", "end 100%"]
+        // offset: ["start center", "end end"]
 
     })
 
