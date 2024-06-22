@@ -33,7 +33,7 @@
         font-size: var(--fs-C_1-1920);
         font-style: normal;
         font-weight: var(--fw-C_1);
-        line-height:  var(--lh-C_1);
+        line-height: var(--lh-C_1);
         letter-spacing: var(--ls-C_1-1920);
         transition: 0.2s ease-out;
     }
@@ -61,6 +61,10 @@
     }
 }
 
+.small {
+    padding: 20px 24px;
+}
+
 @media (max-width: 1439px) {
     .container {
         padding: 20px;
@@ -77,6 +81,10 @@
             letter-spacing: var(--ls-C_1-1024);
         }
     }
+
+    .small {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -91,7 +99,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         padding: 16px;
         gap: 8px;
@@ -107,6 +115,10 @@
             font-size: var(--fs-C_1-480);
             letter-spacing: var(--ls-C_1-480);
         }
+    }
+
+    .small {
+        padding: 16px;
     }
 }
 

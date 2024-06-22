@@ -4,4 +4,34 @@
     flex-direction: column;
     align-items: center;
     scroll-behavior:  smooth;
+    position: relative;
+    z-index: 1;
+}
+
+.backEllipse {
+    position: fixed;
+    z-index: -2;
+    bottom: -25%;
+    width: 1140px;
+    height: 377px;
+    flex-shrink: 0;
+    border-radius: 1140px;
+    opacity: 0.34;
+    background: #3E169D;
+    background-attachment: fixed;
+    filter: blur(100px);
+}
+
+
+.headingBlock {
+    transition: opacity 0.5s ease-out;
+    position: sticky;
+    z-index: 0; 
+}
+
+.secondBlock {
+    transform: translateY(100vh) ;
+    z-index: 1;
+    opacity: 1;
+    background-color: var(--background-far);
 }

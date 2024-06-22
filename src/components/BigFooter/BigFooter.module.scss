@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    padding: 80px 0px 140px 0px;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 auto;
+    align-self: stretch;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px dashed var(--gray-10-transparacy, rgba(231, 229, 237, 0.10));
+
+
+}

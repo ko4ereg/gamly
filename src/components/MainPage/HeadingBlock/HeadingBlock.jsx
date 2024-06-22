@@ -12,8 +12,8 @@ const HeadingBlock = (props) => {
         <section className={s.headingBlock}>
             <Heading />
             <HeadingFeatures />
-            <motion.div  style={{ translateY }}
-        ref={scrollRef}  className={s.backEllipse} />
+            {/* <motion.div  style={{ translateY }}
+        ref={scrollRef}  className={s.backEllipse} /> */}
         </section>)
 }
 

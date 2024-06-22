@@ -1,0 +1,73 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: pointer;
+
+    color: var(--light-gray);
+
+    /* 1920-0000/Text/T_3 */
+    font-size: var(--fs-T_3-1920);
+    font-style: normal;
+    font-weight: var(--fw-T_3);
+    line-height: var(--lh-T_3);
+    letter-spacing: var(--ls-T_3-1920);
+    transition: 0.2s ease-out;
+}
+
+
+
+
+
+@media (hover: hover) and (pointer: fine) {
+    .button {
+        &:hover {
+            color: var(--white);
+            transition: 0.2s ease-out;
+        }
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .button {
+        &:active {
+            color: var(--white);
+            transition: 0.2s ease-out;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .button {
+        font-size: var(--fs-T_3-1024);
+        letter-spacing: var(--ls-T_3-1024);
+
+    }
+}
+
+@media (max-width: 1023px) {
+    .button {
+        padding: 8px 0px;
+        font-size: var(--fs-T_3-768);
+        letter-spacing: var(--ls-T_3-768);
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        font-size: var(--fs-T_3-480);
+        letter-spacing: var(--ls-T_3-480);
+    }
+}
+
+@media (max-width: 479px) {
+    .button {
+        font-size: var(--fs-T_3-375);
+        letter-spacing: var(--ls-T_3-375);
+    }
+}

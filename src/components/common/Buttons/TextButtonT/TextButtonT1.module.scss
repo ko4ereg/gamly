@@ -1,0 +1,79 @@
+.button {
+    display: inline-block;
+    padding-bottom: 3px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: pointer;
+
+    /* 1920-0000/Text/T_1 */
+    font-size: var(--fs-T_1-1920);
+    font-style: normal;
+    font-weight:var(--fw-T_1);
+    line-height:var(--lh-T_1);
+    letter-spacing: var(--ls-T_1-1920);
+    color: var(--white);
+
+}
+
+
+
+.button {
+    background:
+        linear-gradient(currentColor 0 0) var(--p, 0) 100% /var(--d, 0) 1px no-repeat;
+    transition: 0.2s ease-out, background-position 0s 0.2s ease-out;
+}
+
+
+
+@media (hover: hover) and (pointer: fine) {
+    .button {
+        &:hover {
+            --d: 100%;
+            --p: 100%;
+        }
+    }
+
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .button {
+        &:active {
+            --d: 100%;
+            --p: 100%;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .button {
+        font-size: var(--fs-T_1-1024);
+        letter-spacing: var(--ls-T_1-1024);
+
+    }
+}
+
+@media (max-width: 1023px) {
+    .button {
+        padding: 8px 0px;
+        font-size: var(--fs-T_1-768);
+        letter-spacing: var(--ls-T_1-768);
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        font-size: var(--fs-T_1-480);
+        letter-spacing: var(--ls-T_1-480);
+    }
+}
+
+@media (max-width: 479px) {
+    .button {
+        font-size: var(--fs-T_1-375);
+        letter-spacing: var(--ls-T_1-375);
+    }
+}

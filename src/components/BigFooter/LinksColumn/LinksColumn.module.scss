@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    width: 464px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+   
+
+    .logo {
+        color: var(--accent-color);
+       
+        font-size: 44.249px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 48px;
+
+        .links_container {
+            display: flex;
+            width: 220px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+
+            .heading {
+                color: var(--white);
+
+                /* 1920-0000/Headline/H_7 Vela */
+                font-size: var(--fs-H_7-1920);
+                font-style: normal;
+                font-weight: var(--fw-H_7);
+                line-height: var(--lh-H_7-1920);
+                letter-spacing: var(--ls-H_7-1920);
+            }
+
+            .link_item {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                align-self: stretch;
+
+                .link_title {
+                    color: var(--light-gray);
+
+                    /* 1920-0000/Caption/C_1 */
+                    font-size: var(--fs-C_1-1920);
+                    font-style: normal;
+                    font-weight: var(--fw-C_1);
+                    line-height: var(--lh-C_1);
+                    letter-spacing: var(--ls-C_1-1920);
+                }
+            }
+        }
+    }
+}
