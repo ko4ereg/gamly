@@ -7,6 +7,7 @@ import BottomBlock from "../components/MainPage/BottomBlock/BottomBlock";
 import Paragraph from "../components/MainPage/TextBlock/Paragraph";
 import BigFooter from "../components/BigFooter/BigFooter";
 import { motion, useScroll, useTransform } from "framer-motion";
+import MiniFooter from "../components/MiniFooter/MiniFooter";
 
 
 const MainPage = (props) => {
@@ -21,9 +22,14 @@ const MainPage = (props) => {
             >
                 <HeadingBlock /></motion.div>
             {/* <TextBlock/> */}
-            <Paragraph />
-            <BottomBlock />
-            <BigFooter />
+            < div
+                // Применяем анимированный paddingTop
+                className={s.block}
+            >
+                <Paragraph />
+                <BottomBlock />
+                <BigFooter />
+            </ div>
             <div className={s.backEllipse} ></div>
         </div>
     )

@@ -12,6 +12,7 @@ import PopupAccountReplenishment from '../components/common/Popup/PopupContent/P
 import ButtonPrimary from '../components/common/Buttons/ButtonPrimary/ButtonPrimary';
 import PopupReplenishment from '../components/common/Popup/PopupLayouts/PopupReplenishment/PopupReplenishment';
 import loginback from './../assets/popup/loginback.png';
+import MiniFooter from '../components/MiniFooter/MiniFooter';
 
 
 const ReplenishmentPage = (props) => {
@@ -28,7 +29,7 @@ const ReplenishmentPage = (props) => {
     const [toLogin, setToLogin] = useState(false);
 
     return (
-        <div style={{ background: 'transparent' }}>
+        <div style={{ background: 'transparent', display: 'flex', flexDirection: 'column' }}>
             <TopContainer selectedType={selectedType} setSelectedType={setSelectedType} />
             <div className={g.container + ' ' + s.container}>
                 <BottomContainer
@@ -57,7 +58,7 @@ const ReplenishmentPage = (props) => {
 
 
             </div>
-
+          
         </div>)
 }
 

@@ -17,6 +17,8 @@ import popupfail from './assets/popup/failreplenishmentback.png';
 
 function App() {
 
+
+
   if(navigator.userAgent.indexOf('iPhone') > -1 )
     {
         document
@@ -37,7 +39,7 @@ function App() {
 
   const imagesPreload = [backskins, backbalance, popuplogin, popupsucces, popupfail];
  
-
+  const pathname = window.location.pathname; 
 
   useEffect(() => {
     document.addEventListener('touchstart', preventZoom, { passive: false });
@@ -65,7 +67,7 @@ function App() {
           <Route path='/cart' element={<CartPage/>} />
         </Routes>
         </div>
-        <MiniFooter/>
+        <MiniFooter/> 
         </div>
       
       {/*         

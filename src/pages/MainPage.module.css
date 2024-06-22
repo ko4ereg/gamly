@@ -1,37 +1,46 @@
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    scroll-behavior:  smooth;
+    scroll-behavior: smooth;
     position: relative;
     z-index: 1;
+   
 }
 
 .backEllipse {
-    position: fixed;
     z-index: -2;
-    bottom: -25%;
+    position: absolute;
+    bottom: 0%;
     width: 1140px;
-    height: 377px;
+    height:177px;
     flex-shrink: 0;
     border-radius: 1140px;
     opacity: 0.34;
     background: #3E169D;
     background-attachment: fixed;
+    background-position: bottom;
     filter: blur(100px);
+    transform: translateY(47px);
 }
 
 
 .headingBlock {
     transition: opacity 0.5s ease-out;
-    position: sticky;
-    z-index: 0; 
+    position: fixed;
+    top: 64px;
+    z-index: -1;
 }
 
 .secondBlock {
-    transform: translateY(100vh) ;
+    transform: translateY(100vh);
     z-index: 1;
     opacity: 1;
     background-color: var(--background-far);
+}
+
+.block {
+    margin-top: 100vh;
+    /* background: var(--background-far);
+    */
 }
