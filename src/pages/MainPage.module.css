@@ -42,6 +42,6 @@
 
 .block {
     margin-top: 100vh;
-  
+    background: var(--background-far);
    
 }
