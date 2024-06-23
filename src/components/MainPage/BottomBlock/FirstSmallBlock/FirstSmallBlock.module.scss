@@ -1,38 +1,53 @@
 .container {
     display: flex;
-    height: 320px;
-    min-width: 700px;
+    height: 544px;
+    min-width: 300px;
+    max-width: 50%;
     padding: 40px;
     flex-direction: column;
-    gap: 24px;
+    justify-content: flex-end;
     align-items: flex-start;
-    flex: 1 0 50%;
+    gap: 24px;
+    flex: 1 0 auto;
     border-radius: 24px;
-    border: 1px solid var(--gray-4);
-    background: var(--gray-4);
+    border: 1px solid var(--gray-4, rgba(178, 172, 191, 0.04));
+    background: rgba(26, 23, 33, 1);
+    z-index: -1;
+    overflow: hidden;
+    position: relative;
+
+    .img {
+        width: 712px;
+        height: 402.954px;
+        // background: url('./../../../../assets/mainpage/terminal.png') 50% / cover no-repeat;
+        background: url('./../../../../assets/mainpage/terminal.png') 50% / cover no-repeat;
+        position: absolute;
+        top: -16px;
+        left: 0;
+        z-index: -1;
+    }
+
+    .gradient {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        width: 712px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent 48.74%, rgba(26, 23, 33, 1) 100%);
+    }
 
     .text {
-        flex: 1 0 auto;
         color: var(--white);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        /* 1920-0000/Headline/H_7 Vela */
-        font-size: 24px;
+
+        /* 1920-0000/Headline/H_6 Vela */
+        font-size: 36px;
         font-style: normal;
         font-weight: 600;
-        line-height: 120%;
-        /* 28.8px */
-        letter-spacing: 0.24px;
+        line-height: 110%;
+        /* 39.6px */
+        letter-spacing: 0.36px;
+        z-index: 2;
 
-        .subtitle {
-            /* 1920-0000/Text/T_3 */
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 22.4px */
-            letter-spacing: 0.32px;
-        }
     }
 }

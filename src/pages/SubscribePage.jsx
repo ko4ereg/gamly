@@ -20,6 +20,9 @@ const SubscribePage = (props) => {
 
     return (
         <div className={g.container}>
+               <video autoPlay={true}   loop muted  >
+        <source src="https://vold-website-assets.s3.amazonaws.com/Main+video.mp4" type="video/mp4" />
+        </video>
             <button onClick={() => setReplenishment(!replenishment)} style={{ color: 'white' }}> Пополнение</button>
             <PopupReplenishment popupActive={replenishment} setPopupActive={setReplenishment} />
             <button onClick={() => setLogin(!login)} style={{ color: 'white' }}> Логин</button>

@@ -5,7 +5,8 @@
     scroll-behavior: smooth;
     position: relative;
     z-index: 1;
-   overflow: hidden;
+    overflow: hidden;
+    background-color: var(--background-far);
 }
 
 /* .backEllipse {
@@ -43,5 +44,19 @@
 .block {
     margin-top: 100vh;
 
-   
+
+}
+
+.videoback {
+    position: fixed;
+    top: -35%;
+    flex-shrink: 0;
+    mix-blend-mode: lighten;
+    z-index: -2;
+}
+
+.video {
+    width: 960px;
+    height: 960px;
+    opacity: 0.2;
 }
