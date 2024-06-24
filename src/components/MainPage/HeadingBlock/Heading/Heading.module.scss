@@ -60,3 +60,62 @@
         }
     }
 }
+
+@media (max-width:1439px) {
+    .heading {
+        display: flex;
+        flex-direction: column;
+      
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        width:fit-content;
+    
+        .bullets {
+ 
+    
+            .bullet {
+                font-size: var(--fs-T_3-1024);
+                letter-spacing: var(--ls-T_3-1024);
+            }
+        }
+    
+        .title {
+      
+            font-size: var(--fs-H_2-1024);
+            letter-spacing: var(--ls-H_2-1024);
+    
+            span {
+                font-size: var(--fs-H_2-1024);
+                letter-spacing: var(--ls-H_2-1024);
+            }
+        }
+    }
+    
+}
+@media (max-width:1023px) {
+    .heading {
+ 
+    
+        .bullets {
+ 
+    
+            .bullet {
+                font-size: var(--fs-T_3-768);
+                letter-spacing: var(--ls-T_3-768);
+            }
+        }
+    
+        .title {
+      
+            font-size: var(--fs-H_2-1024);
+            letter-spacing: var(--ls-H_2-1024);
+    
+            span {
+                font-size: var(--fs-H_2-1024);
+                letter-spacing: var(--ls-H_2-1024);
+            }
+        }
+    }
+    
+}

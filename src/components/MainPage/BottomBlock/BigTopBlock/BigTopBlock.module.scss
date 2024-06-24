@@ -1,4 +1,5 @@
 .container {
+    width: 100%;
     display: flex;
     height: 544px;
     min-width: 900px;
@@ -15,15 +16,18 @@
     .text {
         /* 1920-0000/Headline/H_6 Vela */
         width: 639px;
-        font-size: 36px;
+        font-size: var(--fs-H_6-1920);
         font-style: normal;
-        font-weight: 600;
-        line-height: 110%;
-        /* 39.6px */
-        letter-spacing: 0.36px;
+        font-weight: var(--fw-H_6);
+        line-height: var(--lh-H_6-1920);
+        letter-spacing: var(--ls-H_6-1920);
+
         .title {
             color: var(--white);
-        };
+        }
+
+        ;
+
         .subtitle {
             color: var(--gray-40);
         }
@@ -36,5 +40,98 @@
         right: 64px;
         top: 32px;
         background: url('./../../../../assets/icons/mainpage/bigruby.png') 50% / cover no-repeat;
+    }
+}
+
+@media (max-width:1919px) {
+    .container {
+
+        min-width: 998px;
+
+        .text {
+            width: 496px;
+
+        }
+
+        .image {
+
+            right: 24px;
+            top: 32px;
+
+        }
+    }
+}
+
+@media (max-width:1439px) {
+    .container {
+        padding: 40px;
+        min-width: 541px;
+
+        .text {
+            width: 100%;
+            font-size: var(--fs-H_6-1024);
+            letter-spacing: var(--ls-H_6-1024);
+        }
+
+        .image {
+            width: 319px;
+            height: 319px;
+            top: unset;
+            right: 40px;
+            bottom: 40px;
+
+        }
+    }
+}
+
+@media (max-width:1023px) {
+    .container { 
+        .text {
+            width: 100%;
+            font-size: var(--fs-H_6-768);
+            letter-spacing: var(--ls-H_6-768);
+        }
+
+        .image {
+            width: 289px;
+            height: 289px;
+        }
+    }
+}
+@media (max-width:767px) {
+    .container {
+        padding: 24px;
+        height: 400px;
+        min-width: 393px;
+
+        .text {
+ 
+            font-size: var(--fs-H_6-480);
+            letter-spacing: var(--ls-H_6-480);
+        }
+
+        .image {
+            width: 153px;
+            height: 153px;
+            right: 32px;
+            bottom: 24px;
+        }
+    }
+}
+@media (max-width:479px) {
+    .container {
+ 
+        min-width: 321px;
+
+        .text {
+ 
+            font-size: var(--fs-H_6-375);
+            letter-spacing: var(--ls-H_6-375);
+        }
+
+        .image {
+            right: 16px;
+            bottom: 58px;
+        }
     }
 }

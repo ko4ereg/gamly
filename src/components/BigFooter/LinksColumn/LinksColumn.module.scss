@@ -5,11 +5,11 @@
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
-   
+
 
     .logo {
         color: var(--accent-color);
-       
+
         font-size: 44.249px;
         font-style: normal;
         font-weight: 700;
@@ -41,6 +41,12 @@
                 letter-spacing: var(--ls-H_7-1920);
             }
 
+            .link_items {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+
             .link_item {
                 display: flex;
                 flex-direction: column;
@@ -57,6 +63,186 @@
                     font-weight: var(--fw-C_1);
                     line-height: var(--lh-C_1);
                     letter-spacing: var(--ls-C_1-1920);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1919px) {
+    .container {
+        width: 357px;
+    }
+}
+
+@media (max-width:1439px) {
+    .container {
+        width: 100%;
+        order: 2;
+
+        .logo {
+            position: absolute;
+            top: 48px;
+            left: 96px;
+            font-size: 33.187px;
+        }
+
+        .links {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 24px;
+            width: 100%;
+
+            .links_container {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+
+                .link_items {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .heading {
+                    color: var(--white);
+
+
+                    font-size: var(--fs-H_7-1024);
+                    letter-spacing: var(--ls-H_7-1024);
+                }
+
+                .link_item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 4px;
+                    align-self: stretch;
+                    width: 100%;
+
+                    .link_title {
+                        color: var(--light-gray);
+
+
+                        font-size: var(--fs-C_1-1024);
+                        letter-spacing: var(--ls-C_1-1024);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1023px) {
+    .container {
+
+        .links {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 24px;
+            width: 100%;
+
+            .links_container {
+                gap: 20px;
+
+                .link_items {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
+
+                .heading {
+                    color: var(--white);
+
+                    /* 1920-0000/Headline/H_7 Vela */
+                    font-size: var(--fs-H_7-V-768);
+                    letter-spacing: var(--ls-H_7-V-768);
+                }
+
+                .link_item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0px;
+                    align-self: stretch;
+
+                    .link_title {
+                        color: var(--light-gray);
+
+                        /* 1920-0000/Caption/C_1 */
+                        font-size: var(--fs-C_1-768);
+                        letter-spacing: var(--ls-C_1-768);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        .logo {
+            left: 24px;
+        }
+
+        .links {
+
+            .links_container {
+
+                .heading {
+                    color: var(--white);
+
+                    /* 1920-0000/Headline/H_7 Vela */
+                    font-size: var(--fs-H_7-nevela-480);
+                    letter-spacing: var(--ls-H_7-nevela-768);
+                }
+
+                .link_item {
+
+
+                    .link_title {
+                        font-size: var(--fs-C_1-480);
+                        letter-spacing: var(--ls-C_1-480);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:479px) {
+    .container {
+        .logo {
+            top: 24px;
+        }
+        .links {
+            flex-direction: column;
+
+            .links_container {
+                gap: 16px;
+
+                .link_items {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+
+                .heading {
+                    color: var(--white);
+
+                    /* 1920-0000/Headline/H_7 Vela */
+                    font-size: var(--fs-H_7-375);
+                    letter-spacing: var(--ls-H_7-375);
+                }
+
+                .link_item {
+
+                    width: 45%;
+
+                    .link_title {
+                        font-size: var(--fs-C_1-375);
+                        letter-spacing: var(--ls-C_1-375);
+                    }
                 }
             }
         }

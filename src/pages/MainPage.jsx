@@ -10,19 +10,19 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const MainPage = (props) => {
     const { scrollY } = useScroll(); // Отслеживаем значение Y-скролла
     const opacity = useTransform(scrollY, [0, 700], [1, 0]);
-    const opacityVideo = useTransform(scrollY, [0, 700], [1, 0]); // Начальное значение 0.2, конечное 0
+    
     return (
         <>
 
             <div className={g.container + ' ' + s.container}>
-                <motion.div style={{ opacity: opacity }} className={s.videoback}>
+                <motion.div style={{ opacity: window.innerWidth > 1024 ? opacity : 1 }} className={s.videoback}>
                     <video autoPlay loop muted className={s.video}>
                         <source src="https://vold-website-assets.s3.amazonaws.com/Main+video.mp4" type="video/mp4" />
                     </video>
                 </motion.div>
                 <motion.div
 
-                    style={{ opacity }}
+                    style={{  opacity: window.innerWidth > 1024 ? opacity : 1 }}
                     className={s.headingBlock}
                 >
                     <HeadingBlock />

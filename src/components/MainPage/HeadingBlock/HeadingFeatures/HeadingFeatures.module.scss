@@ -7,11 +7,13 @@
         background: var(--gray-4);
         position: relative;
         z-index: 1;
-.line {
-    width: 1px;
-height: 320px;
-background: var(--gray-10-transparacy);
-}
+
+        .line {
+            width: 1px;
+            height: 320px;
+            background: var(--gray-10-transparacy);
+        }
+
         .card {
             display: flex;
             height: 400px;
@@ -113,7 +115,146 @@ background: var(--gray-10-transparacy);
                 margin-bottom: 0px;
             }
 
-            .button {}
+
+        }
+    }
+}
+
+@media (max-width:1439px) {
+    .container {
+        .cards {
+
+            .card {
+                height: 400px;
+                padding: 24px;
+
+                .text {
+                    .card_title {
+
+                        font-size: 24px;
+                        letter-spacing: 0.72px;
+                    }
+
+                    .card_subtitle {
+
+                        font-size: var(--fs-T_3-1024);
+                        letter-spacing: var(--ls-T_3-1024);
+                    }
+                }
+
+                .button {
+                    width: fit-content;
+
+                }
+            }
+
+            .card:hover {
+
+                .icon {
+                    transform: translate3d(0px, -122px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                    transform-style: preserve-3d;
+                    transition: 0.2s ease-out;
+
+                }
+
+                .cardInfo {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                    transform-style: preserve-3d;
+                    transition: 0.2s ease-out;
+
+                }
+
+                .text {
+                    transition: 0.2s ease-out;
+                    margin-bottom: 0px;
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (max-width:1023px) {
+    .container {
+        .cards {
+            flex-direction: column;
+
+            .line {
+                width: 528px;
+                height: 1px;
+            }
+
+            .card {
+                height: auto;
+                padding: 24px;
+                flex-direction: row;
+                gap: 32px;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+
+                .cardInfo {
+                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                }
+
+                .text {
+                    margin-bottom: 0px;
+gap: 12px;
+                    .card_title {
+
+                        font-size: 24px;
+                        letter-spacing: 0.72px;
+                    }
+
+                    .card_subtitle {
+max-width: 100%;
+                        font-size: var(--fs-T_3-1024);
+                        letter-spacing: var(--ls-T_3-1024);
+                    }
+                }
+
+                .icon {
+                    position: static;
+                    align-self: flex-start;
+                }
+
+                .button {
+                    width: fit-content;
+
+                }
+            }
+
+            .card:hover {
+
+                .icon {
+                    position: static;
+                    transform: none;
+                    transform-style: preserve-3d;
+                    transition: 0.2s ease-out;
+
+                }
+
+                .cardInfo {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                    transform-style: preserve-3d;
+                    transition: 0.2s ease-out;
+
+                }
+
+                .text {
+                    transition: 0.2s ease-out;
+
+                }
+
+
+            }
         }
     }
 }

@@ -13,3 +13,13 @@
     display: flex;
     gap: 16px;
 }
+
+@media (max-width:1439px) {
+    .bottomBlock {
+ flex-direction: column;
+    }
+    
+    .bottom {
+        flex-direction: column;
+    }  
+}

@@ -47,7 +47,7 @@
 
         .text {
             color: var(--White, #F9F8FC);
-z-index: 1;
+            z-index: 1;
             /* 1920-0000/Headline/H_6 Vela */
             font-size: 36px;
             font-style: normal;
@@ -62,7 +62,84 @@ z-index: 1;
             align-items: flex-start;
             gap: 12px;
             align-self: stretch;
+
+            .button {
+                width: 33.333%;
+            }
         }
     }
 
+}
+
+
+@media (max-width: 1919px) {
+    .container {
+
+
+        .img {
+            width: 512px;
+            height: 403px;
+            top: 0px;
+            left: 20px;
+            z-index: 0;
+        }
+
+        .gradient {
+            width: 512px;
+        }
+
+        .content {
+
+
+            .text {
+                font-size: var(--fs-H_6-1920);
+                font-weight: var(--fw-H_6);
+                line-height: var(--lh-H_6-1920);
+                letter-spacing: var(--ls-H_6-1920);
+            }
+
+            .buttons {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 4px;
+                align-self: stretch;
+                z-index: 1;
+
+                .button {
+                    flex: 1 0 auto;
+                }
+            }
+        }
+
+    }
+}
+@media (max-width: 1439px) {
+    .container {
+
+        max-width: 100%;
+        .img {
+            width: 624px;
+            height: 403px;
+            left: 104px;
+        }
+
+        .gradient {
+            width: 624px;
+        }
+
+        .content {
+
+
+            .text {
+                font-size: var(--fs-H_6-1024);
+                letter-spacing: var(--ls-H_6-1024);
+            }
+
+            .buttons {
+                flex-wrap: nowrap;
+            }
+        }
+
+    }
 }

@@ -13,9 +13,10 @@ const SecondSmallBlock = (props) => {
             <div className={s.content}>
                 <div className={s.text}>Читайте нас</div>
                 <div className={s.buttons}>
-                    <RedirectButton small={true} text={'Vk'} />
-                    <RedirectButton small={true} text={'Telegram'} />
-                    <RedirectButton small={true} text={'Discord'} />
+                    <div className={s.button}>
+                    <RedirectButton small={true} text={'Vk'} /></div>
+                    <div className={s.button}><RedirectButton small={true} text={'Telegram'} /></div> 
+                    <div className={s.button}><RedirectButton small={true} text={'Discord'} /></div> 
                 </div>
             </div>
         </div>)

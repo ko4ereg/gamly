@@ -24,3 +24,29 @@
         filter: blur(100px);
     }
 }
+
+@media (max-width:1439px) {
+
+    .headingBlock {
+ 
+        padding: 56px 0px 40px;
+ 
+     
+        .backEllipse {
+            bottom: -20%;
+            width: 832px;
+            height: 275px;
+        }
+    }
+     
+}
+@media (max-width:1023px) {
+
+    .headingBlock {
+ 
+        padding: 56px 0px 32px;
+        gap: 32px;
+ 
+    }
+     
+}
