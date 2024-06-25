@@ -211,6 +211,27 @@
             }
         }
     }
+
+    
+    
+    
+    @media (hover: none) and (pointer: coarse) {
+        .menu {
+            &:active .menu_buttons {
+                .menu_button {
+                    opacity: 1;
+                    transition: 0.2s ease-out;
+    
+                    &:active {
+                        opacity: 1;
+                        transition: 0.2s ease-out;
+                    }
+                }
+            }
+        }
+    
+     
+    }
 }
 @media (max-width: 767px) {
     
@@ -240,7 +261,27 @@
 @media (max-width: 479px) {
     
     .container {
-   
+        .menu {
+           
+            .heading {
+                color: var(--gray-40);
+                text-align: center;
+          
+                /* 1024/Headline/H_4 Vela */
+                font-size: var(--fs-H_4-375);
+                letter-spacing: var(--ls-H_4-375);
+            }
+    
+            .menu_buttons {
+    
+                .menu_button {
+              
+                    padding-bottom: 20px;
+                }
+            }
+    
+    
+        }
         .buttons {
             flex-direction: column;
             gap: 8px;
