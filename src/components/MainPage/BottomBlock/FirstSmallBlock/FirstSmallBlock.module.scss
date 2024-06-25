@@ -99,3 +99,86 @@
         }
     }
 }
+@media (max-width: 1023px) {
+    .container {
+        
+        max-width: 100%;
+        .img {
+            width: 624px;
+            height: 403px;
+            left: -24px;
+
+        }
+    
+        .gradient {
+            width: 624px;
+        }
+    
+        .text {
+            font-size: var(--fs-H_6-768);
+            letter-spacing:var(--ls-H_6-768);
+        }
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        height: 400px;
+ 
+        padding: 24px;
+        .img {
+            width: 432px;
+            height: 279px;
+            left: 0;
+
+        }
+    
+        .gradient {
+            width: 432px;
+        }
+    
+        .text {
+            font-size: var(--fs-H_6-480);
+            letter-spacing:var(--ls-H_6-480);
+        }
+    }
+}
+@media (max-width: 479px) {
+    .container {
+    
+        .img {
+            width: 327px;
+            height: 211.188px;
+            left: 0;
+
+        }
+    
+        .gradient {
+            width: 327px;
+        }
+    
+        .text {
+            font-size: var(--fs-H_6-375);
+            letter-spacing:var(--ls-H_6-375);
+        }
+    }
+}
+@media (max-width: 374px) {
+    .container {
+        min-width: 277px;
+        .img {
+            width: 288px;
+            height: 186px;
+            left: 0;
+
+        }
+    
+        .gradient {
+            width: 288px;
+        }
+    
+        .text {
+            font-size: var(--fs-H_6-375);
+            letter-spacing:var(--ls-H_6-375);
+        }
+    }
+}

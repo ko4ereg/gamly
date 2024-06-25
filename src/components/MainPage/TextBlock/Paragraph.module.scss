@@ -88,3 +88,66 @@
     
     }
 }
+@media (max-width:1023px) {
+
+    .textBlock {
+        background: transparent;
+        .word {
+            .span {
+                font-size: var(--fs-H_5-768);
+                letter-spacing: var(--ls-H_5-768);
+           
+            }
+    
+ 
+            .shadow {
+                font-size: var(--fs-H_5-768);
+                letter-spacing: var(--ls-H_5-768);
+            }
+    
+        }
+    
+    }
+}
+@media (max-width:767px) {
+
+    .textBlock {
+ 
+        .word {
+            .span {
+                font-size: var(--fs-H_5-480);
+                letter-spacing: var(--ls-H_5-480);
+           
+            }
+    
+ 
+            .shadow {
+                font-size: var(--fs-H_5-480);
+                letter-spacing: var(--ls-H_5-480);
+            }
+    
+        }
+    
+    }
+}
+@media (max-width:479px) {
+
+    .textBlock {
+ 
+        .word {
+            .span {
+                font-size: var(--fs-H_5-375);
+                letter-spacing: var(--ls-H_5-375);
+           
+            }
+    
+ 
+            .shadow {
+                font-size: var(--fs-H_5-375);
+                letter-spacing: var(--ls-H_5-375);
+            }
+    
+        }
+    
+    }
+}

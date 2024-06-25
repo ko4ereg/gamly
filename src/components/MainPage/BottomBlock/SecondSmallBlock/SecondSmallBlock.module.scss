@@ -114,10 +114,12 @@
 
     }
 }
+
 @media (max-width: 1439px) {
     .container {
 
         max-width: 100%;
+
         .img {
             width: 624px;
             height: 403px;
@@ -138,6 +140,128 @@
 
             .buttons {
                 flex-wrap: nowrap;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1023px) {
+    .container {
+
+        max-width: 100%;
+
+        .img {
+            width: 624px;
+            height: 403px;
+            left: -24px;
+        }
+
+        .gradient {
+            width: 624px;
+        }
+
+        .content {
+
+
+            .text {
+                font-size: var(--fs-H_6-768);
+                letter-spacing: var(--ls-H_6-768);
+            }
+
+            .buttons {
+                flex-wrap: wrap;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+
+        height: 400px;
+
+        padding: 24px;
+
+        .img {
+            width: 432px;
+            height: 279px;
+            left: 0;
+
+        }
+
+        .gradient {
+            width: 432px;
+        }
+
+        .content {
+
+
+            .text {
+                font-size: var(--fs-H_6-480);
+                letter-spacing: var(--ls-H_6-480);
+            }
+
+            .buttons {
+                flex-wrap: wrap;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 479px) {
+    .container {
+
+        .img {
+            width: 327px;
+            height: 211.188px;
+            left: 0;
+        }
+
+
+        .gradient {
+            width: 327px;
+        }
+
+        .content {
+
+
+            .text {
+                font-size: var(--fs-H_6-375);
+                letter-spacing: var(--ls-H_6-375);
+            }
+
+            .buttons {
+                flex-wrap: wrap;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 374px) {
+    .container {
+
+        .img {
+            width: 288px;
+            height: 186px;
+        }
+
+        .gradient {
+            width: 288px;
+
+        }
+
+        .content {
+            .buttons {
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                .button {
+                    width: 100%;
+                }
             }
         }
 

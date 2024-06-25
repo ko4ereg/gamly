@@ -135,3 +135,14 @@
         }
     }
 }
+@media (max-width:374px) {
+    .container {
+ 
+        min-width: 275px;
+ 
+
+        .image {
+        display: none;
+        }
+    }
+}

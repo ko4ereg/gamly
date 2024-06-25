@@ -1,7 +1,7 @@
 .heading {
     display: flex;
     flex-direction: column;
-  
+
     justify-content: center;
     align-items: center;
     gap: 16px;
@@ -65,57 +65,111 @@
     .heading {
         display: flex;
         flex-direction: column;
-      
+
         justify-content: center;
         align-items: center;
         gap: 16px;
-        width:fit-content;
-    
+        width: fit-content;
+
         .bullets {
- 
-    
+
+
             .bullet {
                 font-size: var(--fs-T_3-1024);
                 letter-spacing: var(--ls-T_3-1024);
             }
         }
-    
+
         .title {
-      
+
             font-size: var(--fs-H_2-1024);
             letter-spacing: var(--ls-H_2-1024);
-    
+
             span {
                 font-size: var(--fs-H_2-1024);
                 letter-spacing: var(--ls-H_2-1024);
             }
         }
     }
-    
+
 }
+
 @media (max-width:1023px) {
     .heading {
- 
-    
+
+
         .bullets {
- 
-    
+
+
             .bullet {
                 font-size: var(--fs-T_3-768);
                 letter-spacing: var(--ls-T_3-768);
             }
         }
-    
+
         .title {
-      
+
             font-size: var(--fs-H_2-1024);
             letter-spacing: var(--ls-H_2-1024);
-    
+
             span {
                 font-size: var(--fs-H_2-1024);
                 letter-spacing: var(--ls-H_2-1024);
             }
         }
     }
-    
+
 }
+
+@media (max-width: 767px) {
+    .heading {
+
+
+        .bullets {
+
+            flex-direction: column;
+
+            .bullet {
+                font-size: var(--fs-T_3-480);
+                letter-spacing: var(--ls-T_3-480);
+            }
+        }
+
+        .title {
+            font-size: var(--fs-H_2-480);
+            letter-spacing: var(--ls-H_2-480);
+       
+
+            span {
+                font-size: var(--fs-H_2-480);
+                letter-spacing: var(--ls-H_2-480);
+            }
+        }
+    }
+
+}
+@media (max-width: 479px) {
+    .heading {
+        .bullets {
+            gap: 4px;
+
+            .bullet {
+                font-size: var(--fs-T_3-375);
+                letter-spacing: var(--ls-T_3-375);
+            }
+        }
+
+        .title {
+            font-size: var(--fs-H_2-375);
+            letter-spacing: var(--ls-H_2-375);
+       
+
+            span {
+                font-size: var(--fs-H_2-375);
+                letter-spacing: var(--ls-H_2-375);
+            }
+        }
+    }
+
+}
+ 

@@ -203,7 +203,8 @@
 
                 .text {
                     margin-bottom: 0px;
-gap: 12px;
+                    gap: 12px;
+
                     .card_title {
 
                         font-size: 24px;
@@ -211,9 +212,9 @@ gap: 12px;
                     }
 
                     .card_subtitle {
-max-width: 100%;
-                        font-size: var(--fs-T_3-1024);
-                        letter-spacing: var(--ls-T_3-1024);
+                        max-width: 100%;
+                        font-size: var(--fs-T_3-768);
+                        letter-spacing: var(--ls-T_3-768);
                     }
                 }
 
@@ -233,27 +234,139 @@ max-width: 100%;
                 .icon {
                     position: static;
                     transform: none;
-                    transform-style: preserve-3d;
-                    transition: 0.2s ease-out;
 
                 }
 
                 .cardInfo {
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
-                    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-                    transform-style: preserve-3d;
-                    transition: 0.2s ease-out;
+                    gap: none;
+                    transform: none;
 
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        .cards {
+
+            .line {
+                width: 390px;
+
+            }
+
+            .card:hover {
+
+
+
+                .cardInfo {
+                    gap: 12px;
+                }
+
+
+            }
+
+            .card {
+                padding: 20px;
+                gap: 16px;
+                width: 100%;
+
+                .cardInfo {
+                    gap: 12px;
                 }
 
                 .text {
-                    transition: 0.2s ease-out;
+                    gap: 8px;
 
+                    .card_title {
+                        font-size: var(--fs-H_3-480);
+                        letter-spacing: var(--ls-H_3-480);
+                    }
+
+                    .card_subtitle {
+                        max-width: 100%;
+                        font-size: var(--fs-T_3-480);
+                        letter-spacing: var(--ls-T_3-480);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:479px) {
+    .container {
+        .cards {
+
+            .line {
+                width: 279px;
+
+            }
+
+            .card:hover {
+                .cardInfo {
+                    gap: 8px;
+                }
+            }
+
+            .card {
+                padding: 16px;
+                gap: 8px;
+
+                .cardInfo {
+                    gap: 8px;
                 }
 
+                .text {
 
+
+                    .card_title {
+                        font-size: var(--fs-H_3-375);
+                        letter-spacing: var(--ls-H_3-375);
+                    }
+
+                    .card_subtitle {
+                        max-width: 100%;
+                        font-size: var(--fs-T_3-375);
+                        letter-spacing: var(--ls-T_3-375);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:374px) {
+    .container {
+        .cards {
+
+            .line {
+                width: 100%;
+
+            }
+
+            .card:hover {
+                .cardInfo {
+                    gap: 8px;
+                }
+            }
+
+            .card {
+
+                .cardInfo {
+                    gap: 8px;
+                }
+
+                .text {
+
+                    gap: 4px;
+
+                }
             }
         }
     }
