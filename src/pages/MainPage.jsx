@@ -18,7 +18,7 @@ const MainPage = (props) => {
                 <motion.div 
                   style={{  opacity:  opacity   }} className={s.videoback}
                 >
-                    <video autoPlay loop muted className={s.video}>
+                    <video autoPlay loop muted playsInline className={s.video}>
                         <source src="https://vold-website-assets.s3.amazonaws.com/Main+video.mp4" type="video/mp4" />
                     </video>
                 </motion.div>
