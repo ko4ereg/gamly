@@ -83,14 +83,18 @@
         
         max-width: 100%;
         .img {
-            width: 624px;
+            // width: 624px;
+            width: 100%;
             height: 403px;
-            left: 104px;
+            // left: 104px;
+       left: 25%;
+       transform: translateX(-25%);
 
         }
     
         .gradient {
-            width: 624px;
+            // width: 624px;
+            width: 100%;
         }
     
         .text {
@@ -104,15 +108,15 @@
         
         max-width: 100%;
         .img {
-            width: 624px;
+            // width: 624px;
             height: 403px;
-            left: -24px;
+            // left: -24px;
 
         }
     
-        .gradient {
-            width: 624px;
-        }
+        // .gradient {
+        //     width: 624px;
+        // }
     
         .text {
             font-size: var(--fs-H_6-768);
@@ -126,14 +130,14 @@
  
         padding: 24px;
         .img {
-            width: 432px;
-            height: 279px;
-            left: 0;
+            // width: 432px;
+            // height: 279px;
+            // left: 0;
 
         }
     
         .gradient {
-            width: 432px;
+            // width: 432px;
         }
     
         .text {
@@ -146,14 +150,14 @@
     .container {
     
         .img {
-            width: 327px;
+            // width: 327px;
             height: 211.188px;
-            left: 0;
+            // left: 0;
 
         }
     
         .gradient {
-            width: 327px;
+            // width: 327px;
         }
     
         .text {
@@ -166,14 +170,14 @@
     .container {
         min-width: 277px;
         .img {
-            width: 288px;
+            // width: 288px;
             height: 186px;
-            left: 0;
+            // left: 0;
 
         }
     
         .gradient {
-            width: 288px;
+            // width: 288px;
         }
     
         .text {

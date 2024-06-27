@@ -16,17 +16,20 @@
 
 @media (max-width:1439px) {
     .bottomBlock {
- flex-direction: column;
+        flex-direction: column;
+      
     }
-    
+
     .bottom {
         flex-direction: column;
-    }  
+        width: 100%;
+    }
 }
+
 @media (max-width:767px) {
     .bottomBlock {
- 
- margin-bottom: 120px;
+
+        margin-bottom: 120px;
     }
- 
+
 }
