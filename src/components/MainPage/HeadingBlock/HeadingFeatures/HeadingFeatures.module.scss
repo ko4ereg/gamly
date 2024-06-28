@@ -31,9 +31,9 @@
                 width: 68px;
                 height: 64px;
                 flex-shrink: 0;
-                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-                transform-style: preserve-3d;
-                transition: 0.2s ease-out;
+                // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                // transform-style: preserve-3d;
+                // transition: 0.2s ease-out;
                 background-position: 50%;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -93,12 +93,12 @@
 
         .card:hover {
 
-            .icon {
-                transform: translate3d(0px, -122px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-                transform-style: preserve-3d;
-                transition: 0.2s ease-out;
+            // .icon {
+            //     transform: translate3d(0px, -122px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+            //     transform-style: preserve-3d;
+            //     transition: 0.2s ease-out;
 
-            }
+            // }
 
             .cardInfo {
                 display: flex;
@@ -150,12 +150,12 @@
 
             .card:hover {
 
-                .icon {
-                    transform: translate3d(0px, -122px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-                    transform-style: preserve-3d;
-                    transition: 0.2s ease-out;
+                // .icon {
+                //     transform: translate3d(0px, -122px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
+                //     transform-style: preserve-3d;
+                //     transition: 0.2s ease-out;
 
-                }
+                // }
 
                 .cardInfo {
                     display: flex;
@@ -231,11 +231,11 @@
 
             .card:hover {
 
-                .icon {
-                    position: static;
-                    transform: none;
+                // .icon {
+                //     position: static;
+                //     transform: none;
 
-                }
+                // }
 
                 .cardInfo {
                     display: flex;
