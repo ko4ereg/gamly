@@ -33,7 +33,7 @@ const PopupFiltersLayout = ({ popupActive, setPopupActive, note }) => {
     return (
         <PopupWithoutImage
             bottom={<BottomMenu separator={true}>
-                <ButtonPrimary text={'Перейти к оплате'} />
+                <ButtonPrimary text={'Применить'} />
                 <ButtonSecondary disabled={disabled} onClick={handleReset} text={'Сбросить'} />
             </BottomMenu>}
             popupActive={popupActive} setPopupActive={setPopupActive} note={note} heading={"Фильтры"}>
